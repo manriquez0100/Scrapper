@@ -1,0 +1,8 @@
+instructions:
+genera un script para automatizar la publicación de publicidad en facebook.
+los links de las páginas en las que se debe publicar están en grupos.py y el ejemplo de la página de facebook está en pagefacebookgroupexample.html.
+para evitar que banee el servicio por uso de bots, es necesario comportarse como humano. Es decir, abrir la url, ir al campo "escribe algo" y hacer click, pegar letra por letra el mensaje y presionar el botón publicar.
+para evitar publicaciones.
+Tu tarea termina cuando terminas de escribir el texto publicitario en la caja de texto de "crea una publicacion".
+Por ahora, solo hazlo para una url de grupos.py y mete las url en un arreglo para despues, ya terminado, recorrer todas las direcciones y publicar en todas.
+
