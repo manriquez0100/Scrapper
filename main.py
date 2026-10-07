@@ -4,9 +4,12 @@ import json
 import logging
 import os
 import asyncio
+import re
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
 from uuid import uuid4
+from datetime import datetime
+from zoneinfo import ZoneInfo
 
 from dotenv import load_dotenv
 from fastapi import FastAPI, HTTPException
@@ -22,6 +25,7 @@ logger = logging.getLogger(__name__)
 BEHAVIOR_CONFIG_PATH = Path(
     os.getenv("ASSISTANT_BEHAVIOR_CONFIG", Path(__file__).with_name("behavior.json"))
 )
+ASSISTANT_TIMEZONE = os.getenv("ASSISTANT_TIMEZONE", "America/Mexico_City")
 
 
 def load_behavior_config() -> Dict[str, str]:
@@ -36,6 +40,7 @@ def load_behavior_config() -> Dict[str, str]:
 
     required_keys = {
         "query_extraction_instructions",
+        "query_enrichment_instructions",
         "customer_care_instructions",
         "no_book_query_response",
         "no_results_response_template",
@@ -44,6 +49,9 @@ def load_behavior_config() -> Dict[str, str]:
         "available_without_price_template",
         "availability_unknown_template",
         "catalog_notice_template",
+        "greeting_morning",
+        "greeting_afternoon",
+        "greeting_evening",
     }
     missing_keys = required_keys.difference(config)
     if missing_keys:
@@ -52,6 +60,16 @@ def load_behavior_config() -> Dict[str, str]:
             + ", ".join(sorted(missing_keys))
         )
     return config
+
+
+def get_greeting(behavior: Dict[str, str]) -> str:
+    """Return the configured greeting for the assistant's local time."""
+    hour = datetime.now(ZoneInfo(ASSISTANT_TIMEZONE)).hour
+    if 5 <= hour < 12:
+        return behavior["greeting_morning"]
+    if 12 <= hour < 19:
+        return behavior["greeting_afternoon"]
+    return behavior["greeting_evening"]
 
 
 CATALOG_DIR = Path(__file__).resolve().with_name("busquedas") / "catalogos"
@@ -87,6 +105,54 @@ def generate_catalog_images(results: List[Dict]) -> List[str]:
     return image_urls
 
 
+def extract_query_fallback(message: str) -> Optional[str]:
+    """Recover a clear book request when the model returns NO_BOOK_QUERY."""
+    clean_message = " ".join(message.strip().split())
+    if not re.search(
+        r"\b(busco|buscar|quiero|quisiera|necesito|tienen|tendrá|tendrán|tendrás|tendras)\b",
+        clean_message,
+        flags=re.IGNORECASE,
+    ):
+        return None
+
+    topic_match = re.search(
+        r"\b(?:qué|que)\s+tienen\s+de\s+(.+?)(?:[?.!]|$)",
+        clean_message,
+        flags=re.IGNORECASE,
+    )
+    if topic_match:
+        topic = topic_match.group(1).strip(" ,.-¿¡")
+        return topic if len(topic) >= 3 else None
+
+    availability_match = re.search(
+        r"\b(?:tendrás|tendras|tendrá|tendrán|tienen)\s+"
+        r"(?:(?:algo|libros?)\s+)?de\s+(.+?)(?:[?.!]|$)",
+        clean_message,
+        flags=re.IGNORECASE,
+    )
+    if availability_match:
+        query = availability_match.group(1).strip(" ,.-¿¡")
+        return query if len(query) >= 3 else None
+
+    query = re.sub(
+        r"^\s*(?:hola[,! ]*)?"
+        r"(?:busco|buscar|quiero|quisiera|necesito)\s+"
+        r"(?:(?:algo|un libro|el libro|la novela)\s+)?(?:de\s+)?",
+        "",
+        clean_message,
+        flags=re.IGNORECASE,
+    )
+    query = re.split(r"[?.!]", query, maxsplit=1)[0]
+    query = re.sub(
+        r"\b(?:lo|la)\s+(?:tienen|tendrá|tendrán)\b.*$|\b(?:por favor|gracias)\b.*$",
+        "",
+        query,
+        flags=re.IGNORECASE,
+    )
+    query = query.strip(" ,.-¿¡")
+    return query if len(query) >= 3 and any(char.isalpha() for char in query) else None
+
+
 class Agent:
     def __init__(self, llm: LLMProvider, behavior: Optional[Dict[str, str]] = None):
         self.llm = llm
@@ -104,7 +170,35 @@ class Agent:
         )
 
         query = " ".join(response.strip().strip('"\\\'').split())
-        return None if query.upper() == "NO_BOOK_QUERY" else query or None
+        if query and query.upper() != "NO_BOOK_QUERY":
+            return query
+
+        fallback_query = extract_query_fallback(message)
+        if fallback_query:
+            logger.info("Usando consulta de respaldo: %s", fallback_query)
+        return fallback_query
+
+    async def enrich_book_query(self, query: str) -> str:
+        """Add the author only when LM Studio identifies a specific book title."""
+        try:
+            response = await self.llm.generate(
+                [
+                    {
+                        "role": "system",
+                        "content": self.behavior["query_enrichment_instructions"],
+                    },
+                    {"role": "user", "content": query},
+                ],
+                temperature=0.0,
+                max_tokens=80,
+            )
+        except Exception:
+            logger.exception("No se pudo enriquecer la consulta; se usará la original")
+            return query
+        enriched_query = " ".join(response.strip().strip('"\\\'').split())
+        if not enriched_query or enriched_query.upper() == "NO_ENRICHMENT":
+            return query
+        return enriched_query
 
     async def generate_response(self, query: str, results: List[Dict]) -> str:
         if not results:
@@ -119,6 +213,8 @@ class Agent:
                 "currency": result.get("currency", "MXN"),
                 "availability": result.get("availability", False),
                 "editorial": result.get("editorial", "No disponible"),
+                "delivery_estimate": result.get("delivery_estimate", "No disponible"),
+                "delivery_dates": result.get("delivery_dates", []),
             }
             for result in results[:3]
         ]
@@ -156,8 +252,12 @@ class Agent:
         if not query:
             return self.behavior["no_book_query_response"], []
 
+        search_query = await self.enrich_book_query(query)
+        if search_query != query:
+            logger.info("Consulta enriquecida para Buscalibre: %s", search_query)
+
         # search_buscalibre mueve Selenium a un hilo, para no bloquear FastAPI.
-        search_results = await search_buscalibre(query, max_results=5)
+        search_results = await search_buscalibre(search_query, max_results=5)
         if search_results.get("error"):
             logger.warning("Buscalibre search failed: %s", search_results["error"])
             return self.behavior["search_error_response"], []
@@ -197,7 +297,11 @@ class MessageResponse(BaseModel):
 async def receive_message(request: MessageRequest) -> MessageResponse:
     try:
         response, catalog_images = await agent.handle_message(request.message)
-        return MessageResponse(response=response, catalog_images=catalog_images)
+        response_with_greeting = f"{get_greeting(agent.behavior)} {response}"
+        return MessageResponse(
+            response=response_with_greeting,
+            catalog_images=catalog_images,
+        )
     except Exception:
         logger.exception("Error processing message")
         raise HTTPException(500, "Error interno del servidor")

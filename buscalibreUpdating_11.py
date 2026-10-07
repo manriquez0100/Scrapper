@@ -777,17 +777,24 @@ def extraer_detalle_libro(driver, url_libro, numero_producto):
                     tiempo_envio_real = envio_element.text.strip()
                     if tiempo_envio_real and len(tiempo_envio_real) > 5:  # Validar que tenga contenido útil
                         info_completa['tiempo_entrega'] = tiempo_envio_real
+                        info_completa['fechas_entrega'] = re.findall(
+                            r'\b\d{1,2}\s+de\s+'
+                            r'(?:enero|febrero|marzo|abril|mayo|junio|julio|agosto|'
+                            r'septiembre|octubre|noviembre|diciembre)(?:\s+de\s+\d{4})?\b',
+                            tiempo_envio_real,
+                            flags=re.IGNORECASE
+                        )
                         break
                 except:
                     continue
                     
             if not tiempo_envio_real:
-                # Fallback: usar el cálculo original si no se encuentra tiempoEnvio
-                info_completa['tiempo_entrega'] = calcular_tiempo_entrega()
-                print(f" No se encontró tiempoEnvio, usando cálculo por defecto")
+                info_completa['tiempo_entrega'] = "No disponible"
+                info_completa['fechas_entrega'] = []
         except Exception as e:
-            info_completa['tiempo_entrega'] = calcular_tiempo_entrega()
-            print(f" Error extrayendo tiempo de envío: {e}, usando cálculo por defecto")
+            info_completa['tiempo_entrega'] = "No disponible"
+            info_completa['fechas_entrega'] = []
+            print(f" Error extrayendo tiempo de envío: {e}")
         
         ##print(f"✅ Información completa extraída para libro #{numero_producto}")
         
@@ -1067,7 +1074,7 @@ try:
                     productos_a_extraer = productos[:NUMERO_PRODUCTOS]
 
                     print(f"\n Se encontraron {len(productos)} productos. Extrayendo {len(productos_a_extraer)}...\n")
-                    tiempo_entrega = calcular_tiempo_entrega()
+                    tiempo_entrega = "No disponible"
                     productos_info = []
 
                     for i, producto in enumerate(productos_a_extraer, 1):
@@ -1087,7 +1094,7 @@ try:
                             nombre = info_completa.get('nombre', f'Libro #{i}')
                             precio_texto = info_completa.get('precio_original', 'Precio no disponible')
                             precio_final = info_completa.get('precio_con_envio', 'Precio no disponible')
-                            tiempo_entrega = info_completa.get('tiempo_entrega', calcular_tiempo_entrega())
+                            tiempo_entrega = info_completa.get('tiempo_entrega', 'No disponible')
                             url_imagen_final = info_completa.get('url_imagen_hq')
 
                             archivo_imagen = None
@@ -1108,6 +1115,7 @@ try:
                                 'url_libro': url_libro,
                                 'enlace_abierto': enlace_abierto,
                                 'tiempo_entrega': tiempo_entrega,
+                                'fechas_entrega': info_completa.get('fechas_entrega', []),
                                 'autor': info_completa.get('autor', 'No disponible'),
                                 'descripcion': info_completa.get('descripcion', 'No disponible')
                             }

@@ -3,6 +3,7 @@
 import sys
 import os
 import asyncio
+import re
 from typing import List, Dict, Any
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -50,6 +51,49 @@ def extraer_url_libro(producto):
         return None
     except:
         return None
+
+
+def extraer_entrega_buscalibre(driver: webdriver.Chrome) -> Dict[str, Any]:
+    """Extract the delivery estimate published on the Buscalibre product page."""
+    selectors = [
+        ".tiempoEnvio",
+        "[class*='tiempoEnvio']",
+        "[id*='tiempoEnvio']",
+        ".tiempo-envio",
+        ".shipping-time",
+        ".delivery-time",
+        ".envio-tiempo",
+        "[class*='shipping']",
+        "[class*='delivery']",
+        "[data-testid*='delivery']",
+        "[data-testid*='shipping']",
+    ]
+    delivery_keywords = ("entrega", "envío", "envio", "recibe", "llega", "despacho")
+
+    for selector in selectors:
+        try:
+            for element in driver.find_elements(By.CSS_SELECTOR, selector):
+                delivery_text = " ".join(element.text.split())
+                if len(delivery_text) < 4 or not any(
+                    keyword in delivery_text.lower() for keyword in delivery_keywords
+                ):
+                    continue
+
+                dates = re.findall(
+                    r"\b\d{1,2}\s+de\s+"
+                    r"(?:enero|febrero|marzo|abril|mayo|junio|julio|agosto|"
+                    r"septiembre|octubre|noviembre|diciembre)(?:\s+de\s+\d{4})?\b",
+                    delivery_text,
+                    flags=re.IGNORECASE,
+                )
+                return {
+                    "delivery_estimate": delivery_text,
+                    "delivery_dates": dates,
+                }
+        except Exception:
+            continue
+
+    return {"delivery_estimate": "No disponible", "delivery_dates": []}
 
 
 def extraer_detalle_libro(driver, url_libro, numero_producto):
@@ -219,6 +263,8 @@ def extraer_detalle_libro(driver, url_libro, numero_producto):
             pass
         if 'descripcion' not in info_completa:
             info_completa['descripcion'] = "No disponible"
+
+        info_completa.update(extraer_entrega_buscalibre(driver))
         
         info_completa['url_libro'] = url_libro
         
@@ -293,7 +339,9 @@ def search_buscalibre_sync(query: str, max_results: int = 5) -> Dict[str, Any]:
                     "image_url": detail.get('url_imagen_hq', ''),
                     "editorial": detail.get('editorial', 'No disponible'),
                     "pages": detail.get('num_paginas', 'No disponible'),
-                    "description": detail.get('descripcion', 'No disponible')
+                    "description": detail.get('descripcion', 'No disponible'),
+                    "delivery_estimate": detail.get('delivery_estimate', 'No disponible'),
+                    "delivery_dates": detail.get('delivery_dates', []),
                 })
                 time.sleep(1)
             except Exception as e:

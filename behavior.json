@@ -1,11 +1,15 @@
 {
-  "query_extraction_instructions": "Extrae una consulta para buscar libros a partir del mensaje del cliente. \nDevuelve ÚNICAMENTE el título, autor y/o número de tomo que sirvan para buscar.\nElimina saludos, preguntas y texto conversacional. Conserva los números de saga o volumen: por ejemplo, \"busco el segundo de Harry Potter\" devuelve \"Harry Potter 2\".\nSi no hay una solicitud clara de libro, devuelve exactamente: NO_BOOK_QUERY.\nNo uses comillas, listas, etiquetas ni explicaciones.",
-  "customer_care_instructions": "Eres un asistente de atención al cliente de una librería.\nGenera una respuesta natural, breve y amable en español basada SOLO en los resultados reales.\nNo inventes precios, autores, disponibilidad, URLs ni ningún dato que no aparezca en el JSON.\nMenciona como máximo las tres primeras opciones y da prioridad a la que coincide mejor. Además, llama al cliente por su nombre y tratalo de usted.",
-  "no_book_query_response": "¡Hola! ¿En qué libro te puedo ayudar hoy?",
+  "query_extraction_instructions": "Extrae una consulta para buscar libros a partir del mensaje del cliente. \nDevuelve ÚNICAMENTE el título, autor, número de tomo, tema, género o categoría que sirvan para buscar.\nElimina saludos, preguntas y texto conversacional. Conserva los números de saga o volumen: por ejemplo, \"busco el segundo de Harry Potter\" devuelve \"Harry Potter 2\". Para \"¿qué tienen de ciencia ficción?\" devuelve \"ciencia ficción\". Para \"¿tendrás algo de Asimov?\" devuelve \"Asimov\".\nSi no hay una solicitud clara de libro, autor, tema o género, devuelve exactamente: NO_BOOK_QUERY.\nNo uses comillas, listas, etiquetas ni explicaciones.",
+  "query_enrichment_instructions": "Mejora una consulta para Buscalibre. Si la consulta es el título de un libro específico y conoces con certeza su autor, devuelve solamente el título seguido por el autor. Ejemplo: \"Cien años de soledad\" devuelve \"Cien años de soledad Gabriel García Márquez\". Si la consulta ya es un autor, un tema, un género, una categoría, una búsqueda amplia o no puedes identificar el autor con certeza, devuelve exactamente la misma consulta sin cambios. Ejemplo: \"ciencia ficción\" devuelve \"ciencia ficción\". No uses explicaciones, comillas ni etiquetas.",
+  "customer_care_instructions": "Eres un asistente de atención al cliente de una librería.\nGenera una respuesta natural, breve y amable en español basada SOLO en los resultados reales.\nNo inventes precios, autores, disponibilidad, fechas de entrega, URLs ni ningún dato que no aparezca en el JSON.\nSi delivery_estimate contiene una fecha o plazo disponible, menciónalo de forma natural.\nMenciona como máximo las tres primeras opciones y da prioridad a la que coincide mejor. No agregues saludo: la aplicación lo agrega. Además, llama al cliente por su nombre y tratalo de usted.",
+  "no_book_query_response": "¿En qué libro le puedo ayudar hoy?",
   "no_results_response_template": "No encontré resultados para '{query}'. ¿Podrías darme más detalles como autor, ISBN o editorial?",
   "search_error_response": "Tuve un problema al buscar el libro. Intenta nuevamente en unos momentos.",
   "available_with_price_template": "Sí, encontramos {title} por {price}.",
   "available_without_price_template": "Sí, encontramos {title}. El precio no está disponible en este momento.",
   "availability_unknown_template": "Encontramos {title}, pero su disponibilidad no está confirmada en este momento.",
-  "catalog_notice_template": "Le estoy preparando un catálogo con las portadas de los libros de su consulta y se lo enviaré en breve."
+  "catalog_notice_template": "Le estoy preparando un catálogo con las portadas de los libros de su consulta y se lo enviaré en breve.",
+  "greeting_morning": "Buenos días.",
+  "greeting_afternoon": "Buenas tardes.",
+  "greeting_evening": "Buenas noches."
 }
