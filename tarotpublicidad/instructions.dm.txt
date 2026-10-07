@@ -1,2 +1,0 @@
-instructions:
-Acomoda las direcciones de grupos.py en un arreglo y cicla con n=1 para abrir la url en google chrome.
