@@ -64,6 +64,7 @@ output/
 *.csv
 *.json
 *.xlsx
+!behavior.json
 
 # Selenium logs
 selenium.log

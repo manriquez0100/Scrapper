@@ -9,6 +9,7 @@ import requests
 import os
 import re
 import math
+import logging
 from urllib.parse import urlparse
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
@@ -27,7 +28,9 @@ try:
     PIL_AVAILABLE = True
 except ImportError:
     PIL_AVAILABLE = False
-    print("⚠️ PIL no disponible - generación de imágenes publicitarias desactivada")
+    logging.getLogger(__name__).warning(
+        "PIL no disponible; generación de imágenes publicitarias desactivada"
+    )
 
 # Importar Firebase
 import sys
@@ -39,7 +42,7 @@ try:
     FIREBASE_AVAILABLE = True
 except ImportError:
     FIREBASE_AVAILABLE = False
-    print("⚠️ Firebase no disponible")
+    logging.getLogger(__name__).info("Firebase no disponible; se omite la integración")
 
 # -----------------------------------------------
 # CONFIGURACIÓN
@@ -301,10 +304,10 @@ class FacebookAdGenerator:
             filename = re.sub(r'[<>:"/\\|?*]', '_', filename)
             filepath = os.path.join(self.output_dir, filename)
             image.save(filepath, 'PNG', quality=95, optimize=True)
-            print(f"🎨 Imagen publicitaria guardada: {filepath}")
+            print(f" Imagen publicitaria guardada: {filepath}")
             return filepath
         except Exception as e:
-            print(f"❌ Error generando imagen publicitaria: {e}")
+            print(f" Error generando imagen publicitaria: {e}")
             import traceback
             traceback.print_exc()
             return None
@@ -322,15 +325,15 @@ def initialize_firebase():
             if os.path.exists(cred_path):
                 cred = credentials.Certificate(cred_path)
                 firebase_admin.initialize_app(cred)
-                print("🔥 Firebase inicializado correctamente")
+                print(" Firebase inicializado correctamente")
             else:
-                print(f"❌ No se encontró archivo de credenciales: {cred_path}")
+                print(f" No se encontró archivo de credenciales: {cred_path}")
                 return None
         
         db = firestore.client()
         return db
     except Exception as e:
-        print(f"❌ Error inicializando Firebase: {e}")
+        print(f" Error inicializando Firebase: {e}")
         return None
 
 def insert_book_to_firebase(db, libro_info):
@@ -362,12 +365,12 @@ def insert_book_to_firebase(db, libro_info):
         doc_ref = db.collection('books').add(book_data)
         doc_id = doc_ref[1].id
         
-        print(f"🔥 Libro insertado en Firebase con ID: {doc_id}")
+        print(f" Libro insertado en Firebase con ID: {doc_id}")
         print(f"   portada: {libro_info.get('url_imagen', '')}")
         return doc_id
         
     except Exception as e:
-        print(f"❌ Error insertando en Firebase: {e}")
+        print(f" Error insertando en Firebase: {e}")
         return None
 
 def calcular_tiempo_entrega():
@@ -422,7 +425,7 @@ def extraer_url_libro(producto):
         return None
         
     except Exception as e:
-        print(f"⚠️ Error extrayendo URL: {e}")
+        print(f" Error extrayendo URL: {e}")
         return None
 
 def abrir_libro_en_nueva_pestana(driver, url_libro, numero_producto):
@@ -451,7 +454,7 @@ def abrir_libro_en_nueva_pestana(driver, url_libro, numero_producto):
         return True
         
     except Exception as e:
-        print(f"❌ Error al abrir libro #{numero_producto}: {e}")
+        print(f" Error al abrir libro #{numero_producto}: {e}")
         return False
 
 def extraer_detalle_libro(driver, url_libro, numero_producto):
@@ -534,10 +537,10 @@ def extraer_detalle_libro(driver, url_libro, numero_producto):
                     
             if 'nombre' not in info_completa:
                 info_completa['nombre'] = f"Libro #{numero_producto}"
-                print(f"⚠️ No se pudo extraer nombre, usando valor por defecto")
+                print(f" No se pudo extraer nombre, usando valor por defecto")
         except Exception as e:
             info_completa['nombre'] = f"Libro #{numero_producto}"
-            print(f"⚠️ Error extrayendo nombre: {e}")
+            print(f" Error extrayendo nombre: {e}")
         
         # EXTRAER PRECIO ORIGINAL
         try:
@@ -604,7 +607,7 @@ def extraer_detalle_libro(driver, url_libro, numero_producto):
         except Exception as e:
             info_completa['precio_original'] = "Precio no disponible"
             info_completa['precio_con_envio'] = "Precio no disponible"
-            print(f"⚠️ Error extrayendo precio: {e}")
+            print(f" Error extrayendo precio: {e}")
         
         # EXTRAER IMAGEN DE ALTA CALIDAD
         try:
@@ -631,7 +634,7 @@ def extraer_detalle_libro(driver, url_libro, numero_producto):
                         # Buscar la versión de mayor resolución
                         if any(size in url_imagen_hq for size in ['large', 'big', 'full', 'original', '_l', '_xl']):
                             info_completa['url_imagen_hq'] = url_imagen_hq
-                            print(f"🖼️ Imagen de alta calidad encontrada: {url_imagen_hq[:60]}...")
+                            print(f" Imagen de alta calidad encontrada: {url_imagen_hq[:60]}...")
                             break
                         elif not info_completa.get('url_imagen_hq'):
                             info_completa['url_imagen_hq'] = url_imagen_hq
@@ -639,9 +642,9 @@ def extraer_detalle_libro(driver, url_libro, numero_producto):
                     continue
                     
             if not info_completa.get('url_imagen_hq'):
-                print(f"⚠️ No se encontró imagen de alta calidad para libro #{numero_producto}")
+                print(f" No se encontró imagen de alta calidad para libro #{numero_producto}")
         except Exception as e:
-            print(f"⚠️ Error extrayendo imagen: {e}")
+            print(f" Error extrayendo imagen: {e}")
         
         # EXTRAER AUTOR, EDITORIAL Y NÚMERO DE PÁGINAS
         try:
@@ -733,7 +736,7 @@ def extraer_detalle_libro(driver, url_libro, numero_producto):
             info_completa['autor'] = "No disponible"
             info_completa['editorial'] = "No disponible"
             info_completa['num_paginas'] = "No disponible"
-            print(f"⚠️ Error extrayendo autor/editorial/páginas: {e}")
+            print(f" Error extrayendo autor/editorial/páginas: {e}")
         
         # EXTRAER DESCRIPCIÓN
         try:
@@ -781,10 +784,10 @@ def extraer_detalle_libro(driver, url_libro, numero_producto):
             if not tiempo_envio_real:
                 # Fallback: usar el cálculo original si no se encuentra tiempoEnvio
                 info_completa['tiempo_entrega'] = calcular_tiempo_entrega()
-                print(f"⚠️ No se encontró tiempoEnvio, usando cálculo por defecto")
+                print(f" No se encontró tiempoEnvio, usando cálculo por defecto")
         except Exception as e:
             info_completa['tiempo_entrega'] = calcular_tiempo_entrega()
-            print(f"⚠️ Error extrayendo tiempo de envío: {e}, usando cálculo por defecto")
+            print(f" Error extrayendo tiempo de envío: {e}, usando cálculo por defecto")
         
         ##print(f"✅ Información completa extraída para libro #{numero_producto}")
         
@@ -797,7 +800,7 @@ def extraer_detalle_libro(driver, url_libro, numero_producto):
         return info_completa
         
     except Exception as e:
-        print(f"❌ Error al extraer información completa del libro #{numero_producto}: {e}")
+        print(f" Error al extraer información completa del libro #{numero_producto}: {e}")
         
         # Asegurarse de volver a la ventana original
         try:
@@ -813,7 +816,7 @@ def crear_carpeta_imagenes():
     """Crea la carpeta para guardar las imágenes si no existe."""
     if not os.path.exists(CARPETA_IMAGENES):
         os.makedirs(CARPETA_IMAGENES)
-        print(f"📁 Carpeta '{CARPETA_IMAGENES}' creada")
+        print(f" Carpeta '{CARPETA_IMAGENES}' creada")
     return CARPETA_IMAGENES
 
 def actualizar_contexto_busqueda(nuevo_termino):
@@ -885,10 +888,10 @@ def descargar_imagen(url_imagen, nombre_libro, numero_producto):
         return ruta_archivo
         
     except requests.exceptions.RequestException as e:
-        print(f"❌ Error de red al descargar imagen #{numero_producto}: {e}")
+        print(f" Error de red al descargar imagen #{numero_producto}: {e}")
         return None
     except Exception as e:
-        print(f"❌ Error al guardar imagen #{numero_producto}: {e}")
+        print(f" Error al guardar imagen #{numero_producto}: {e}")
         return None
 
 def human_pause(a=0.1, b=0.4):
@@ -951,41 +954,41 @@ def setup_chrome_driver():
 # INICIO DEL AUTOMATION
 # -----------------------------------------------
 
-print("🚀 Iniciando navegador Chrome...")
+print("Iniciando navegador Chrome...")
 driver = setup_chrome_driver()
 
 # Inicializar Firebase
-print("🔥 Inicializando conexión a Firebase...")
+print(" Inicializando conexión a Firebase...")
 db_firebase = initialize_firebase()
 if db_firebase:
-    print("✅ Firebase listo para insertar datos")
+    print(" Firebase listo para insertar datos")
 else:
-    print("⚠️ Firebase no disponible - solo se guardará en archivo")
+    print(" Firebase no disponible - solo se guardará en archivo")
 
 try:
     url = "https://www.buscalibre.com.mx/"
-    print("💬 Escribe un término de búsqueda y presiona Enter (escribe 'salir' para terminar).")
+    print(" Escribe un término de búsqueda y presiona Enter (escribe 'salir' para terminar).")
 
     while True:
         termino_ingresado = input("\n🔎 Término de búsqueda: ").strip()
 
         if not termino_ingresado:
-            print("⚠️ Debes ingresar un término válido.")
+            print(" Debes ingresar un término válido.")
             continue
 
         if termino_ingresado.lower() in ["salir", "exit", "q"]:
-            print("👋 Saliendo por solicitud del usuario.")
+            print(" Saliendo por solicitud del usuario.")
             break
 
         actualizar_contexto_busqueda(termino_ingresado)
         archivo_txt = None
 
-        print(f"📍 Navegando a {url}")
+        print(f" Navegando a {url}")
         driver.get(url)
         human_pause(2, 4)
-        print("✅ Página cargada exitosamente")
+        print(" Página cargada exitosamente")
 
-        print("🔍 Buscando el campo de búsqueda...")
+        print(" Buscando el campo de búsqueda...")
         wait = WebDriverWait(driver, 15)
 
         try:
@@ -1001,21 +1004,21 @@ try:
             for by, selector in selectors:
                 try:
                     search_box = wait.until(EC.presence_of_element_located((by, selector)))
-                    print(f"✅ Campo de búsqueda encontrado usando {by}: {selector}")
+                    print(f" Campo de búsqueda encontrado usando {by}: {selector}")
                     break
                 except TimeoutException:
                     continue
 
             if search_box is None:
-                raise Exception("❌ No se pudo encontrar el campo de búsqueda con ningún selector")
+                raise Exception(" No se pudo encontrar el campo de búsqueda con ningún selector")
 
             driver.execute_script("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", search_box)
             human_pause(1, 2)
             search_box.click()
             human_pause(0.5, 1)
 
-            print("✅ Campo de búsqueda listo para escribir")
-            print(f"⌨️  Escribiendo '{search_term}' de forma humana...")
+            print(" Campo de búsqueda listo para escribir")
+            print(f"Escribiendo '{search_term}' de forma humana...")
             search_text = search_term
 
             for char in search_text:
@@ -1030,40 +1033,40 @@ try:
                 if random.random() < 0.15:
                     human_pause(0.3, 0.6)
 
-            print("✅ Texto escrito exitosamente en el campo de búsqueda")
+            print("Texto escrito exitosamente en el campo de búsqueda")
             human_pause(0.8, 1.5)
-            print("🔍 Buscando el botón 'Buscar'...")
+            print(" Buscando el botón 'Buscar'...")
 
             try:
                 search_button = wait.until(EC.element_to_be_clickable((By.ID, "botonBuscarHeader")))
-                print("✅ Botón 'Buscar' encontrado")
+                print(" Botón 'Buscar' encontrado")
                 driver.execute_script("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", search_button)
                 human_pause(0.5, 0.8)
                 search_button.click()
-                print("✅ Clic en botón 'Buscar' realizado exitosamente")
+                print(" Clic en botón 'Buscar' realizado exitosamente")
 
-                print("⏳ Esperando que carguen los resultados...")
+                print("Esperando que carguen los resultados...")
                 human_pause(3, 5)
-                print("✅ Búsqueda completada")
+                print(" Búsqueda completada")
 
                 if DESCARGAR_IMAGENES:
                     crear_carpeta_imagenes()
-                    print(f"📁 Las imágenes se guardarán en la carpeta: {CARPETA_IMAGENES}")
-                    print("🖼️ Imágenes de alta calidad desde páginas individuales")
+                    print(f"Las imágenes se guardarán en la carpeta: {CARPETA_IMAGENES}")
+                    print(" Imágenes de alta calidad desde páginas individuales")
 
                     try:
                         archivo_txt = os.path.join(CARPETA_IMAGENES, f"libros_{search_term.replace(' ', '_')}.txt")
                         if os.path.exists(archivo_txt):
                             os.remove(archivo_txt)
-                        print(f"📄 La información se guardará en: libros_{search_term.replace(' ', '_')}.txt")
+                        print(f" La información se guardará en: libros_{search_term.replace(' ', '_')}.txt")
                     except Exception as e:
-                        print(f"⚠️ Error preparando archivo de texto: {e}")
+                        print(f" Error preparando archivo de texto: {e}")
 
                 try:
                     productos = wait.until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, ".box-producto")))
                     productos_a_extraer = productos[:NUMERO_PRODUCTOS]
 
-                    print(f"\n✅ Se encontraron {len(productos)} productos. Extrayendo {len(productos_a_extraer)}...\n")
+                    print(f"\n Se encontraron {len(productos)} productos. Extrayendo {len(productos_a_extraer)}...\n")
                     tiempo_entrega = calcular_tiempo_entrega()
                     productos_info = []
 
@@ -1072,13 +1075,13 @@ try:
                             url_libro = extraer_url_libro(producto)
 
                             if not url_libro:
-                                print(f"❌ No se pudo extraer URL para producto #{i}, saltando...")
+                                print(f" No se pudo extraer URL para producto #{i}, saltando...")
                                 continue
 
                             info_completa = extraer_detalle_libro(driver, url_libro, i)
 
                             if not info_completa:
-                                print(f"❌ No se pudo extraer información para libro #{i}, saltando...")
+                                print(f" No se pudo extraer información para libro #{i}, saltando...")
                                 continue
 
                             nombre = info_completa.get('nombre', f'Libro #{i}')
@@ -1112,11 +1115,11 @@ try:
 
                             info_adicional = ""
                             if info_completa.get('autor') != "No disponible":
-                                info_adicional += f"👤 Autor: {info_completa['autor']}\n"
+                                info_adicional += f" Autor: {info_completa['autor']}\n"
                             if info_completa.get('editorial') != "No disponible":
-                                info_adicional += f"🏢 Editorial: {info_completa['editorial']}\n"
+                                info_adicional += f" Editorial: {info_completa['editorial']}\n"
                             if info_completa.get('num_paginas') != "No disponible":
-                                info_adicional += f"📄 Páginas: {info_completa['num_paginas']}\n"
+                                info_adicional += f" Páginas: {info_completa['num_paginas']}\n"
 
                             if db_firebase:
                                 libro_firebase = {
@@ -1147,15 +1150,15 @@ try:
                                         info_producto['imagen_publicitaria'] = ad_path
 
                                 except Exception as e:
-                                    print(f"⚠️ Error generando imagen publicitaria para libro #{i}: {e}")
+                                    print(f" Error generando imagen publicitaria para libro #{i}: {e}")
 
                             info_texto = f"""{"="*70}
-                        📖 LIBRO #{i}
+                         LIBRO #{i}
                         {"="*70}
-                        📕 Nombre: {nombre}
+                         Nombre: {nombre}
                         {info_adicional}
-                        💵 Precio total con envío: {precio_final}
-                        🚚 Tiempo de entrega: 2 a 3 semanas a partir de la fecha de compra.
+                         Precio total con envío: {precio_final}
+                         Tiempo de entrega: 2 a 3 semanas a partir de la fecha de compra.
                         {"="*70}
 
                         """
@@ -1169,50 +1172,50 @@ try:
                                     f.write(info_texto)
 
                                 if i == 1:
-                                    print(f"📄 Guardando información en: {archivo_txt}")
+                                    print(f" Guardando información en: {archivo_txt}")
 
                             except Exception as e:
-                                print(f"⚠️ Error guardando archivo de texto: {e}")
+                                print(f" Error guardando archivo de texto: {e}")
 
                             human_pause(1, 2)
 
                         except Exception as e:
-                            print(f"⚠️ Error extrayendo producto #{i}: {e}\n")
+                            print(f" Error extrayendo producto #{i}: {e}\n")
                             continue
 
                 except Exception as e:
-                    print(f"❌ Error al extraer productos: {e}")
+                    print(f" Error al extraer productos: {e}")
 
             except TimeoutException:
-                print("❌ No se pudo encontrar el botón 'Buscar' con id 'botonBuscarHeader'")
+                print(" No se pudo encontrar el botón 'Buscar' con id 'botonBuscarHeader'")
             except Exception as e:
-                print(f"⚠️  Error al hacer clic en el botón: {e}")
+                print(f"Error al hacer clic en el botón: {e}")
 
-            print("\n✅ Precio y disponibilidad puede variar con los días.")
+            print("\n Precio y disponibilidad puede variar con los días.")
 
             if archivo_txt:
                 try:
                     with open(archivo_txt, 'a', encoding='utf-8') as f:
-                        f.write("\n✅ Precio y disponibilidad puede variar con los días.")
+                        f.write("\n Precio y disponibilidad puede variar con los días.")
                 except Exception as e:
-                    print(f"⚠️ Error escribiendo nota final en archivo: {e}")
+                    print(f" Error escribiendo nota final en archivo: {e}")
 
             print("💡 Extracción completada. Puedes ingresar otro término o escribir 'salir'.")
 
         except TimeoutException:
-            print("❌ Timeout: La página tardó demasiado en cargar el campo de búsqueda")
-            print("💡 Intenta verificar tu conexión a internet o si buscalibre.com.mx está disponible")
+            print(" Timeout: La página tardó demasiado en cargar el campo de búsqueda")
+            print(" Intenta verificar tu conexión a internet o si buscalibre.com.mx está disponible")
         except Exception as e:
             print(f"❌ Error inesperado: {e}")
             import traceback
             traceback.print_exc()
     
 except KeyboardInterrupt:
-    print("\n⚠️  Interrupción detectada por el usuario")
+    print("\n Interrupción detectada por el usuario")
 except Exception as e:
-    print(f"❌ Error al iniciar el navegador: {e}")
+    print(f"Error al iniciar el navegador: {e}")
 finally:
-    print("🔒 Cerrando navegador...")
+    print(" Cerrando navegador...")
     try:
         # Cerrar pestañas adicionales si se abrieron
         if ABRIR_ENLACES and len(driver.window_handles) > 1:
@@ -1225,4 +1228,4 @@ finally:
         driver.quit()
     except:
         pass
-    print("✅ Navegador cerrado")
+    print(" Navegador cerrado")
