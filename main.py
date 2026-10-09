@@ -15,6 +15,7 @@ from dotenv import load_dotenv
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field
 from fastapi.staticfiles import StaticFiles
+from fastapi.middleware.cors import CORSMiddleware
 
 from buscalibre_tool import search_buscalibre
 from buscalibreUpdating_11 import FacebookAdGenerator
@@ -283,6 +284,14 @@ app = FastAPI(
     version="1.0.0",
 )
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173", "http://localhost:5174", "http://127.0.0.1:5173", "http://127.0.0.1:5174"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 
 class MessageRequest(BaseModel):
     message: str = Field(..., min_length=1, max_length=2_000, description="Pregunta del cliente en lenguaje natural")
@@ -305,7 +314,11 @@ async def receive_message(request: MessageRequest) -> MessageResponse:
     except Exception:
         logger.exception("Error processing message")
         raise HTTPException(500, "Error interno del servidor")
-
+    
+#@app.post("/saludo", response_model=MessageResponse)
+#async def saludo() -> MessageResponse:
+    #"""Endpoint to return a greeting message."""
+   
 
 @app.get("/health")
 async def health() -> Dict[str, str]:

@@ -1,0 +1,58 @@
+:root {
+  --bg: #0d1117;
+  --fg: #e6edf3;
+  --prompt: #3fb950;
+  --border: #30363d;
+  --panel-bg: #161b22;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', 'Monaco', monospace;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#root {
+  height: 100vh;
+}
+
+.terminal {
+  height: 100%;
+}
+
+.request-item:hover {
+  border-color: var(--border) !important;
+}
+
+.output-response {
+  font-family: inherit;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #484f58;
+}
+
+input::placeholder {
+  color: #484f58;
+}
