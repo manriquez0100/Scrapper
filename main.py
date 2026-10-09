@@ -28,6 +28,55 @@ BEHAVIOR_CONFIG_PATH = Path(
 )
 ASSISTANT_TIMEZONE = os.getenv("ASSISTANT_TIMEZONE", "America/Mexico_City")
 
+CONVERSATIONS_FILE = Path(__file__).with_name("conversations.json")
+
+# Lock for thread-safe file operations
+_conversations_lock = asyncio.Lock()
+
+
+async def load_conversations() -> Dict:
+    """Load conversations from JSON file."""
+    async with _conversations_lock:
+        try:
+            with CONVERSATIONS_FILE.open("r", encoding="utf-8") as f:
+                return json.load(f)
+        except (OSError, json.JSONDecodeError):
+            return {"conversations": []}
+
+
+async def save_conversations(data: Dict) -> None:
+    """Save conversations to JSON file."""
+    async with _conversations_lock:
+        try:
+            with CONVERSATIONS_FILE.open("w", encoding="utf-8") as f:
+                json.dump(data, f, ensure_ascii=False, indent=2)
+        except OSError as exc:
+            logger.error("Failed to save conversations: %s", exc)
+
+
+async def add_message_to_conversation(session_id: str, role: str, content: str, catalog_images: Optional[List[str]] = None) -> None:
+    """Add a message to a conversation, creating it if needed."""
+    data = await load_conversations()
+    conversations = data.get("conversations", [])
+    
+    conv = next((c for c in conversations if c["id"] == session_id), None)
+    if not conv:
+        conv = {
+            "id": session_id,
+            "created_at": datetime.now(ZoneInfo(ASSISTANT_TIMEZONE)).isoformat(),
+            "messages": []
+        }
+        conversations.append(conv)
+    
+    conv["messages"].append({
+        "role": role,
+        "content": content,
+        "catalog_images": catalog_images or [],
+        "timestamp": datetime.now(ZoneInfo(ASSISTANT_TIMEZONE)).isoformat()
+    })
+    
+    await save_conversations({"conversations": conversations})
+
 
 def load_behavior_config() -> Dict[str, str]:
     """Load assistant behavior and customer-care instructions from JSON."""
@@ -205,7 +254,6 @@ class Agent:
         if not results:
             return self.behavior["no_results_response_template"].format(query=query)
 
-        # Evita enviar descripciones y URLs largas que retrasan innecesariamente a Gemma.
         response_results = [
             {
                 "title": result.get("title", "No disponible"),
@@ -235,8 +283,6 @@ class Agent:
         if response.strip():
             return response.strip()
 
-        # Algunos modelos generan solo reasoning_content. La consulta no debe fallar
-        # cuando ocurre: los datos ya fueron obtenidos de Buscalibre.
         first_result = response_results[0]
         title = first_result["title"]
         price = first_result["price"]
@@ -257,7 +303,6 @@ class Agent:
         if search_query != query:
             logger.info("Consulta enriquecida para Buscalibre: %s", search_query)
 
-        # search_buscalibre mueve Selenium a un hilo, para no bloquear FastAPI.
         search_results = await search_buscalibre(search_query, max_results=5)
         if search_results.get("error"):
             logger.warning("Buscalibre search failed: %s", search_results["error"])
@@ -271,17 +316,27 @@ class Agent:
                 f"{response} "
                 f"{self.behavior['catalog_notice_template'].format(count=len(catalog_images))}"
             )
-            response = f"{response}\n\nCatálogo: " + " ".join(catalog_images)
+            response = {response}
         return response, catalog_images
 
 
 llm_provider = get_llm_provider()
 agent = Agent(llm_provider)
 
+from contextlib import asynccontextmanager
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    yield
+    # Shutdown: close httpx client
+    if hasattr(llm_provider, 'close'):
+        await llm_provider.close()
+
 app = FastAPI(
     title="Book Search Agent",
     description="Procesa preguntas en español, busca libros en Buscalibre y responde naturalmente con LM Studio.",
     version="1.0.0",
+    lifespan=lifespan
 )
 
 app.add_middleware(
@@ -295,30 +350,86 @@ app.add_middleware(
 
 class MessageRequest(BaseModel):
     message: str = Field(..., min_length=1, max_length=2_000, description="Pregunta del cliente en lenguaje natural")
+    session_id: Optional[str] = Field(None, description="ID de sesión para persistencia de conversación")
 
 
 class MessageResponse(BaseModel):
     response: str
     catalog_images: List[str] = Field(default_factory=list)
+    session_id: str
+
+
+class ConversationSummary(BaseModel):
+    id: str
+    created_at: str
+    preview: str
+
+
+class Conversation(BaseModel):
+    id: str
+    created_at: str
+    messages: List[Dict]
 
 
 @app.post("/message", response_model=MessageResponse)
 async def receive_message(request: MessageRequest) -> MessageResponse:
     try:
+        session_id = request.session_id or str(uuid4())
         response, catalog_images = await agent.handle_message(request.message)
         response_with_greeting = f"{get_greeting(agent.behavior)} {response}"
+        
+        await add_message_to_conversation(session_id, "user", request.message)
+        await add_message_to_conversation(session_id, "assistant", response_with_greeting, catalog_images)
+        
         return MessageResponse(
             response=response_with_greeting,
             catalog_images=catalog_images,
+            session_id=session_id,
         )
     except Exception:
         logger.exception("Error processing message")
         raise HTTPException(500, "Error interno del servidor")
-    
-#@app.post("/saludo", response_model=MessageResponse)
-#async def saludo() -> MessageResponse:
-    #"""Endpoint to return a greeting message."""
-   
+
+
+@app.get("/conversations", response_model=List[ConversationSummary])
+async def list_conversations() -> List[ConversationSummary]:
+    data = await load_conversations()
+    conversations = data.get("conversations", [])
+    summaries = []
+    for conv in sorted(conversations, key=lambda x: x["created_at"], reverse=True):
+        preview = ""
+        if conv["messages"]:
+            first_user_msg = next((m for m in conv["messages"] if m["role"] == "user"), None)
+            if first_user_msg:
+                preview = first_user_msg["content"][:80]
+                if len(first_user_msg["content"]) > 80:
+                    preview += "..."
+        summaries.append(ConversationSummary(
+            id=conv["id"],
+            created_at=conv["created_at"],
+            preview=preview
+        ))
+    return summaries
+
+
+@app.get("/conversations/{conversation_id}", response_model=Conversation)
+async def get_conversation(conversation_id: str) -> Conversation:
+    data = await load_conversations()
+    conversations = data.get("conversations", [])
+    conv = next((c for c in conversations if c["id"] == conversation_id), None)
+    if not conv:
+        raise HTTPException(404, "Conversación no encontrada")
+    return Conversation(**conv)
+
+
+@app.delete("/conversations/{conversation_id}")
+async def delete_conversation(conversation_id: str) -> Dict[str, str]:
+    data = await load_conversations()
+    conversations = data.get("conversations", [])
+    conversations = [c for c in conversations if c["id"] != conversation_id]
+    await save_conversations({"conversations": conversations})
+    return {"status": "deleted"}
+
 
 @app.get("/health")
 async def health() -> Dict[str, str]:

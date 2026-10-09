@@ -8,6 +8,9 @@ from typing import List, Dict, Any
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
+# Concurrency control: only 1 Selenium search at a time
+_search_semaphore = asyncio.Semaphore(1)
+
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
@@ -355,7 +358,8 @@ def search_buscalibre_sync(query: str, max_results: int = 5) -> Dict[str, Any]:
 
 
 async def search_buscalibre(query: str, max_results: int = 5) -> Dict[str, Any]:
-    return await asyncio.to_thread(search_buscalibre_sync, query, max_results)
+    async with _search_semaphore:
+        return await asyncio.to_thread(search_buscalibre_sync, query, max_results)
 
 
 if __name__ == "__main__":

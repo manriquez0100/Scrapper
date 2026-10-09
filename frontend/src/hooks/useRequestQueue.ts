@@ -1,4 +1,4 @@
-import { useState, useRef, useCallback } from 'react';
+import { useState, useRef, useCallback, useEffect } from 'react';
 import type { RequestItem, RequestStatus } from '../types';
 import { sendMessage } from '../services/api';
 
@@ -6,19 +6,23 @@ const MAX_CONCURRENT = 10;
 
 export function useRequestQueue() {
   const [requests, setRequests] = useState<RequestItem[]>([]);
+  const [currentSessionId, setCurrentSessionId] = useState<string>(() => crypto.randomUUID());
   const activeRef = useRef(0);
   const processingRef = useRef<Set<string>>(new Set());
+  const requestsRef = useRef(requests);
 
-  const updateStatus = useCallback((id: string, status: RequestStatus, response = '') => {
+  requestsRef.current = requests;
+
+  const updateStatus = useCallback((id: string, status: RequestStatus, response = '', catalog_images?: string[]) => {
     setRequests(prev => prev.map(r =>
-      r.id === id ? { ...r, status, response } : r
+      r.id === id ? { ...r, status, response, catalog_images } : r
     ));
   }, []);
 
   const processQueue = useCallback(() => {
     if (activeRef.current >= MAX_CONCURRENT) return;
 
-    const pendingRequest = requests.find(
+    const pendingRequest = requestsRef.current.find(
       r => r.status === 'pending' && !processingRef.current.has(r.id)
     );
     if (!pendingRequest) return;
@@ -27,9 +31,9 @@ export function useRequestQueue() {
     activeRef.current++;
     updateStatus(pendingRequest.id, 'processing');
 
-    sendMessage(pendingRequest.question)
+    sendMessage(pendingRequest.question, pendingRequest.session_id)
       .then(data => {
-        updateStatus(pendingRequest.id, 'done', data.response);
+        updateStatus(pendingRequest.id, 'done', data.response, data.catalog_images);
       })
       .catch(err => {
         updateStatus(pendingRequest.id, 'error', err.message);
@@ -37,9 +41,12 @@ export function useRequestQueue() {
       .finally(() => {
         activeRef.current--;
         processingRef.current.delete(pendingRequest.id);
-        processQueue();
       });
-  }, [requests, updateStatus]);
+  }, [updateStatus]);
+
+  useEffect(() => {
+    processQueue();
+  }, [requests, processQueue]);
 
   const enqueue = useCallback((question: string) => {
     const id = crypto.randomUUID();
@@ -49,16 +56,17 @@ export function useRequestQueue() {
       status: 'pending',
       response: '',
       timestamp: Date.now(),
+      session_id: currentSessionId,
     };
     setRequests(prev => [...prev, newRequest]);
-    processQueue();
-  }, [processQueue]);
+  }, [currentSessionId]);
 
   const clearAll = useCallback(() => {
     setRequests([]);
     activeRef.current = 0;
     processingRef.current.clear();
+    setCurrentSessionId(crypto.randomUUID());
   }, []);
 
-  return { requests, enqueue, clearAll };
+  return { requests, enqueue, clearAll, currentSessionId };
 }
