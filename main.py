@@ -12,10 +12,11 @@ from datetime import datetime
 from zoneinfo import ZoneInfo
 
 from dotenv import load_dotenv
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Request, Response
 from pydantic import BaseModel, Field
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
+from starlette.middleware.base import BaseHTTPMiddleware
 
 from buscalibre_tool import search_buscalibre
 from buscalibreUpdating_11 import FacebookAdGenerator
@@ -435,6 +436,18 @@ async def delete_conversation(conversation_id: str) -> Dict[str, str]:
 async def health() -> Dict[str, str]:
     return {"status": "ok"}
 
+
+class CatalogCORSMiddleware(BaseHTTPMiddleware):
+    async def dispatch(self, request: Request, call_next):
+        response: Response = await call_next(request)
+        if request.url.path.startswith("/catalogos/"):
+            response.headers["Access-Control-Allow-Origin"] = "*"
+            response.headers["Cross-Origin-Resource-Policy"] = "cross-origin"
+            response.headers["Access-Control-Allow-Methods"] = "GET, OPTIONS"
+            response.headers["Access-Control-Allow-Headers"] = "*"
+        return response
+
+app.add_middleware(CatalogCORSMiddleware)
 
 app.mount("/catalogos", StaticFiles(directory=CATALOG_DIR), name="catalogos")
 

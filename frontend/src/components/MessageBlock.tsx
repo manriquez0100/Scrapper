@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { copyResponseToClipboard } from '../utils/clipboard';
+import { copyResponseToClipboard, copyImagesToClipboard } from '../utils/clipboard';
 import type { Message, RequestItem } from '../types';
 
 interface MessageBlockProps {
@@ -10,8 +10,10 @@ interface MessageBlockProps {
 
 export function MessageBlock({ message, index, conversationId }: MessageBlockProps) {
   const [copied, setCopied] = useState(false);
+  const [imagesCopied, setImagesCopied] = useState(false);
   const isAssistant = message.role === 'assistant';
   const hasContent = isAssistant && (message.content || (message.catalog_images && message.catalog_images.length > 0));
+  const hasImages = isAssistant && message.catalog_images && message.catalog_images.length > 0;
 
   const handleCopy = async () => {
     if (!isAssistant || !hasContent) return;
@@ -21,6 +23,17 @@ export function MessageBlock({ message, index, conversationId }: MessageBlockPro
       setTimeout(() => setCopied(false), 2000);
     } catch (e) {
       console.error('Failed to copy:', e);
+    }
+  };
+
+  const handleCopyImages = async () => {
+    if (!isAssistant || !hasImages) return;
+    try {
+      await copyImagesToClipboard(message.catalog_images || []);
+      setImagesCopied(true);
+      setTimeout(() => setImagesCopied(false), 2000);
+    } catch (e) {
+      console.error('Failed to copy images:', e);
     }
   };
 
@@ -66,6 +79,24 @@ export function MessageBlock({ message, index, conversationId }: MessageBlockPro
             {copied ? '✅ Copiado' : '📋 Copiar'}
           </button>
         )}
+        {hasImages && (
+          <button
+            onClick={handleCopyImages}
+            style={{
+              padding: '2px 8px',
+              fontSize: '11px',
+              background: imagesCopied ? '#3fb950' : 'var(--border)',
+              color: imagesCopied ? '#fff' : 'var(--fg)',
+              border: 'none',
+              borderRadius: '3px',
+              cursor: 'pointer',
+              transition: 'background 0.2s',
+            }}
+            title="Copiar solo imágenes al portapapeles"
+          >
+            {imagesCopied ? '✅ Imágenes copiadas' : '🖼️ Copiar imágenes'}
+          </button>
+        )}
       </div>
       <pre
         className="output-response"
@@ -80,6 +111,7 @@ export function MessageBlock({ message, index, conversationId }: MessageBlockPro
               key={i}
               src={img}
               alt={`Catalog ${i + 1}`}
+              crossOrigin="anonymous"
               style={{ maxHeight: '150px', border: '1px solid var(--border)', borderRadius: '4px', cursor: 'pointer' }}
               onClick={() => window.open(img, '_blank')}
             />
@@ -97,8 +129,10 @@ interface RequestBlockProps {
 
 export function RequestBlock({ request }: RequestBlockProps) {
   const [copied, setCopied] = useState(false);
+  const [imagesCopied, setImagesCopied] = useState(false);
   const isDone = request.status === 'done';
   const hasContent = isDone && (request.response || (request.catalog_images && request.catalog_images.length > 0));
+  const hasImages = isDone && request.catalog_images && request.catalog_images.length > 0;
 
   const handleCopy = async () => {
     if (!isDone || !hasContent) return;
@@ -108,6 +142,17 @@ export function RequestBlock({ request }: RequestBlockProps) {
       setTimeout(() => setCopied(false), 2000);
     } catch (e) {
       console.error('Failed to copy:', e);
+    }
+  };
+
+  const handleCopyImages = async () => {
+    if (!isDone || !hasImages) return;
+    try {
+      await copyImagesToClipboard(request.catalog_images || []);
+      setImagesCopied(true);
+      setTimeout(() => setImagesCopied(false), 2000);
+    } catch (e) {
+      console.error('Failed to copy images:', e);
     }
   };
 
@@ -144,6 +189,24 @@ export function RequestBlock({ request }: RequestBlockProps) {
             {copied ? '✅ Copiado' : '📋 Copiar'}
           </button>
         )}
+        {hasImages && (
+          <button
+            onClick={handleCopyImages}
+            style={{
+              padding: '2px 8px',
+              fontSize: '11px',
+              background: imagesCopied ? '#3fb950' : 'var(--border)',
+              color: imagesCopied ? '#fff' : 'var(--fg)',
+              border: 'none',
+              borderRadius: '3px',
+              cursor: 'pointer',
+              transition: 'background 0.2s',
+            }}
+            title="Copiar solo imágenes al portapapeles"
+          >
+            {imagesCopied ? '✅ Imágenes copiadas' : '🖼️ Copiar imágenes'}
+          </button>
+        )}
       </div>
       <pre
         className="output-response"
@@ -158,6 +221,7 @@ export function RequestBlock({ request }: RequestBlockProps) {
               key={i}
               src={img}
               alt={`Catalog ${i + 1}`}
+              crossOrigin="anonymous"
               style={{ maxHeight: '150px', border: '1px solid var(--border)', borderRadius: '4px', cursor: 'pointer' }}
               onClick={() => window.open(img, '_blank')}
             />
