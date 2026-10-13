@@ -31,4 +31,12 @@ Mejora para guardar las conversaciones por nombre del cliente incluso si se rein
 Ademas, cada conversación y cada busqueda se debe guardar en la conversación del cliente correspondiente.
 ---
 status: DONE
-FIX HTTP 500
+FIX HTTP 50.
+---
+status: TODO
+el archivo mercadolibre.py es un scrapper de mercado libre que tiene como entrada la URL del libro que se busca.
+En la carpeta mercadolibre est´el archivo mercadoLibreExample.html, que guarda el ejemplo de una página pra que busques y 
+tomes como referencia para mejorar mercadolibre.py. El resultado final debe mostrar los datos en la imagen generada.
+----
+status: TODO( omitir por ahora)
+Es necesario que, al hacer una consulta, primero se responda con un saludo breve e indicando que se está buscando el libro, y despues ya seguir el flujo normal de la busqueda con LM Studio y buscalibre,

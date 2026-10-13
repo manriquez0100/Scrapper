@@ -215,6 +215,9 @@ def load_behavior_config() -> Dict[str, str]:
         "greeting_morning_no_name",
         "greeting_afternoon_no_name",
         "greeting_evening_no_name",
+        "purchase_and_shipping_instructions",
+        "payment_intent_instructions",
+        "purchase_and_shipping_response",
     }
     missing_keys = required_keys.difference(config)
     if missing_keys:
@@ -389,6 +392,39 @@ class Agent:
         except Exception:
             logger.exception("Error extracting sender name")
             return ""
+
+    async def is_payment_or_purchase_question(self, message: str) -> bool:
+        """Route purchase, payment, and shipping-process questions through LM Studio."""
+        try:
+            response = await asyncio.wait_for(
+                self.llm.generate(
+                    [
+                        {"role": "system", "content": self.behavior["payment_intent_instructions"]},
+                        {"role": "user", "content": message},
+                    ],
+                    temperature=0.0,
+                    max_tokens=12,
+                ),
+                timeout=20.0,
+            )
+            intent = response.strip().upper().split(maxsplit=1)[0].strip(".,:;!¡") if response.strip() else ""
+            return intent == "PAYMENT_INFO"
+        except asyncio.TimeoutError:
+            logger.warning("LM Studio timeout classifying payment intent; using fallback")
+        except Exception as exc:
+            logger.warning("Could not classify payment intent with LM Studio: %s", exc)
+
+        # The fallback only keeps service available if LM Studio is unavailable.
+        return bool(re.search(
+            r"\b(pag[ao]|pago|pagar|pagos|comprar|compra|pedido|pedir|dep[oó]sito|"
+            r"comprobante|transferencia|env[ií]o|enviar|datos de env[ií]o)\b",
+            message,
+            flags=re.IGNORECASE,
+        ))
+
+    def purchase_and_shipping_response(self) -> str:
+        """Return the approved, gradual buying explanation without bank details."""
+        return self.behavior["purchase_and_shipping_response"]
 
     async def extract_book_query(self, message: str, conversation_context: str = "") -> Optional[str]:
         try:
@@ -572,6 +608,10 @@ class Agent:
         
         # Use persisted name if available, otherwise use extracted name
         name = persisted_name or sender_name
+
+        # This branch must precede book extraction: payment questions are not searches.
+        if await self.is_payment_or_purchase_question(message):
+            return self.purchase_and_shipping_response(), [], name
 
         if is_delivery_question(message):
             delivery_answer = latest_delivery_answer(previous_messages if session_id else [])

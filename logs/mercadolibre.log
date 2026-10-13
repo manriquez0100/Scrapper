@@ -1,0 +1,726 @@
+2026-10-13 13:23:21,568 | ERROR | Error al procesar https://www.mercadolibre.com.mx/gz/cart/v2: La URL debe ser la ficha de un producto (por ejemplo, una URL que contenga '/up/').
+Traceback (most recent call last):
+  File "C:\Users\DATA-MESACNTL3\scrapper\Scrapper\mercadolibre.py", line 289, in main
+    _validar_url_producto(url)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\DATA-MESACNTL3\scrapper\Scrapper\mercadolibre.py", line 57, in _validar_url_producto
+    raise MercadoLibreError("La URL debe ser la ficha de un producto (por ejemplo, una URL que contenga '/up/').")
+MercadoLibreError: La URL debe ser la ficha de un producto (por ejemplo, una URL que contenga '/up/').
+2026-10-13 13:23:23,572 | INFO | Imagen generada: C:\Users\DATA-MESACNTL3\scrapper\Scrapper\busquedas\book_images_mercadolibre\resultado_mercadolibre.png
+2026-10-13 13:23:34,212 | INFO | Abriendo Chrome con el perfil local 'Default'.
+2026-10-13 13:23:37,522 | ERROR | Error al procesar https://www.mercadolibre.com.mx/el-santo-desierto-de-los-carmelitas-de-la-provincia/up/MLMU3297208440: No fue posible abrir Chrome: Message: session not created: Chrome failed to start: crashed.
+  (session not created: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location C:\Program Files\Google\Chrome\Application\chrome.exe is no longer running, so ChromeDriver is assuming that Chrome has crashed.); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff798e59d55+5a55]
+	chromedriver!(No symbol) [0x7ff798d7f540]
+	chromedriver!(No symbol) [0x7ff798ba45fd]
+	chromedriver!(No symbol) [0x7ff798be74e0]
+	chromedriver!(No symbol) [0x7ff798be260a]
+	chromedriver!(No symbol) [0x7ff798c3766f]
+	chromedriver!(No symbol) [0x7ff798c36ed6]
+	chromedriver!(No symbol) [0x7ff798bf1a12]
+	chromedriver!(No symbol) [0x7ff798bf2823]
+	chromedriver!GetHandleVerifier [0x7ff7992704b1+41c1b1]
+	chromedriver!GetHandleVerifier [0x7ff79929e26b+449f6b]
+	chromedriver!GetHandleVerifier [0x7ff79929274e+43e44e]
+	chromedriver!GetHandleVerifier [0x7ff798f532fe+feffe]
+	chromedriver!(No symbol) [0x7ff798d8cb55]
+	chromedriver!(No symbol) [0x7ff798d87f64]
+	chromedriver!(No symbol) [0x7ff798d880f4]
+	chromedriver!(No symbol) [0x7ff798d72e4c]
+	KERNEL32!BaseThreadInitThunk [0x7ffd73a77374+14]
+	ntdll!RtlUserThreadStart [0x7ffd74d7cc91+21]
+Traceback (most recent call last):
+  File "C:\Users\DATA-MESACNTL3\scrapper\Scrapper\mercadolibre.py", line 194, in abrir_chrome_y_extraer
+    driver = webdriver.Chrome(options=options)
+  File "C:\Users\DATA-MESACNTL3\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 46, in __init__
+    super().__init__(
+    ~~~~~~~~~~~~~~~~^
+        browser_name=DesiredCapabilities.CHROME["browserName"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        keep_alive=keep_alive,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\DATA-MESACNTL3\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\chromium\webdriver.py", line 71, in __init__
+    super().__init__(command_executor=executor, options=options)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DATA-MESACNTL3\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 263, in __init__
+    self.start_session(capabilities)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\DATA-MESACNTL3\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 366, in start_session
+    response = self.execute(Command.NEW_SESSION, caps)["value"]
+               ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DATA-MESACNTL3\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 458, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\DATA-MESACNTL3\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: session not created: Chrome failed to start: crashed.
+  (session not created: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location C:\Program Files\Google\Chrome\Application\chrome.exe is no longer running, so ChromeDriver is assuming that Chrome has crashed.); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff798e59d55+5a55]
+	chromedriver!(No symbol) [0x7ff798d7f540]
+	chromedriver!(No symbol) [0x7ff798ba45fd]
+	chromedriver!(No symbol) [0x7ff798be74e0]
+	chromedriver!(No symbol) [0x7ff798be260a]
+	chromedriver!(No symbol) [0x7ff798c3766f]
+	chromedriver!(No symbol) [0x7ff798c36ed6]
+	chromedriver!(No symbol) [0x7ff798bf1a12]
+	chromedriver!(No symbol) [0x7ff798bf2823]
+	chromedriver!GetHandleVerifier [0x7ff7992704b1+41c1b1]
+	chromedriver!GetHandleVerifier [0x7ff79929e26b+449f6b]
+	chromedriver!GetHandleVerifier [0x7ff79929274e+43e44e]
+	chromedriver!GetHandleVerifier [0x7ff798f532fe+feffe]
+	chromedriver!(No symbol) [0x7ff798d8cb55]
+	chromedriver!(No symbol) [0x7ff798d87f64]
+	chromedriver!(No symbol) [0x7ff798d880f4]
+	chromedriver!(No symbol) [0x7ff798d72e4c]
+	KERNEL32!BaseThreadInitThunk [0x7ffd73a77374+14]
+	ntdll!RtlUserThreadStart [0x7ffd74d7cc91+21]
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\DATA-MESACNTL3\scrapper\Scrapper\mercadolibre.py", line 290, in main
+    data = extraer_desde_html(args.html.read_text(encoding="utf-8"), url) if args.html else abrir_chrome_y_extraer(url, args.chrome_user_data_dir, args.chrome_profile)
+                                                                                            ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DATA-MESACNTL3\scrapper\Scrapper\mercadolibre.py", line 199, in abrir_chrome_y_extraer
+    raise MercadoLibreError(f"No fue posible abrir Chrome: {message}") from exc
+MercadoLibreError: No fue posible abrir Chrome: Message: session not created: Chrome failed to start: crashed.
+  (session not created: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location C:\Program Files\Google\Chrome\Application\chrome.exe is no longer running, so ChromeDriver is assuming that Chrome has crashed.); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff798e59d55+5a55]
+	chromedriver!(No symbol) [0x7ff798d7f540]
+	chromedriver!(No symbol) [0x7ff798ba45fd]
+	chromedriver!(No symbol) [0x7ff798be74e0]
+	chromedriver!(No symbol) [0x7ff798be260a]
+	chromedriver!(No symbol) [0x7ff798c3766f]
+	chromedriver!(No symbol) [0x7ff798c36ed6]
+	chromedriver!(No symbol) [0x7ff798bf1a12]
+	chromedriver!(No symbol) [0x7ff798bf2823]
+	chromedriver!GetHandleVerifier [0x7ff7992704b1+41c1b1]
+	chromedriver!GetHandleVerifier [0x7ff79929e26b+449f6b]
+	chromedriver!GetHandleVerifier [0x7ff79929274e+43e44e]
+	chromedriver!GetHandleVerifier [0x7ff798f532fe+feffe]
+	chromedriver!(No symbol) [0x7ff798d8cb55]
+	chromedriver!(No symbol) [0x7ff798d87f64]
+	chromedriver!(No symbol) [0x7ff798d880f4]
+	chromedriver!(No symbol) [0x7ff798d72e4c]
+	KERNEL32!BaseThreadInitThunk [0x7ffd73a77374+14]
+	ntdll!RtlUserThreadStart [0x7ffd74d7cc91+21]
+
+2026-10-13 13:24:04,836 | INFO | Imagen generada: C:\Users\DATA-MESACNTL3\scrapper\Scrapper\busquedas\book_images_mercadolibre\resultado_mercadolibre.png
+2026-10-13 13:24:37,910 | INFO | Abriendo Chrome con el perfil local 'Default'.
+2026-10-13 13:24:41,017 | ERROR | Chrome no pudo iniciarse con el perfil 'Default': Message: session not created: Chrome failed to start: crashed.
+  (session not created: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location C:\Program Files\Google\Chrome\Application\chrome.exe is no longer running, so ChromeDriver is assuming that Chrome has crashed.); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff7de339d55+5a55]
+	chromedriver!(No symbol) [0x7ff7de25f540]
+	chromedriver!(No symbol) [0x7ff7de0845fd]
+	chromedriver!(No symbol) [0x7ff7de0c74e0]
+	chromedriver!(No symbol) [0x7ff7de0c260a]
+	chromedriver!(No symbol) [0x7ff7de11766f]
+	chromedriver!(No symbol) [0x7ff7de116ed6]
+	chromedriver!(No symbol) [0x7ff7de0d1a12]
+	chromedriver!(No symbol) [0x7ff7de0d2823]
+	chromedriver!GetHandleVerifier [0x7ff7de7504b1+41c1b1]
+	chromedriver!GetHandleVerifier [0x7ff7de77e26b+449f6b]
+	chromedriver!GetHandleVerifier [0x7ff7de77274e+43e44e]
+	chromedriver!GetHandleVerifier [0x7ff7de4332fe+feffe]
+	chromedriver!(No symbol) [0x7ff7de26cb55]
+	chromedriver!(No symbol) [0x7ff7de267f64]
+	chromedriver!(No symbol) [0x7ff7de2680f4]
+	chromedriver!(No symbol) [0x7ff7de252e4c]
+	KERNEL32!BaseThreadInitThunk [0x7ffd73a77374+14]
+	ntdll!RtlUserThreadStart [0x7ffd74d7cc91+21]
+Traceback (most recent call last):
+  File "C:\Users\DATA-MESACNTL3\scrapper\Scrapper\mercadoLibre.py", line 194, in abrir_chrome_y_extraer
+    driver = webdriver.Chrome(options=options)
+  File "C:\Users\DATA-MESACNTL3\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 46, in __init__
+    super().__init__(
+    ~~~~~~~~~~~~~~~~^
+        browser_name=DesiredCapabilities.CHROME["browserName"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        keep_alive=keep_alive,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\DATA-MESACNTL3\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\chromium\webdriver.py", line 71, in __init__
+    super().__init__(command_executor=executor, options=options)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DATA-MESACNTL3\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 263, in __init__
+    self.start_session(capabilities)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\DATA-MESACNTL3\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 366, in start_session
+    response = self.execute(Command.NEW_SESSION, caps)["value"]
+               ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DATA-MESACNTL3\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 458, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\DATA-MESACNTL3\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: session not created: Chrome failed to start: crashed.
+  (session not created: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location C:\Program Files\Google\Chrome\Application\chrome.exe is no longer running, so ChromeDriver is assuming that Chrome has crashed.); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff7de339d55+5a55]
+	chromedriver!(No symbol) [0x7ff7de25f540]
+	chromedriver!(No symbol) [0x7ff7de0845fd]
+	chromedriver!(No symbol) [0x7ff7de0c74e0]
+	chromedriver!(No symbol) [0x7ff7de0c260a]
+	chromedriver!(No symbol) [0x7ff7de11766f]
+	chromedriver!(No symbol) [0x7ff7de116ed6]
+	chromedriver!(No symbol) [0x7ff7de0d1a12]
+	chromedriver!(No symbol) [0x7ff7de0d2823]
+	chromedriver!GetHandleVerifier [0x7ff7de7504b1+41c1b1]
+	chromedriver!GetHandleVerifier [0x7ff7de77e26b+449f6b]
+	chromedriver!GetHandleVerifier [0x7ff7de77274e+43e44e]
+	chromedriver!GetHandleVerifier [0x7ff7de4332fe+feffe]
+	chromedriver!(No symbol) [0x7ff7de26cb55]
+	chromedriver!(No symbol) [0x7ff7de267f64]
+	chromedriver!(No symbol) [0x7ff7de2680f4]
+	chromedriver!(No symbol) [0x7ff7de252e4c]
+	KERNEL32!BaseThreadInitThunk [0x7ffd73a77374+14]
+	ntdll!RtlUserThreadStart [0x7ffd74d7cc91+21]
+
+2026-10-13 13:24:41,026 | ERROR | Error al procesar https://www.mercadolibre.com.mx/historia-documental-del-cine-mexicano--garcia-riera-vol-6/up/MLMU711511914: No fue posible abrir Chrome: No se pudo abrir el perfil que ya tiene tu sesión. Cierra todas las ventanas y procesos de Chrome, vuelve a ejecutar el scraper y no abras Chrome hasta que termine. El detalle técnico quedó en logs/mercadolibre.log.
+Traceback (most recent call last):
+  File "C:\Users\DATA-MESACNTL3\scrapper\Scrapper\mercadoLibre.py", line 194, in abrir_chrome_y_extraer
+    driver = webdriver.Chrome(options=options)
+  File "C:\Users\DATA-MESACNTL3\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 46, in __init__
+    super().__init__(
+    ~~~~~~~~~~~~~~~~^
+        browser_name=DesiredCapabilities.CHROME["browserName"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        keep_alive=keep_alive,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\DATA-MESACNTL3\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\chromium\webdriver.py", line 71, in __init__
+    super().__init__(command_executor=executor, options=options)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DATA-MESACNTL3\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 263, in __init__
+    self.start_session(capabilities)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\DATA-MESACNTL3\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 366, in start_session
+    response = self.execute(Command.NEW_SESSION, caps)["value"]
+               ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DATA-MESACNTL3\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 458, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\DATA-MESACNTL3\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: session not created: Chrome failed to start: crashed.
+  (session not created: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location C:\Program Files\Google\Chrome\Application\chrome.exe is no longer running, so ChromeDriver is assuming that Chrome has crashed.); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff7de339d55+5a55]
+	chromedriver!(No symbol) [0x7ff7de25f540]
+	chromedriver!(No symbol) [0x7ff7de0845fd]
+	chromedriver!(No symbol) [0x7ff7de0c74e0]
+	chromedriver!(No symbol) [0x7ff7de0c260a]
+	chromedriver!(No symbol) [0x7ff7de11766f]
+	chromedriver!(No symbol) [0x7ff7de116ed6]
+	chromedriver!(No symbol) [0x7ff7de0d1a12]
+	chromedriver!(No symbol) [0x7ff7de0d2823]
+	chromedriver!GetHandleVerifier [0x7ff7de7504b1+41c1b1]
+	chromedriver!GetHandleVerifier [0x7ff7de77e26b+449f6b]
+	chromedriver!GetHandleVerifier [0x7ff7de77274e+43e44e]
+	chromedriver!GetHandleVerifier [0x7ff7de4332fe+feffe]
+	chromedriver!(No symbol) [0x7ff7de26cb55]
+	chromedriver!(No symbol) [0x7ff7de267f64]
+	chromedriver!(No symbol) [0x7ff7de2680f4]
+	chromedriver!(No symbol) [0x7ff7de252e4c]
+	KERNEL32!BaseThreadInitThunk [0x7ffd73a77374+14]
+	ntdll!RtlUserThreadStart [0x7ffd74d7cc91+21]
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\DATA-MESACNTL3\scrapper\Scrapper\mercadoLibre.py", line 293, in main
+    data = extraer_desde_html(args.html.read_text(encoding="utf-8"), url) if args.html else abrir_chrome_y_extraer(url, args.chrome_user_data_dir, args.chrome_profile)
+                                                                                            ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DATA-MESACNTL3\scrapper\Scrapper\mercadoLibre.py", line 202, in abrir_chrome_y_extraer
+    raise MercadoLibreError(f"No fue posible abrir Chrome: {message}") from exc
+MercadoLibreError: No fue posible abrir Chrome: No se pudo abrir el perfil que ya tiene tu sesión. Cierra todas las ventanas y procesos de Chrome, vuelve a ejecutar el scraper y no abras Chrome hasta que termine. El detalle técnico quedó en logs/mercadolibre.log.
+2026-10-13 13:25:04,455 | INFO | Abriendo Chrome con el perfil local 'Default'.
+2026-10-13 13:25:07,340 | ERROR | Chrome no pudo iniciarse con el perfil 'Default': Message: session not created: Chrome failed to start: crashed.
+  (session not created: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location C:\Program Files\Google\Chrome\Application\chrome.exe is no longer running, so ChromeDriver is assuming that Chrome has crashed.); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff7de339d55+5a55]
+	chromedriver!(No symbol) [0x7ff7de25f540]
+	chromedriver!(No symbol) [0x7ff7de0845fd]
+	chromedriver!(No symbol) [0x7ff7de0c74e0]
+	chromedriver!(No symbol) [0x7ff7de0c260a]
+	chromedriver!(No symbol) [0x7ff7de11766f]
+	chromedriver!(No symbol) [0x7ff7de116ed6]
+	chromedriver!(No symbol) [0x7ff7de0d1a12]
+	chromedriver!(No symbol) [0x7ff7de0d2823]
+	chromedriver!GetHandleVerifier [0x7ff7de7504b1+41c1b1]
+	chromedriver!GetHandleVerifier [0x7ff7de77e26b+449f6b]
+	chromedriver!GetHandleVerifier [0x7ff7de77274e+43e44e]
+	chromedriver!GetHandleVerifier [0x7ff7de4332fe+feffe]
+	chromedriver!(No symbol) [0x7ff7de26cb55]
+	chromedriver!(No symbol) [0x7ff7de267f64]
+	chromedriver!(No symbol) [0x7ff7de2680f4]
+	chromedriver!(No symbol) [0x7ff7de252e4c]
+	KERNEL32!BaseThreadInitThunk [0x7ffd73a77374+14]
+	ntdll!RtlUserThreadStart [0x7ffd74d7cc91+21]
+Traceback (most recent call last):
+  File "C:\Users\DATA-MESACNTL3\scrapper\Scrapper\mercadoLibre.py", line 194, in abrir_chrome_y_extraer
+    driver = webdriver.Chrome(options=options)
+  File "C:\Users\DATA-MESACNTL3\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 46, in __init__
+    super().__init__(
+    ~~~~~~~~~~~~~~~~^
+        browser_name=DesiredCapabilities.CHROME["browserName"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        keep_alive=keep_alive,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\DATA-MESACNTL3\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\chromium\webdriver.py", line 71, in __init__
+    super().__init__(command_executor=executor, options=options)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DATA-MESACNTL3\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 263, in __init__
+    self.start_session(capabilities)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\DATA-MESACNTL3\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 366, in start_session
+    response = self.execute(Command.NEW_SESSION, caps)["value"]
+               ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DATA-MESACNTL3\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 458, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\DATA-MESACNTL3\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: session not created: Chrome failed to start: crashed.
+  (session not created: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location C:\Program Files\Google\Chrome\Application\chrome.exe is no longer running, so ChromeDriver is assuming that Chrome has crashed.); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff7de339d55+5a55]
+	chromedriver!(No symbol) [0x7ff7de25f540]
+	chromedriver!(No symbol) [0x7ff7de0845fd]
+	chromedriver!(No symbol) [0x7ff7de0c74e0]
+	chromedriver!(No symbol) [0x7ff7de0c260a]
+	chromedriver!(No symbol) [0x7ff7de11766f]
+	chromedriver!(No symbol) [0x7ff7de116ed6]
+	chromedriver!(No symbol) [0x7ff7de0d1a12]
+	chromedriver!(No symbol) [0x7ff7de0d2823]
+	chromedriver!GetHandleVerifier [0x7ff7de7504b1+41c1b1]
+	chromedriver!GetHandleVerifier [0x7ff7de77e26b+449f6b]
+	chromedriver!GetHandleVerifier [0x7ff7de77274e+43e44e]
+	chromedriver!GetHandleVerifier [0x7ff7de4332fe+feffe]
+	chromedriver!(No symbol) [0x7ff7de26cb55]
+	chromedriver!(No symbol) [0x7ff7de267f64]
+	chromedriver!(No symbol) [0x7ff7de2680f4]
+	chromedriver!(No symbol) [0x7ff7de252e4c]
+	KERNEL32!BaseThreadInitThunk [0x7ffd73a77374+14]
+	ntdll!RtlUserThreadStart [0x7ffd74d7cc91+21]
+
+2026-10-13 13:25:07,343 | ERROR | Error al procesar https://www.mercadolibre.com.mx/historia-documental-del-cine-mexicano--garcia-riera-vol-6/up/MLMU711511914: No fue posible abrir Chrome: No se pudo abrir el perfil que ya tiene tu sesión. Cierra todas las ventanas y procesos de Chrome, vuelve a ejecutar el scraper y no abras Chrome hasta que termine. El detalle técnico quedó en logs/mercadolibre.log.
+Traceback (most recent call last):
+  File "C:\Users\DATA-MESACNTL3\scrapper\Scrapper\mercadoLibre.py", line 194, in abrir_chrome_y_extraer
+    driver = webdriver.Chrome(options=options)
+  File "C:\Users\DATA-MESACNTL3\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 46, in __init__
+    super().__init__(
+    ~~~~~~~~~~~~~~~~^
+        browser_name=DesiredCapabilities.CHROME["browserName"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        keep_alive=keep_alive,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\DATA-MESACNTL3\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\chromium\webdriver.py", line 71, in __init__
+    super().__init__(command_executor=executor, options=options)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DATA-MESACNTL3\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 263, in __init__
+    self.start_session(capabilities)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\DATA-MESACNTL3\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 366, in start_session
+    response = self.execute(Command.NEW_SESSION, caps)["value"]
+               ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DATA-MESACNTL3\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 458, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\DATA-MESACNTL3\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: session not created: Chrome failed to start: crashed.
+  (session not created: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location C:\Program Files\Google\Chrome\Application\chrome.exe is no longer running, so ChromeDriver is assuming that Chrome has crashed.); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff7de339d55+5a55]
+	chromedriver!(No symbol) [0x7ff7de25f540]
+	chromedriver!(No symbol) [0x7ff7de0845fd]
+	chromedriver!(No symbol) [0x7ff7de0c74e0]
+	chromedriver!(No symbol) [0x7ff7de0c260a]
+	chromedriver!(No symbol) [0x7ff7de11766f]
+	chromedriver!(No symbol) [0x7ff7de116ed6]
+	chromedriver!(No symbol) [0x7ff7de0d1a12]
+	chromedriver!(No symbol) [0x7ff7de0d2823]
+	chromedriver!GetHandleVerifier [0x7ff7de7504b1+41c1b1]
+	chromedriver!GetHandleVerifier [0x7ff7de77e26b+449f6b]
+	chromedriver!GetHandleVerifier [0x7ff7de77274e+43e44e]
+	chromedriver!GetHandleVerifier [0x7ff7de4332fe+feffe]
+	chromedriver!(No symbol) [0x7ff7de26cb55]
+	chromedriver!(No symbol) [0x7ff7de267f64]
+	chromedriver!(No symbol) [0x7ff7de2680f4]
+	chromedriver!(No symbol) [0x7ff7de252e4c]
+	KERNEL32!BaseThreadInitThunk [0x7ffd73a77374+14]
+	ntdll!RtlUserThreadStart [0x7ffd74d7cc91+21]
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\DATA-MESACNTL3\scrapper\Scrapper\mercadoLibre.py", line 293, in main
+    data = extraer_desde_html(args.html.read_text(encoding="utf-8"), url) if args.html else abrir_chrome_y_extraer(url, args.chrome_user_data_dir, args.chrome_profile)
+                                                                                            ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DATA-MESACNTL3\scrapper\Scrapper\mercadoLibre.py", line 202, in abrir_chrome_y_extraer
+    raise MercadoLibreError(f"No fue posible abrir Chrome: {message}") from exc
+MercadoLibreError: No fue posible abrir Chrome: No se pudo abrir el perfil que ya tiene tu sesión. Cierra todas las ventanas y procesos de Chrome, vuelve a ejecutar el scraper y no abras Chrome hasta que termine. El detalle técnico quedó en logs/mercadolibre.log.
+2026-10-13 13:26:42,698 | ERROR | Error al procesar https://www.mercadolibre.com.mx/historia-documental-del-cine-mexicano--garcia-riera-vol-6/up/MLMU711511914: [WinError 32] El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso
+Traceback (most recent call last):
+  File "C:\Users\DATA-MESACNTL3\scrapper\Scrapper\mercadolibre.py", line 327, in main
+    data = extraer_desde_html(args.html.read_text(encoding="utf-8"), url) if args.html else abrir_chrome_y_extraer(url, args.chrome_user_data_dir, args.chrome_profile)
+                                                                                            ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DATA-MESACNTL3\scrapper\Scrapper\mercadolibre.py", line 219, in abrir_chrome_y_extraer
+    temporary_profile, chrome_data_dir = _copiar_perfil_chrome(user_data_dir, profile)
+                                         ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DATA-MESACNTL3\scrapper\Scrapper\mercadolibre.py", line 200, in _copiar_perfil_chrome
+    shutil.copy2(source, target)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\DATA-MESACNTL3\AppData\Local\Programs\Python\Python313\Lib\shutil.py", line 453, in copy2
+    _winapi.CopyFile2(src_, dst_, flags)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+PermissionError: [WinError 32] El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso
+2026-10-13 13:27:55,638 | INFO | Abriendo Chrome en modo público; no se solicita ni se usa una cuenta.
+2026-10-13 13:27:56,888 | INFO | Cargando publicación: https://www.mercadolibre.com.mx/historia-documental-del-cine-mexicano--garcia-riera-vol-6/up/MLMU711511914
+2026-10-13 13:27:58,217 | INFO | Extracción terminada: https://www.mercadolibre.com.mx/historia-documental-del-cine-mexicano--garcia-riera-vol-6/up/MLMU711511914
+2026-10-13 13:28:00,805 | INFO | Imagen generada: C:\Users\DATA-MESACNTL3\scrapper\Scrapper\busquedas\book_images_mercadolibre\resultado_mercadolibre_profile.png
+2026-10-13 13:29:21,842 | INFO | Abriendo Chrome con el perfil 'Default'.
+2026-10-13 13:29:25,036 | ERROR | Chrome no pudo iniciarse con el perfil 'Default': Message: session not created: Chrome failed to start: crashed.
+  (session not created: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location C:\Program Files\Google\Chrome\Application\chrome.exe is no longer running, so ChromeDriver is assuming that Chrome has crashed.); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff798009d55+5a55]
+	chromedriver!(No symbol) [0x7ff797f2f540]
+	chromedriver!(No symbol) [0x7ff797d545fd]
+	chromedriver!(No symbol) [0x7ff797d974e0]
+	chromedriver!(No symbol) [0x7ff797d9260a]
+	chromedriver!(No symbol) [0x7ff797de766f]
+	chromedriver!(No symbol) [0x7ff797de6ed6]
+	chromedriver!(No symbol) [0x7ff797da1a12]
+	chromedriver!(No symbol) [0x7ff797da2823]
+	chromedriver!GetHandleVerifier [0x7ff7984204b1+41c1b1]
+	chromedriver!GetHandleVerifier [0x7ff79844e26b+449f6b]
+	chromedriver!GetHandleVerifier [0x7ff79844274e+43e44e]
+	chromedriver!GetHandleVerifier [0x7ff7981032fe+feffe]
+	chromedriver!(No symbol) [0x7ff797f3cb55]
+	chromedriver!(No symbol) [0x7ff797f37f64]
+	chromedriver!(No symbol) [0x7ff797f380f4]
+	chromedriver!(No symbol) [0x7ff797f22e4c]
+	KERNEL32!BaseThreadInitThunk [0x7ffd73a77374+14]
+	ntdll!RtlUserThreadStart [0x7ffd74d7cc91+21]
+Traceback (most recent call last):
+  File "C:\Users\DATA-MESACNTL3\scrapper\Scrapper\mercadoLibre.py", line 198, in abrir_chrome_y_extraer
+    driver = webdriver.Chrome(options=options)
+  File "C:\Users\DATA-MESACNTL3\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 46, in __init__
+    super().__init__(
+    ~~~~~~~~~~~~~~~~^
+        browser_name=DesiredCapabilities.CHROME["browserName"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        keep_alive=keep_alive,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\DATA-MESACNTL3\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\chromium\webdriver.py", line 71, in __init__
+    super().__init__(command_executor=executor, options=options)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DATA-MESACNTL3\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 263, in __init__
+    self.start_session(capabilities)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\DATA-MESACNTL3\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 366, in start_session
+    response = self.execute(Command.NEW_SESSION, caps)["value"]
+               ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DATA-MESACNTL3\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 458, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\DATA-MESACNTL3\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: session not created: Chrome failed to start: crashed.
+  (session not created: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location C:\Program Files\Google\Chrome\Application\chrome.exe is no longer running, so ChromeDriver is assuming that Chrome has crashed.); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff798009d55+5a55]
+	chromedriver!(No symbol) [0x7ff797f2f540]
+	chromedriver!(No symbol) [0x7ff797d545fd]
+	chromedriver!(No symbol) [0x7ff797d974e0]
+	chromedriver!(No symbol) [0x7ff797d9260a]
+	chromedriver!(No symbol) [0x7ff797de766f]
+	chromedriver!(No symbol) [0x7ff797de6ed6]
+	chromedriver!(No symbol) [0x7ff797da1a12]
+	chromedriver!(No symbol) [0x7ff797da2823]
+	chromedriver!GetHandleVerifier [0x7ff7984204b1+41c1b1]
+	chromedriver!GetHandleVerifier [0x7ff79844e26b+449f6b]
+	chromedriver!GetHandleVerifier [0x7ff79844274e+43e44e]
+	chromedriver!GetHandleVerifier [0x7ff7981032fe+feffe]
+	chromedriver!(No symbol) [0x7ff797f3cb55]
+	chromedriver!(No symbol) [0x7ff797f37f64]
+	chromedriver!(No symbol) [0x7ff797f380f4]
+	chromedriver!(No symbol) [0x7ff797f22e4c]
+	KERNEL32!BaseThreadInitThunk [0x7ffd73a77374+14]
+	ntdll!RtlUserThreadStart [0x7ffd74d7cc91+21]
+
+2026-10-13 13:29:25,746 | ERROR | Error al procesar https://www.mercadolibre.com.mx/mi-psicologa-me-dijo-de-katherine-hoyer-tapa-blanda-en-espanol-2025/p/MLM54366993: No fue posible abrir Chrome: El perfil de Chrome está ocupado. Ciérralo antes de usar --usar-perfil-chrome.
+Traceback (most recent call last):
+  File "C:\Users\DATA-MESACNTL3\scrapper\Scrapper\mercadoLibre.py", line 198, in abrir_chrome_y_extraer
+    driver = webdriver.Chrome(options=options)
+  File "C:\Users\DATA-MESACNTL3\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 46, in __init__
+    super().__init__(
+    ~~~~~~~~~~~~~~~~^
+        browser_name=DesiredCapabilities.CHROME["browserName"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        keep_alive=keep_alive,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\DATA-MESACNTL3\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\chromium\webdriver.py", line 71, in __init__
+    super().__init__(command_executor=executor, options=options)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DATA-MESACNTL3\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 263, in __init__
+    self.start_session(capabilities)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\DATA-MESACNTL3\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 366, in start_session
+    response = self.execute(Command.NEW_SESSION, caps)["value"]
+               ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DATA-MESACNTL3\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 458, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\DATA-MESACNTL3\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: session not created: Chrome failed to start: crashed.
+  (session not created: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location C:\Program Files\Google\Chrome\Application\chrome.exe is no longer running, so ChromeDriver is assuming that Chrome has crashed.); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff798009d55+5a55]
+	chromedriver!(No symbol) [0x7ff797f2f540]
+	chromedriver!(No symbol) [0x7ff797d545fd]
+	chromedriver!(No symbol) [0x7ff797d974e0]
+	chromedriver!(No symbol) [0x7ff797d9260a]
+	chromedriver!(No symbol) [0x7ff797de766f]
+	chromedriver!(No symbol) [0x7ff797de6ed6]
+	chromedriver!(No symbol) [0x7ff797da1a12]
+	chromedriver!(No symbol) [0x7ff797da2823]
+	chromedriver!GetHandleVerifier [0x7ff7984204b1+41c1b1]
+	chromedriver!GetHandleVerifier [0x7ff79844e26b+449f6b]
+	chromedriver!GetHandleVerifier [0x7ff79844274e+43e44e]
+	chromedriver!GetHandleVerifier [0x7ff7981032fe+feffe]
+	chromedriver!(No symbol) [0x7ff797f3cb55]
+	chromedriver!(No symbol) [0x7ff797f37f64]
+	chromedriver!(No symbol) [0x7ff797f380f4]
+	chromedriver!(No symbol) [0x7ff797f22e4c]
+	KERNEL32!BaseThreadInitThunk [0x7ffd73a77374+14]
+	ntdll!RtlUserThreadStart [0x7ffd74d7cc91+21]
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\DATA-MESACNTL3\scrapper\Scrapper\mercadoLibre.py", line 300, in main
+    data = extraer_desde_html(args.html.read_text(encoding="utf-8"), url) if args.html else abrir_chrome_y_extraer(
+                                                                                            ~~~~~~~~~~~~~~~~~~~~~~^
+        url, args.chrome_user_data_dir, args.chrome_profile, args.usar_perfil_chrome
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\DATA-MESACNTL3\scrapper\Scrapper\mercadoLibre.py", line 205, in abrir_chrome_y_extraer
+    raise MercadoLibreError(f"No fue posible abrir Chrome: {message}") from exc
+MercadoLibreError: No fue posible abrir Chrome: El perfil de Chrome está ocupado. Ciérralo antes de usar --usar-perfil-chrome.
+2026-10-13 13:29:50,607 | ERROR | Error al procesar }DATA-MESACNTL3@DESKTOP-PE3AAM6 MINGW64 ~/scrapper/Scrapper (main): La URL debe pertenecer a Mercado Libre.
+Traceback (most recent call last):
+  File "C:\Users\DATA-MESACNTL3\scrapper\Scrapper\mercadoLibre.py", line 299, in main
+    _validar_url_producto(url)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\DATA-MESACNTL3\scrapper\Scrapper\mercadoLibre.py", line 54, in _validar_url_producto
+    raise MercadoLibreError("La URL debe pertenecer a Mercado Libre.")
+MercadoLibreError: La URL debe pertenecer a Mercado Libre.
+2026-10-13 13:29:56,800 | ERROR | Error al procesar $ python mercadoLibre.py --usar-perfil-chrome: La URL debe pertenecer a Mercado Libre.
+Traceback (most recent call last):
+  File "C:\Users\DATA-MESACNTL3\scrapper\Scrapper\mercadoLibre.py", line 299, in main
+    _validar_url_producto(url)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\DATA-MESACNTL3\scrapper\Scrapper\mercadoLibre.py", line 54, in _validar_url_producto
+    raise MercadoLibreError("La URL debe pertenecer a Mercado Libre.")
+MercadoLibreError: La URL debe pertenecer a Mercado Libre.
+2026-10-13 13:30:45,624 | INFO | Imagen generada: C:\Users\DATA-MESACNTL3\scrapper\Scrapper\busquedas\book_images_mercadolibre\resultado_mercadolibre.png
+2026-10-13 13:31:55,782 | ERROR | Error al procesar DATA-MESACNTL3@DESKTOP-PE3AAM6 MINGW64 ~/scrapper/Scrapper (main): La URL debe pertenecer a Mercado Libre.
+Traceback (most recent call last):
+  File "C:\Users\DATA-MESACNTL3\scrapper\Scrapper\mercadoLibre.py", line 303, in main
+    _validar_url_producto(url)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\DATA-MESACNTL3\scrapper\Scrapper\mercadoLibre.py", line 54, in _validar_url_producto
+    raise MercadoLibreError("La URL debe pertenecer a Mercado Libre.")
+MercadoLibreError: La URL debe pertenecer a Mercado Libre.
+2026-10-13 13:32:54,405 | ERROR | Error al procesar $ python mercadoLibre.py --usar-perfil-chrome: La URL debe pertenecer a Mercado Libre.
+Traceback (most recent call last):
+  File "C:\Users\DATA-MESACNTL3\scrapper\Scrapper\mercadoLibre.py", line 303, in main
+    _validar_url_producto(url)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\DATA-MESACNTL3\scrapper\Scrapper\mercadoLibre.py", line 54, in _validar_url_producto
+    raise MercadoLibreError("La URL debe pertenecer a Mercado Libre.")
+MercadoLibreError: La URL debe pertenecer a Mercado Libre.
+2026-10-13 13:33:04,254 | INFO | Abriendo Chrome con el perfil 'Default'.
+2026-10-13 13:33:07,404 | ERROR | Chrome no pudo iniciarse con el perfil 'Default': Message: session not created: Chrome failed to start: crashed.
+  (session not created: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location C:\Program Files\Google\Chrome\Application\chrome.exe is no longer running, so ChromeDriver is assuming that Chrome has crashed.); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff722219d55+5a55]
+	chromedriver!(No symbol) [0x7ff72213f540]
+	chromedriver!(No symbol) [0x7ff721f645fd]
+	chromedriver!(No symbol) [0x7ff721fa74e0]
+	chromedriver!(No symbol) [0x7ff721fa260a]
+	chromedriver!(No symbol) [0x7ff721ff766f]
+	chromedriver!(No symbol) [0x7ff721ff6ed6]
+	chromedriver!(No symbol) [0x7ff721fb1a12]
+	chromedriver!(No symbol) [0x7ff721fb2823]
+	chromedriver!GetHandleVerifier [0x7ff7226304b1+41c1b1]
+	chromedriver!GetHandleVerifier [0x7ff72265e26b+449f6b]
+	chromedriver!GetHandleVerifier [0x7ff72265274e+43e44e]
+	chromedriver!GetHandleVerifier [0x7ff7223132fe+feffe]
+	chromedriver!(No symbol) [0x7ff72214cb55]
+	chromedriver!(No symbol) [0x7ff722147f64]
+	chromedriver!(No symbol) [0x7ff7221480f4]
+	chromedriver!(No symbol) [0x7ff722132e4c]
+	KERNEL32!BaseThreadInitThunk [0x7ffd73a77374+14]
+	ntdll!RtlUserThreadStart [0x7ffd74d7cc91+21]
+Traceback (most recent call last):
+  File "C:\Users\DATA-MESACNTL3\scrapper\Scrapper\mercadoLibre.py", line 198, in abrir_chrome_y_extraer
+    driver = webdriver.Chrome(options=options)
+  File "C:\Users\DATA-MESACNTL3\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 46, in __init__
+    super().__init__(
+    ~~~~~~~~~~~~~~~~^
+        browser_name=DesiredCapabilities.CHROME["browserName"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        keep_alive=keep_alive,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\DATA-MESACNTL3\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\chromium\webdriver.py", line 71, in __init__
+    super().__init__(command_executor=executor, options=options)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DATA-MESACNTL3\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 263, in __init__
+    self.start_session(capabilities)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\DATA-MESACNTL3\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 366, in start_session
+    response = self.execute(Command.NEW_SESSION, caps)["value"]
+               ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DATA-MESACNTL3\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 458, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\DATA-MESACNTL3\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: session not created: Chrome failed to start: crashed.
+  (session not created: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location C:\Program Files\Google\Chrome\Application\chrome.exe is no longer running, so ChromeDriver is assuming that Chrome has crashed.); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff722219d55+5a55]
+	chromedriver!(No symbol) [0x7ff72213f540]
+	chromedriver!(No symbol) [0x7ff721f645fd]
+	chromedriver!(No symbol) [0x7ff721fa74e0]
+	chromedriver!(No symbol) [0x7ff721fa260a]
+	chromedriver!(No symbol) [0x7ff721ff766f]
+	chromedriver!(No symbol) [0x7ff721ff6ed6]
+	chromedriver!(No symbol) [0x7ff721fb1a12]
+	chromedriver!(No symbol) [0x7ff721fb2823]
+	chromedriver!GetHandleVerifier [0x7ff7226304b1+41c1b1]
+	chromedriver!GetHandleVerifier [0x7ff72265e26b+449f6b]
+	chromedriver!GetHandleVerifier [0x7ff72265274e+43e44e]
+	chromedriver!GetHandleVerifier [0x7ff7223132fe+feffe]
+	chromedriver!(No symbol) [0x7ff72214cb55]
+	chromedriver!(No symbol) [0x7ff722147f64]
+	chromedriver!(No symbol) [0x7ff7221480f4]
+	chromedriver!(No symbol) [0x7ff722132e4c]
+	KERNEL32!BaseThreadInitThunk [0x7ffd73a77374+14]
+	ntdll!RtlUserThreadStart [0x7ffd74d7cc91+21]
+
+2026-10-13 13:33:07,409 | ERROR | Error al procesar https://www.mercadolibre.com.mx/mi-psicologa-me-dijo-de-katherine-hoyer-tapa-blanda-en-espanol-2025/p/MLM54366993: No fue posible abrir Chrome: El perfil de Chrome está ocupado. Ciérralo antes de usar --usar-perfil-chrome, o ejecuta sin esa opción para consultar la publicación pública sin iniciar sesión.
+Traceback (most recent call last):
+  File "C:\Users\DATA-MESACNTL3\scrapper\Scrapper\mercadoLibre.py", line 198, in abrir_chrome_y_extraer
+    driver = webdriver.Chrome(options=options)
+  File "C:\Users\DATA-MESACNTL3\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 46, in __init__
+    super().__init__(
+    ~~~~~~~~~~~~~~~~^
+        browser_name=DesiredCapabilities.CHROME["browserName"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        keep_alive=keep_alive,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\DATA-MESACNTL3\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\chromium\webdriver.py", line 71, in __init__
+    super().__init__(command_executor=executor, options=options)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DATA-MESACNTL3\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 263, in __init__
+    self.start_session(capabilities)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\DATA-MESACNTL3\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 366, in start_session
+    response = self.execute(Command.NEW_SESSION, caps)["value"]
+               ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DATA-MESACNTL3\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 458, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\DATA-MESACNTL3\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: session not created: Chrome failed to start: crashed.
+  (session not created: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location C:\Program Files\Google\Chrome\Application\chrome.exe is no longer running, so ChromeDriver is assuming that Chrome has crashed.); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff722219d55+5a55]
+	chromedriver!(No symbol) [0x7ff72213f540]
+	chromedriver!(No symbol) [0x7ff721f645fd]
+	chromedriver!(No symbol) [0x7ff721fa74e0]
+	chromedriver!(No symbol) [0x7ff721fa260a]
+	chromedriver!(No symbol) [0x7ff721ff766f]
+	chromedriver!(No symbol) [0x7ff721ff6ed6]
+	chromedriver!(No symbol) [0x7ff721fb1a12]
+	chromedriver!(No symbol) [0x7ff721fb2823]
+	chromedriver!GetHandleVerifier [0x7ff7226304b1+41c1b1]
+	chromedriver!GetHandleVerifier [0x7ff72265e26b+449f6b]
+	chromedriver!GetHandleVerifier [0x7ff72265274e+43e44e]
+	chromedriver!GetHandleVerifier [0x7ff7223132fe+feffe]
+	chromedriver!(No symbol) [0x7ff72214cb55]
+	chromedriver!(No symbol) [0x7ff722147f64]
+	chromedriver!(No symbol) [0x7ff7221480f4]
+	chromedriver!(No symbol) [0x7ff722132e4c]
+	KERNEL32!BaseThreadInitThunk [0x7ffd73a77374+14]
+	ntdll!RtlUserThreadStart [0x7ffd74d7cc91+21]
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\DATA-MESACNTL3\scrapper\Scrapper\mercadoLibre.py", line 304, in main
+    data = extraer_desde_html(args.html.read_text(encoding="utf-8"), url) if args.html else abrir_chrome_y_extraer(
+                                                                                            ~~~~~~~~~~~~~~~~~~~~~~^
+        url, args.chrome_user_data_dir, args.chrome_profile, args.usar_perfil_chrome
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\DATA-MESACNTL3\scrapper\Scrapper\mercadoLibre.py", line 206, in abrir_chrome_y_extraer
+    raise MercadoLibreError(f"No fue posible abrir Chrome: {message}") from exc
+MercadoLibreError: No fue posible abrir Chrome: El perfil de Chrome está ocupado. Ciérralo antes de usar --usar-perfil-chrome, o ejecuta sin esa opción para consultar la publicación pública sin iniciar sesión.

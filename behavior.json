@@ -15,5 +15,8 @@
   "greeting_evening": "Buenas noches, {name}.",
   "greeting_morning_no_name": "Buenos días.",
   "greeting_afternoon_no_name": "Buenas tardes.",
-  "greeting_evening_no_name": "Buenas noches."
+  "greeting_evening_no_name": "Buenas noches.",
+  "purchase_and_shipping_instructions": "Cuando el cliente pregunte cómo comprar, cómo hacer el pedido, cómo se realiza el pago o cómo se envía el libro, explica brevemente el proceso: todas las compras requieren pago previo al envío. El cliente debe realizar primero el pago por el total del libro y enviar el comprobante de pago, ya sea con la foto del ticket o con un mensaje. Después debe proporcionar sus datos de envío: ciudad, estado, código postal y teléfono. El teléfono se solicita para que la paquetería pueda comunicarse con el cliente cuando llegue a su domicilio. Una vez confirmado el pago y recibidos los datos de envío, nosotros enviamos el libro. No inventes métodos de pago, costos de envío, tiempos de entrega ni condiciones adicionales que no estén indicados.",
+  "payment_intent_instructions": "Clasifica el mensaje del cliente. Responde ÚNICAMENTE PAYMENT_INFO si pregunta por cómo comprar, hacer un pedido, pagar, método o datos de pago, depósito, comprobante, envío o los datos que debe proporcionar para recibir el libro. Responde ÚNICAMENTE OTHER en cualquier otro caso. No añadas explicaciones.",
+  "purchase_and_shipping_response": "Para realizar su compra, primero se cubre el total del libro y se comparte el comprobante de pago, ya sea con la foto del ticket o con un mensaje. Después sólo necesitamos sus datos de envío: ciudad, estado, código postal y teléfono, para que la paquetería pueda comunicarse con usted al llegar a su domicilio. Una vez confirmado el pago y recibidos esos datos, enviamos su libro. ¿Gusta que le envíe los datos de depósito?"
 }
