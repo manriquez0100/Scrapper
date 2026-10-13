@@ -99,7 +99,7 @@ def extraer_entrega_buscalibre(driver: webdriver.Chrome) -> Dict[str, Any]:
     return {"delivery_estimate": "No disponible", "delivery_dates": []}
 
 
-def extraer_detalle_libro(driver, url_libro, numero_producto):
+def extraer_detalle_libro(driver, url_libro, numero_producto, ganancia_envio: float = 200):
     if not url_libro:
         return None
     try:
@@ -158,7 +158,6 @@ def extraer_detalle_libro(driver, url_libro, numero_producto):
                     precio_numerico = re.search(r'[\d,]+\.?\d*', precio_texto)
                     if precio_numerico:
                         precio_valor = float(precio_numerico.group().replace(',', ''))
-                        ganancia_envio = 200
                         precio_actualizado = precio_valor + ganancia_envio
                         unidad = int(precio_actualizado) % 10
                         if 1 <= unidad <= 5:
@@ -284,7 +283,7 @@ def extraer_detalle_libro(driver, url_libro, numero_producto):
         return None
 
 
-def search_buscalibre_sync(query: str, max_results: int = 5) -> Dict[str, Any]:
+def search_buscalibre_sync(query: str, max_results: int = 5, ganancia_envio: float = 200) -> Dict[str, Any]:
     driver = setup_chrome_driver()
     results = []
     try:
@@ -327,7 +326,7 @@ def search_buscalibre_sync(query: str, max_results: int = 5) -> Dict[str, Any]:
                 url = extraer_url_libro(producto)
                 if not url:
                     continue
-                detail = extraer_detalle_libro(driver, url, i)
+                detail = extraer_detalle_libro(driver, url, i, ganancia_envio)
                 if not detail:
                     continue
                 available = detail.get('precio_con_envio', 'No disponible') != 'No disponible'
@@ -357,12 +356,12 @@ def search_buscalibre_sync(query: str, max_results: int = 5) -> Dict[str, Any]:
     return {"results": results}
 
 
-async def search_buscalibre(query: str, max_results: int = 5) -> Dict[str, Any]:
+async def search_buscalibre(query: str, max_results: int = 5, ganancia_envio: float = 200) -> Dict[str, Any]:
     async with _search_semaphore:
         try:
             # Add 120 second timeout to prevent hanging
             return await asyncio.wait_for(
-                asyncio.to_thread(search_buscalibre_sync, query, max_results),
+                asyncio.to_thread(search_buscalibre_sync, query, max_results, ganancia_envio),
                 timeout=120.0
             )
         except asyncio.TimeoutError:

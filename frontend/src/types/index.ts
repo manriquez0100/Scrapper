@@ -16,6 +16,10 @@ export interface ApiResponse {
   session_id: string;
 }
 
+export interface PricingConfig {
+  ganancia_envio: number;
+}
+
 export interface Message {
   role: 'user' | 'assistant';
   content: string;
@@ -33,6 +37,7 @@ export interface Conversation {
 export interface ConversationSummary {
   id: string;
   created_at: string;
+  updated_at?: string;
   preview: string;
   client_name?: string;
 }

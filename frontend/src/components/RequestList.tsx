@@ -100,7 +100,7 @@ export function RequestList({ requests, onLoadConversation, activeConversationId
                 {conv.client_name || 'Cliente sin nombre'}
               </div>
               <div style={{ fontSize: '11px', color: '#8b949e', marginBottom: '4px' }}>
-                {new Date(conv.created_at).toLocaleString()}
+                Última actividad: {new Date(conv.updated_at || conv.created_at).toLocaleString()}
               </div>
               <div style={{ fontSize: '13px', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
                 {conv.preview || '(empty)'}

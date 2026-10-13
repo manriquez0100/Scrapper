@@ -3,11 +3,13 @@ import type { RequestItem, RequestStatus } from '../types';
 import { sendMessage } from '../services/api';
 
 const MAX_CONCURRENT = 1;
+const BETWEEN_REQUESTS_MS = 250;
 
 export function useRequestQueue() {
   const [requests, setRequests] = useState<RequestItem[]>([]);
   const [currentSessionId, setCurrentSessionId] = useState<string>(() => crypto.randomUUID());
   const [lastCompletedSessionId, setLastCompletedSessionId] = useState<string | null>(null);
+  const [queueVersion, setQueueVersion] = useState(0);
   const activeRef = useRef(0);
   const processingRef = useRef<Set<string>>(new Set());
   const requestsRef = useRef(requests);
@@ -41,14 +43,18 @@ export function useRequestQueue() {
         updateStatus(pendingRequest.id, 'error', err.message);
       })
       .finally(() => {
-        activeRef.current--;
-        processingRef.current.delete(pendingRequest.id);
+        window.setTimeout(() => {
+          if (!processingRef.current.delete(pendingRequest.id)) return;
+          activeRef.current = Math.max(0, activeRef.current - 1);
+          // Trigger the next FIFO item only after this one has released the browser and LM Studio.
+          setQueueVersion(version => version + 1);
+        }, BETWEEN_REQUESTS_MS);
       });
   }, [updateStatus]);
 
   useEffect(() => {
     processQueue();
-  }, [requests, processQueue]);
+  }, [requests, queueVersion, processQueue]);
 
   const enqueue = useCallback((question: string) => {
     const id = crypto.randomUUID();

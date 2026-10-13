@@ -10,6 +10,7 @@ export default defineConfig({
       '/health': 'http://localhost:8000',
       '/conversations': 'http://localhost:8000',
       '/catalogos': 'http://localhost:8000',
+      '/pricing': 'http://localhost:8000',
     }
   }
 })

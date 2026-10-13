@@ -1,4 +1,4 @@
-import type { ApiResponse, Conversation, ConversationSummary } from '../types';
+import type { ApiResponse, Conversation, ConversationSummary, PricingConfig } from '../types';
 
 export async function sendMessage(message: string, session_id?: string): Promise<ApiResponse> {
   const body: { message: string; session_id?: string } = { message };
@@ -15,6 +15,22 @@ export async function sendMessage(message: string, session_id?: string): Promise
 
 export async function checkHealth(): Promise<{ status: string }> {
   const res = await fetch('/health');
+  return res.json();
+}
+
+export async function getPricing(): Promise<PricingConfig> {
+  const res = await fetch('/pricing');
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  return res.json();
+}
+
+export async function updatePricing(ganancia_envio: number): Promise<PricingConfig> {
+  const res = await fetch('/pricing', {
+    method: 'PUT',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ ganancia_envio }),
+  });
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
   return res.json();
 }
 

@@ -30,9 +30,40 @@ BEHAVIOR_CONFIG_PATH = Path(
 ASSISTANT_TIMEZONE = os.getenv("ASSISTANT_TIMEZONE", "America/Mexico_City")
 
 CONVERSATIONS_FILE = Path(__file__).with_name("conversations.json")
+PRICING_CONFIG_FILE = Path(__file__).with_name("pricing_config.json")
+DEFAULT_GANANCIA_ENVIO = 200.0
 
 # Lock for thread-safe file operations
 _conversations_lock = asyncio.Lock()
+_pricing_lock = asyncio.Lock()
+
+
+def _load_pricing_config() -> Dict[str, float]:
+    try:
+        with PRICING_CONFIG_FILE.open("r", encoding="utf-8") as config_file:
+            value = float(json.load(config_file).get("ganancia_envio", DEFAULT_GANANCIA_ENVIO))
+        return {"ganancia_envio": max(0, value)}
+    except (OSError, ValueError, TypeError, json.JSONDecodeError):
+        return {"ganancia_envio": DEFAULT_GANANCIA_ENVIO}
+
+
+_pricing_config = _load_pricing_config()
+
+
+async def get_pricing_config() -> Dict[str, float]:
+    async with _pricing_lock:
+        return dict(_pricing_config)
+
+
+async def save_pricing_config(ganancia_envio: float) -> Dict[str, float]:
+    config = {"ganancia_envio": ganancia_envio}
+    async with _pricing_lock:
+        temporary_file = PRICING_CONFIG_FILE.with_suffix(".json.tmp")
+        with temporary_file.open("w", encoding="utf-8") as config_file:
+            json.dump(config, config_file, ensure_ascii=False, indent=2)
+        temporary_file.replace(PRICING_CONFIG_FILE)
+        _pricing_config.update(config)
+        return dict(_pricing_config)
 
 
 def _migrate_conversations(data: Dict) -> Dict:
@@ -563,7 +594,12 @@ class Agent:
         if search_query != query:
             logger.info("Consulta enriquecida para Buscalibre: %s", search_query)
         
-        search_results = await search_buscalibre(search_query, max_results=5)
+        pricing_config = await get_pricing_config()
+        search_results = await search_buscalibre(
+            search_query,
+            max_results=5,
+            ganancia_envio=pricing_config["ganancia_envio"],
+        )
         if search_results.get("error"):
             logger.warning("Buscalibre search failed: %s", search_results["error"])
             return self.behavior["search_error_response"].format(name=name), [], name
@@ -618,9 +654,14 @@ class MessageResponse(BaseModel):
     session_id: str
 
 
+class PricingConfig(BaseModel):
+    ganancia_envio: float = Field(..., ge=0, le=10_000, description="Ganancia fija por libro en MXN")
+
+
 class ConversationSummary(BaseModel):
     id: str
     created_at: str
+    updated_at: Optional[str] = None
     preview: str
     client_name: Optional[str] = None
 
@@ -690,6 +731,7 @@ async def list_conversations() -> List[ConversationSummary]:
         summaries.append(ConversationSummary(
             id=conv["id"],
             created_at=conv["created_at"],
+            updated_at=conv.get("updated_at", conv["created_at"]),
             preview=preview,
             client_name=conv.get("client_name") or conv.get("sender_name"),
         ))
@@ -723,6 +765,16 @@ async def delete_conversation(conversation_id: str) -> Dict[str, str]:
 @app.get("/health")
 async def health() -> Dict[str, str]:
     return {"status": "ok"}
+
+
+@app.get("/pricing", response_model=PricingConfig)
+async def get_pricing() -> PricingConfig:
+    return PricingConfig(**await get_pricing_config())
+
+
+@app.put("/pricing", response_model=PricingConfig)
+async def update_pricing(config: PricingConfig) -> PricingConfig:
+    return PricingConfig(**await save_pricing_config(config.ganancia_envio))
 
 
 class CatalogCORSMiddleware(BaseHTTPMiddleware):
