@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { copyResponseToClipboard, copyImagesToClipboard } from '../utils/clipboard';
+import { copyResponseToClipboard, copyImagesFromDOM, copyAllFromDOM } from '../utils/clipboard';
 import type { Message, RequestItem } from '../types';
 
 interface MessageBlockProps {
@@ -11,6 +11,7 @@ interface MessageBlockProps {
 export function MessageBlock({ message, index, conversationId }: MessageBlockProps) {
   const [copied, setCopied] = useState(false);
   const [imagesCopied, setImagesCopied] = useState(false);
+  const [allCopied, setAllCopied] = useState(false);
   const isAssistant = message.role === 'assistant';
   const hasContent = isAssistant && (message.content || (message.catalog_images && message.catalog_images.length > 0));
   const hasImages = isAssistant && message.catalog_images && message.catalog_images.length > 0;
@@ -18,7 +19,7 @@ export function MessageBlock({ message, index, conversationId }: MessageBlockPro
   const handleCopy = async () => {
     if (!isAssistant || !hasContent) return;
     try {
-      await copyResponseToClipboard(message.content || '', message.catalog_images || []);
+      await copyResponseToClipboard(message.content || '');
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch (e) {
@@ -29,11 +30,22 @@ export function MessageBlock({ message, index, conversationId }: MessageBlockPro
   const handleCopyImages = async () => {
     if (!isAssistant || !hasImages) return;
     try {
-      await copyImagesToClipboard(message.catalog_images || []);
+      await copyImagesFromDOM(message.catalog_images || []);
       setImagesCopied(true);
       setTimeout(() => setImagesCopied(false), 2000);
     } catch (e) {
       console.error('Failed to copy images:', e);
+    }
+  };
+
+  const handleCopyAll = async () => {
+    if (!isAssistant || !hasContent) return;
+    try {
+      await copyAllFromDOM(message.content || '', message.catalog_images || []);
+      setAllCopied(true);
+      setTimeout(() => setAllCopied(false), 2000);
+    } catch (e) {
+      console.error('Failed to copy all:', e);
     }
   };
 
@@ -61,41 +73,59 @@ export function MessageBlock({ message, index, conversationId }: MessageBlockPro
           </span>
         )}
         {hasContent && (
-          <button
-            onClick={handleCopy}
-            style={{
-              marginLeft: 'auto',
-              padding: '2px 8px',
-              fontSize: '11px',
-              background: copied ? '#3fb950' : 'var(--border)',
-              color: copied ? '#fff' : 'var(--fg)',
-              border: 'none',
-              borderRadius: '3px',
-              cursor: 'pointer',
-              transition: 'background 0.2s',
-            }}
-            title="Copiar respuesta al portapapeles (texto e imágenes)"
-          >
-            {copied ? '✅ Copiado' : '📋 Copiar'}
-          </button>
-        )}
-        {hasImages && (
-          <button
-            onClick={handleCopyImages}
-            style={{
-              padding: '2px 8px',
-              fontSize: '11px',
-              background: imagesCopied ? '#3fb950' : 'var(--border)',
-              color: imagesCopied ? '#fff' : 'var(--fg)',
-              border: 'none',
-              borderRadius: '3px',
-              cursor: 'pointer',
-              transition: 'background 0.2s',
-            }}
-            title="Copiar solo imágenes al portapapeles"
-          >
-            {imagesCopied ? '✅ Imágenes copiadas' : '🖼️ Copiar imágenes'}
-          </button>
+          <>
+            <button
+              onClick={handleCopy}
+              style={{
+                marginLeft: 'auto',
+                padding: '2px 8px',
+                fontSize: '11px',
+                background: copied ? '#3fb950' : 'var(--border)',
+                color: copied ? '#fff' : 'var(--fg)',
+                border: 'none',
+                borderRadius: '3px',
+                cursor: 'pointer',
+                transition: 'background 0.2s',
+              }}
+              title="Copiar texto"
+            >
+              {copied ? '✅ Copiado' : '📋 Copiar'}
+            </button>
+            {hasImages && (
+              <button
+                onClick={handleCopyImages}
+                style={{
+                  padding: '2px 8px',
+                  fontSize: '11px',
+                  background: imagesCopied ? '#3fb950' : 'var(--border)',
+                  color: imagesCopied ? '#fff' : 'var(--fg)',
+                  border: 'none',
+                  borderRadius: '3px',
+                  cursor: 'pointer',
+                  transition: 'background 0.2s',
+                }}
+                title="Copiar solo imágenes"
+              >
+                {imagesCopied ? '✅ Imágenes copiadas' : '🖼️ Copiar imágenes'}
+              </button>
+            )}
+            <button
+              onClick={handleCopyAll}
+              style={{
+                padding: '2px 8px',
+                fontSize: '11px',
+                background: allCopied ? '#3fb950' : 'var(--border)',
+                color: allCopied ? '#fff' : 'var(--fg)',
+                border: 'none',
+                borderRadius: '3px',
+                cursor: 'pointer',
+                transition: 'background 0.2s',
+              }}
+              title="Copiar todo (texto + imágenes)"
+            >
+              {allCopied ? '✅ Todo copiado' : '📄 Copiar todo'}
+            </button>
+          </>
         )}
       </div>
       <pre
@@ -130,6 +160,7 @@ interface RequestBlockProps {
 export function RequestBlock({ request }: RequestBlockProps) {
   const [copied, setCopied] = useState(false);
   const [imagesCopied, setImagesCopied] = useState(false);
+  const [allCopied, setAllCopied] = useState(false);
   const isDone = request.status === 'done';
   const hasContent = isDone && (request.response || (request.catalog_images && request.catalog_images.length > 0));
   const hasImages = isDone && request.catalog_images && request.catalog_images.length > 0;
@@ -137,7 +168,7 @@ export function RequestBlock({ request }: RequestBlockProps) {
   const handleCopy = async () => {
     if (!isDone || !hasContent) return;
     try {
-      await copyResponseToClipboard(request.response || '', request.catalog_images || []);
+      await copyResponseToClipboard(request.response || '');
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch (e) {
@@ -148,11 +179,22 @@ export function RequestBlock({ request }: RequestBlockProps) {
   const handleCopyImages = async () => {
     if (!isDone || !hasImages) return;
     try {
-      await copyImagesToClipboard(request.catalog_images || []);
+      await copyImagesFromDOM(request.catalog_images || []);
       setImagesCopied(true);
       setTimeout(() => setImagesCopied(false), 2000);
     } catch (e) {
       console.error('Failed to copy images:', e);
+    }
+  };
+
+  const handleCopyAll = async () => {
+    if (!isDone || !hasContent) return;
+    try {
+      await copyAllFromDOM(request.response || '', request.catalog_images || []);
+      setAllCopied(true);
+      setTimeout(() => setAllCopied(false), 2000);
+    } catch (e) {
+      console.error('Failed to copy all:', e);
     }
   };
 
@@ -171,41 +213,59 @@ export function RequestBlock({ request }: RequestBlockProps) {
       >
         ▶ {request.question}
         {hasContent && (
-          <button
-            onClick={handleCopy}
-            style={{
-              marginLeft: 'auto',
-              padding: '2px 8px',
-              fontSize: '11px',
-              background: copied ? '#3fb950' : 'var(--border)',
-              color: copied ? '#fff' : 'var(--fg)',
-              border: 'none',
-              borderRadius: '3px',
-              cursor: 'pointer',
-              transition: 'background 0.2s',
-            }}
-            title="Copiar respuesta al portapapeles (texto e imágenes)"
-          >
-            {copied ? '✅ Copiado' : '📋 Copiar'}
-          </button>
-        )}
-        {hasImages && (
-          <button
-            onClick={handleCopyImages}
-            style={{
-              padding: '2px 8px',
-              fontSize: '11px',
-              background: imagesCopied ? '#3fb950' : 'var(--border)',
-              color: imagesCopied ? '#fff' : 'var(--fg)',
-              border: 'none',
-              borderRadius: '3px',
-              cursor: 'pointer',
-              transition: 'background 0.2s',
-            }}
-            title="Copiar solo imágenes al portapapeles"
-          >
-            {imagesCopied ? '✅ Imágenes copiadas' : '🖼️ Copiar imágenes'}
-          </button>
+          <>
+            <button
+              onClick={handleCopy}
+              style={{
+                marginLeft: 'auto',
+                padding: '2px 8px',
+                fontSize: '11px',
+                background: copied ? '#3fb950' : 'var(--border)',
+                color: copied ? '#fff' : 'var(--fg)',
+                border: 'none',
+                borderRadius: '3px',
+                cursor: 'pointer',
+                transition: 'background 0.2s',
+              }}
+              title="Copiar texto"
+            >
+              {copied ? '✅ Copiado' : '📋 Copiar'}
+            </button>
+            {hasImages && (
+              <button
+                onClick={handleCopyImages}
+                style={{
+                  padding: '2px 8px',
+                  fontSize: '11px',
+                  background: imagesCopied ? '#3fb950' : 'var(--border)',
+                  color: imagesCopied ? '#fff' : 'var(--fg)',
+                  border: 'none',
+                  borderRadius: '3px',
+                  cursor: 'pointer',
+                  transition: 'background 0.2s',
+                }}
+                title="Copiar solo imágenes"
+              >
+                {imagesCopied ? '✅ Imágenes copiadas' : '🖼️ Copiar imágenes'}
+              </button>
+            )}
+            <button
+              onClick={handleCopyAll}
+              style={{
+                padding: '2px 8px',
+                fontSize: '11px',
+                background: allCopied ? '#3fb950' : 'var(--border)',
+                color: allCopied ? '#fff' : 'var(--fg)',
+                border: 'none',
+                borderRadius: '3px',
+                cursor: 'pointer',
+                transition: 'background 0.2s',
+              }}
+              title="Copiar todo (texto + imágenes)"
+            >
+              {allCopied ? '✅ Todo copiado' : '📄 Copiar todo'}
+            </button>
+          </>
         )}
       </div>
       <pre

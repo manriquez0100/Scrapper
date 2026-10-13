@@ -7,7 +7,7 @@ import { MessageBlock, RequestBlock } from './MessageBlock';
 import type { Conversation, Message } from '../types';
 
 export function Terminal() {
-  const { requests, enqueue, clearAll, currentSessionId } = useRequestQueue();
+  const { requests, enqueue, clearAll, selectSession, startNewConversation, lastCompletedSessionId } = useRequestQueue();
   const [history, setHistory] = useState<string[]>([]);
   const [historyIndex, setHistoryIndex] = useState(-1);
   const outputRef = useRef<HTMLDivElement>(null);
@@ -23,6 +23,10 @@ export function Terminal() {
     setHistory(prev => [...prev, question]);
     setHistoryIndex(-1);
     enqueue(question);
+  };
+
+  const newConversation = () => {
+    startNewConversation();
     setActiveConversation(null);
   };
 
@@ -33,12 +37,17 @@ export function Terminal() {
     try {
       const conv = await getConversation(id);
       setActiveConversation(conv);
+      selectSession(conv.id);
     } catch (err) {
       console.error('Failed to load conversation:', err);
     } finally {
       setConversationLoading(false);
     }
   };
+
+  useEffect(() => {
+    if (lastCompletedSessionId) loadConversation(lastCompletedSessionId);
+  }, [lastCompletedSessionId]);
 
   useEffect(() => {
     if (outputRef.current) {
@@ -99,6 +108,8 @@ export function Terminal() {
         requests={requests}
         onLoadConversation={loadConversation}
         activeConversationId={activeConversation?.id || null}
+        refreshKey={completedRequests.length}
+        onNewConversation={newConversation}
       />
 
       <div

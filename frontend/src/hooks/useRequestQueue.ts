@@ -2,11 +2,12 @@ import { useState, useRef, useCallback, useEffect } from 'react';
 import type { RequestItem, RequestStatus } from '../types';
 import { sendMessage } from '../services/api';
 
-const MAX_CONCURRENT = 10;
+const MAX_CONCURRENT = 1;
 
 export function useRequestQueue() {
   const [requests, setRequests] = useState<RequestItem[]>([]);
   const [currentSessionId, setCurrentSessionId] = useState<string>(() => crypto.randomUUID());
+  const [lastCompletedSessionId, setLastCompletedSessionId] = useState<string | null>(null);
   const activeRef = useRef(0);
   const processingRef = useRef<Set<string>>(new Set());
   const requestsRef = useRef(requests);
@@ -34,6 +35,7 @@ export function useRequestQueue() {
     sendMessage(pendingRequest.question, pendingRequest.session_id)
       .then(data => {
         updateStatus(pendingRequest.id, 'done', data.response, data.catalog_images);
+        setLastCompletedSessionId(data.session_id);
       })
       .catch(err => {
         updateStatus(pendingRequest.id, 'error', err.message);
@@ -68,5 +70,14 @@ export function useRequestQueue() {
     setCurrentSessionId(crypto.randomUUID());
   }, []);
 
-  return { requests, enqueue, clearAll, currentSessionId };
+  const selectSession = useCallback((sessionId: string) => {
+    setCurrentSessionId(sessionId);
+  }, []);
+
+  const startNewConversation = useCallback(() => {
+    setCurrentSessionId(crypto.randomUUID());
+    setLastCompletedSessionId(null);
+  }, []);
+
+  return { requests, enqueue, clearAll, selectSession, startNewConversation, lastCompletedSessionId };
 }

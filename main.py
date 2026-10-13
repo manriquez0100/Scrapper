@@ -35,30 +35,54 @@ CONVERSATIONS_FILE = Path(__file__).with_name("conversations.json")
 _conversations_lock = asyncio.Lock()
 
 
+def _migrate_conversations(data: Dict) -> Dict:
+    """Migrate old conversation format to new format with clients."""
+    conversations = data.get("conversations", [])
+    clients = data.get("clients", {})
+    for conv in conversations:
+        name = conv.get("client_name") or conv.get("sender_name")
+        if not name:
+            continue
+        profile = clients.setdefault(name.lower().strip(), {
+            "name": name,
+            "first_seen": conv.get("created_at"),
+            "last_seen": conv.get("created_at"),
+            "conversation_ids": [],
+        })
+        if conv["id"] not in profile["conversation_ids"]:
+            profile["conversation_ids"].append(conv["id"])
+    data = {"clients": clients, "conversations": conversations}
+    return data
+
+
 async def load_conversations() -> Dict:
     """Load conversations from JSON file."""
     async with _conversations_lock:
         try:
             with CONVERSATIONS_FILE.open("r", encoding="utf-8") as f:
-                return json.load(f)
+                data = json.load(f)
+            return _migrate_conversations(data)
         except (OSError, json.JSONDecodeError):
-            return {"conversations": []}
+            return {"clients": {}, "conversations": []}
 
 
 async def save_conversations(data: Dict) -> None:
     """Save conversations to JSON file."""
     async with _conversations_lock:
         try:
-            with CONVERSATIONS_FILE.open("w", encoding="utf-8") as f:
+            temporary_file = CONVERSATIONS_FILE.with_suffix(".json.tmp")
+            with temporary_file.open("w", encoding="utf-8") as f:
                 json.dump(data, f, ensure_ascii=False, indent=2)
+            temporary_file.replace(CONVERSATIONS_FILE)
         except OSError as exc:
             logger.error("Failed to save conversations: %s", exc)
 
 
-async def add_message_to_conversation(session_id: str, role: str, content: str, catalog_images: Optional[List[str]] = None) -> None:
+async def add_message_to_conversation(session_id: str, role: str, content: str, catalog_images: Optional[List[str]] = None, client_name: Optional[str] = None) -> None:
     """Add a message to a conversation, creating it if needed."""
     data = await load_conversations()
     conversations = data.get("conversations", [])
+    clients = data.get("clients", {})
     
     conv = next((c for c in conversations if c["id"] == session_id), None)
     if not conv:
@@ -69,14 +93,67 @@ async def add_message_to_conversation(session_id: str, role: str, content: str, 
         }
         conversations.append(conv)
     
+    # Link conversation to client if client_name provided
+    resolved_client_name = conv.get("client_name") or client_name
+    if resolved_client_name:
+        conv.setdefault("client_name", resolved_client_name)
+        # Update client profile
+        normalized_name = resolved_client_name.lower().strip()
+        if normalized_name not in clients:
+            clients[normalized_name] = {
+                "name": resolved_client_name,
+                "first_seen": datetime.now(ZoneInfo(ASSISTANT_TIMEZONE)).isoformat(),
+                "last_seen": datetime.now(ZoneInfo(ASSISTANT_TIMEZONE)).isoformat(),
+                "conversation_ids": []
+            }
+        client_profile = clients[normalized_name]
+        client_profile["last_seen"] = datetime.now(ZoneInfo(ASSISTANT_TIMEZONE)).isoformat()
+        if session_id not in client_profile["conversation_ids"]:
+            client_profile["conversation_ids"].append(session_id)
+    
     conv["messages"].append({
         "role": role,
         "content": content,
         "catalog_images": catalog_images or [],
         "timestamp": datetime.now(ZoneInfo(ASSISTANT_TIMEZONE)).isoformat()
     })
+    conv["updated_at"] = datetime.now(ZoneInfo(ASSISTANT_TIMEZONE)).isoformat()
     
-    await save_conversations({"conversations": conversations})
+    data["clients"] = clients
+    await save_conversations({"clients": clients, "conversations": conversations})
+
+
+async def get_or_create_client(client_name: str) -> Dict:
+    """Get or create a client profile by name."""
+    data = await load_conversations()
+    clients = data.get("clients", {})
+    normalized_name = client_name.lower().strip()
+    
+    if normalized_name not in clients:
+        clients[normalized_name] = {
+            "name": client_name,
+            "first_seen": datetime.now(ZoneInfo(ASSISTANT_TIMEZONE)).isoformat(),
+            "last_seen": datetime.now(ZoneInfo(ASSISTANT_TIMEZONE)).isoformat(),
+            "conversation_ids": []
+        }
+        data["clients"] = clients
+        await save_conversations({"clients": clients, "conversations": data.get("conversations", [])})
+    
+    return clients[normalized_name]
+
+
+async def get_client_conversations(client_name: str) -> List[Dict]:
+    """Get all conversations for a specific client."""
+    data = await load_conversations()
+    clients = data.get("clients", {})
+    normalized_name = client_name.lower().strip()
+    
+    if normalized_name not in clients:
+        return []
+    
+    conversation_ids = clients[normalized_name].get("conversation_ids", [])
+    conversations = data.get("conversations", [])
+    return [c for c in conversations if c["id"] in conversation_ids]
 
 
 def load_behavior_config() -> Dict[str, str]:
@@ -92,6 +169,7 @@ def load_behavior_config() -> Dict[str, str]:
     required_keys = {
         "query_extraction_instructions",
         "query_enrichment_instructions",
+        "name_extraction_instructions",
         "customer_care_instructions",
         "no_book_query_response",
         "no_results_response_template",
@@ -103,6 +181,9 @@ def load_behavior_config() -> Dict[str, str]:
         "greeting_morning",
         "greeting_afternoon",
         "greeting_evening",
+        "greeting_morning_no_name",
+        "greeting_afternoon_no_name",
+        "greeting_evening_no_name",
     }
     missing_keys = required_keys.difference(config)
     if missing_keys:
@@ -113,14 +194,19 @@ def load_behavior_config() -> Dict[str, str]:
     return config
 
 
-def get_greeting(behavior: Dict[str, str]) -> str:
+def get_greeting(behavior: Dict[str, str], name: Optional[str] = None) -> str:
     """Return the configured greeting for the assistant's local time."""
     hour = datetime.now(ZoneInfo(ASSISTANT_TIMEZONE)).hour
     if 5 <= hour < 12:
-        return behavior["greeting_morning"]
-    if 12 <= hour < 19:
-        return behavior["greeting_afternoon"]
-    return behavior["greeting_evening"]
+        template = behavior["greeting_morning"] if name else behavior["greeting_morning_no_name"]
+    elif 12 <= hour < 19:
+        template = behavior["greeting_afternoon"] if name else behavior["greeting_afternoon_no_name"]
+    else:
+        template = behavior["greeting_evening"] if name else behavior["greeting_evening_no_name"]
+    
+    if name:
+        return template.format(name=name)
+    return template
 
 
 CATALOG_DIR = Path(__file__).resolve().with_name("busquedas") / "catalogos"
@@ -204,23 +290,66 @@ def extract_query_fallback(message: str) -> Optional[str]:
     return query if len(query) >= 3 and any(char.isalpha() for char in query) else None
 
 
+def extract_sender_name_fallback(message: str) -> str:
+    """Extract a sender name from common customer-message prefixes."""
+    match = re.match(
+        r"^\s*(?:de\s*:\s*)?([A-Za-zÁÉÍÓÚÜÑáéíóúüñ]+)(?:\s+[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]+){0,2}\s+(?:dice|dijo)\s*:",
+        message,
+        flags=re.IGNORECASE,
+    )
+    return match.group(1).capitalize() if match else ""
+
+
 class Agent:
     def __init__(self, llm: LLMProvider, behavior: Optional[Dict[str, str]] = None):
         self.llm = llm
         self.behavior = behavior or load_behavior_config()
 
-    async def extract_book_query(self, message: str) -> Optional[str]:
-        system_prompt = self.behavior["query_extraction_instructions"]
-        response = await self.llm.generate(
-            [
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": message},
-            ],
-            temperature=0.1,
-            max_tokens=80,
-        )
+    async def extract_sender_name(self, message: str) -> str:
+        """Extract sender's first name, preferring an explicit message prefix."""
+        explicit_name = extract_sender_name_fallback(message)
+        if explicit_name:
+            return explicit_name
+        try:
+            system_prompt = self.behavior["name_extraction_instructions"]
+            response = await self.llm.generate(
+                [
+                    {"role": "system", "content": system_prompt},
+                    {"role": "user", "content": message},
+                ],
+                temperature=0.0,
+                max_tokens=30,
+            )
+            name = response.strip().strip('"\\').split()[0] if response.strip() else ""
+            if name.upper() == "NO_NAME":
+                return ""
+            return name
+        except Exception:
+            logger.exception("Error extracting sender name")
+            return ""
 
-        query = " ".join(response.strip().strip('"\\\'').split())
+    async def extract_book_query(self, message: str) -> Optional[str]:
+        try:
+            system_prompt = self.behavior["query_extraction_instructions"]
+            response = await asyncio.wait_for(
+                self.llm.generate(
+                    [
+                        {"role": "system", "content": system_prompt},
+                        {"role": "user", "content": message},
+                    ],
+                    temperature=0.1,
+                    max_tokens=80,
+                ),
+                timeout=30.0
+            )
+        except asyncio.TimeoutError:
+            logger.warning("LLM timeout extracting book query, using fallback")
+            return extract_query_fallback(message)
+        except Exception as e:
+            logger.exception("Error extracting book query: %s", e)
+            return extract_query_fallback(message)
+
+        query = " ".join(response.strip().strip("\"\\'").split())
         if query and query.upper() != "NO_BOOK_QUERY":
             return query
 
@@ -228,32 +357,36 @@ class Agent:
         if fallback_query:
             logger.info("Usando consulta de respaldo: %s", fallback_query)
         return fallback_query
-
     async def enrich_book_query(self, query: str) -> str:
         """Add the author only when LM Studio identifies a specific book title."""
         try:
-            response = await self.llm.generate(
-                [
-                    {
-                        "role": "system",
-                        "content": self.behavior["query_enrichment_instructions"],
-                    },
-                    {"role": "user", "content": query},
-                ],
-                temperature=0.0,
-                max_tokens=80,
+            response = await asyncio.wait_for(
+                self.llm.generate(
+                    [
+                        {
+                            "role": "system",
+                            "content": self.behavior["query_enrichment_instructions"],
+                        },
+                        {"role": "user", "content": query},
+                    ],
+                    temperature=0.0,
+                    max_tokens=80,
+                ),
+                timeout=30.0
             )
-        except Exception:
-            logger.exception("No se pudo enriquecer la consulta; se usará la original")
+        except asyncio.TimeoutError:
+            logger.warning("LLM timeout enriching book query, using original")
             return query
-        enriched_query = " ".join(response.strip().strip('"\\\'').split())
+        except Exception as e:
+            logger.exception("No se pudo enriquecer la consulta: %s", e)
+            return query
+        enriched_query = " ".join(response.strip().strip("\"\\'").split())
         if not enriched_query or enriched_query.upper() == "NO_ENRICHMENT":
             return query
         return enriched_query
-
-    async def generate_response(self, query: str, results: List[Dict]) -> str:
+    async def generate_response(self, query: str, results: List[Dict], name: str = "") -> str:
         if not results:
-            return self.behavior["no_results_response_template"].format(query=query)
+            return self.behavior["no_results_response_template"].format(query=query, name=name)
 
         response_results = [
             {
@@ -273,52 +406,79 @@ class Agent:
             f"{self.behavior['customer_care_instructions']}\n\n"
             f"Resultados de Buscalibre:\n{results_text}"
         )
-        response = await self.llm.generate(
-            [
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": f"Cliente busca: {query}"},
-            ],
-            temperature=0.3,
-            max_tokens=700,
-        )
+        try:
+            response = await asyncio.wait_for(
+                self.llm.generate(
+                    [
+                        {"role": "system", "content": system_prompt},
+                        {"role": "user", "content": f"Cliente busca: {query}"},
+                    ],
+                    temperature=0.3,
+                    max_tokens=700,
+                ),
+                timeout=45.0,
+            )
+        except (asyncio.TimeoutError, Exception) as exc:
+            logger.warning("No se pudo generar respuesta con LLM: %s", exc)
+            response = ""
         if response.strip():
-            return response.strip()
+            # Ensure single paragraph, no newlines
+            return " ".join(response.strip().split())
 
         first_result = response_results[0]
         title = first_result["title"]
         price = first_result["price"]
+        editorial = first_result["editorial"]
+        delivery_estimate = first_result["delivery_estimate"]
+        delivery = f"Entrega en {delivery_estimate}." if delivery_estimate and delivery_estimate != "No disponible" else ""
+        
         if first_result["availability"] and price != "No disponible":
-            return self.behavior["available_with_price_template"].format(
-                title=title, price=price
-            )
+            return self.behavior["available_with_price_template"].format(title=title, price=price, editorial=editorial, delivery=delivery)
         if first_result["availability"]:
-            return self.behavior["available_without_price_template"].format(title=title)
-        return self.behavior["availability_unknown_template"].format(title=title)
+            return self.behavior["available_without_price_template"].format(title=title, editorial=editorial, delivery=delivery)
+        return self.behavior["availability_unknown_template"].format(title=title, editorial=editorial)
 
-    async def handle_message(self, message: str) -> Tuple[str, List[str]]:
+    async def handle_message(self, message: str, session_id: Optional[str] = None) -> Tuple[str, List[str], str]:
+        # Extract sender name from message
+        sender_name = await self.extract_sender_name(message)
+        
+        # If we have a session_id, check for persisted name
+        persisted_name = ""
+        if session_id:
+            data = await load_conversations()
+            conversations = data.get("conversations", [])
+            conv = next((c for c in conversations if c["id"] == session_id), None)
+            if conv and conv.get("sender_name"):
+                persisted_name = conv["sender_name"]
+            # Also get client_name from conversation if available
+            if conv and conv.get("client_name"):
+                persisted_name = persisted_name or conv["client_name"]
+        
+        # Use persisted name if available, otherwise use extracted name
+        name = persisted_name or sender_name
+        
         query = await self.extract_book_query(message)
         if not query:
-            return self.behavior["no_book_query_response"], []
-
+            return self.behavior["no_book_query_response"], [], name
+        
         search_query = await self.enrich_book_query(query)
         if search_query != query:
             logger.info("Consulta enriquecida para Buscalibre: %s", search_query)
-
+        
         search_results = await search_buscalibre(search_query, max_results=5)
         if search_results.get("error"):
             logger.warning("Buscalibre search failed: %s", search_results["error"])
-            return self.behavior["search_error_response"], []
-
+            return self.behavior["search_error_response"].format(name=name), [], name
+        
         results = search_results.get("results", [])
-        response = await self.generate_response(query, results)
+        response = await self.generate_response(query, results, name)
         catalog_images = await asyncio.to_thread(generate_catalog_images, results)
         if catalog_images:
             response = (
                 f"{response} "
                 f"{self.behavior['catalog_notice_template'].format(count=len(catalog_images))}"
             )
-            response = {response}
-        return response, catalog_images
+        return response, catalog_images, name
 
 
 llm_provider = get_llm_provider()
@@ -364,11 +524,13 @@ class ConversationSummary(BaseModel):
     id: str
     created_at: str
     preview: str
+    client_name: Optional[str] = None
 
 
 class Conversation(BaseModel):
     id: str
     created_at: str
+    client_name: Optional[str] = None
     messages: List[Dict]
 
 
@@ -376,11 +538,33 @@ class Conversation(BaseModel):
 async def receive_message(request: MessageRequest) -> MessageResponse:
     try:
         session_id = request.session_id or str(uuid4())
-        response, catalog_images = await agent.handle_message(request.message)
-        response_with_greeting = f"{get_greeting(agent.behavior)} {response}"
+        # Persist the incoming request before any external work can fail.
+        await add_message_to_conversation(
+            session_id,
+            "user",
+            request.message,
+            client_name=extract_sender_name_fallback(request.message),
+        )
         
-        await add_message_to_conversation(session_id, "user", request.message)
-        await add_message_to_conversation(session_id, "assistant", response_with_greeting, catalog_images)
+        # Handle message with session for name persistence
+        response, catalog_images, sender_name = await agent.handle_message(request.message, session_id)
+        
+        # Get greeting with name
+        greeting = get_greeting(agent.behavior, sender_name)
+        response_with_greeting = f"{greeting} {response}"
+        
+        # Save name to conversation if we have a new one
+        if sender_name:
+            data = await load_conversations()
+            conversations = data.get("conversations", [])
+            conv = next((c for c in conversations if c["id"] == session_id), None)
+            if conv and not conv.get("sender_name"):
+                conv["sender_name"] = sender_name
+                data["conversations"] = conversations
+                await save_conversations(data)
+        
+        # Link the conversation to its client when saving the answer.
+        await add_message_to_conversation(session_id, "assistant", response_with_greeting, catalog_images, client_name=sender_name)
         
         return MessageResponse(
             response=response_with_greeting,
@@ -397,7 +581,7 @@ async def list_conversations() -> List[ConversationSummary]:
     data = await load_conversations()
     conversations = data.get("conversations", [])
     summaries = []
-    for conv in sorted(conversations, key=lambda x: x["created_at"], reverse=True):
+    for conv in sorted(conversations, key=lambda x: x.get("updated_at", x["created_at"]), reverse=True):
         preview = ""
         if conv["messages"]:
             first_user_msg = next((m for m in conv["messages"] if m["role"] == "user"), None)
@@ -408,7 +592,8 @@ async def list_conversations() -> List[ConversationSummary]:
         summaries.append(ConversationSummary(
             id=conv["id"],
             created_at=conv["created_at"],
-            preview=preview
+            preview=preview,
+            client_name=conv.get("client_name") or conv.get("sender_name"),
         ))
     return summaries
 
@@ -428,7 +613,12 @@ async def delete_conversation(conversation_id: str) -> Dict[str, str]:
     data = await load_conversations()
     conversations = data.get("conversations", [])
     conversations = [c for c in conversations if c["id"] != conversation_id]
-    await save_conversations({"conversations": conversations})
+    for profile in data.get("clients", {}).values():
+        profile["conversation_ids"] = [
+            item for item in profile.get("conversation_ids", []) if item != conversation_id
+        ]
+    data["conversations"] = conversations
+    await save_conversations(data)
     return {"status": "deleted"}
 
 

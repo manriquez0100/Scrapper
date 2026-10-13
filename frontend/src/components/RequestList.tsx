@@ -7,16 +7,18 @@ interface RequestListProps {
   requests: RequestItem[];
   onLoadConversation: (id: string) => void;
   activeConversationId: string | null;
+  refreshKey: number;
+  onNewConversation: () => void;
 }
 
-export function RequestList({ requests, onLoadConversation, activeConversationId }: RequestListProps) {
+export function RequestList({ requests, onLoadConversation, activeConversationId, refreshKey, onNewConversation }: RequestListProps) {
   const [expandedId, setExpandedId] = useState<string | null>(null);
   const [conversations, setConversations] = useState<ConversationSummary[]>([]);
-  const [showConversations, setShowConversations] = useState(false);
+  const [showConversations, setShowConversations] = useState(true);
 
   useEffect(() => {
     getConversations().then(setConversations).catch(console.error);
-  }, []);
+  }, [refreshKey]);
 
   const handleLoadConversation = (id: string) => {
     onLoadConversation(id);
@@ -35,12 +37,28 @@ export function RequestList({ requests, onLoadConversation, activeConversationId
     }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
         <h3 style={{ margin: 0, fontSize: '14px', color: 'var(--fg)' }}>
-          📋 Requests ({requests.length})
+          💾 Conversations
         </h3>
-        <button
-          onClick={() => setShowConversations(!showConversations)}
-          style={{
-            padding: '4px 8px',
+        <div style={{ display: 'flex', gap: '6px' }}>
+          <button
+            onClick={onNewConversation}
+            title="Iniciar conversación nueva"
+            style={{
+              padding: '4px 8px',
+              fontSize: '11px',
+              background: 'var(--prompt)',
+              color: '#000',
+              border: 'none',
+              borderRadius: '3px',
+              cursor: 'pointer',
+            }}
+          >
+            + Nueva
+          </button>
+          <button
+            onClick={() => setShowConversations(!showConversations)}
+            style={{
+              padding: '4px 8px',
             fontSize: '11px',
             background: showConversations ? 'var(--prompt)' : 'var(--border)',
             color: showConversations ? '#000' : 'var(--fg)',
@@ -48,9 +66,10 @@ export function RequestList({ requests, onLoadConversation, activeConversationId
             borderRadius: '3px',
             cursor: 'pointer',
           }}
-        >
-          {showConversations ? '📝 Requests' : '💾 Conversations'}
-        </button>
+          >
+            {showConversations ? '📝 Requests' : '💾 Conversations'}
+          </button>
+        </div>
       </div>
 
       {showConversations ? (
@@ -77,7 +96,10 @@ export function RequestList({ requests, onLoadConversation, activeConversationId
               onMouseEnter={e => e.currentTarget.style.borderColor = 'var(--border)'}
               onMouseLeave={e => e.currentTarget.style.borderColor = 'transparent'}
             >
-              <div style={{ fontSize: '12px', color: '#8b949e', marginBottom: '4px' }}>
+              <div style={{ fontSize: '13px', fontWeight: 600, marginBottom: '4px' }}>
+                {conv.client_name || 'Cliente sin nombre'}
+              </div>
+              <div style={{ fontSize: '11px', color: '#8b949e', marginBottom: '4px' }}>
                 {new Date(conv.created_at).toLocaleString()}
               </div>
               <div style={{ fontSize: '13px', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>

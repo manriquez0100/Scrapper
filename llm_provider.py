@@ -1,6 +1,7 @@
 """LLM Provider - matches ExamenIntegra analyzer.ts pattern exactly (no auth header)"""
 
 import os
+import asyncio
 import httpx
 from abc import ABC, abstractmethod
 from typing import List, Dict, Any
@@ -45,19 +46,32 @@ class LMStudioProvider(LLMProvider):
         }
         
         client = await self._get_client()
-        response = await client.post(
-            self.chat_url,
-            headers=self._headers,
-            json=payload
-        )
+        max_retries = 3
+        last_error = None
         
-        if not response.is_success:
-            error_text = response.text
-            raise Exception(f"LM Studio API error: {response.status_code} - {error_text}")
+        for attempt in range(max_retries):
+            try:
+                response = await client.post(
+                    self.chat_url,
+                    headers=self._headers,
+                    json=payload
+                )
+                
+                if not response.is_success:
+                    error_text = response.text
+                    raise Exception(f"LM Studio API error: {response.status_code} - {error_text}")
+                
+                data = response.json()
+                content = data["choices"][0]["message"].get("content", "")
+                return content if isinstance(content, str) else ""
+                
+            except Exception as e:
+                last_error = e
+                if attempt < max_retries - 1:
+                    await asyncio.sleep(2 ** attempt)  # Exponential backoff
+                continue
         
-        data = response.json()
-        content = data["choices"][0]["message"].get("content", "")
-        return content if isinstance(content, str) else ""
+        raise Exception(f"LM Studio API failed after {max_retries} retries: {last_error}")
 
     async def close(self):
         if self._client and not self._client.is_closed:

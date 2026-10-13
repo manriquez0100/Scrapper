@@ -13,6 +13,7 @@ export interface RequestItem {
 export interface ApiResponse {
   response: string;
   catalog_images: string[];
+  session_id: string;
 }
 
 export interface Message {
@@ -25,6 +26,7 @@ export interface Message {
 export interface Conversation {
   id: string;
   created_at: string;
+  client_name?: string;
   messages: Message[];
 }
 
@@ -32,4 +34,5 @@ export interface ConversationSummary {
   id: string;
   created_at: string;
   preview: string;
+  client_name?: string;
 }
