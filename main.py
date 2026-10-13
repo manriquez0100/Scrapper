@@ -300,6 +300,37 @@ def extract_sender_name_fallback(message: str) -> str:
     return match.group(1).capitalize() if match else ""
 
 
+def is_delivery_question(message: str) -> bool:
+    """Identify questions that should be answered from the active conversation."""
+    normalized = message.lower()
+    return any(term in normalized for term in (
+        "tiempo de entrega", "tiempos de entrega", "tiempo de llegada", "tiempos de llegada",
+        "cuánto tarda", "cuanto tarda",
+        "cuándo llega", "cuando llega", "plazo de envío", "plazo de envio",
+        "días de envío", "dias de envio",
+    ))
+
+
+def latest_delivery_answer(messages: List[Dict]) -> Optional[str]:
+    """Return the latest delivery estimate previously given to the customer."""
+    patterns = (
+        r"entrega en\s+(?:env[ií]o:\s*)?([^.!\n]+)",
+        r"(?:estimado|plazo) de env[ií]o(?:\s+de)?\s+([^.!\n]+)",
+        r"(?:env[ií]o|disponible para env[ií]o)\s+en\s+(?:un\s+)?plazo\s+de\s+([^.!\n]+)",
+    )
+    for item in reversed(messages):
+        if item.get("role") != "assistant":
+            continue
+        content = item.get("content", "")
+        for pattern in patterns:
+            match = re.search(pattern, content, flags=re.IGNORECASE)
+            if match:
+                return f"El tiempo estimado de entrega es de {match.group(1).strip()}."
+        if re.search(r"env[ií]o\s+r[aá]pido", content, flags=re.IGNORECASE):
+            return "El libro consultado cuenta con envío rápido."
+    return None
+
+
 class Agent:
     def __init__(self, llm: LLMProvider, behavior: Optional[Dict[str, str]] = None):
         self.llm = llm
@@ -328,14 +359,21 @@ class Agent:
             logger.exception("Error extracting sender name")
             return ""
 
-    async def extract_book_query(self, message: str) -> Optional[str]:
+    async def extract_book_query(self, message: str, conversation_context: str = "") -> Optional[str]:
         try:
             system_prompt = self.behavior["query_extraction_instructions"]
             response = await asyncio.wait_for(
                 self.llm.generate(
                     [
                         {"role": "system", "content": system_prompt},
-                        {"role": "user", "content": message},
+                        {
+                            "role": "user",
+                            "content": (
+                                f"Historial de la conversación:\n{conversation_context}\n\n"
+                                f"Mensaje nuevo:\n{message}"
+                                if conversation_context else message
+                            ),
+                        },
                     ],
                     temperature=0.1,
                     max_tokens=80,
@@ -357,7 +395,7 @@ class Agent:
         if fallback_query:
             logger.info("Usando consulta de respaldo: %s", fallback_query)
         return fallback_query
-    async def enrich_book_query(self, query: str) -> str:
+    async def enrich_book_query(self, query: str, conversation_context: str = "") -> str:
         """Add the author only when LM Studio identifies a specific book title."""
         try:
             response = await asyncio.wait_for(
@@ -367,7 +405,14 @@ class Agent:
                             "role": "system",
                             "content": self.behavior["query_enrichment_instructions"],
                         },
-                        {"role": "user", "content": query},
+                        {
+                            "role": "user",
+                            "content": (
+                                f"Historial de la conversación:\n{conversation_context}\n\n"
+                                f"Consulta actual:\n{query}"
+                                if conversation_context else query
+                            ),
+                        },
                     ],
                     temperature=0.0,
                     max_tokens=80,
@@ -384,7 +429,7 @@ class Agent:
         if not enriched_query or enriched_query.upper() == "NO_ENRICHMENT":
             return query
         return enriched_query
-    async def generate_response(self, query: str, results: List[Dict], name: str = "") -> str:
+    async def generate_response(self, query: str, results: List[Dict], name: str = "", conversation_context: str = "") -> str:
         if not results:
             return self.behavior["no_results_response_template"].format(query=query, name=name)
 
@@ -406,6 +451,12 @@ class Agent:
             f"{self.behavior['customer_care_instructions']}\n\n"
             f"Resultados de Buscalibre:\n{results_text}"
         )
+        if conversation_context:
+            system_prompt += (
+                "\n\nHistorial de esta conversación (úsalo para mantener el contexto, "
+                "pero no inventes datos):\n"
+                f"{conversation_context}"
+            )
         try:
             response = await asyncio.wait_for(
                 self.llm.generate(
@@ -438,12 +489,40 @@ class Agent:
             return self.behavior["available_without_price_template"].format(title=title, editorial=editorial, delivery=delivery)
         return self.behavior["availability_unknown_template"].format(title=title, editorial=editorial)
 
+    async def generate_context_response(self, message: str, conversation_context: str) -> str:
+        """Answer a non-search follow-up using only the saved conversation."""
+        prompt = (
+            "Eres un asistente de atención al cliente de una librería. Responde la pregunta "
+            "del cliente usando ÚNICAMENTE el historial proporcionado. No busques libros, "
+            "no inventes datos y no agregues saludo. Si el historial no contiene la respuesta, "
+            "indícalo brevemente y ofrezca consultar un libro específico.\n\n"
+            f"Historial:\n{conversation_context}\n\nPregunta nueva:\n{message}"
+        )
+        try:
+            response = await asyncio.wait_for(
+                self.llm.generate(
+                    [
+                        {"role": "system", "content": prompt},
+                        {"role": "user", "content": message},
+                    ],
+                    temperature=0.1,
+                    max_tokens=180,
+                ),
+                timeout=30.0,
+            )
+        except (asyncio.TimeoutError, Exception) as exc:
+            logger.warning("No se pudo responder el seguimiento: %s", exc)
+            return "No tengo esa información registrada. Si gusta, puedo consultar el libro de nuevo."
+        return " ".join(response.strip().split()) or "No tengo esa información registrada."
+
     async def handle_message(self, message: str, session_id: Optional[str] = None) -> Tuple[str, List[str], str]:
         # Extract sender name from message
         sender_name = await self.extract_sender_name(message)
         
         # If we have a session_id, check for persisted name
         persisted_name = ""
+        conversation_context = ""
+        previous_messages: List[Dict] = []
         if session_id:
             data = await load_conversations()
             conversations = data.get("conversations", [])
@@ -453,15 +532,34 @@ class Agent:
             # Also get client_name from conversation if available
             if conv and conv.get("client_name"):
                 persisted_name = persisted_name or conv["client_name"]
+            if conv:
+                previous_messages = conv.get("messages", [])[:-1]
+                conversation_context = "\n".join(
+                    f"{item.get('role', 'user')}: {item.get('content', '')}"
+                    for item in previous_messages
+                )
         
         # Use persisted name if available, otherwise use extracted name
         name = persisted_name or sender_name
+
+        if is_delivery_question(message):
+            delivery_answer = latest_delivery_answer(previous_messages if session_id else [])
+            if delivery_answer:
+                return delivery_answer, [], name
+            return (
+                "No tengo un plazo de entrega registrado para esta conversación. "
+                "Si gusta, puedo consultar de nuevo el libro.",
+                [],
+                name,
+            )
         
-        query = await self.extract_book_query(message)
+        query = await self.extract_book_query(message, conversation_context)
         if not query:
+            if conversation_context:
+                return await self.generate_context_response(message, conversation_context), [], name
             return self.behavior["no_book_query_response"], [], name
         
-        search_query = await self.enrich_book_query(query)
+        search_query = await self.enrich_book_query(query, conversation_context)
         if search_query != query:
             logger.info("Consulta enriquecida para Buscalibre: %s", search_query)
         
@@ -471,7 +569,7 @@ class Agent:
             return self.behavior["search_error_response"].format(name=name), [], name
         
         results = search_results.get("results", [])
-        response = await self.generate_response(query, results, name)
+        response = await self.generate_response(query, results, name, conversation_context)
         catalog_images = await asyncio.to_thread(generate_catalog_images, results)
         if catalog_images:
             response = (
