@@ -9,6 +9,7 @@ export function useRequestQueue() {
   const [requests, setRequests] = useState<RequestItem[]>([]);
   const [currentSessionId, setCurrentSessionId] = useState<string>(() => crypto.randomUUID());
   const [lastCompletedSessionId, setLastCompletedSessionId] = useState<string | null>(null);
+  const [lastCompletedRequestId, setLastCompletedRequestId] = useState<string | null>(null);
   const [queueVersion, setQueueVersion] = useState(0);
   const activeRef = useRef(0);
   const processingRef = useRef<Set<string>>(new Set());
@@ -38,9 +39,12 @@ export function useRequestQueue() {
       .then(data => {
         updateStatus(pendingRequest.id, 'done', data.response, data.catalog_images);
         setLastCompletedSessionId(data.session_id);
+        setLastCompletedRequestId(pendingRequest.id);
       })
       .catch(err => {
         updateStatus(pendingRequest.id, 'error', err.message);
+        if (pendingRequest.session_id) setLastCompletedSessionId(pendingRequest.session_id);
+        setLastCompletedRequestId(pendingRequest.id);
       })
       .finally(() => {
         window.setTimeout(() => {
@@ -85,5 +89,14 @@ export function useRequestQueue() {
     setLastCompletedSessionId(null);
   }, []);
 
-  return { requests, enqueue, clearAll, selectSession, startNewConversation, lastCompletedSessionId };
+  return {
+    requests,
+    currentSessionId,
+    enqueue,
+    clearAll,
+    selectSession,
+    startNewConversation,
+    lastCompletedSessionId,
+    lastCompletedRequestId,
+  };
 }

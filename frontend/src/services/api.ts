@@ -1,4 +1,4 @@
-import type { ApiResponse, Conversation, ConversationSummary, PricingConfig } from '../types';
+import type { ApiResponse, Conversation, ConversationSummary, PricingConfig, BehaviorConfig } from '../types';
 
 export async function sendMessage(message: string, session_id?: string): Promise<ApiResponse> {
   const body: { message: string; session_id?: string } = { message };
@@ -29,6 +29,22 @@ export async function updatePricing(ganancia_envio: number): Promise<PricingConf
     method: 'PUT',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ ganancia_envio }),
+  });
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  return res.json();
+}
+
+export async function getBehavior(): Promise<BehaviorConfig> {
+  const res = await fetch('/behavior');
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  return res.json();
+}
+
+export async function updateBehavior(behavior: Record<string, string>): Promise<BehaviorConfig> {
+  const res = await fetch('/behavior', {
+    method: 'PUT',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ behavior }),
   });
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
   return res.json();

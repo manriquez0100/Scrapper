@@ -2,12 +2,13 @@ import { useRef, useEffect, useState } from 'react';
 
 interface InputLineProps {
   onSubmit: (question: string) => void;
+  disabled?: boolean;
   history: string[];
   historyIndex: number;
   setHistoryIndex: React.Dispatch<React.SetStateAction<number>>;
 }
 
-export function InputLine({ onSubmit, history, historyIndex, setHistoryIndex }: InputLineProps) {
+export function InputLine({ onSubmit, disabled = false, history, historyIndex, setHistoryIndex }: InputLineProps) {
   const [input, setInput] = useState('');
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -17,6 +18,7 @@ export function InputLine({ onSubmit, history, historyIndex, setHistoryIndex }: 
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter') {
+      if (disabled) return;
       const trimmed = input.trim();
       if (trimmed === ':clear' || trimmed === 'cls') {
         onSubmit('__CLEAR__');
@@ -70,6 +72,7 @@ export function InputLine({ onSubmit, history, historyIndex, setHistoryIndex }: 
         value={input}
         onChange={e => setInput(e.target.value)}
         onKeyDown={handleKeyDown}
+        disabled={disabled}
         spellCheck={false}
         style={{
           flex: 1,
@@ -80,7 +83,7 @@ export function InputLine({ onSubmit, history, historyIndex, setHistoryIndex }: 
           fontFamily: 'inherit',
           outline: 'none',
         }}
-        placeholder="Type your question... (:clear to clear)"
+        placeholder={disabled ? 'Procesando la consulta…' : 'Type your question... (:clear to clear)'}
       />
     </div>
   );

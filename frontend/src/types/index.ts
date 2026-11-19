@@ -41,3 +41,7 @@ export interface ConversationSummary {
   preview: string;
   client_name?: string;
 }
+
+export interface BehaviorConfig {
+  behavior: Record<string, string>;
+}

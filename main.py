@@ -19,8 +19,10 @@ from fastapi.middleware.cors import CORSMiddleware
 from starlette.middleware.base import BaseHTTPMiddleware
 
 from buscalibre_tool import search_buscalibre
-from buscalibreUpdating_11 import FacebookAdGenerator
+from catalog_generator import FacebookAdGenerator
 from llm_provider import LLMProvider, get_llm_provider
+from mercadolibre import search_mercadolibre
+from chrome_manager import ensure_chrome_debugging, terminate_chrome_debugging
 
 load_dotenv()
 logger = logging.getLogger(__name__)
@@ -109,7 +111,14 @@ async def save_conversations(data: Dict) -> None:
             logger.error("Failed to save conversations: %s", exc)
 
 
-async def add_message_to_conversation(session_id: str, role: str, content: str, catalog_images: Optional[List[str]] = None, client_name: Optional[str] = None) -> None:
+async def add_message_to_conversation(
+    session_id: str,
+    role: str,
+    content: str,
+    catalog_images: Optional[List[str]] = None,
+    client_name: Optional[str] = None,
+    search_results: Optional[List[Dict]] = None,
+) -> None:
     """Add a message to a conversation, creating it if needed."""
     data = await load_conversations()
     conversations = data.get("conversations", [])
@@ -142,12 +151,15 @@ async def add_message_to_conversation(session_id: str, role: str, content: str, 
         if session_id not in client_profile["conversation_ids"]:
             client_profile["conversation_ids"].append(session_id)
     
-    conv["messages"].append({
+    message = {
         "role": role,
         "content": content,
         "catalog_images": catalog_images or [],
         "timestamp": datetime.now(ZoneInfo(ASSISTANT_TIMEZONE)).isoformat()
-    })
+    }
+    if search_results:
+        message["search_results"] = search_results
+    conv["messages"].append(message)
     conv["updated_at"] = datetime.now(ZoneInfo(ASSISTANT_TIMEZONE)).isoformat()
     
     data["clients"] = clients
@@ -247,10 +259,19 @@ CATALOG_DIR = Path(__file__).resolve().with_name("busquedas") / "catalogos"
 CATALOG_DIR.mkdir(parents=True, exist_ok=True)
 
 
-def generate_catalog_images(results: List[Dict]) -> List[str]:
-    """Reuse the existing Facebook promotional card generator for book covers."""
-    catalog_id = uuid4().hex
-    output_dir = CATALOG_DIR / catalog_id
+def generate_catalog_images(results: List[Dict], client_name: str = "", query: str = "") -> List[str]:
+    """Reuse the existing Facebook promotional card generator for book covers.
+    
+    Creates personalized catalog folders named with client name and book title
+    for easy WhatsApp sharing.
+    """
+    # Create personalized catalog folder name
+    safe_client = re.sub(r'[^a-zA-Z0-9_\-]', '_', client_name.strip()) if client_name else "cliente"
+    safe_query = re.sub(r'[^a-zA-Z0-9_\-]', '_', query.strip()[:30]) if query else "busqueda"
+    catalog_folder = f"{safe_client}_{safe_query}_{uuid4().hex[:8]}"
+    output_dir = CATALOG_DIR / catalog_folder
+    output_dir.mkdir(parents=True, exist_ok=True)
+    
     generator = FacebookAdGenerator(output_dir=str(output_dir))
     image_urls = []
 
@@ -271,19 +292,48 @@ def generate_catalog_images(results: List[Dict]) -> List[str]:
         )
         if image_path:
             filename = Path(image_path).name
-            image_urls.append(f"/catalogos/{catalog_id}/{filename}")
+            image_urls.append(f"/catalogos/{catalog_folder}/{filename}")
 
     return image_urls
 
 
 def extract_query_fallback(message: str) -> Optional[str]:
-    """Recover a clear book request when the model returns NO_BOOK_QUERY."""
+    """Recover a clear book request when the model returns ``NO_BOOK_QUERY``.
+
+    This route deliberately recognizes conjugations such as ``estoy buscando``.
+    It must not depend exclusively on the LLM: a missed extraction should still
+    start the catalog search instead of being treated as a conversational reply.
+    """
     clean_message = " ".join(message.strip().split())
-    if not re.search(
-        r"\b(busco|buscar|quiero|quisiera|necesito|tienen|tendrá|tendrán|tendrás|tendras)\b",
+    # Customer messages are often forwarded as "Nombre dice: ...".  The
+    # sender identifier is useful for the greeting, never for the catalog
+    # query.
+    clean_message = re.sub(
+        r"^\s*(?:de\s*:\s*)?(?:[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]+\s+){0,2}"
+        r"(?:dice|dijo)\s*:\s*",
+        "",
         clean_message,
         flags=re.IGNORECASE,
-    ):
+    )
+    explicit_request = re.search(
+        r"\b(busco|buscas|buscando|buscar|quiero|quisiera|necesito|"
+        r"tienen|tiene|tienes|tendrá|tendrán|tendrás|tendras|hay|existe)\b",
+        clean_message,
+        flags=re.IGNORECASE,
+    )
+    if not explicit_request:
+        bare_query = clean_message.strip(" ,.-¿¡?")
+        words = re.findall(r"[A-Za-zÁÉÍÓÚÜÑáéíóúüñ0-9]+", bare_query)
+        non_book_phrases = (
+            "gracias", "muchas gracias", "buenos días", "buenas tardes",
+            "buenas noches", "de acuerdo", "está bien", "esta bien",
+        )
+        if (
+            2 <= len(words) <= 16
+            and len(bare_query) >= 3
+            and not any(phrase in bare_query.lower() for phrase in non_book_phrases)
+        ):
+            return bare_query
         return None
 
     topic_match = re.search(
@@ -296,8 +346,8 @@ def extract_query_fallback(message: str) -> Optional[str]:
         return topic if len(topic) >= 3 else None
 
     availability_match = re.search(
-        r"\b(?:tendrás|tendras|tendrá|tendrán|tienen)\s+"
-        r"(?:(?:algo|libros?)\s+)?de\s+(.+?)(?:[?.!]|$)",
+        r"\b(?:tendrás|tendras|tendrá|tendrán|tienen|tiene|tienes|hay|existe)\s+"
+        r"(?:(?:algo|libros?)\s+)?(?:de\s+)?(.+?)(?:[?.!]|$)",
         clean_message,
         flags=re.IGNORECASE,
     )
@@ -307,7 +357,7 @@ def extract_query_fallback(message: str) -> Optional[str]:
 
     query = re.sub(
         r"^\s*(?:hola[,! ]*)?"
-        r"(?:busco|buscar|quiero|quisiera|necesito)\s+"
+        r"(?:(?:estoy|ando)\s+)?(?:busco|buscas|buscando|buscar|quiero|quisiera|necesito)\s+"
         r"(?:(?:algo|un libro|el libro|la novela)\s+)?(?:de\s+)?",
         "",
         clean_message,
@@ -315,13 +365,32 @@ def extract_query_fallback(message: str) -> Optional[str]:
     )
     query = re.split(r"[?.!]", query, maxsplit=1)[0]
     query = re.sub(
-        r"\b(?:lo|la)\s+(?:tienen|tendrá|tendrán)\b.*$|\b(?:por favor|gracias)\b.*$",
+        r"\b(?:lo|la)\s+(?:tienen|tendrá|tendrán|tendrás|tendras)\b.*$|"
+        r"\b(?:por favor|gracias)\b.*$",
         "",
         query,
         flags=re.IGNORECASE,
     )
     query = query.strip(" ,.-¿¡")
-    return query if len(query) >= 3 and any(char.isalpha() for char in query) else None
+    if len(query) >= 3 and any(char.isalpha() for char in query):
+        return query
+
+    # A customer can send only a title or author (for example, "Sebastian
+    # Bach"), which still belongs on the catalog-search route.  Keep polite
+    # chatter out of this fallback so normal conversation remains intact.
+    bare_query = clean_message.strip(" ,.-¿¡?")
+    words = re.findall(r"[A-Za-zÁÉÍÓÚÜÑáéíóúüñ0-9]+", bare_query)
+    non_book_phrases = (
+        "gracias", "muchas gracias", "buenos días", "buenas tardes",
+        "buenas noches", "de acuerdo", "está bien", "esta bien",
+    )
+    if (
+        2 <= len(words) <= 16
+        and len(bare_query) >= 3
+        and not any(phrase in bare_query.lower() for phrase in non_book_phrases)
+    ):
+        return bare_query
+    return None
 
 
 def extract_sender_name_fallback(message: str) -> str:
@@ -363,6 +432,84 @@ def latest_delivery_answer(messages: List[Dict]) -> Optional[str]:
         if re.search(r"env[ií]o\s+r[aá]pido", content, flags=re.IGNORECASE):
             return "El libro consultado cuenta con envío rápido."
     return None
+
+
+def prepare_response_results(results: List[Dict]) -> List[Dict]:
+    """Keep only verified fields needed in the customer response and conversation memory."""
+    return [
+        {
+            "title": result.get("title", "No disponible"),
+            "author": result.get("author", "No disponible"),
+            "price": result.get("price", "No disponible"),
+            "currency": result.get("currency", "MXN"),
+            "availability": result.get("availability", False),
+            "editorial": result.get("editorial", "No disponible"),
+            "delivery_estimate": result.get("delivery_estimate", "No disponible"),
+            "delivery_dates": result.get("delivery_dates", []),
+            "condition": result.get("condition", "No disponible"),
+            "source": result.get("source", "buscalibre"),
+        }
+        for result in results[:3]
+    ]
+
+
+def latest_search_results(messages: List[Dict]) -> List[Dict]:
+    """Return the structured results from the most recent completed search."""
+    for message in reversed(messages):
+        results = message.get("search_results")
+        if message.get("role") == "assistant" and isinstance(results, list) and results:
+            return results
+    return []
+
+
+def format_result_options(results: List[Dict]) -> str:
+    """Render every result so the customer can refer to an option by position."""
+    options = []
+    for index, result in enumerate(results, start=1):
+        details = [result.get("title", "Libro disponible")]
+        author = result.get("author", "No disponible")
+        price = result.get("price", "No disponible")
+        editorial = result.get("editorial", "No disponible")
+        delivery = result.get("delivery_estimate", "No disponible")
+        if author != "No disponible":
+            details.append(f"de {author}")
+        if price != "No disponible":
+            details.append(f"por {price}")
+        if editorial != "No disponible":
+            details.append(f"editorial {editorial}")
+        if delivery != "No disponible":
+            details.append(f"entrega: {delivery}")
+        options.append(f"{index}) " + ", ".join(details) + ".")
+    return " ".join(options)
+
+
+def selected_result_from_message(message: str, results: List[Dict]) -> Optional[Dict]:
+    """Resolve references such as 'el segundo' against the latest saved search."""
+    normalized = message.lower()
+    ordinals = {
+        0: (r"\b(?:primero|primera|1(?:er|ra)?|opci[oó]n\s*1)\b",),
+        1: (r"\b(?:segundo|segunda|2(?:do|da)?|opci[oó]n\s*2)\b",),
+        2: (r"\b(?:tercero|tercera|3(?:er|ra)?|opci[oó]n\s*3)\b",),
+    }
+    for index, patterns in ordinals.items():
+        if index < len(results) and any(re.search(pattern, normalized) for pattern in patterns):
+            return results[index]
+    return None
+
+
+def purchase_selected_result_response(result: Dict, purchase_instructions: str) -> str:
+    """Confirm the selected option before explaining the purchase process."""
+    details = [result.get("title", "el libro seleccionado")]
+    author = result.get("author", "No disponible")
+    price = result.get("price", "No disponible")
+    delivery = result.get("delivery_estimate", "No disponible")
+    if author != "No disponible":
+        details.append(f"de {author}")
+    if price != "No disponible":
+        details.append(f"por {price}")
+    if delivery != "No disponible":
+        details.append(f"con entrega estimada: {delivery}")
+    return f"Perfecto, seleccionó {', '.join(details)}. {purchase_instructions}"
 
 
 class Agent:
@@ -408,13 +555,14 @@ class Agent:
                 timeout=20.0,
             )
             intent = response.strip().upper().split(maxsplit=1)[0].strip(".,:;!¡") if response.strip() else ""
-            return intent == "PAYMENT_INFO"
+            if intent == "PAYMENT_INFO":
+                return True
         except asyncio.TimeoutError:
             logger.warning("LM Studio timeout classifying payment intent; using fallback")
         except Exception as exc:
             logger.warning("Could not classify payment intent with LM Studio: %s", exc)
 
-        # The fallback only keeps service available if LM Studio is unavailable.
+        # Keep purchase instructions available even when the classifier misses an obvious intent.
         return bool(re.search(
             r"\b(pag[ao]|pago|pagar|pagos|comprar|compra|pedido|pedir|dep[oó]sito|"
             r"comprobante|transferencia|env[ií]o|enviar|datos de env[ií]o)\b",
@@ -426,7 +574,32 @@ class Agent:
         """Return the approved, gradual buying explanation without bank details."""
         return self.behavior["purchase_and_shipping_response"]
 
+    def _queries_are_similar(self, query1: str, query2: str) -> bool:
+        """Check if two queries refer to the same book."""
+        q1 = query1.lower().strip()
+        q2 = query2.lower().strip()
+        if q1 == q2:
+            return True
+        # Check if one is contained in the other (e.g., "harry potter 2" vs "harry potter y la cámara secreta")
+        if q1 in q2 or q2 in q1:
+            return True
+        # Check for common words (title words)
+        words1 = set(w for w in q1.split() if len(w) > 3)
+        words2 = set(w for w in q2.split() if len(w) > 3)
+        if words1 and words2:
+            overlap = len(words1 & words2) / min(len(words1), len(words2))
+            return overlap > 0.5
+        return False
+
     async def extract_book_query(self, message: str, conversation_context: str = "") -> Optional[str]:
+        # Prefer a deterministic extraction for explicit requests.  This keeps a
+        # clear message such as "Estoy buscando ... ¿lo tendrás?" on the search
+        # route even when the local model is unavailable or misclassifies it.
+        fallback_query = extract_query_fallback(message)
+        if fallback_query:
+            logger.info("Consulta explícita detectada: %s", fallback_query)
+            return fallback_query
+
         try:
             system_prompt = self.behavior["query_extraction_instructions"]
             response = await asyncio.wait_for(
@@ -449,19 +622,16 @@ class Agent:
             )
         except asyncio.TimeoutError:
             logger.warning("LLM timeout extracting book query, using fallback")
-            return extract_query_fallback(message)
+            return None
         except Exception as e:
             logger.exception("Error extracting book query: %s", e)
-            return extract_query_fallback(message)
+            return None
 
         query = " ".join(response.strip().strip("\"\\'").split())
         if query and query.upper() != "NO_BOOK_QUERY":
             return query
 
-        fallback_query = extract_query_fallback(message)
-        if fallback_query:
-            logger.info("Usando consulta de respaldo: %s", fallback_query)
-        return fallback_query
+        return None
     async def enrich_book_query(self, query: str, conversation_context: str = "") -> str:
         """Add the author only when LM Studio identifies a specific book title."""
         try:
@@ -493,30 +663,20 @@ class Agent:
             logger.exception("No se pudo enriquecer la consulta: %s", e)
             return query
         enriched_query = " ".join(response.strip().strip("\"\\'").split())
-        if not enriched_query or enriched_query.upper() == "NO_ENRICHMENT":
+        if not enriched_query or enriched_query.upper() in {"NO_ENRICHMENT", "NO_BOOK_QUERY"}:
             return query
         return enriched_query
     async def generate_response(self, query: str, results: List[Dict], name: str = "", conversation_context: str = "") -> str:
         if not results:
             return self.behavior["no_results_response_template"].format(query=query, name=name)
 
-        response_results = [
-            {
-                "title": result.get("title", "No disponible"),
-                "author": result.get("author", "No disponible"),
-                "price": result.get("price", "No disponible"),
-                "currency": result.get("currency", "MXN"),
-                "availability": result.get("availability", False),
-                "editorial": result.get("editorial", "No disponible"),
-                "delivery_estimate": result.get("delivery_estimate", "No disponible"),
-                "delivery_dates": result.get("delivery_dates", []),
-            }
-            for result in results[:3]
-        ]
+        response_results = prepare_response_results(results)
         results_text = json.dumps(response_results, ensure_ascii=False, indent=2)
         system_prompt = (
             f"{self.behavior['customer_care_instructions']}\n\n"
-            f"Resultados de Buscalibre:\n{results_text}"
+            "Responde SOLAMENTE con una frase breve de introducción. No enumeres ni repitas "
+            "los datos de los libros: la aplicación los añade después de tu respuesta.\n\n"
+            f"Resultados de búsqueda:\n{results_text}"
         )
         if conversation_context:
             system_prompt += (
@@ -539,22 +699,10 @@ class Agent:
         except (asyncio.TimeoutError, Exception) as exc:
             logger.warning("No se pudo generar respuesta con LLM: %s", exc)
             response = ""
-        if response.strip():
-            # Ensure single paragraph, no newlines
-            return " ".join(response.strip().split())
-
-        first_result = response_results[0]
-        title = first_result["title"]
-        price = first_result["price"]
-        editorial = first_result["editorial"]
-        delivery_estimate = first_result["delivery_estimate"]
-        delivery = f"Entrega en {delivery_estimate}." if delivery_estimate and delivery_estimate != "No disponible" else ""
-        
-        if first_result["availability"] and price != "No disponible":
-            return self.behavior["available_with_price_template"].format(title=title, price=price, editorial=editorial, delivery=delivery)
-        if first_result["availability"]:
-            return self.behavior["available_without_price_template"].format(title=title, editorial=editorial, delivery=delivery)
-        return self.behavior["availability_unknown_template"].format(title=title, editorial=editorial)
+        introduction = " ".join(response.strip().split())
+        if not introduction:
+            introduction = "Encontré estas opciones disponibles para su consulta:"
+        return f"{introduction} {format_result_options(response_results)}"
 
     async def generate_context_response(self, message: str, conversation_context: str) -> str:
         """Answer a non-search follow-up using only the saved conversation."""
@@ -582,7 +730,7 @@ class Agent:
             return "No tengo esa información registrada. Si gusta, puedo consultar el libro de nuevo."
         return " ".join(response.strip().split()) or "No tengo esa información registrada."
 
-    async def handle_message(self, message: str, session_id: Optional[str] = None) -> Tuple[str, List[str], str]:
+    async def handle_message(self, message: str, session_id: Optional[str] = None) -> Tuple[str, List[str], str, List[Dict]]:
         # Extract sender name from message
         sender_name = await self.extract_sender_name(message)
         
@@ -590,6 +738,9 @@ class Agent:
         persisted_name = ""
         conversation_context = ""
         previous_messages: List[Dict] = []
+        previous_search_results: List[Dict] = []
+        last_book_query = ""
+        last_book_price = ""
         if session_id:
             data = await load_conversations()
             conversations = data.get("conversations", [])
@@ -605,54 +756,129 @@ class Agent:
                     f"{item.get('role', 'user')}: {item.get('content', '')}"
                     for item in previous_messages
                 )
+                previous_search_results = latest_search_results(previous_messages)
+                if previous_search_results:
+                    conversation_context += (
+                        "\n\nResultados estructurados de la última búsqueda:\n"
+                        + json.dumps(previous_search_results, ensure_ascii=False)
+                    )
+                # Buscar la última consulta de libro y precio en el historial
+                for item in reversed(previous_messages):
+                    if item.get("role") == "user":
+                        # Verificar si es una consulta de libro
+                        extracted = await self.extract_book_query(item.get("content", ""), "")
+                        if extracted:
+                            last_book_query = extracted
+                            break
+                    elif item.get("role") == "assistant":
+                        # Buscar precio en la respuesta del asistente
+                        content = item.get("content", "")
+                        price_match = re.search(r'\$?\s*(\d{1,3}(?:[.,]\d{3})*(?:[.,]\d{2})?)', content)
+                        if price_match:
+                            last_book_price = price_match.group(0)
+                            break
         
         # Use persisted name if available, otherwise use extracted name
         name = persisted_name or sender_name
 
-        # This branch must precede book extraction: payment questions are not searches.
+        # Purchase routes precede book extraction: they never trigger another scraper search.
         if await self.is_payment_or_purchase_question(message):
-            return self.purchase_and_shipping_response(), [], name
+            selected_result = selected_result_from_message(message, previous_search_results)
+            if selected_result:
+                return (
+                    purchase_selected_result_response(
+                        selected_result,
+                        self.purchase_and_shipping_response(),
+                    ),
+                    [],
+                    name,
+                    [],
+                )
+            return self.purchase_and_shipping_response(), [], name, []
 
         if is_delivery_question(message):
             delivery_answer = latest_delivery_answer(previous_messages if session_id else [])
             if delivery_answer:
-                return delivery_answer, [], name
+                return delivery_answer, [], name, []
             return (
                 "No tengo un plazo de entrega registrado para esta conversación. "
                 "Si gusta, puedo consultar de nuevo el libro.",
                 [],
                 name,
+                [],
             )
         
         query = await self.extract_book_query(message, conversation_context)
+        
+        # SMART FOLLOW-UP: Si el cliente pregunta por el mismo libro que buscó antes
+        # y ya tenemos el precio, usar template de seguimiento
+        if query and last_book_query and last_book_price:
+            # Verificar si la consulta actual es similar a la anterior
+            if self._queries_are_similar(query, last_book_query):
+                followup_msg = self.behavior.get("follow_up_greeting_template", "").format(
+                    name=name or "cliente",
+                    last_query=last_book_query,
+                    last_price=last_book_price
+                )
+                if followup_msg:
+                    return followup_msg, [], name, []
+        
         if not query:
             if conversation_context:
-                return await self.generate_context_response(message, conversation_context), [], name
-            return self.behavior["no_book_query_response"], [], name
+                return await self.generate_context_response(message, conversation_context), [], name, []
+            return self.behavior["no_book_query_response"], [], name, []
         
         search_query = await self.enrich_book_query(query, conversation_context)
         if search_query != query:
-            logger.info("Consulta enriquecida para Buscalibre: %s", search_query)
+            logger.info("Consulta enriquecida para búsqueda: %s", search_query)
         
         pricing_config = await get_pricing_config()
-        search_results = await search_buscalibre(
-            search_query,
-            max_results=5,
-            ganancia_envio=pricing_config["ganancia_envio"],
-        )
-        if search_results.get("error"):
-            logger.warning("Buscalibre search failed: %s", search_results["error"])
-            return self.behavior["search_error_response"].format(name=name), [], name
+        ganancia_envio = pricing_config["ganancia_envio"]
         
-        results = search_results.get("results", [])
-        response = await self.generate_response(query, results, name, conversation_context)
-        catalog_images = await asyncio.to_thread(generate_catalog_images, results)
+        # Buscar en paralelo en BuscaLibre y MercadoLibre
+        buscalibre_task = search_buscalibre(search_query, max_results=3, ganancia_envio=ganancia_envio)
+        debugger_address = os.getenv("MELI_CHROME_DEBUGGER_ADDRESS")
+        mercadolibre_task = search_mercadolibre(search_query, max_results=3, ganancia_envio=ganancia_envio, detailed=True, debugger_address=debugger_address)
+        
+        buscalibre_results, mercadolibre_results = await asyncio.gather(
+            buscalibre_task, mercadolibre_task, return_exceptions=True
+        )
+        
+        # Procesar resultados de BuscaLibre
+        results = []
+        if isinstance(buscalibre_results, dict) and not buscalibre_results.get("error"):
+            bl_results = buscalibre_results.get("results", [])
+            for r in bl_results:
+                r["source"] = "buscalibre"
+            results.extend(bl_results)
+        elif isinstance(buscalibre_results, Exception) or (isinstance(buscalibre_results, dict) and buscalibre_results.get("error")):
+            logger.warning("Buscalibre search failed: %s", buscalibre_results.get("error") if isinstance(buscalibre_results, dict) else buscalibre_results)
+        
+        # Procesar resultados de MercadoLibre
+        if isinstance(mercadolibre_results, dict) and not mercadolibre_results.get("error"):
+            ml_results = mercadolibre_results.get("results", [])
+            for r in ml_results:
+                r["source"] = "mercadolibre"
+            results.extend(ml_results)
+        elif isinstance(mercadolibre_results, Exception) or (isinstance(mercadolibre_results, dict) and mercadolibre_results.get("error")):
+            logger.warning("MercadoLibre search failed: %s", mercadolibre_results.get("error") if isinstance(mercadolibre_results, dict) else mercadolibre_results)
+        
+        if not results:
+            logger.warning("Both searches returned no results")
+            return self.behavior["no_results_response_template"].format(query=query, name=name), [], name, []
+        
+        # Ordenar por precio (los que tienen precio primero, luego por precio ascendente)
+        results.sort(key=lambda x: (x.get("price") == "No disponible", float(re.sub(r'[^0-9.]', '', str(x.get("price", "999999")))) if x.get("price") != "No disponible" else 999999))
+        
+        response_results = prepare_response_results(results)
+        response = await self.generate_response(query, response_results, name, conversation_context)
+        catalog_images = await asyncio.to_thread(generate_catalog_images, results[:3], name, query)
         if catalog_images:
             response = (
                 f"{response} "
                 f"{self.behavior['catalog_notice_template'].format(count=len(catalog_images))}"
             )
-        return response, catalog_images, name
+        return response, catalog_images, name, response_results
 
 
 llm_provider = get_llm_provider()
@@ -662,10 +888,29 @@ from contextlib import asynccontextmanager
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
+    # Startup: ensure Chrome debugging is available
+    auto_start = os.getenv("AUTO_START_CHROME_DEBUG", "false").lower() == "true"
+    if auto_start:
+        port = int(os.getenv("CHROME_DEBUG_PORT", "9222"))
+        user_data_dir = os.getenv("CHROME_USER_DATA_DIR")
+        timeout = float(os.getenv("CHROME_START_TIMEOUT", "15.0"))
+        logger.info("Starting Chrome debugging auto-management...")
+        try:
+            await ensure_chrome_debugging(port=port, user_data_dir=user_data_dir, timeout=timeout)
+            logger.info("Chrome debugging auto-management started successfully")
+        except Exception as e:
+            logger.error(f"Failed to start Chrome debugging: {e}")
+            # Don't fail startup, just log error - MercadoLibre searches will fail gracefully
+    
     yield
-    # Shutdown: close httpx client
+    
+    # Shutdown: close httpx client and Chrome debugging
     if hasattr(llm_provider, 'close'):
         await llm_provider.close()
+    
+    # Terminate Chrome debugging if we launched it
+    await terminate_chrome_debugging()
+    logger.info("Shutdown complete")
 
 app = FastAPI(
     title="Book Search Agent",
@@ -726,7 +971,10 @@ async def receive_message(request: MessageRequest) -> MessageResponse:
         )
         
         # Handle message with session for name persistence
-        response, catalog_images, sender_name = await agent.handle_message(request.message, session_id)
+        response, catalog_images, sender_name, search_results = await agent.handle_message(
+            request.message,
+            session_id,
+        )
         
         # Get greeting with name
         greeting = get_greeting(agent.behavior, sender_name)
@@ -743,7 +991,14 @@ async def receive_message(request: MessageRequest) -> MessageResponse:
                 await save_conversations(data)
         
         # Link the conversation to its client when saving the answer.
-        await add_message_to_conversation(session_id, "assistant", response_with_greeting, catalog_images, client_name=sender_name)
+        await add_message_to_conversation(
+            session_id,
+            "assistant",
+            response_with_greeting,
+            catalog_images,
+            client_name=sender_name,
+            search_results=search_results,
+        )
         
         return MessageResponse(
             response=response_with_greeting,
@@ -815,6 +1070,58 @@ async def get_pricing() -> PricingConfig:
 @app.put("/pricing", response_model=PricingConfig)
 async def update_pricing(config: PricingConfig) -> PricingConfig:
     return PricingConfig(**await save_pricing_config(config.ganancia_envio))
+
+
+class BehaviorConfig(BaseModel):
+    behavior: Dict[str, str]
+
+
+@app.get("/behavior", response_model=BehaviorConfig)
+async def get_behavior() -> BehaviorConfig:
+    return BehaviorConfig(behavior=agent.behavior)
+
+
+@app.put("/behavior", response_model=BehaviorConfig)
+async def update_behavior(config: BehaviorConfig) -> BehaviorConfig:
+    # Validate required keys
+    required_keys = {
+        "query_extraction_instructions",
+        "query_enrichment_instructions",
+        "name_extraction_instructions",
+        "customer_care_instructions",
+        "no_book_query_response",
+        "no_results_response_template",
+        "search_error_response",
+        "available_with_price_template",
+        "available_without_price_template",
+        "availability_unknown_template",
+        "catalog_notice_template",
+        "greeting_morning",
+        "greeting_afternoon",
+        "greeting_evening",
+        "greeting_morning_no_name",
+        "greeting_afternoon_no_name",
+        "greeting_evening_no_name",
+        "purchase_and_shipping_instructions",
+        "payment_intent_instructions",
+        "purchase_and_shipping_response",
+        "follow_up_greeting_template",
+        "smart_followup_instructions",
+    }
+    missing_keys = required_keys.difference(config.behavior)
+    if missing_keys:
+        raise HTTPException(400, f"Faltan claves requeridas: {', '.join(sorted(missing_keys))}")
+    
+    # Save to file
+    temporary_file = BEHAVIOR_CONFIG_PATH.with_suffix(".json.tmp")
+    with temporary_file.open("w", encoding="utf-8") as f:
+        json.dump(config.behavior, f, ensure_ascii=False, indent=2)
+    temporary_file.replace(BEHAVIOR_CONFIG_PATH)
+    
+    # Reload agent behavior
+    agent.behavior = config.behavior
+    
+    return BehaviorConfig(behavior=agent.behavior)
 
 
 class CatalogCORSMiddleware(BaseHTTPMiddleware):

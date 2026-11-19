@@ -4,15 +4,26 @@ import { RequestList } from './RequestList';
 import { InputLine } from './InputLine';
 import { getConversation } from '../services/api';
 import { MessageBlock, RequestBlock } from './MessageBlock';
-import type { Conversation, Message } from '../types';
+import { ConfigPanel } from './ConfigPanel';
+import type { Conversation, Message, RequestItem } from '../types';
 
 export function Terminal() {
-  const { requests, enqueue, clearAll, selectSession, startNewConversation, lastCompletedSessionId } = useRequestQueue();
+  const {
+    requests,
+    currentSessionId,
+    enqueue,
+    clearAll,
+    selectSession,
+    startNewConversation,
+    lastCompletedSessionId,
+    lastCompletedRequestId,
+  } = useRequestQueue();
   const [history, setHistory] = useState<string[]>([]);
   const [historyIndex, setHistoryIndex] = useState(-1);
   const outputRef = useRef<HTMLDivElement>(null);
   const [activeConversation, setActiveConversation] = useState<Conversation | null>(null);
   const [conversationLoading, setConversationLoading] = useState(false);
+  const [showConfig, setShowConfig] = useState(false);
 
   const handleSubmit = (question: string) => {
     if (question === '__CLEAR__') {
@@ -31,6 +42,10 @@ export function Terminal() {
   };
 
   const completedRequests = requests.filter(r => r.status === 'done' || r.status === 'error');
+  const activeRequests = requests.filter(
+    request => request.session_id === currentSessionId &&
+      (request.status === 'pending' || request.status === 'processing'),
+  );
 
   const loadConversation = async (id: string) => {
     setConversationLoading(true);
@@ -47,13 +62,27 @@ export function Terminal() {
 
   useEffect(() => {
     if (lastCompletedSessionId) loadConversation(lastCompletedSessionId);
-  }, [lastCompletedSessionId]);
+  }, [lastCompletedSessionId, lastCompletedRequestId]);
 
   useEffect(() => {
     if (outputRef.current) {
       outputRef.current.scrollTop = outputRef.current.scrollHeight;
     }
-  }, [completedRequests.length, activeConversation]);
+  }, [completedRequests.length, activeConversation, activeRequests.length, requests]);
+
+  const renderLoadingRequest = (request: RequestItem) => {
+    const processing = request.status === 'processing';
+    return (
+      <div key={request.id} className="loading-request" aria-live="polite">
+        <div className="output-question loading-request-question">▶ You</div>
+        <pre className="output-response loading-request-message">{request.question}</pre>
+        <div className="loading-response">
+          <span className="loading-spinner" aria-hidden="true" />
+          <span>{processing ? 'Buscando libros y preparando catálogo…' : 'Consulta en cola…'}</span>
+        </div>
+      </div>
+    );
+  };
 
   const renderMessages = () => {
     if (activeConversation) {
@@ -101,6 +130,21 @@ export function Terminal() {
               Conversation: {activeConversation.id.slice(0, 8)}...
             </span>
           )}
+          <button
+            onClick={() => setShowConfig(!showConfig)}
+            style={{
+              padding: '6px 12px',
+              background: showConfig ? 'var(--primary)' : 'transparent',
+              color: showConfig ? 'white' : 'var(--fg)',
+              border: '1px solid var(--border)',
+              borderRadius: '4px',
+              cursor: 'pointer',
+              fontSize: '12px',
+            }}
+            title={showConfig ? 'Ocultar configuración' : 'Mostrar configuración'}
+          >
+            ⚙️ Config
+          </button>
         </div>
       </div>
 
@@ -132,6 +176,7 @@ export function Terminal() {
         {!conversationLoading && (
           <>
             {renderMessages()}
+            {activeRequests.map(renderLoadingRequest)}
             {(!activeConversation && completedRequests.length === 0) && (
               <div style={{ color: '#8b949e', textAlign: 'center', marginTop: '40px' }}>
                 Submit a question to get started...
@@ -141,8 +186,23 @@ export function Terminal() {
         )}
       </div>
 
+      {showConfig && (
+        <div
+          style={{
+            gridArea: 'list',
+            borderRight: '1px solid var(--border)',
+            background: 'var(--panel-bg)',
+            overflow: 'auto',
+            zIndex: 10,
+          }}
+        >
+          <ConfigPanel />
+        </div>
+      )}
+
       <InputLine
         onSubmit={handleSubmit}
+        disabled={activeRequests.length > 0}
         history={history}
         historyIndex={historyIndex}
         setHistoryIndex={setHistoryIndex}
