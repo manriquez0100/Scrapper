@@ -34,6 +34,21 @@ class BookQueryRoutingTests(unittest.TestCase):
         )
         self.assertEqual(main.extract_query_fallback("El evangelio de Judas"), "El evangelio de Judas")
 
+    def test_purchase_response_explains_payment_and_delivery_steps(self):
+        behavior = main.load_behavior_config()
+        response = main.purchase_selected_result_response(
+            {
+                "title": "Segunda Fundación",
+                "author": "Isaac Asimov",
+                "price": "$ 289",
+                "delivery_estimate": "Envío Rápido",
+            },
+            behavior["purchase_and_shipping_response"],
+        )
+        self.assertIn("nombre completo, teléfono, domicilio, código postal", response)
+        self.assertIn("transferencia, PayPal o depósito en OXXO o banco", response)
+        self.assertIn("envíenos su comprobante", response)
+
     def test_missed_llm_extraction_still_searches_buscalibre(self):
         async def run_test():
             agent = main.Agent(NoBookQueryLLM(), behavior=main.load_behavior_config())
