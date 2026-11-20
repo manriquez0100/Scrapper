@@ -1,0 +1,27 @@
+2026-11-19 20:27:50 | INFO | FIRESTORE_SYNC_STARTED | query='Salvador Dalí' | found_results=3 | collection=books
+2026-11-19 20:27:55 | INFO | FIRESTORE_CONNECTED | collection=books | project=delabuenamemoriaapp
+2026-11-19 20:27:56 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_cabf0ed181200a524a728c85 | title='Salvador Dali: Biografia = Salvador Dali' | source=buscalibre | update_time=2026-11-20 02:27:55.706963+00:00
+2026-11-19 20:27:56 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_9bfc6374e2895e29ae771f75 | title='Diario de un Genio' | source=buscalibre | update_time=2026-11-20 02:27:56.169573+00:00
+2026-11-19 20:27:56 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_fa2f03326dc05548dbf1449f | title='La Vida Incombustible de Salvador Dalí' | source=buscalibre | update_time=2026-11-20 02:27:56.312436+00:00
+2026-11-19 20:27:56 | INFO | FIRESTORE_SYNC_FINISHED | query='Salvador Dalí' | attempted=3 | saved=3 | failed=0 | status=success
+2026-11-19 20:28:47 | INFO | FIRESTORE_CONNECTED | collection=books | project=delabuenamemoriaapp
+2026-11-20 11:56:12 | INFO | FIRESTORE_SYNC_STARTED | query='TEST QUERY' | found_results=1 | collection=books
+2026-11-20 11:56:14 | INFO | FIRESTORE_CONNECTED | collection=books | project=store-ea555
+2026-11-20 11:56:15 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_762a297edc811d3c9bdadecd | title='Libro de Prueba 1' | source=buscalibre | update_time=2026-11-20 17:56:14.442396+00:00
+2026-11-20 11:56:15 | INFO | FIRESTORE_SYNC_FINISHED | query='TEST QUERY' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-20 12:10:17 | INFO | FIRESTORE_SYNC_STARTED | query='TEST QUERY' | found_results=3 | collection=books
+2026-11-20 12:10:17 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-20 12:10:17 | WARNING | FIRESTORE_SYNC_FINISHED | query='TEST QUERY' | attempted=3 | saved=0 | status=skipped
+2026-11-20 12:11:01 | INFO | FIRESTORE_CONNECTED | collection=books | project=store-ea555
+2026-11-20 12:11:01 | INFO | FIRESTORE_SYNC_STARTED | query='TEST QUERY' | found_results=3 | collection=books
+2026-11-20 12:11:01 | INFO | FIRESTORE_CONNECTED | collection=books | project=store-ea555
+2026-11-20 12:11:03 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_762a297edc811d3c9bdadecd | title='Libro 1: El principito' | source=buscalibre | update_time=2026-11-20 18:11:02.228104+00:00
+2026-11-20 12:11:03 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_49f7e89a67a76c493cd15554 | title='Libro 2: Don Quijote' | source=buscalibre | update_time=2026-11-20 18:11:02.349380+00:00
+2026-11-20 12:11:03 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_129d85077320e04406c08968 | title='Libro 3: Cien años de soledad' | source=buscalibre | update_time=2026-11-20 18:11:02.591334+00:00
+2026-11-20 12:11:03 | INFO | FIRESTORE_SYNC_FINISHED | query='TEST QUERY' | attempted=3 | saved=3 | failed=0 | status=success
+2026-11-20 12:29:52 | INFO | FIRESTORE_SYNC_STARTED | query='cien años de soledad' | found_results=3 | collection=books
+2026-11-20 12:29:59 | INFO | FIRESTORE_CONNECTED | collection=books | project=store-ea555
+2026-11-20 12:30:00 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_84e67fd8b875d33978c11301 | title='Cien Años de Soledad' | source=buscalibre | update_time=2026-11-20 18:29:59.830093+00:00
+2026-11-20 12:30:00 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_cac1fce0749dfd7e648ef1af | title='Cien años de soledad' | source=buscalibre | update_time=2026-11-20 18:30:00.197394+00:00
+2026-11-20 12:30:01 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_dbef0bdd1057f3aa006079f7 | title='Cien Años de Soledad (2015)' | source=buscalibre | update_time=2026-11-20 18:30:00.311734+00:00
+2026-11-20 12:30:01 | INFO | FIRESTORE_SYNC_FINISHED | query='cien años de soledad' | attempted=3 | saved=3 | failed=0 | status=success

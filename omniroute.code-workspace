@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "omniroute",
+			"path": "../../../../omniroute"
+		},
+		{
+			"name": "scrapper",
+			"path": ".."
+		}
+	],
+	"settings": {}
+}

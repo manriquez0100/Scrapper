@@ -1,0 +1,5721 @@
+Mejoras
+Toma el valor de las fechas de llegada que vienen en la siguiente etiqueta.
+En el archivo htmlResponseExample.html se muestra un ejemplo de la etiqueta:
+            </script><div class="opcionForm idx1" style=""><strong class="tituloProducto">Libro Nuevo</strong><p class="stock">
+                                    Quedan 15 unidades
+                            </p><strong class="precio">$ 63.00</strong><form action="/carro/agregar"><input type="hidden" name="c_producto" value="2562376"><input type="hidden" name="c_proveedor" value="3862"><button id="addToCart" class="button button-secondary">Comprar</button></form><div class="tiempoEnvio"><div class="diaEnvio"><div><span data-solo="0">
+                    Llega entre <strong style="color: green">el 29 May</strong> y <strong style="color: green">el 03 Jun</strong><span class="detalle-direccion-envio"> a <strong>CUAUHTÉMOC, Ciudad de México</strong>. <a href="javascript:void(0)" onclick="selectDireccion()" class="link-seleccionar-ubicacion">Seleccionar ubicación</a></span></span></div></div></div></div></div><div class="book-tools"><div><label onclick="javascript:$('#agregar-deseo button').click()"><i class="far fa-heart margin-right-10"></i>Agregar a lista de deseos</label><div style="display:none"><form id="agregar-deseo" class="agregar-deseo" action="/v2/u"><input type="hidden" name="rto" value="/pb/2510172"><button class="padding-left-xs-10 float-right no-button" type="submit"><div class="menu-icon-wrapper"><div class="margin-top-xs-10 font-color-bl overflow-visible"><i class="far fa-heart fa-lg margin-right-10"></i>Agregar a lista de deseos</div></div></button></form><!-- MODAL lista de deseos --><div class="modal modal-deseo-contenido dialog-box"><i class="cerrar fas fa-times color-gray fa-lg"></i><p class="font-size-medium margin-top-xs-10 text-align-center">Elige la lista en la que quieres agregar tu producto o crea una <span class="nuevaLista color-primary cursor-pointer">nueva lista</span></p><form class="agregandoaLista margin-top-20 margin-bottom-20 display-inline-block width-100" action="/v2/lista-deseos"><input type="hidden" name="action" value="add_product"><input type="hidden" name="id_producto" value="2510172"><input type="hidden" name="precio" value=""><!-- <div class="row"><div class="col-xs-12 col-md-6"> --><select class="margin-left-0 cursor-pointer width-100" name="id_lista"><option value="-1">Cargando, espera por favor...</option></select><!-- </div><div class="col-xs-12 col-md-6"> --><button class="agregarEnLista button button-secondary margin-right-0 margin-top-10 font-size-small width-100" type="button">Agregar</button><!-- </div></div> --></form><form class="creandounaLista display-none margin-top-20" action="/v2/lista-deseos"><input type="hidden" name="action" value="create_add_product"><input type="hidden" name="id_producto" value="2510172"><input type="hidden" name="precio" value=""><!-- <div class="row"><div class="col-xs-12 col-md-6"> --><input class="margin-left-0" type="text" name="nombre" placeholder="Nombre nueva lista"><!-- </div><div class="col-xs-12 col-md-6"> --><button class="agregarEnLista button button-secondary margin-right-0 margin-top-10 font-size-small width-100" type="button">Crear y Agregar</button><!-- </div></div> --></form><p class="agregadoAlCarro font-size-normal text-align-center" style="display:none;"><span>✓</span> Producto agregado <strong>correctamente</strong> a la lista de deseos.</p><a class="margin-top-20" href="/u" title="Ir a Mis Listas">Ir a Mis Listas</a></div><!-- /MODAL lista de deseos --><script type="text/javascript">
+
+Que es donde viene el campo de fecha de llegada.
+
+Adjunto la pantalla completa en html para que modifiques.
+El valor de las fechas dellegada se debe mostrar en la imagen generada.
+<html class="no-js" lang="es"><!--<![endif]--><head>
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+<link rel="preconnect" href="https://statics.cdn1.buscalibre.com">
+<link rel="preconnect" href="https://statics.cdn0.buscalibre.com">
+
+<link rel="dns-prefetch" href="https://images.cdn1.buscalibre.com">
+<link rel="dns-prefetch" href="https://images.cdn2.buscalibre.com">
+<link rel="dns-prefetch" href="https://images.cdn3.buscalibre.com">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <title>Libro La Ciencia del Caos De Isaac Schifter - Buscalibre México</title>
+    <!-- <link rel="stylesheet" href="https://statics.cdn0.buscalibre.com/css/styles.pure.product20200207.css" /> -->
+<meta name="description" content="En años recientes, parte de la comunidad científica en todo el mundo ha comenzado a hablar incesantemente de caos, desorden, para explicar muchos fenómenos que suceden en la naturaleza y en experimentos caracterizados por tener un comportamiento que no puede ser descrito por leyes matemáticas sencillas. ¿Por qué existe este caos?, ¿cómo interviene en nuestra vida cotidiana y cuáles son sus consecuencias?En 1776 Laplace afirmaba que si se conociera la velocidad y posición de todas las partículas del Universo en un momento determinado, se podría conocer su pasado y predecir su futuro con certeza. Durante más de cien años, nos dice el doctor Schifter, esta suposición pareció correcta, hasta el punto de que la aplicación de tal principio al comportamiento humano llegó a poner en duda la existencia del libre albedrío. La experiencia nos ha enseñado, sin embargo, que existen fenómenos impredecibles, y los cambios climáticos son un ejemplo. El desorden- nos dice el autor - es precisamente el personaje principal de este relato, el cual intenta dar a conocer el estudio del comportamiento caótico en diversos campos de la ciencia y hacer que el lector se interese en indagar más sobre el tema. - ver opiniones y comentarios. Compra y venta de libros importados, novedades y bestsellers en tu librería Online Buscalibre México y Buscalibros. ">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="title" content="Libro La Ciencia del Caos De Isaac Schifter - Buscalibre México">
+<meta property="og:image" content="https://images.cdn3.buscalibre.com/fit-in/360x360/ae/58/ae583931b7df64bb4eda7c97a26649e4.jpg">
+<meta property="og:url" content="https://www.buscalibre.com.mx/libro-la-ciencia-del-caos/9789681668631/p/2510172">
+<meta property="og:title" content="Libro La Ciencia del Caos De Isaac Schifter - Buscalibre México">
+<meta property="og:description" content="Libro La Ciencia del Caos De Isaac Schifter - Buscalibre México - ver opiniones y comentarios. Compra y venta de libros importados, novedades y bestsellers en tu librería Online Buscalibre México y Buscalibros. ">
+
+<meta name="keywords" content="ciencia,del,caos,isaac,schifter,fondo,cultura,economica,isaac,schifter,fondo,cultura,economica,9681668634,9789681668631,buscalibre méxico,comprar,venta,tienda,amazon,ebay,libros,buscalibre.com.mx">
+<meta property="og:type" content="product">
+<meta property="buscalibre" content="https://www.buscalibre.com.mx/​ip/2510172">
+<meta property="fb:admins" content="585352946, 552901842, 100000020388529">
+<meta property="fb:app_id" content="2402715036437017">
+<meta property="fb:page_id" content="139692006112195">
+<meta itemprop="productID" content="2510172">
+<meta itemprop="image" content="https://images.cdn3.buscalibre.com/fit-in/360x360/ae/58/ae583931b7df64bb4eda7c97a26649e4.jpg">
+
+<link rel="canonical" href="https://www.buscalibre.com.mx/libro-la-ciencia-del-caos/9789681668631/p/2510172">
+
+
+   <link itemprop="availability" href="http://schema.org/InStock">
+
+
+
+
+<script src="https://ct.pinterest.com/static/ct/token_create.js"></script><script type="text/javascript" async="" src="https://analytics.tiktok.com/i18n/pixel/static/identify_5cff1caf.js"></script><script type="text/javascript" async="" src="https://capi-automation.s3.us-east-2.amazonaws.com/public/client_js/capiParamBuilder/clientParamBuilder.bundle.js"></script><script type="text/javascript" async="" src="https://analytics.tiktok.com/i18n/pixel/static/main.MWJkOTJmOWRkOQ.js" data-id="C4J59C51KC6QQ9D0GOMG"></script><script async="" src="https://s.pinimg.com/ct/lib/main.948ee93e.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/destination?id=AW-1053284526&amp;cx=c&amp;gtm=4e65k1"></script><script src="https://connect.facebook.net/signals/config/334724869216339?v=2.9.325&amp;r=stable&amp;domain=www.buscalibre.com.mx&amp;hme=af8aa31887db259becaf70277daef60bd8bc35c2df82c2acd4258de27ecac4b5&amp;ex_m=104%2C207%2C155%2C22%2C72%2C73%2C146%2C68%2C67%2C11%2C164%2C90%2C16%2C138%2C127%2C39%2C75%2C78%2C134%2C160%2C166%2C8%2C4%2C5%2C7%2C6%2C3%2C91%2C101%2C167%2C172%2C221%2C62%2C188%2C189%2C55%2C279%2C30%2C74%2C233%2C232%2C231%2C23%2C33%2C103%2C61%2C10%2C63%2C97%2C98%2C99%2C105%2C130%2C31%2C29%2C132%2C133%2C129%2C128%2C156%2C76%2C159%2C157%2C158%2C50%2C60%2C123%2C15%2C163%2C45%2C266%2C267%2C265%2C26%2C27%2C28%2C48%2C147%2C77%2C112%2C18%2C20%2C44%2C40%2C42%2C41%2C83%2C92%2C96%2C110%2C145%2C148%2C46%2C111%2C24%2C21%2C119%2C69%2C36%2C150%2C149%2C151%2C142%2C140%2C25%2C35%2C59%2C109%2C162%2C70%2C17%2C153%2C114%2C81%2C66%2C19%2C85%2C86%2C116%2C84%2C136%2C135%2C139%2C161%2C34%2C281%2C297%2C214%2C203%2C204%2C202%2C300%2C291%2C52%2C215%2C107%2C131%2C80%2C121%2C54%2C47%2C49%2C113%2C120%2C126%2C125%2C58%2C64%2C152%2C115%2C37%2C32%2C53%2C56%2C100%2C165%2C1%2C124%2C14%2C122%2C12%2C2%2C57%2C93%2C65%2C118%2C89%2C88%2C168%2C169%2C94%2C95%2C9%2C102%2C51%2C143%2C87%2C79%2C71%2C117%2C106%2C43%2C144%2C0%2C82%2C137%2C141%2C154%2C38%2C108%2C13%2C170" async=""></script><script type="text/javascript" async="" src="https://connect.facebook.net/en_US/fbevents.js"></script><script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script><script type="text/javascript" async="" src="https://analytics.tiktok.com/i18n/pixel/events.js?sdkid=C4J59C51KC6QQ9D0GOMG&amp;lib=ttq"></script><script type="text/javascript" async="" src="https://s.pinimg.com/ct/core.js"></script><script type="text/javascript" async="" src="https://static.ads-twitter.com/uwt.js"></script><script type="text/javascript" async="" src="https://static.hotjar.com/c/hotjar-2865918.js?sv=7"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-BG9K6GGJ64&amp;cx=c&amp;gtm=4e65k1"></script><script type="text/javascript" async="" src="https://tags.creativecdn.com/60uLkp0a0FiNIf0v6eDQ.js"></script><script async="" src="//www.googletagmanager.com/gtm.js?id=GTM-KHLPCQ"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/gtm/js?id=GTM-NHF6QVD&amp;cid=2001311754.1779577234"></script><script async="" src="https://www.google-analytics.com/analytics.js"></script><script>
+dataLayer = [{
+                'adroll_pais_cliente': 'mx',
+        'adroll_id_producto': '2510172',
+    'pa_id_producto' : '2510172',
+    'precio_producto': '3267.7281',
+    'ecomm_totalvalue' : 63.00,
+    'ecomm_totalvalue_us' : '3.64',
+    'items': [
+        {
+            'item_id': '2510172',
+            'item_name': 'La Ciencia del Caos',
+            'price': 63.00,
+            'item_category': 'Books',
+            'quantity': 1,
+            'discount': 30,
+        }
+    ]
+}];
+</script>
+
+<style>
+    section#producto .thumbs ul li.slide_thumbs{
+        display: block;
+    }
+</style>
+
+
+
+      <link rel="alternate" href="https://www.buscalibre.com.ar/libro-la-ciencia-del-caos/9789681668631/p/2510172" hreflang="es-AR">
+      <link rel="alternate" href="https://www.bookdelivery.com/au-en/book-la-ciencia-del-caos/9789681668631/p/2510172" hreflang="en-AU">
+      <link rel="alternate" href="https://www.bookdelivery.at/book-la-ciencia-del-caos/9789681668631/p/2510172" hreflang="en-AT">
+      <link rel="alternate" href="https://www.bookdelivery.com/be-en/book-la-ciencia-del-caos/9789681668631/p/2510172" hreflang="en-BE">
+      <link rel="alternate" href="https://www.bookdelivery.com/br-en/book-la-ciencia-del-caos/9789681668631/p/2510172" hreflang="en-BR">
+      <link rel="alternate" href="https://www.bookdelivery.com/ca-en/book-la-ciencia-del-caos/9789681668631/p/2510172" hreflang="en-CA">
+      <link rel="alternate" href="https://www.buscalibre.cl/libro-la-ciencia-del-caos/9789681668631/p/2510172" hreflang="es-CL">
+      <link rel="alternate" href="https://www.buscalibre.com.co/libro-la-ciencia-del-caos/9789681668631/p/2510172" hreflang="es-CO">
+      <link rel="alternate" href="https://www.buscalibre.cr/libro-la-ciencia-del-caos/9789681668631/p/2510172" hreflang="es-CR">
+      <link rel="alternate" href="https://www.bookdelivery.com/hr-en/book-la-ciencia-del-caos/9789681668631/p/2510172" hreflang="en-HR">
+      <link rel="alternate" href="https://www.bookdelivery.com/cz-en/book-la-ciencia-del-caos/9789681668631/p/2510172" hreflang="en-CZ">
+      <link rel="alternate" href="https://www.buscalibre.com/do-es/libro-la-ciencia-del-caos/9789681668631/p/2510172" hreflang="es-DO">
+      <link rel="alternate" href="https://www.buscalibre.ec/libro-la-ciencia-del-caos/9789681668631/p/2510172" hreflang="es-EC">
+      <link rel="alternate" href="https://www.buscalibre.com/sv-es/libro-la-ciencia-del-caos/9789681668631/p/2510172" hreflang="es-SV">
+      <link rel="alternate" href="https://www.buscalibre.es/libro-la-ciencia-del-caos/9789681668631/p/2510172" hreflang="es-ES">
+      <link rel="alternate" href="https://www.bookdelivery.com/fi-en/book-la-ciencia-del-caos/9789681668631/p/2510172" hreflang="en-FI">
+      <link rel="alternate" href="https://www.bookdelivery.com/fr-en/book-la-ciencia-del-caos/9789681668631/p/2510172" hreflang="en-FR">
+      <link rel="alternate" href="https://www.bookdelivery.com/fr-fr/livre-la-ciencia-del-caos/9789681668631/p/2510172" hreflang="fr-FR">
+      <link rel="alternate" href="https://www.bookdelivery.com/de-en/book-la-ciencia-del-caos/9789681668631/p/2510172" hreflang="en-DE">
+      <link rel="alternate" href="https://www.bookdelivery.com/gr-en/book-la-ciencia-del-caos/9789681668631/p/2510172" hreflang="en-GR">
+      <link rel="alternate" href="https://www.bookdelivery.com/hk-en/book-la-ciencia-del-caos/9789681668631/p/2510172" hreflang="en-HK">
+      <link rel="alternate" href="https://www.bookdelivery.com/hu-en/book-la-ciencia-del-caos/9789681668631/p/2510172" hreflang="en-HU">
+      <link rel="alternate" href="https://www.bookdelivery.com/id-en/book-la-ciencia-del-caos/9789681668631/p/2510172" hreflang="en-ID">
+      <link rel="alternate" href="https://www.bookdelivery.com/ie-en/book-la-ciencia-del-caos/9789681668631/p/2510172" hreflang="en-IE">
+      <link rel="alternate" href="https://www.bookdelivery.com/il-en/book-la-ciencia-del-caos/9789681668631/p/2510172" hreflang="en-IL">
+      <link rel="alternate" href="https://www.bookdelivery.com/it-en/book-la-ciencia-del-caos/9789681668631/p/2510172" hreflang="en-IT">
+      <link rel="alternate" href="https://www.bookdelivery.com/jp-en/book-la-ciencia-del-caos/9789681668631/p/2510172" hreflang="en-JP">
+      <link rel="alternate" href="https://www.bookdelivery.com/lv-en/book-la-ciencia-del-caos/9789681668631/p/2510172" hreflang="en-LV">
+      <link rel="alternate" href="https://www.bookdelivery.com/my-en/book-la-ciencia-del-caos/9789681668631/p/2510172" hreflang="en-MY">
+      <link rel="alternate" href="https://www.bookdelivery.com/mt-en/book-la-ciencia-del-caos/9789681668631/p/2510172" hreflang="en-MT">
+      <link rel="alternate" href="https://www.buscalibre.com.mx/libro-la-ciencia-del-caos/9789681668631/p/2510172" hreflang="es-MX">
+      <link rel="alternate" href="https://www.bookdelivery.nl/book-la-ciencia-del-caos/9789681668631/p/2510172" hreflang="en-NL">
+      <link rel="alternate" href="https://www.bookdelivery.co.nz/book-la-ciencia-del-caos/9789681668631/p/2510172" hreflang="en-NZ">
+      <link rel="alternate" href="https://www.buscalibre.pe/libro-la-ciencia-del-caos/9789681668631/p/2510172" hreflang="es-PE">
+      <link rel="alternate" href="https://www.bookdelivery.com/ph-en/book-la-ciencia-del-caos/9789681668631/p/2510172" hreflang="en-PH">
+      <link rel="alternate" href="https://www.bookdelivery.com/pt-en/book-la-ciencia-del-caos/9789681668631/p/2510172" hreflang="en-PT">
+      <link rel="alternate" href="https://www.bookdelivery.com/sg-en/book-la-ciencia-del-caos/9789681668631/p/2510172" hreflang="en-SG">
+      <link rel="alternate" href="https://www.bookdelivery.com/sk-en/book-la-ciencia-del-caos/9789681668631/p/2510172" hreflang="en-SK">
+      <link rel="alternate" href="https://www.bookdelivery.com/si-en/book-la-ciencia-del-caos/9789681668631/p/2510172" hreflang="en-SI">
+      <link rel="alternate" href="https://www.bookdelivery.co.za/book-la-ciencia-del-caos/9789681668631/p/2510172" hreflang="en-ZA">
+      <link rel="alternate" href="https://www.bookdelivery.com/kr-en/book-la-ciencia-del-caos/9789681668631/p/2510172" hreflang="en-KR">
+      <link rel="alternate" href="https://www.bookdelivery.com/ch-en/book-la-ciencia-del-caos/9789681668631/p/2510172" hreflang="en-CH">
+      <link rel="alternate" href="https://www.bookdelivery.tw/book-la-ciencia-del-caos/9789681668631/p/2510172" hreflang="en-TW">
+      <link rel="alternate" href="https://www.bookdelivery.com/th-en/book-la-ciencia-del-caos/9789681668631/p/2510172" hreflang="en-TH">
+      <link rel="alternate" href="https://www.bookdelivery.com/gb-en/book-la-ciencia-del-caos/9789681668631/p/2510172" hreflang="en-GB">
+      <link rel="alternate" href="https://www.buscalibre.us/libro-la-ciencia-del-caos/9789681668631/p/2510172" hreflang="es-US">
+      <link rel="alternate" href="https://www.bookdelivery.com/us-en/book-la-ciencia-del-caos/9789681668631/p/2510172" hreflang="en-US">
+      <link rel="alternate" href="https://www.buscalibre.uy/libro-la-ciencia-del-caos/9789681668631/p/2510172" hreflang="es-UY">
+      <link rel="alternate" href="https://www.bookdelivery.com/vn-en/book-la-ciencia-del-caos/9789681668631/p/2510172" hreflang="en-VN">
+      <link rel="alternate" href="https://www.buscalibre.com/int-es/libro-la-ciencia-del-caos/9789681668631/p/2510172" hreflang="es-PA">
+      <link rel="alternate" href="https://www.buscalibre.com/int-es/libro-la-ciencia-del-caos/9789681668631/p/2510172" hreflang="es-GT">
+      <link rel="alternate" href="https://www.buscalibre.com/int-es/libro-la-ciencia-del-caos/9789681668631/p/2510172" hreflang="es-BZ">
+      <link rel="alternate" href="https://www.buscalibre.com/int-es/libro-la-ciencia-del-caos/9789681668631/p/2510172" hreflang="es-HN">
+      <link rel="alternate" href="https://www.buscalibre.com/int-es/libro-la-ciencia-del-caos/9789681668631/p/2510172" hreflang="es-NI">
+      <link rel="alternate" href="https://www.buscalibre.com/int-es/libro-la-ciencia-del-caos/9789681668631/p/2510172" hreflang="es-VE">
+      <link rel="alternate" href="https://www.buscalibre.com/int-es/libro-la-ciencia-del-caos/9789681668631/p/2510172" hreflang="es-GY">
+      <link rel="alternate" href="https://www.buscalibre.com/int-es/libro-la-ciencia-del-caos/9789681668631/p/2510172" hreflang="es-SR">
+      <link rel="alternate" href="https://www.buscalibre.com/int-es/libro-la-ciencia-del-caos/9789681668631/p/2510172" hreflang="es-PY">
+      <link rel="alternate" href="https://www.buscalibre.com/int-es/libro-la-ciencia-del-caos/9789681668631/p/2510172" hreflang="es-CU">
+      <link rel="alternate" href="https://www.buscalibre.com/int-es/libro-la-ciencia-del-caos/9789681668631/p/2510172" hreflang="es-PR">
+      <link rel="alternate" href="https://www.buscalibre.com/int-es/libro-la-ciencia-del-caos/9789681668631/p/2510172" hreflang="es-JM">
+      <link rel="alternate" href="https://www.buscalibre.com/int-es/libro-la-ciencia-del-caos/9789681668631/p/2510172" hreflang="es-HT">
+  
+    
+
+<meta name="google-site-verification" content="Tuq2DY0nF1Uf0zsTwCxf3pkFnlbZ6hKkfXkCUefiAmY">
+<meta name="robots" content="index,follow">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+<link rel="shortcut icon" href="https://statics.cdn0.buscalibre.com/icons/20240422180100/favicon.ico">
+
+
+<meta name="facebook-domain-verification" content="4cgldhlmja9r4gdjywig2st9a34gtv">
+
+<script type="text/javascript" src="https://9589e48bd177.us-east-1.sdk.awswaf.com/9589e48bd177/c29344e9af89/challenge.js" defer=""></script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-41147306-4', 'auto');  // Update tracker settings
+  ga('require', 'GTM-NHF6QVD');           // Add this line
+</script>
+
+<link rel="apple-touch-icon" href="https://statics.cdn0.buscalibre.com/icons/20240422180100/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="120x120" href="https://statics.cdn0.buscalibre.com/icons/20240422180100/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://statics.cdn0.buscalibre.com/icons/20240422180100/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://statics.cdn0.buscalibre.com/icons/20240422180100/favicon-16x16.png">
+<link rel="manifest" href="https://statics.cdn0.buscalibre.com/icons/20240422180100/manifest.json">
+<link rel="mask-icon" href="https://statics.cdn0.buscalibre.com/icons/20240422180100/safari-pinned-tab.svg" color="#fe5a1e">
+
+
+<meta http-equiv="Cache-Control" content="max-age=0, s-maxage=345600">
+<meta name="theme-color" content="#ff5a00">
+
+    <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/colmcabachdhhfliafaohakoonlmjlpo">
+
+
+
+    <style type="text/css">@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');:root{--montserrat:'Montserrat', sans-serif !important;--naranjo:#ff3c00;--naranjo-hover:#ed3700;--headerfondo:#182B3A;--azul:#182B3A;--verde:#3EAF3F;--bold:600;--medium:400;--b:#BBBBBB;--d:#DDDDDD}body a, body div, body li, body p{font-family:var( --montserrat ) !important}.blbutton{background:var(--naranjo);color:white;font-weight:var( --semibold );padding:19px 10px;border-radius:6px;text-align:center;-webkit-transition:all 0.1s ease-out;-moz-transition:all 0.1s ease-out;-o-transition:all 0.1s ease-out;transition:all 0.1s ease-out}.blbutton:hover{background:var(--naranjo-hover);color:white}span.despachoGratisIcono{background-image:url(https://statics.cdn0.buscalibre.com/images/20181129-1150spritedetalle.png);height:36px;width:122px;display:block;background-position:0 -36px}span[data-pista='despacho_24_horas']{display:block;background-position:0px -67px;background-image:url("https://statics.cdn0.buscalibre.com/images/20240611152510spritedetalle.png");background-repeat:no-repeat;background-size:41em;width:100px;height:32px;text-indent:53px;line-height:2.5em;font-size:0.8em;color:white;position:absolute;top:155px}</style>
+
+<!-- Lazyload -->
+<script>
+    !function(a,b){var c=b(a,a.document);a.lazySizes=c,"object"==typeof module&&module.exports&&(module.exports=c)}(window,function(a,b){"use strict";if(b.getElementsByClassName){var c,d,e=b.documentElement,f=a.Date,g=a.HTMLPictureElement,h="addEventListener",i="getAttribute",j=a[h],k=a.setTimeout,l=a.requestAnimationFrame||k,m=a.requestIdleCallback,n=/^picture$/i,o=["load","error","lazyincluded","_lazyloaded"],p={},q=Array.prototype.forEach,r=function(a,b){return p[b]||(p[b]=new RegExp("(\\s|^)"+b+"(\\s|$)")),p[b].test(a[i]("class")||"")&&p[b]},s=function(a,b){r(a,b)||a.setAttribute("class",(a[i]("class")||"").trim()+" "+b)},t=function(a,b){var c;(c=r(a,b))&&a.setAttribute("class",(a[i]("class")||"").replace(c," "))},u=function(a,b,c){var d=c?h:"removeEventListener";c&&u(a,b),o.forEach(function(c){a[d](c,b)})},v=function(a,d,e,f,g){var h=b.createEvent("CustomEvent");return e||(e={}),e.instance=c,h.initCustomEvent(d,!f,!g,e),a.dispatchEvent(h),h},w=function(b,c){var e;!g&&(e=a.picturefill||d.pf)?(c&&c.src&&!b[i]("srcset")&&b.setAttribute("srcset",c.src),e({reevaluate:!0,elements:[b]})):c&&c.src&&(b.src=c.src)},x=function(a,b){return(getComputedStyle(a,null)||{})[b]},y=function(a,b,c){for(c=c||a.offsetWidth;c<d.minSize&&b&&!a._lazysizesWidth;)c=b.offsetWidth,b=b.parentNode;return c},z=function(){var a,c,d=[],e=[],f=d,g=function(){var b=f;for(f=d.length?e:d,a=!0,c=!1;b.length;)b.shift()();a=!1},h=function(d,e){a&&!e?d.apply(this,arguments):(f.push(d),c||(c=!0,(b.hidden?k:l)(g)))};return h._lsFlush=g,h}(),A=function(a,b){return b?function(){z(a)}:function(){var b=this,c=arguments;z(function(){a.apply(b,c)})}},B=function(a){var b,c=0,e=d.throttleDelay,g=d.ricTimeout,h=function(){b=!1,c=f.now(),a()},i=m&&g>49?function(){m(h,{timeout:g}),g!==d.ricTimeout&&(g=d.ricTimeout)}:A(function(){k(h)},!0);return function(a){var d;(a=a===!0)&&(g=33),b||(b=!0,d=e-(f.now()-c),0>d&&(d=0),a||9>d?i():k(i,d))}},C=function(a){var b,c,d=99,e=function(){b=null,a()},g=function(){var a=f.now()-c;d>a?k(g,d-a):(m||e)(e)};return function(){c=f.now(),b||(b=k(g,d))}};!function(){var b,c={lazyClass:"lazyload",loadedClass:"lazyloaded",loadingClass:"lazyloading",preloadClass:"lazypreload",errorClass:"lazyerror",autosizesClass:"lazyautosizes",srcAttr:"data-src",srcsetAttr:"data-srcset",sizesAttr:"data-sizes",minSize:40,customMedia:{},init:!0,expFactor:1.5,hFac:.8,loadMode:2,loadHidden:!0,ricTimeout:0,throttleDelay:125};d=a.lazySizesConfig||a.lazysizesConfig||{};for(b in c)b in d||(d[b]=c[b]);a.lazySizesConfig=d,k(function(){d.init&&F()})}();var D=function(){var g,l,m,o,p,y,D,F,G,H,I,J,K,L,M=/^img$/i,N=/^iframe$/i,O="onscroll"in a&&!/(gle|ing)bot/.test(navigator.userAgent),P=0,Q=0,R=0,S=-1,T=function(a){R--,a&&a.target&&u(a.target,T),(!a||0>R||!a.target)&&(R=0)},U=function(a,c){var d,f=a,g="hidden"==x(b.body,"visibility")||"hidden"!=x(a.parentNode,"visibility")&&"hidden"!=x(a,"visibility");for(F-=c,I+=c,G-=c,H+=c;g&&(f=f.offsetParent)&&f!=b.body&&f!=e;)g=(x(f,"opacity")||1)>0,g&&"visible"!=x(f,"overflow")&&(d=f.getBoundingClientRect(),g=H>d.left&&G<d.right&&I>d.top-1&&F<d.bottom+1);return g},V=function(){var a,f,h,j,k,m,n,p,q,r=c.elements;if((o=d.loadMode)&&8>R&&(a=r.length)){f=0,S++,null==K&&("expand"in d||(d.expand=e.clientHeight>500&&e.clientWidth>500?500:370),J=d.expand,K=J*d.expFactor),K>Q&&1>R&&S>2&&o>2&&!b.hidden?(Q=K,S=0):Q=o>1&&S>1&&6>R?J:P;for(;a>f;f++)if(r[f]&&!r[f]._lazyRace)if(O)if((p=r[f][i]("data-expand"))&&(m=1*p)||(m=Q),q!==m&&(y=innerWidth+m*L,D=innerHeight+m,n=-1*m,q=m),h=r[f].getBoundingClientRect(),(I=h.bottom)>=n&&(F=h.top)<=D&&(H=h.right)>=n*L&&(G=h.left)<=y&&(I||H||G||F)&&(d.loadHidden||"hidden"!=x(r[f],"visibility"))&&(l&&3>R&&!p&&(3>o||4>S)||U(r[f],m))){if(ba(r[f]),k=!0,R>9)break}else!k&&l&&!j&&4>R&&4>S&&o>2&&(g[0]||d.preloadAfterLoad)&&(g[0]||!p&&(I||H||G||F||"auto"!=r[f][i](d.sizesAttr)))&&(j=g[0]||r[f]);else ba(r[f]);j&&!k&&ba(j)}},W=B(V),X=function(a){s(a.target,d.loadedClass),t(a.target,d.loadingClass),u(a.target,Z),v(a.target,"lazyloaded")},Y=A(X),Z=function(a){Y({target:a.target})},$=function(a,b){try{a.contentWindow.location.replace(b)}catch(c){a.src=b}},_=function(a){var b,c=a[i](d.srcsetAttr);(b=d.customMedia[a[i]("data-media")||a[i]("media")])&&a.setAttribute("media",b),c&&a.setAttribute("srcset",c)},aa=A(function(a,b,c,e,f){var g,h,j,l,o,p;(o=v(a,"lazybeforeunveil",b)).defaultPrevented||(e&&(c?s(a,d.autosizesClass):a.setAttribute("sizes",e)),h=a[i](d.srcsetAttr),g=a[i](d.srcAttr),f&&(j=a.parentNode,l=j&&n.test(j.nodeName||"")),p=b.firesLoad||"src"in a&&(h||g||l),o={target:a},p&&(u(a,T,!0),clearTimeout(m),m=k(T,2500),s(a,d.loadingClass),u(a,Z,!0)),l&&q.call(j.getElementsByTagName("source"),_),h?a.setAttribute("srcset",h):g&&!l&&(N.test(a.nodeName)?$(a,g):a.src=g),f&&(h||l)&&w(a,{src:g})),a._lazyRace&&delete a._lazyRace,t(a,d.lazyClass),z(function(){(!p||a.complete&&a.naturalWidth>1)&&(p?T(o):R--,X(o))},!0)}),ba=function(a){var b,c=M.test(a.nodeName),e=c&&(a[i](d.sizesAttr)||a[i]("sizes")),f="auto"==e;(!f&&l||!c||!a[i]("src")&&!a.srcset||a.complete||r(a,d.errorClass)||!r(a,d.lazyClass))&&(b=v(a,"lazyunveilread").detail,f&&E.updateElem(a,!0,a.offsetWidth),a._lazyRace=!0,R++,aa(a,b,f,e,c))},ca=function(){if(!l){if(f.now()-p<999)return void k(ca,999);var a=C(function(){d.loadMode=3,W()});l=!0,d.loadMode=3,W(),j("scroll",function(){3==d.loadMode&&(d.loadMode=2),a()},!0)}};return{_:function(){p=f.now(),c.elements=b.getElementsByClassName(d.lazyClass),g=b.getElementsByClassName(d.lazyClass+" "+d.preloadClass),L=d.hFac,j("scroll",W,!0),j("resize",W,!0),a.MutationObserver?new MutationObserver(W).observe(e,{childList:!0,subtree:!0,attributes:!0}):(e[h]("DOMNodeInserted",W,!0),e[h]("DOMAttrModified",W,!0),setInterval(W,999)),j("hashchange",W,!0),["focus","mouseover","click","load","transitionend","animationend","webkitAnimationEnd"].forEach(function(a){b[h](a,W,!0)}),/d$|^c/.test(b.readyState)?ca():(j("load",ca),b[h]("DOMContentLoaded",W),k(ca,2e4)),c.elements.length?(V(),z._lsFlush()):W()},checkElems:W,unveil:ba}}(),E=function(){var a,c=A(function(a,b,c,d){var e,f,g;if(a._lazysizesWidth=d,d+="px",a.setAttribute("sizes",d),n.test(b.nodeName||""))for(e=b.getElementsByTagName("source"),f=0,g=e.length;g>f;f++)e[f].setAttribute("sizes",d);c.detail.dataAttr||w(a,c.detail)}),e=function(a,b,d){var e,f=a.parentNode;f&&(d=y(a,f,d),e=v(a,"lazybeforesizes",{width:d,dataAttr:!!b}),e.defaultPrevented||(d=e.detail.width,d&&d!==a._lazysizesWidth&&c(a,f,e,d)))},f=function(){var b,c=a.length;if(c)for(b=0;c>b;b++)e(a[b])},g=C(f);return{_:function(){a=b.getElementsByClassName(d.autosizesClass),j("resize",g)},checkElems:g,updateElem:e}}(),F=function(){F.i||(F.i=!0,E._(),D._())};return c={cfg:d,autoSizer:E,loader:D,init:F,uP:w,aC:s,rC:t,hC:r,fire:v,gW:y,rAF:z}}});
+</script>
+
+
+<script>
+    var countryshow           = '131';
+    var timeserver            = new Date('Sat May 23 2026 19:02:02 -0400');
+    var sitio_es_bookdelivery = false;
+</script>
+
+<script>
+    function getCookie(b) {var c, a, e, d = document.cookie.split(";");for (c = 0; c < d.length; c++) {a = d[c].substr(0, d[c].indexOf("="));e = d[c].substr(d[c].indexOf("=") + 1);a = a.replace(/^\s+|\s+$/g, "");if (a == b) {return unescape(e)}}}
+    function setCookie(c, e, a, h, d, g) {var b = new Date();b.setTime(b.getTime());if (a) {a = a * 1000 * 60 * 60 * 24}var f = new Date(b.getTime() + (a));document.cookie = c + "=" + escape(e) + ((a) ? ";expires=" + f.toGMTString() : "") + ((h) ? ";path=" + h : "") + ((d) ? ";domain=" + d : "") + ((g) ? ";secure" : "")}
+</script>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "url": "https://www.buscalibre.com.mx",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://www.buscalibre.com.mx/libros/search/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+
+
+  <script src="https://accounts.google.com/gsi/client" async="" defer=""></script>
+  <script>
+    const CLIENT_ID = "789874775943-bmjvsobshc87u7r3dvjip58rtvn2q47d.apps.googleusercontent.com";
+    window.onload = function () {
+      google.accounts.id.initialize({
+        client_id: CLIENT_ID,
+        callback: async (res) => {
+          const r = await fetch("/v2/api/auth/google", {
+            method: "POST",
+            headers: {"Content-Type":"application/json"},
+            credentials: "include",
+            body: JSON.stringify({ id_token: res.credential })
+          });
+          if (r.ok) location.reload();
+          else console.error("Login falló");
+        },
+        use_fedcm_for_prompt: true
+      });
+      google.accounts.id.prompt();
+    };
+  </script>
+    <style>
+.row{box-sizing:border-box;display:-ms-flexbox;display:-webkit-box;display:flex;-ms-flex:0 1 auto;-webkit-box-flex:0;flex:0 1 auto;-ms-flex-direction:row;-webkit-box-orient:horizontal;-webkit-box-direction:normal;flex-direction:row;-ms-flex-wrap:wrap;flex-wrap:wrap;margin-right:-1rem;margin-left:-1rem}.col-xs,.col-xs-1,.col-xs-10,.col-xs-11,.col-xs-12,.col-xs-2,.col-xs-3,.col-xs-4,.col-xs-5,.col-xs-6,.col-xs-7,.col-xs-8,.col-xs-9{box-sizing:border-box;-ms-flex:0 0 auto;-webkit-box-flex:0;flex:0 0 auto;padding-right:1rem;padding-left:1rem}.col-xs{-webkit-flex-grow:1;-ms-flex-positive:1;-webkit-box-flex:1;flex-grow:1;-ms-flex-preferred-size:0;flex-basis:0;max-width:100%}.col-xs-1{-ms-flex-preferred-size:8.333%;flex-basis:8.333%;max-width:8.333%}.col-xs-2{-ms-flex-preferred-size:16.667%;flex-basis:16.667%;max-width:16.667%}.col-xs-3{-ms-flex-preferred-size:25%;flex-basis:25%;max-width:25%}.col-xs-4{-ms-flex-preferred-size:33.333%;flex-basis:33.333%;max-width:33.333%}.col-xs-5{-ms-flex-preferred-size:41.667%;flex-basis:41.667%;max-width:41.667%}.col-xs-6{-ms-flex-preferred-size:50%;flex-basis:50%;max-width:50%}.col-xs-7{-ms-flex-preferred-size:58.333%;flex-basis:58.333%;max-width:58.333%}.col-xs-8{-ms-flex-preferred-size:66.667%;flex-basis:66.667%;max-width:66.667%}.col-xs-9{-ms-flex-preferred-size:75%;flex-basis:75%;max-width:75%}.col-xs-10{-ms-flex-preferred-size:83.333%;flex-basis:83.333%;max-width:83.333%}.col-xs-11{-ms-flex-preferred-size:91.667%;flex-basis:91.667%;max-width:91.667%}.col-xs-12{-ms-flex-preferred-size:100%;flex-basis:100%;max-width:100%}.col-xs-offset-1{margin-left:8.333%}.col-xs-offset-2{margin-left:16.667%}.col-xs-offset-3{margin-left:25%}.col-xs-offset-4{margin-left:33.333%}.col-xs-offset-5{margin-left:41.667%}.col-xs-offset-6{margin-left:50%}.col-xs-offset-7{margin-left:58.333%}.col-xs-offset-8{margin-left:66.667%}.col-xs-offset-9{margin-left:75%}.col-xs-offset-10{margin-left:83.333%}.col-xs-offset-11{margin-left:91.667%}.start-xs{-ms-flex-pack:start;-webkit-box-pack:start;justify-content:flex-start;text-align:start}.center-xs{-ms-flex-pack:center;-webkit-box-pack:center;justify-content:center;text-align:center}.end-xs{-ms-flex-pack:end;-webkit-box-pack:end;justify-content:flex-end;text-align:end}.top-xs{-ms-flex-align:start;-webkit-box-align:start;align-items:flex-start}.middle-xs{-ms-flex-align:center;-webkit-box-align:center;align-items:center}.bottom-xs{-ms-flex-align:end;-webkit-box-align:end;align-items:flex-end}.first-xs{-ms-flex-order:-1;-webkit-box-ordinal-group:0;order:-1}.last-xs{-ms-flex-order:1;-webkit-box-ordinal-group:2;order:1}@media only screen and (min-width:48em){.container{width:46rem}.col-sm,.col-sm-1,.col-sm-10,.col-sm-11,.col-sm-12,.col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9{box-sizing:border-box;-ms-flex:0 0 auto;-webkit-box-flex:0;flex:0 0 auto;padding-right:1rem;padding-left:1rem}.col-sm{-webkit-flex-grow:1;-ms-flex-positive:1;-webkit-box-flex:1;flex-grow:1;-ms-flex-preferred-size:0;flex-basis:0;max-width:100%}.col-sm-1{-ms-flex-preferred-size:8.333%;flex-basis:8.333%;max-width:8.333%}.col-sm-2{-ms-flex-preferred-size:16.667%;flex-basis:16.667%;max-width:16.667%}.col-sm-3{-ms-flex-preferred-size:25%;flex-basis:25%;max-width:25%}.col-sm-4{-ms-flex-preferred-size:33.333%;flex-basis:33.333%;max-width:33.333%}.col-sm-5{-ms-flex-preferred-size:41.667%;flex-basis:41.667%;max-width:41.667%}.col-sm-6{-ms-flex-preferred-size:50%;flex-basis:50%;max-width:50%}.col-sm-7{-ms-flex-preferred-size:58.333%;flex-basis:58.333%;max-width:58.333%}.col-sm-8{-ms-flex-preferred-size:66.667%;flex-basis:66.667%;max-width:66.667%}.col-sm-9{-ms-flex-preferred-size:75%;flex-basis:75%;max-width:75%}.col-sm-10{-ms-flex-preferred-size:83.333%;flex-basis:83.333%;max-width:83.333%}.col-sm-11{-ms-flex-preferred-size:91.667%;flex-basis:91.667%;max-width:91.667%}.col-sm-12{-ms-flex-preferred-size:100%;flex-basis:100%;max-width:100%}.col-sm-offset-1{margin-left:8.333%}.col-sm-offset-2{margin-left:16.667%}.col-sm-offset-3{margin-left:25%}.col-sm-offset-4{margin-left:33.333%}.col-sm-offset-5{margin-left:41.667%}.col-sm-offset-6{margin-left:50%}.col-sm-offset-7{margin-left:58.333%}.col-sm-offset-8{margin-left:66.667%}.col-sm-offset-9{margin-left:75%}.col-sm-offset-10{margin-left:83.333%}.col-sm-offset-11{margin-left:91.667%}.start-sm{-ms-flex-pack:start;-webkit-box-pack:start;justify-content:flex-start;text-align:start}.center-sm{-ms-flex-pack:center;-webkit-box-pack:center;justify-content:center;text-align:center}.end-sm{-ms-flex-pack:end;-webkit-box-pack:end;justify-content:flex-end;text-align:end}.top-sm{-ms-flex-align:start;-webkit-box-align:start;align-items:flex-start}.middle-sm{-ms-flex-align:center;-webkit-box-align:center;align-items:center}.bottom-sm{-ms-flex-align:end;-webkit-box-align:end;align-items:flex-end}.first-sm{-ms-flex-order:-1;-webkit-box-ordinal-group:0;order:-1}.last-sm{-ms-flex-order:1;-webkit-box-ordinal-group:2;order:1}}@media only screen and (min-width:62em){.container{width:61rem}.col-md,.col-md-1,.col-md-10,.col-md-11,.col-md-12,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9{box-sizing:border-box;-ms-flex:0 0 auto;-webkit-box-flex:0;flex:0 0 auto;padding-right:1rem;padding-left:1rem}.col-md{-webkit-flex-grow:1;-ms-flex-positive:1;-webkit-box-flex:1;flex-grow:1;-ms-flex-preferred-size:0;flex-basis:0;max-width:100%}.col-md-1{-ms-flex-preferred-size:8.333%;flex-basis:8.333%;max-width:8.333%}.col-md-2{-ms-flex-preferred-size:16.667%;flex-basis:16.667%;max-width:16.667%}.col-md-3{-ms-flex-preferred-size:25%;flex-basis:25%;max-width:25%}.col-md-4{-ms-flex-preferred-size:33.333%;flex-basis:33.333%;max-width:33.333%}.col-md-5{-ms-flex-preferred-size:41.667%;flex-basis:41.667%;max-width:41.667%}.col-md-6{-ms-flex-preferred-size:50%;flex-basis:50%;max-width:50%}.col-md-7{-ms-flex-preferred-size:58.333%;flex-basis:58.333%;max-width:58.333%}.col-md-8{-ms-flex-preferred-size:66.667%;flex-basis:66.667%;max-width:66.667%}.col-md-9{-ms-flex-preferred-size:75%;flex-basis:75%;max-width:75%}.col-md-10{-ms-flex-preferred-size:83.333%;flex-basis:83.333%;max-width:83.333%}.col-md-11{-ms-flex-preferred-size:91.667%;flex-basis:91.667%;max-width:91.667%}.col-md-12{-ms-flex-preferred-size:100%;flex-basis:100%;max-width:100%}.col-md-offset-1{margin-left:8.333%}.col-md-offset-2{margin-left:16.667%}.col-md-offset-3{margin-left:25%}.col-md-offset-4{margin-left:33.333%}.col-md-offset-5{margin-left:41.667%}.col-md-offset-6{margin-left:50%}.col-md-offset-7{margin-left:58.333%}.col-md-offset-8{margin-left:66.667%}.col-md-offset-9{margin-left:75%}.col-md-offset-10{margin-left:83.333%}.col-md-offset-11{margin-left:91.667%}.start-md{-ms-flex-pack:start;-webkit-box-pack:start;justify-content:flex-start;text-align:start}.center-md{-ms-flex-pack:center;-webkit-box-pack:center;justify-content:center;text-align:center}.end-md{-ms-flex-pack:end;-webkit-box-pack:end;justify-content:flex-end;text-align:end}.top-md{-ms-flex-align:start;-webkit-box-align:start;align-items:flex-start}.middle-md{-ms-flex-align:center;-webkit-box-align:center;align-items:center}.bottom-md{-ms-flex-align:end;-webkit-box-align:end;align-items:flex-end}.first-md{-ms-flex-order:-1;-webkit-box-ordinal-group:0;order:-1}.last-md{-ms-flex-order:1;-webkit-box-ordinal-group:2;order:1}}@media only screen and (min-width:75em){.container{width:71rem}.col-lg,.col-lg-1,.col-lg-10,.col-lg-11,.col-lg-12,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9{box-sizing:border-box;-ms-flex:0 0 auto;-webkit-box-flex:0;flex:0 0 auto;padding-right:1rem;padding-left:1rem}.col-lg{-webkit-flex-grow:1;-ms-flex-positive:1;-webkit-box-flex:1;flex-grow:1;-ms-flex-preferred-size:0;flex-basis:0;max-width:100%}.col-lg-1{-ms-flex-preferred-size:8.333%;flex-basis:8.333%;max-width:8.333%}.col-lg-2{-ms-flex-preferred-size:16.667%;flex-basis:16.667%;max-width:16.667%}.col-lg-3{-ms-flex-preferred-size:25%;flex-basis:25%;max-width:25%}.col-lg-4{-ms-flex-preferred-size:33.333%;flex-basis:33.333%;max-width:33.333%}.col-lg-5{-ms-flex-preferred-size:41.667%;flex-basis:41.667%;max-width:41.667%}.col-lg-6{-ms-flex-preferred-size:50%;flex-basis:50%;max-width:50%}.col-lg-7{-ms-flex-preferred-size:58.333%;flex-basis:58.333%;max-width:58.333%}.col-lg-8{-ms-flex-preferred-size:66.667%;flex-basis:66.667%;max-width:66.667%}.col-lg-9{-ms-flex-preferred-size:75%;flex-basis:75%;max-width:75%}.col-lg-10{-ms-flex-preferred-size:83.333%;flex-basis:83.333%;max-width:83.333%}.col-lg-11{-ms-flex-preferred-size:91.667%;flex-basis:91.667%;max-width:91.667%}.col-lg-12{-ms-flex-preferred-size:100%;flex-basis:100%;max-width:100%}.col-lg-offset-1{margin-left:8.333%}.col-lg-offset-2{margin-left:16.667%}.col-lg-offset-3{margin-left:25%}.col-lg-offset-4{margin-left:33.333%}.col-lg-offset-5{margin-left:41.667%}.col-lg-offset-6{margin-left:50%}.col-lg-offset-7{margin-left:58.333%}.col-lg-offset-8{margin-left:66.667%}.col-lg-offset-9{margin-left:75%}.col-lg-offset-10{margin-left:83.333%}.col-lg-offset-11{margin-left:91.667%}.start-lg{-ms-flex-pack:start;-webkit-box-pack:start;justify-content:flex-start;text-align:start}.center-lg{-ms-flex-pack:center;-webkit-box-pack:center;justify-content:center;text-align:center}.end-lg{-ms-flex-pack:end;-webkit-box-pack:end;justify-content:flex-end;text-align:end}.top-lg{-ms-flex-align:start;-webkit-box-align:start;align-items:flex-start}.middle-lg{-ms-flex-align:center;-webkit-box-align:center;align-items:center}.bottom-lg{-ms-flex-align:end;-webkit-box-align:end;align-items:flex-end}.first-lg{-ms-flex-order:-1;-webkit-box-ordinal-group:0;order:-1}.last-lg{-ms-flex-order:1;-webkit-box-ordinal-group:2;order:1}}
+.fa,.fab,.far,.fas{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;display:inline-block;font-style:normal;font-variant:normal;text-rendering:auto;line-height:1}.fa-lg{font-size:1.33333em;line-height:.75em;vertical-align:-.0667em}.fa-xs{font-size:.75em}.fa-sm{font-size:.875em}.fa-1x{font-size:1em}.fa-2x{font-size:2em}.fa-3x{font-size:3em}.fa-4x{font-size:4em}.fa-5x{font-size:5em}.fa-6x{font-size:6em}.fa-7x{font-size:7em}.fa-8x{font-size:8em}.fa-9x{font-size:9em}.fa-10x{font-size:10em}.fa-ul{list-style-type:none;margin-left:2.5em;padding-left:0}.fa-ul>li{position:relative}.fa-li{left:-2em;position:absolute;text-align:center;width:2em;line-height:inherit}.fa-border{border:.08em solid #eee;border-radius:.1em;padding:.2em .25em .15em}@-webkit-keyframes a{0%{-webkit-transform:rotate(0);transform:rotate(0)}to{-webkit-transform:rotate(1turn);transform:rotate(1turn)}}@keyframes a{0%{-webkit-transform:rotate(0);transform:rotate(0)}to{-webkit-transform:rotate(1turn);transform:rotate(1turn)}}.fa-rotate-90{-webkit-transform:rotate(90deg);transform:rotate(90deg)}.fa-rotate-180{-webkit-transform:rotate(180deg);transform:rotate(180deg)}.fa-rotate-270{-webkit-transform:rotate(270deg);transform:rotate(270deg)}:root .fa-rotate-180,:root .fa-rotate-270,:root .fa-rotate-90{-webkit-filter:none;filter:none}.fa-500px:before{content:"\f26e"}.fa-address-book:before{content:"\f2b9"}.fa-address-card:before{content:"\f2bb"}.fa-align-center:before{content:"\f037"}.fa-align-left:before{content:"\f036"}.fa-align-right:before{content:"\f038"}.fa-amazon:before{content:"\f270"}.fa-android:before{content:"\f17b"}.fa-app-store:before{content:"\f36f"}.fa-app-store-ios:before{content:"\f370"}.fa-apple:before{content:"\f179"}.fa-arrow-left:before{content:"\f060"}.fa-arrow-right:before{content:"\f061"}.fa-external-link-alt:before{content:"\f35d"}.fa-arrow-up:before{content:"\f062"}.fa-bold:before{content:"\f032"}.fa-book:before{content:"\f02d"}.fa-calculator:before{content:"\f1ec"}.fa-question-circle:before{content:"\f059"}.fa-car:before{content:"\f1b9"}.fa-cart-plus:before{content:"\f217"}.fa-check:before{content:"\f00c"}.fa-check-square:before{content:"\f14a"}.fa-child:before{content:"\f1ae"}.fa-chrome:before{content:"\f268"}.fa-comments:before{content:"\f086"}.fa-copy:before{content:"\f0c5"}.fa-css3:before{content:"\f13c"}.fa-css3-alt:before{content:"\f38b"}.fa-facebook:before{content:"\f09a"}.fa-facebook-f:before{content:"\f39e"}.fa-facebook-square:before{content:"\f082"}.fa-filter:before{content:"\f0b0"}.fa-font:before{content:"\f031"}.fa-google:before{content:"\f1a0"}.fa-google-play:before{content:"\f3ab"}.fa-google-plus:before{content:"\f2b3"}.fa-google-plus-g:before{content:"\f0d5"}.fa-google-plus-square:before{content:"\f0d4"}.fa-h-square:before{content:"\f0fd"}.fa-heart:before{content:"\f004"}.fa-home:before{content:"\f015"}.fa-html5:before{content:"\f13b"}.fa-i-cursor:before{content:"\f246"}.fa-id-card:before{content:"\f2c2"}.fa-image:before{content:"\f03e"}.fa-images:before{content:"\f302"}.fa-indent:before{content:"\f03c"}.fa-info:before{content:"\f129"}.fa-instagram:before{content:"\f16d"}.fa-italic:before{content:"\f033"}.fa-itunes:before{content:"\f3b4"}.fa-js:before{content:"\f3b8"}.fa-js-square:before{content:"\f3b9"}.fa-line:before{content:"\f3c0"}.fa-link:before{content:"\f0c1"}.fa-linkedin:before{content:"\f08c"}.fa-list:before{content:"\f03a"}.fa-list-alt:before{content:"\f022"}.fa-list-ol:before{content:"\f0cb"}.fa-list-ul:before{content:"\f0ca"}.fa-location-arrow:before{content:"\f124"}.fa-map:before{content:"\f279"}.fa-map-pin:before{content:"\f276"}.fa-medium:before{content:"\f23a"}.fa-medium-m:before{content:"\f3c7"}.fa-microsoft:before{content:"\f3ca"}.fa-mobile:before{content:"\f10b"}.fa-mobile-alt:before{content:"\f3cd"}.fa-music:before{content:"\f001"}.fa-ns8:before{content:"\f3d5"}.fa-page4:before{content:"\f3d7"}.fa-paypal:before{content:"\f1ed"}.fa-percent:before{content:"\f295"}.fa-php:before{content:"\f457"}.fa-pinterest:before{content:"\f0d2"}.fa-pinterest-p:before{content:"\f231"}.fa-pinterest-square:before{content:"\f0d3"}.fa-play:before{content:"\f04b"}.fa-plus:before{content:"\f067"}.fa-plus-square:before{content:"\f0fe"}.fa-quote-left:before{content:"\f10d"}.fa-quote-right:before{content:"\f10e"}.fa-safari:before{content:"\f267"}.fa-search:before{content:"\f002"}.fa-search-plus:before{content:"\f00e"}.fa-share:before{content:"\f064"}.fa-share-alt:before{content:"\f1e0"}.fa-share-alt-square:before{content:"\f1e1"}.fa-share-square:before{content:"\f14d"}.fa-square:before{content:"\f0c8"}.fa-square-full:before{content:"\f45c"}.fa-tag:before{content:"\f02b"}.fa-text-height:before{content:"\f034"}.fa-text-width:before{content:"\f035"}.fa-thumbs-up:before{content:"\f164"}.fa-times:before{content:"\f00d"}.fa-toggle-off:before{content:"\f204"}.fa-toggle-on:before{content:"\f205"}.fa-twitter:before{content:"\f099"}.fa-twitter-square:before{content:"\f081"}.fa-underline:before{content:"\f0cd"}.fa-user:before{content:"\f007"}.fa-user-md:before{content:"\f0f0"}.fa-user-plus:before{content:"\f234"}.fa-user-times:before{content:"\f235"}.fa-users:before{content:"\f0c0"}.fa-vk:before{content:"\f189"}.fa-whatsapp:before{content:"\f232"}.fa-whatsapp-square:before{content:"\f40c"}.fa-window-close:before{content:"\f410"}@font-face{font-family:Font Awesome\ 5 Brands;font-style:normal;font-weight:400;src:url(https://statics.cdn0.buscalibre.com/webfonts/fa-brands-400.eot);src:url(https://statics.cdn0.buscalibre.com/webfonts/fa-brands-400.eot?#iefix) format("embedded-opentype"),url(https://statics.cdn0.buscalibre.com/webfonts/fa-brands-400.woff2) format("woff2"),url(https://statics.cdn0.buscalibre.com/webfonts/fa-brands-400.woff) format("woff"),url(https://statics.cdn0.buscalibre.com/webfonts/fa-brands-400.ttf) format("truetype"),url(https://statics.cdn0.buscalibre.com/webfonts/fa-brands-400.svg#fontawesome) format("svg")}.fab{font-family:Font Awesome\ 5 Brands}@font-face{font-family:Font Awesome\ 5 Free;font-style:normal;font-weight:400;src:url(https://statics.cdn0.buscalibre.com/webfonts/fa-regular-400.eot);src:url(https://statics.cdn0.buscalibre.com/webfonts/fa-regular-400.eot?#iefix) format("embedded-opentype"),url(https://statics.cdn0.buscalibre.com/webfonts/fa-regular-400.woff2) format("woff2"),url(https://statics.cdn0.buscalibre.com/webfonts/fa-regular-400.woff) format("woff"),url(https://statics.cdn0.buscalibre.com/webfonts/fa-regular-400.ttf) format("truetype"),url(https://statics.cdn0.buscalibre.com/webfonts/fa-regular-400.svg#fontawesome) format("svg")}.far{font-weight:400}@font-face{font-family:Font Awesome\ 5 Free;font-style:normal;font-weight:900;src:url(https://statics.cdn0.buscalibre.com/webfonts/fa-solid-900.eot);src:url(https://statics.cdn0.buscalibre.com/webfonts/fa-solid-900.eot?#iefix) format("embedded-opentype"),url(https://statics.cdn0.buscalibre.com/webfonts/fa-solid-900.woff2) format("woff2"),url(https://statics.cdn0.buscalibre.com/webfonts/fa-solid-900.woff) format("woff"),url(https://statics.cdn0.buscalibre.com/webfonts/fa-solid-900.ttf) format("truetype"),url(https://statics.cdn0.buscalibre.com/webfonts/fa-solid-900.svg#fontawesome) format("svg")}.fa,.far,.fas{font-family:Font Awesome\ 5 Free}.fa,.fas{font-weight:900}/*! normalize.css v1.1.3 | MIT License | git.io/normalize */article,aside,details,footer,header,main,nav,section{display:block}[hidden]{display:none}html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}button,html,input,select,textarea{font-family:sans-serif}body{margin:0}a:focus{outline:dotted thin}a:active,a:hover{outline:0}h1{font-size:2em;margin:.67em 0}h2{font-size:1.5em;margin:.83em 0}h3{font-size:1.17em;margin:1em 0}h4{font-size:1em;margin:1.33em 0}h5{font-size:.83em;margin:1.67em 0}h6{font-size:.67em;margin:2.33em 0}b,strong{font-weight:700}p{margin:1em 0}q{quotes:none}q:after,q:before{content:'';content:none}small{font-size:80%}dl,menu,ol,ul{margin:1em 0}dd{margin:0 0 0 40px}menu,ol,ul{padding:0 0 0 40px}nav ol,nav ul{list-style:none}img{border:0;-ms-interpolation-mode:bicubic}svg:not(:root){overflow:hidden}form{margin:0}button,input,select,textarea{font-size:100%;margin:0;vertical-align:baseline}button,input{line-height:normal}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top}/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */button,html,input,select,textarea{color:#222}html{font-size:1em;line-height:1.4}::-moz-selection{background:#b3d4fc;text-shadow:none}::selection{background:#b3d4fc;text-shadow:none}img{vertical-align:middle}textarea{resize:vertical}.ir{background-color:transparent;border:0;overflow:hidden}.ir:before{content:"";display:block;width:0;height:150%}.hidden{display:none!important;visibility:hidden}@media print{*{background:0 0!important;color:#000!important;box-shadow:none!important;text-shadow:none!important}a,a:visited{text-decoration:underline}a[href]:after{content:" (" attr(href) ")"}.ir a:after,a[href^="#"]:after,a[href^="javascript:"]:after{content:""}img{page-break-inside:avoid}img{max-width:100%!important}@page{margin:.5cm}h2,h3,p{orphans:3;widows:3}h2,h3{page-break-after:avoid}}@charset "UTF-8";@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900);@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900);@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900);@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900);a{color:#ff5a00}a.hover,a:hover{color:#d94300}input{outline:0}::-moz-selection{background:#fc8548;color:#fff;text-shadow:none}::selection{background:#fc8548;color:#fff;text-shadow:none}body{font-family:Arial,Helvetica,sans-serif;font-family:Lato,Arial,Helvetica,sans-serif!important}a:focus{outline:0}ul{margin:0;padding:0}li{list-style:none}.sprite{background-image:url(https://statics.cdn1.buscalibre.com/images/spirte20230907030727.png);background-repeat:no-repeat}.clear{height:1px;width:100%;float:left;display:block}nav.mobile{display:none}.dialog-box{background:#fff;padding:20px;-moz-background-clip:padding;-webkit-background-clip:padding;background-clip:padding-box;border:solid 5px #ddd;border:7px solid rgba(0,0,0,.3);display:none;-webkit-border-radius:10px;-moz-border-radius:10px;-ms-border-radius:10px;border-radius:10px}.dialog-box .close{color:#999;float:right;font-size:25px;font-weight:700;cursor:pointer;border:1px solid #ddd;padding:0 3px;position:absolute;right:5px;top:5px}header{margin-bottom:10px;float:left;width:100%}header>article{width:99%;margin-top:10px}header article{margin:0 auto;display:block;clear:left}header article{height:48px;margin-top:5px}header article #logo{float:left;width:160px;margin-top:0;margin-bottom:0;margin:6px 0 0 20px}header article #logo span{display:none}header article #logo a{display:block}header article #logo a img{width:auto}header article div.redes{float:right;margin-top:15px}header article div.redes ul li{float:left}header article div.redes ul li:first-of-type{margin-right:10px}header article div.redes ul li a.facebook,header article div.redes ul li a.twitter{width:30px;height:30px;display:block}header article div.redes ul li a.facebook:hover,header article div.redes ul li a.twitter:hover{opacity:.8}header article div.redes ul li a.facebook{background-position:0 -143px}header article div.redes ul li a.twitter{background-position:-32px -143px}#buscador form button{position:absolute;color:#fff;font-weight:100;border:1px solid #d55714}#buscador form button:hover{background:#e54c00;-webkit-transition:all .3s ease;-moz-transition:all .3s ease;-o-transition:all .3s ease;transition:all .3s ease;background-color:#e54c00;background-color:#e54c00;background:-webkit-linear-gradient(#e54c00,#e54c00);background:-o-linear-gradient(#e54c00,#e54c00);background:-moz-linear-gradient(#e54c00,#e54c00);background:-webkit-gradient(linear,left top,left bottom,from(#e54c00),to(#e54c00));background:linear-gradient(#e54c00,#e54c00)}#buscador form button:focus{outline:0}#buscador form button .sprite{display:inline-block;margin-right:10px;top:6px;position:relative;background-position:-47px -23px;width:24px;height:24px}#buscador form>ul{position:relative;top:2px}#buscador form>ul li{font-weight:400;float:left;margin:0 7px 0 0;position:relative;padding:0 20px 7px;border:1px solid transparent;cursor:pointer;position:relative;height:33px;text-transform:uppercase;font-weight:700}#buscador form>ul li:hover{border:1px solid #999;border-bottom:1px solid transparent;background:#fff;height:27px;margin-bottom:6px}#buscador form>ul .activo{border:1px solid #999;border-bottom:none;background:#fff;color:#000}#buscador form>ul .activo:hover{height:33px;margin-bottom:0}#buscador form>ul li span{display:inline-block;width:23px;height:23px;margin-right:10px;position:relative;top:8px}#buscador form>ul .libros span{background-position:0 -23px;width:20px;height:30px}#buscador form>ul .amazon span{background-position:-20px -23px;height:29px;width:27px}#buscador form>div{border:1px solid #999;clear:left;padding:5px;overflow:hidden;padding-right:9.8em}#buscador form>div.buscandoen-amazon{height:42px}#buscador form>div.buscandoen-amazon select{float:left;height:42px;background-color:#fff;width:190px;padding:0 10px;border:1px solid #ff5a00;cursor:pointer;outline:0;position:relative;z-index:2}#buscador form div.buscandoen-amazon input[type=search]{position:relative;top:-42px;z-index:0;text-indent:190px}#buscador form>div.buscandoen-libros select[name=idxes]{border:1px solid #ff5a00;background:#fff}#buscador form div input[type=search]{border:1px solid #ff5a00;width:100%;padding:5px 10px;height:30px}.ui-menu .ui-menu-item{height:30px;line-height:1.8em;padding:0;border:1px solid transparent;padding:0 0 0 10px}.ui-menu .ui-menu-item:hover{padding:0 0 0 10px}.ui-menu .ui-menu-item strong{color:#ff5a00}header article #pais{height:50px;width:127px;margin:10px 0 0 0;background:#fff;cursor:pointer;float:right;position:relative;top:-5px;z-index:1000;border:1px solid transparent}header article #pais>span{height:22px;width:33px;display:block;margin:5px auto 0;background-position:-268px -119px}header article #pais>span.p10{background-position:0 -119px}header article #pais>span.p42{background-position:-33px -119px}header article #pais>span.p46{background-position:-67px -119px}header article #pais>span.p64{background-position:-100px -119px}header article #pais>span.p131{background-position:-133px -119px}header article #pais>span.p160{background-position:-167px -119px}header article #pais>span.p211{background-position:-201px -119px}header article #pais>p{color:#ff5a00;margin:5px 0 0 0;font-size:.8em;text-align:center;background:#fff;position:relative;z-index:2}header article #pais:hover{border:1px solid #ddd;border-bottom:none}header article #pais:hover .opcionesPais{display:block;cursor:default}header article #pais .opcionesPais{display:none;height:auto;border:1px solid #ddd;z-index:1;position:relative;left:-1px;padding:5px 7px;background:#fff;float:left;width:140px;top:-2px}header article #pais .opcionesPais nav{float:left}header article #pais .opcionesPais nav p{margin:0;color:#000;border-bottom:1px dashed #ddd;display:inline-block;font-size:1.2em}header article #pais .opcionesPais nav ul{margin-top:10px;cursor:pointer}header article #pais .opcionesPais nav ul li{float:left;clear:left;width:100%;opacity:1}header article #pais .opcionesPais nav ul li:hover,header article #pais .opcionesPais nav ul li:hover span{opacity:.7}header article nav ul li:last-of-type{border:none}header article #pais .opcionesPais nav ul li a{text-decoration:none;color:#000;font-size:.9em}header article #pais .opcionesPais nav ul li a span{height:15px;width:21px;margin:0 10px 0 0;display:inline-block}header article #pais .opcionesPais nav ul li[value="10"] a span{background-position:1px -104px}header article #pais .opcionesPais nav ul li[value="42"] a span{background-position:-21px -104px}header article #pais .opcionesPais nav ul li[value="46"] a span{background-position:-42px -104px}header article #pais .opcionesPais nav ul li[value="64"] a span{background-position:-63px -104px}header article #pais .opcionesPais nav ul li[value="131"] a span{background-position:-84px -104px}header article #pais .opcionesPais nav ul li[value="160"] a span{background-position:-105px -104px}header article #pais .opcionesPais nav ul li[value="211"] a span{background-position:-126px -104px}header article #pais .opcionesPais nav ul li[value="216"] a span{background-position:-147px -104px}header article #pais .opcionesPais nav ul li[value="???"] a span{background-position:-167px -104px}#cambiarPais{height:180px;width:400px}#cambiarPais p{font-size:1.2em;text-align:center}#cambiarPais strong{text-transform:capitalize}#cambiarPais .irA{color:#fff;font-size:1.6em;margin-top:0;padding:5px 10px;background:#ff5a00;border:1px solid #aa3e01;margin:0 auto 6px;float:none;clear:both;text-align:center;display:table}#cambiarPais .cerrar{margin-top:0;cursor:pointer;color:#00f;background:0 0;border:none;font-size:1em;padding:0;text-decoration:underline;text-align:center;float:none;width:100%;display:block;cursor: pointer;z-index: 1;}header article div#iniciarSesion{width:148px;line-height:2.5em;padding:5px;height:50px;margin:10px 1px 0 0;background:#fff;cursor:pointer;float:right;position:relative;top:-5px;z-index:3;border:1px solid transparent}header article div#iniciarSesion:hover{border:1px solid #ddd;border-bottom:1px solid transparent}header article div#iniciarSesion>a{color:#000;font-size:.9em}header article div#iniciarSesion a>span{height:20px;width:20px;display:block;background-position:-218px 0;float:left;margin:12px 5px 0 0}header article div#iniciarSesion a>p{height:36px;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden;-o-text-overflow:ellipsis;text-overflow:ellipsis;margin:0;white-space:nowrap;font-size:1em;line-height:3.7em}header article div#iniciarSesion .opcionesCuenta{display:none;z-index:1;position:relative;top:7px;left:-1px}header article div#iniciarSesion:hover .opcionesCuenta{display:block}header article div#iniciarSesion .opcionesCuenta nav ul li{border-right:1px solid #ddd;border-left:1px solid #ddd;padding:0 4px 0 4px;width:150px;left:-5px;position:relative;background:#fff;opacity:1;-webkit-transition:all .2s ease;-moz-transition:all .2s ease;-o-transition:all .2s ease;transition:all .2s ease}header article div#iniciarSesion .opcionesCuenta nav ul li:last-of-type{border-bottom:1px solid #ddd}header article div#iniciarSesion .opcionesCuenta nav ul li:hover{opacity:.7;-webkit-transition:all .2s ease;-moz-transition:all .2s ease;-o-transition:all .2s ease;transition:all .2s ease}header article div#iniciarSesion .opcionesCuenta nav ul li a{color:#000;font-size:.9em;display:inline-block}header article div#iniciarSesion .opcionesCuenta nav ul li a>span{background-position:-192px -24px;margin:0 5px 0 0;position:relative;top:10px}header article div#cart_button{float:right;clear:right;width:84px;border:1px solid transparent;position:relative;top:-5px;margin:10px 0 0 0}header article div#cart_button:hover{border:1px solid #ddd}header article div#cart_button a{display:block;text-decoration:none;padding:5px}header article div#cart_button a>span{height:19px;width:19px;display:block;background-position:0 0;float:left;margin:10px 5px 0 0}header article div#cart_button a p{margin:0;font-size:1.3em;line-height:1.8em;color:#000}header article div#cart_button a p span{color:#ff5a00;font-weight:700;padding:0 5px}nav.tab{width:100%;clear:left;float:left;margin:10px 0 25px;position:relative;height:58px;border-bottom:1px solid #ddd}nav.tab>p{display:none}nav.tab ul{clear:left}nav.tab ul li{background:#fff;background-image:url(https://statics.cdn1.buscalibre.com/images/tabSombra.png);background-position:bottom;background-repeat:no-repeat;width:120px;height:50px;margin-right:10px;padding-bottom:7px;border:1px solid #ddd;float:left}nav.tab ul li:first-of-type{margin-left:10px}nav.tab ul li:last-of-type{margin-right:0}nav.tab ul li.activo,nav.tab ul li:hover{background-image:none;border-bottom:none;position:relative;top:-9px;height:60px;z-index:999;margin-bottom:-9px}nav.tab ul li a{display:block;height:100%;cursor:pointer}nav.tab ul li a>span{text-indent:-9999px;background:url(https://statics.cdn1.buscalibre.com/images/spriteTabs_20170406-1856.png) no-repeat;display:block;margin:10px auto 0}nav.tab ul li.ventaEmpresas a span{background-position:-1392px 0;width:105px;height:50px;margin-top:4px}nav.tab ul li.ventaEmpresas.activo a>span,nav.tab ul li.ventaEmpresas:hover a>span{background-position:-1392px -53px}nav.tab ul li a span{position:relative}nav.tab ul li a>span>.sprite{color:#fff;width:40px;height:40px;display:block;position:absolute;top:-20px;left:-20px;font-size:.55em;text-indent:0;text-align:center;line-height:4.5em;font-weight:700;z-index:1;background-position:0 -53px;background-size:initial;-webkit-border-radius:50%;-moz-border-radius:50%;-ms-border-radius:50%;border-radius:50%}nav.tab>span{display:none}nav.tab .bgMenu{display:none}nav.tab ul li:hover>ul{display:block;background:#fff;min-width:190px;padding:0;margin:0;border-right:1px solid #ddd;border-left:1px solid #ddd;position:relative;top:-3px;left:-1px;border-bottom:3px solid #aaa}nav.tab ul li>ul{display:none}nav.tab ul li>ul li{background:0 0;float:none;width:auto;min-width:170px;border:none;padding:0;margin:0;border-left:2px solid transparent;position:relative;left:-1px;-webkit-transition:all .2s ease;-moz-transition:all .2s ease;-o-transition:all .2s ease;transition:all .2s ease}nav.tab ul li>ul li:hover{border-left:2px solid #ff5a00;top:0;height:59px;left:-1px}nav.tab ul li>ul li:first-of-type{margin-left:0;height:50px;top:0;float:none;width:auto;min-width:170px;border:none;padding:0;margin:0;border-left:2px solid transparent}nav.tab ul li>ul li:last-of-type{margin-left:0;height:50px;top:0;float:none;width:auto;min-width:170px;border:none;padding:0;margin:0;border-left:2px solid transparent}nav.tab ul li>ul li:first-of-type:hover,nav.tab ul li>ul li:last-of-type:hover{border-left:2px solid #ff5a00;-webkit-transition:all .2s ease;-moz-transition:all .2s ease;-o-transition:all .2s ease;transition:all .2s ease}nav.tab ul li>ul li a{color:#000;text-align:left;padding-left:14px;line-height:4em}section#teTraemos>div{width:49%}.breadcrumb{clear:left;margin:0 0 10px 10px;padding:0}ol.breadcrumb>span{color:#000}ol.breadcrumb li{display:inline-block}ol.breadcrumb li a{color:#000;-webkit-transition:all .3s ease;-moz-transition:all .3s ease;-o-transition:all .3s ease;transition:all .3s ease}ol.breadcrumb li a:hover{color:#ff5a00;-webkit-transition:all .3s ease;-moz-transition:all .3s ease;-o-transition:all .3s ease;transition:all .3s ease}ol.breadcrumb li a:after{content:' \00BB';border-bottom:none}.breadcrumb a:hover{color:#ff5a00;-webkit-transition:all .3s ease;-moz-transition:all .3s ease;-o-transition:all .3s ease;transition:all .3s ease}.breadcrumb a:after{content:' \00BB';border-bottom:none}.breadcrumb a>span{text-decoration:underline}.breadcrumb strong{color:#000}section#productosPortada{width:80%;float:left;margin:10px 10px 0 0;overflow:hidden}section#productosPortada>.productos{float:left;width:107%}.productos{float:left;width:105%}h4.deal{float:left;width:99%;height:40px;color:#000;border:1px dashed #ccc;background:#efefef;font-size:1.6em;font-weight:700;line-height:1.8em;padding:0 0 0 8px;margin:0 0 20px 10px;text-transform:inherit;-webkit-line-clamp:1;overflow:hidden;display:-webkit-box;-webkit-box-orient:vertical;-o-text-overflow:ellipsis;text-overflow:ellipsis}h4.deal:first-letter{text-transform:uppercase}.productos .producto{width:calc(9.5% - 10px);position:relative;margin:0 10px;margin-bottom:20px;display:inline-block;padding:0;-webkit-transition:all .5s ease;-moz-transition:all .5s ease;-o-transition:all .5s ease;transition:all .5s ease}#productos .productos .producto{min-height:356px}.productos .producto a{text-decoration:none;color:#000;display:block}.productos .producto>a .mesLibroSINIVA{background:url(https://statics.cdn1.buscalibre.com/images/diaEspecial/abrilLibrosMil/etiqueta20150420/abrilAMil-eti-siniva.png) no-repeat;display:block;width:76px;height:103px;position:absolute;top:-10px;right:0;color:#fff;background-position:0 0;padding:0;z-index:2;letter-spacing:.01em;text-align:center;font-size:2.6em;font-weight:700;line-height:1.5em;text-indent:-14px}.productos .producto>a .etiqueta{background-position:0 0;background-repeat:no-repeat;display:block;width:76px;height:103px;position:absolute;top:-10px;right:0;color:#fff;padding:0;z-index:2;letter-spacing:0;text-align:center;font-weight:700;font-size:1.7em;line-height:1em;text-indent:16px}.productos .producto a .imagen{min-height:180px;min-width:180px;overflow:hidden}.productos .producto a .imagen img{margin:0 auto;display:block}.productos .producto a .nombre{border-top:1px dashed #ccc;margin-top:10px;padding-top:10px;font-weight:700;display:-webkit-box;height:37px;font-size:.8em;line-height:1.4;letter-spacing:.03em;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;-o-text-overflow:ellipsis;text-overflow:ellipsis}.productos .producto a .nombre:first-letter{text-transform:uppercase}.productos .producto a .autor{display:-webkit-box;height:20px;font-size:.7em;line-height:1.4;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden;-o-text-overflow:ellipsis;text-overflow:ellipsis;text-transform:capitalize}.productos .producto a .precioAhora{color:#be0000;font-size:.9em}.productos .producto a .precioAntes{color:#999;text-decoration:line-through;font-size:.7em;height:19px;padding-bottom:0;line-height:2em}.productos .producto a .descuento{height:23px;width:90%;font-size:.7em;line-height:1.9em;display:block;visibility:visible;float:left;color:#be0000}.productos.pais10 .producto a .descuento{display:none}.productos .producto .agregar a{background-color:#ff5a00;height:40px;width:38px;position:absolute;bottom:67px;right:0;float:right;display:none;cursor:pointer;background-position:-156px 5px;background-image:url(https://statics.cdn1.buscalibre.com/images/sprite_20150224-1550_d4556f8a557cae564a24e986d2da56fa.png);background-repeat:no-repeat;-webkit-transition:all .5s ease;-moz-transition:all .5s ease;-o-transition:all .5s ease;transition:all .5s ease}.productos .producto:hover .agregar a{display:block;-webkit-transition:all .5s ease;-moz-transition:all .5s ease;-o-transition:all .5s ease;transition:all .5s ease}.productos .producto>a .envioExpress{background:url(https://statics.cdn1.buscalibre.com/images/diaEspecial/envioExpress/envioExpress.png) no-repeat;position:absolute;background-size:5em;width:89px;height:48px;display:block;text-indent:-9999px;top:150px;left:0;right:inherit}.productos .producto>a .despachoGratisIcono{background:url(https://statics.cdn1.buscalibre.com/images/diaEspecial/despachoGratis/20181001-1300etiqueta.png) no-repeat;position:absolute;background-size:5em;width:89px;height:48px;display:block;text-indent:-9999px;top:150px;left:0;right:inherit}section.bestsellersPortada{width:225px;margin:10px 10px 0 0;float:right}section.bestsellersPortada .bestsellers{border:1px solid #ccc;display:block;float:right;clear:right;margin:0 0 10px 0;background:#fff}section.bestsellersPortada .bestsellers h5{font-size:1.1em;margin:0;padding:0 0 0 5px;height:40px;line-height:2.3em;font-weight:400;border-bottom:1px dashed #ddd}section.bestsellersPortada .bestsellers .productosLista .productoLista a img{width:100px;left:0}section.bestsellersPortada .bestsellers .productosLista .productoLista a h6,section.bestsellersPortada .bestsellers .productosLista .productoLista a>p{margin-left:110px}section.bestsellersPortada .bestsellers .productosLista .productoLista a p.precioAhora,section.bestsellersPortada .bestsellers .productosLista .productoLista a p.precioAntes{width:auto}section.bestsellersPortada .bestsellers .productosLista .productoLista a p.descuento,section.bestsellersPortada .bestsellers .productosLista .productoLista a>p.stock{margin-left:0;width:100%;padding:0}section.bestsellersPortada .bestsellers .productosLista .productoLista a p.descuento{margin-top:20px}section.bestsellersPortada .bestsellers .productosLista .productoLista a .envioExpress{background:url(https://statics.cdn1.buscalibre.com/images/diaEspecial/envioExpress/envioExpress.png) no-repeat;background-size:4em;display:block;width:88px;height:45px;position:absolute;top:86px;left:0}section.bestsellersPortada .bestsellers .productosLista .productoLista a .despachoGratisIcono{background:url(https://statics.cdn1.buscalibre.com/images/diaEspecial/despachoGratis/20181001-1300etiqueta.png) no-repeat;background-size:4em;display:block;width:88px;height:45px;position:absolute;top:86px;left:0}.productosLista .productoLista{float:left;background:#fff;width:100%;height:185px;padding:5px 0;border-bottom:1px dashed #ccc;margin:0 0 5px;position:relative}.productosLista .productoLista:last-of-type{border-bottom:0}.productosLista .productoLista a{display:block}.productosLista .productoLista a .mesLibroSINIVA{background:url(https://statics.cdn1.buscalibre.com/images/diaEspecial/abrilLibrosMil/etiqueta20150420/abrilAMil-eti-siniva.png) no-repeat;color:#fff;display:block;width:65px;height:103px;position:absolute;top:-10px;left:0;background-position:0 0;padding:0 0 0 11px;z-index:0;font-size:1.4em;font-weight:700;line-height:1.9em;text-indent:-3px;background-size:2.1em;letter-spacing:.01em}.productosLista .productoLista a .etiqueta{background:url(https://statics.cdn1.buscalibre.com/images/diaEspecial/abrilLibrosMil/etiqueta20150420/abrilAMil-eti-zigzag.png) no-repeat;background-position:0 0;background-size:2.8em;background-repeat:no-repeat;color:#fff;display:block;width:65px;height:103px;position:absolute;top:-10px;padding:0 0 0 11px;z-index:2;font-size:1.4em;font-weight:700;letter-spacing:.01em;left:inherit;right:0;text-align:center;line-height:1em;text-indent:-10px}.productosLista .productoLista a .envioExpress{background:url(https://statics.cdn1.buscalibre.com/images/diaEspecial/envioExpress/envioExpress.png) no-repeat;position:absolute;width:89px;height:48px;display:block;text-indent:-9999px;top:125px;left:60px;right:inherit}.productosLista .productoLista a .despachoGratisIcono{background:url(https://statics.cdn1.buscalibre.com/images/diaEspecial/despachoGratis/20181001-1300etiqueta.png) no-repeat;position:absolute;width:89px;height:48px;display:block;text-indent:-9999px;top:125px;left:60px;right:inherit}.productosLista .productoLista a img{float:left;margin:5px 5px 0 10px;width:150px;height:auto;position:absolute;z-index:1;z-index:0}.productosLista .productoLista a h6,.productosLista .productoLista a p,.productosLista .productoLista a p.ahorras{margin:0}section.bestsellersPortada .bestsellers .productosLista .productoLista a h6{display:none}section.bestsellersPortada .bestsellers .productosLista .productoLista a h6:first-of-type{display:block;height:53px}.productosLista .productoLista a h6{color:#000;width:auto;float:left;padding:0 5px 5px 0;font-size:.9em;font-weight:400;display:-webkit-box;line-height:1.4;overflow:hidden;-webkit-line-clamp:2;-webkit-box-orient:vertical;-o-text-overflow:ellipsis;text-overflow:ellipsis;border-bottom:1px dotted #aaa;text-align:left;margin-left:170px;margin-bottom:5px;clear:left;z-index:2}.productosLista .productoLista a h6:first-letter{text-transform:uppercase}.productosLista .productoLista a>h6:last-of-type{margin-bottom:10px;border-bottom:none}.productosLista .productoLista a>p{float:left;clear:left;position:relative;margin-left:170px;z-index:0}.productosLista .productoLista a>p:first-of-type{margin-top:0}.productosLista .productoLista a p.precioAntes{color:#999;text-decoration:line-through;text-align:left;float:left;clear:left;line-height:1.7em;height:25px}.productosLista .productoLista a p.precioAhora{color:#b80505;font-weight:700;text-align:left;font-size:1.2em}.productosLista .productoLista a p.descuento{color:#b80505;text-align:center;padding:0 10px 0 0}.productosLista .productoLista a p.stock{color:#005a00;text-align:center;padding:0 10px 0 0}.bestsellers.libros .productosLista .productoLista a h6{-webkit-line-clamp:4}.bestsellers.libros .productosLista .productoLista a p.precioAntes{width:33%;font-size:1em;margin:9px 0 0 0;height:17px;line-height:2.8em}.bestsellers.libros .productosLista .productoLista a p.precioAhora{width:65%;font-size:1.3em;margin:9px 0 0 0;height:17px;line-height:1.1em;text-align:left}.bestsellers.libros .productosLista .productoLista a p.stock{padding-top:15px}#content.lista{width:100%}#content.lista .productosLista .productoLista a h6{width:auto;font-size:1.1em;height:50px;margin-bottom:5px}#content.lista .productosLista .productoLista a h4,#content.lista .productosLista .productoLista a h5{color:#000;width:140px;font-size:.9em;font-weight:400;display:-webkit-box;height:20px;line-height:1.4;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;-o-text-overflow:ellipsis;text-overflow:ellipsis;width:auto;margin:0}#content.lista .productosLista .productoLista a img{width:200px}#content.lista .productosLista .productoLista a p.descuento,#content.lista .productosLista .productoLista a p.stock{text-align:left;width:auto}#content.lista .productosLista .productoLista a p.descuento{text-align:left}#content.lista .productosLista .productoLista a p.precioAhora{margin-top:25px}@-webkit-keyframes rotateOut{0%{-webkit-transform:rotate(0);-moz-transform:rotate(0);-ms-transform:rotate(0);-o-transform:rotate(0);-webkit-transform-origin:center center;transform-origin:center center}100%{-webkit-transform:rotate(-360deg);-moz-transform:rotate(-360deg);-ms-transform:rotate(-360deg);-o-transform:rotate(-360deg);-webkit-transform-origin:center right;transform-origin:center right}}@-webkit-keyframes load{0%{width:100%;background-position:0 0}100%{width:100%;background-position:-290px 0}}@-ms-keyframes load{0%{width:100%;background-position:0 0}100%{width:100%;background-position:-290px 0}}@-o-keyframes load{0%{width:100%;background-position:0 0}100%{width:100%;background-position:-290px 0}}@keyframes load{0%{width:100%;background-position:0 0}100%{width:100%;background-position:-290px 0}}@media (max-width:450px){header div:first-of-type{margin:0;height:auto;float:none}}.load{font-size:2em;margin:0 .5em;margin-left:100px;position:relative;height:.5em;width:1em;display:block;margin:0 auto}.load:after,.load:before{content:"";display:block;height:.5em;position:absolute;width:.5em}.load:before{-webkit-animation:load-before 2s ease-in-out infinite,zoom-before .66s ease-in-out infinite;-moz-animation:load-before 2s ease-in-out infinite,zoom-before .66s ease-in-out infinite;-ms-animation:load-before 2s ease-in-out infinite,zoom-before .66s ease-in-out infinite;-o-animation:load-before 2s ease-in-out infinite,zoom-before .66s ease-in-out infinite;animation:load-before 2s ease-in-out infinite,zoom-before .66s ease-in-out infinite;background:#ff5a00}.load:after{-webkit-animation:load-after 2s ease-in-out infinite,zoom-after .66s ease-in-out infinite;-moz-animation:load-after 2s ease-in-out infinite,zoom-after .66s ease-in-out infinite;-ms-animation:load-after 2s ease-in-out infinite,zoom-after .66s ease-in-out infinite;-o-animation:load-after 2s ease-in-out infinite,zoom-after .66s ease-in-out infinite;animation:load-after 2s ease-in-out infinite,zoom-after .66s ease-in-out infinite;background:#e54c00}@-webkit-keyframes load-before{0%{left:0;-webkit-transform:scale(1.1)}50%{left:100%;-webkit-transform:scale(1)}100%{left:0;-webkit-transform:scale(1.1)}}@-webkit-keyframes load-after{0%{left:100%;-webkit-transform:scale(1.1)}50%{left:0;-webkit-transform:scale(1)}100%{left:100%;-webkit-transform:scale(1.1)}}@-webkit-keyframes zoom-before{0%{z-index:0}50%{z-index:1}100%{z-index:0}}@-webkit-keyframes zoom-after{0%{z-index:1}50%{z-index:0}100%{z-index:1}}@-moz-keyframes load-before{0%{left:0;-moz-transform:scale(1.1)}50%{left:100%;-moz-transform:scale(1)}100%{left:0;-moz-transform:scale(1.1)}}@-moz-keyframes load-after{0%{left:100%;-moz-transform:scale(1.1)}50%{left:0;-moz-transform:scale(1)}100%{left:100%;-moz-transform:scale(1.1)}}@-moz-keyframes zoom-before{0%{z-index:0}50%{z-index:1}100%{z-index:0}}@-moz-keyframes zoom-after{0%{z-index:1}50%{z-index:0}100%{z-index:1}}@-ms-keyframes load-before{0%{left:0;-ms-transform:scale(1.1)}50%{left:100%;-ms-transform:scale(1)}100%{left:0;-ms-transform:scale(1.1)}}@-ms-keyframes load-after{0%{left:100%;-ms-transform:scale(1.1)}50%{left:0;-ms-transform:scale(1)}100%{left:100%;-ms-transform:scale(1.1)}}@-ms-keyframes zoom-before{0%{z-index:0}50%{z-index:1}100%{z-index:0}}@-ms-keyframes zoom-after{0%{z-index:1}50%{z-index:0}100%{z-index:1}}@-o-keyframes load-before{0%{left:0;-o-transform:scale(1.1)}50%{left:100%;-o-transform:scale(1)}100%{left:0;-o-transform:scale(1.1)}}@-o-keyframes load-after{0%{left:100%;-o-transform:scale(1.1)}50%{left:0;-o-transform:scale(1)}100%{left:100%;-o-transform:scale(1.1)}}@-o-keyframes zoom-before{0%{z-index:0}50%{z-index:1}100%{z-index:0}}@-o-keyframes zoom-after{0%{z-index:1}50%{z-index:0}100%{z-index:1}}@keyframes load-before{0%{left:0;-webkit-transform:scale(1.1);transform:scale(1.1)}50%{left:100%;-webkit-transform:scale(1);transform:scale(1)}100%{left:0;-webkit-transform:scale(1.1);transform:scale(1.1)}}@keyframes load-after{0%{left:100%;-webkit-transform:scale(1.1);transform:scale(1.1)}50%{left:0;-webkit-transform:scale(1);transform:scale(1)}100%{left:100%;-webkit-transform:scale(1.1);transform:scale(1.1)}}@keyframes zoom-before{0%{z-index:0}50%{z-index:1}100%{z-index:0}}@keyframes zoom-after{0%{z-index:1}50%{z-index:0}100%{z-index:1}}[class*=span]{float:left;min-height:1px;margin-left:20px}.cantidadProductos{height:25px;float:none;margin:0 30px 10px 10px;padding:4px 0;border-bottom:1px dashed #aaa;border-top:1px dashed #aaa;width:auto;text-align:left}.cantidadProductos p{margin:0}.cantidadProductos p strong{text-transform:capitalize}#content,#filtros{float:left}#content{overflow:hidden}section#producto{overflow:hidden;float:left;width:100%}section#producto>.imagen{height:370px}.carruselRelacionados{position:relative;display:inline-block;width:100%;margin-bottom:40px}.carruselRelacionados:last-of-type{margin-bottom:0}.carruselRelacionados>.productos{display:-webkit-box;display:-ms-flexbox;display:flex;margin:0 auto;padding:20px 0;overflow:hidden;overflow-x:scroll;overflow-y:hidden;white-space:nowrap;margin-left:50px;width:-moz-calc(100% - 110px);width:-webkit-calc(100% - 110px);width:calc(100% - 110px)}.carruselRelacionados>.productos::-webkit-scrollbar{width:12px;height:10px;background-color:#f5f5f5}.carruselRelacionados>.productos::-webkit-scrollbar-thumb{border-radius:10px;background-color:#ff5a00;-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,.3);-moz-box-shadow:inset 0 0 6px rgba(0,0,0,.3);box-shadow:inset 0 0 6px rgba(0,0,0,.3)}.carruselRelacionados>.productos::-webkit-scrollbar-thumb:hover{background-color:#e54c00}.carruselRelacionados>.productos>.producto{display:inline-block;margin:0 20px 0 0}.carruselRelacionados .arrowDespla{height:100%;width:40px;display:block;position:absolute;top:0;-webkit-transition:all .2s ease;-moz-transition:all .2s ease;-o-transition:all .2s ease;transition:all .2s ease}.carruselRelacionados .arrowDespla:hover{opacity:.7;-webkit-transition:all .2s ease;-moz-transition:all .2s ease;-o-transition:all .2s ease;transition:all .2s ease}.carruselRelacionados .arrowDespla>span{width:19px;height:34px;display:block;cursor:pointer;margin-top:210px;background:url(https://statics.cdn1.buscalibre.com/images/20190307-1006flechasCarruCarrusel.png) no-repeat}.carruselRelacionados .arrowIzq{left:0}.carruselRelacionados .arrowIzq>span{background-position:0 0;margin-left:10px}.carruselRelacionados .arrowIzq>span.gris{-webkit-filter:grayscale(100%);filter:grayscale(100%)}.carruselRelacionados .arrowDer{right:0}.carruselRelacionados .arrowDer>span{background-position:-18px 0;margin-right:10px}.tituloRelacionados{background:#feedd3;font-size:1.5em;padding:10px;width:-webkit-fill-available;letter-spacing:.03em}@media (max-width:450px){.carruselRelacionados .arrowDespla{display:none}.carruselRelacionados>.productos{margin-left:10px;width:-moz-calc(100% - 20px);width:-webkit-calc(100% - 20px);width:calc(100% - 20px)}}section#producto .imagen .mesLibroSINIVA{background:url(https://statics.cdn1.buscalibre.com/images/diaEspecial/abrilLibrosMil/etiqueta20150420/abrilAMil-eti-siniva.png) no-repeat;color:#fff;display:block;width:62px;height:103px;position:absolute;bottom:70px;right:0;background-position:0 0;padding-left:15px;font-weight:700;letter-spacing:.001em;padding:0 0 0 11px;z-index:0;font-size:2.3em;line-height:1.8em}section#producto .imagen .etiqueta{color:#fff;display:block;width:62px;height:103px;position:absolute;right:0;padding-left:15px;font-weight:700;padding:0 0 0 11px;z-index:0;bottom:inherit;top:0;text-align:center;font-size:1.9em;line-height:1.9em;text-indent:-25px;letter-spacing:.01em}section#producto .thumbs{margin-top:10px;position:absolute;bottom:0}section#producto .thumbs ul{padding:0;margin:0}section#producto .thumbs ul li{display:none;list-style:none;float:left;border:1px solid #ddd;margin-right:18px}section#producto .thumbs ul li:nth-child(1),section#producto .thumbs ul li:nth-child(2),section#producto .thumbs ul li:nth-child(3),section#producto .thumbs ul li:nth-child(4){display:block}section#producto .thumbs ul li:hover{border:1px solid #ff5a00}section#producto .thumbs ul li:last-of-type{margin-right:0}section#producto .thumbs ul li img{width:auto;cursor:pointer}section#producto .datos.verificarStock *{visibility:hidden}section#producto .datos.verificarStock h2,section#producto .datos.verificarStock img{visibility:visible}section#producto .datos img{width:200px;margin:0 auto;display:block}section#producto .datos>p.agotado{color:#999;font-size:1.3em;border-top:1px dashed #999;border-bottom:1px dashed #999;width:auto}section#producto .datos .entrega{float:left;padding:5px;margin-bottom:10px;border-top:1px dashed #ddd;color:#999}section#producto .datos .entrega p{padding:0;margin:0}section#producto p.tituloProducto{font-weight:400;margin:0;line-height:1.2;display:-webkit-box;font-size:1.7em;display:-webkit-box;-webkit-line-clamp:2;overflow:hidden;display:-webkit-box;-webkit-box-orient:vertical;-o-text-overflow:ellipsis;text-overflow:ellipsis}section#producto .datos>p{width:100%;float:left}.stars.stars-one{width:18px;display:inline-block;cursor:pointer}.stars.stars-one.active,.stars.stars-one.active-hover{background-position:-200px -28px}.stars.stars-one.stars-hover:hover{background-position:-200px -28px}section#producto p.tituloProducto.mobile{display:none}.modal-deseo-contenedor{background:#000;position:fixed;top:0;left:0;z-index:3;width:100%;height:100%;opacity:.8;display:none}.modal-deseo-contenido.modal{width:400px}.modal-deseo-contenido p{text-align:center}.modal-deseo-contenido p.agregadoAlCarro{width:94%}.modal-deseo-contenido form.creandounaLista input[type=text]{height:32px;padding:0 10px}.modal-deseo-contenido form.agregandoaLista select{height:35px}.modal-deseo-contenido>a{color:#aaa;text-decoration:underline;text-align:right;width:100%;display:inline-block;margin:10px 0 0 0}p.agregadoAlCarro{background:#dff0d8;float:left;width:66%;color:#468847;border:1px solid #ddd;padding:10px;margin-bottom:0;text-align:center}p.agregadoAlCarro span{font-weight:700}p.agregadoAlCarro a{font-weight:700;color:#468847}p.agregadoAlCarro a:hover{color:#216121}section#producto #compartir{float:left;width:100%}section#producto .relacionados{position:relative;width:100%;overflow:hidden;clear:left;margin-bottom:20px}section#producto .relacionados h4.deal{width:98%}section#producto .relacionados h2.deal{width:98%}h2.deal{float:left;width:99%;height:40px;color:#000;border:1px dashed #ccc;background:#efefef;font-size:1.6em;font-weight:400;padding:0 0 0 8px;margin:0 0 20px 10px}section#producto .relacionados .productos{height:275px;overflow:hidden;padding-top:10px;overflow-x:scroll;overflow-y:hidden;white-space:nowrap;padding-bottom:30px}section#producto .relacionados .productos .producto{position:relative;min-height:246px;width:170px}section#producto .relacionados .productos .producto a .imagen{width:130px}section#producto .relacionados .productos .producto a .nombre{clear:left}section#producto .relacionados .productos .producto a .descuento,section#producto .relacionados .productos .producto a .precioAntes,section#producto .relacionados .productos .producto a .stock{display:none}section#producto .relacionados .productos .producto .agregar a{bottom:-10px}section#producto .relacionados.agotado .productos{border-bottom:1px dashed #ccc;margin-bottom:30px}section#producto .relacionados.agotado .productos .producto{font-size:.8em;width:150px}section#producto .relacionados.agotado .productos .producto a .nombre{height:36px}section#producto dl{float:left;width:100%}section#producto dl>dd{margin-right:20px;float:left;padding:20px 0}section#producto dl dd p{margin:.7em 0}section#producto #descripcion{float:left;width:100%}section#producto #descripcion>h2{background:#e6e7e8;padding:10px 0 10px 0;color:#000;font-size:1.2em;clear:left;float:left;width:100%}section#producto #descripcion>h2 span{width:0;height:0;border-top:7px solid transparent;border-left:14px solid #6d6e71;border-bottom:7px solid transparent;display:inline-block;margin-right:10px;margin-left:10px}section#producto #descripcion>p{margin:0 20px;float:left}section#producto #descripcion p p{margin:.7em 0}section#producto dl .percent-parent{width:100px;border:1px solid #f4f4ce;background:#f4f4ce;display:inline-block;margin:0 3px}section#producto dl .percent-parent .percent{background:#fc6;height:13px}section#producto dl .evaluacion{float:left;list-style:none;width:200px;margin-left:0;border:1px solid #ddd;padding:10px 10px;margin-bottom:20px}section#producto dl .evaluacion li{height:18px;line-height:12px;color:#777}section#producto dl .evaluacion li:first-of-type{font-weight:700;color:#000;width:100%}section#producto dl .evaluacion li span{display:inline-block;line-height:10px;height:25px;margin-bottom:20px}section#producto dl dd div#evaluacion em{background:url(https://statics.cdn1.buscalibre.com/images/comillas.png) no-repeat;float:left;margin:10px 0 20px 0;padding:15px 0 15px 40px;border-bottom:1px dashed #ddd;clear:left}section#producto dl dd div#evaluacion em:last-of-type{border-bottom:none}section#producto dl dd div#evaluacion h6{font-size:1em;margin:15px 0}#relacionados{overflow:hidden}#relacionados .productos{width:200%}#relacionados .productos .producto{width:140px;min-height:initial;margin:20px 30px 0 30px}#relacionados .productos .producto .imagen{width:110px}#relacionados .productos .producto a .autor,#relacionados .productos .producto a .editorial,#relacionados .productos .producto a .nombre,#relacionados .productos .producto a .precioAhora,#relacionados .productos .producto a .precioAntes,#relacionados .productos .producto a .stock{height:22px;line-height:inherit;display:block;float:left;width:100%;font-size:1em}#relacionados .productos .producto .agregar{display:none}section#producto .imagen .envioExpress{background:url(https://statics.cdn1.buscalibre.com/images/diaEspecial/envioExpress/envioExpress.png) no-repeat;position:absolute;width:89px;height:48px;display:block;left:0;right:inherit;bottom:90px}section#producto .imagen .despachoGratisIcono{background:url(https://statics.cdn1.buscalibre.com/images/diaEspecial/despachoGratis/20181001-1300etiqueta.png) no-repeat;position:absolute;width:89px;height:48px;display:block;left:0;right:inherit;bottom:90px}#filtros{width:230px;margin:10px 10px 0 10px}#filtros .box-list p.subtitulofiltro{color:#333;text-transform:capitalize;background:url(https://statics.cdn1.buscalibre.com/images/bullets.png) no-repeat 0 7px;border-bottom:1px dashed #000;padding-bottom:5px;padding-left:9px;font-size:1.1em;font-weight:400;margin:0}#filtros .box-list ul{font-size:11px;width:100%}#filtros .box-list ul li{margin:8px 0 0 0;list-style:none;float:left;font-size:1.2em;position:relative;padding-left:10px;width:100%}#filtros .box-list>ul>li>a{float:left;font-size:1em;-o-text-overflow:ellipsis;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;margin:0;width:85%;color:#000;letter-spacing:.05em;text-transform:lowercase}#filtros .box-list>ul>li>a::first-letter{text-transform:uppercase}#filtros .box-list>ul>li .desplegar{color:#000;width:14%;font-weight:700;font-size:1.2em;line-height:1em;position:absolute;top:0;right:0;text-align:center;cursor:pointer}#filtros .box-list ul li ul.activo{display:block}#filtros .box-list ul li ul li{text-decoration:underline;margin-top:0}#filtros .box-list ul li ul li a{text-transform:capitalize;font-weight:400;color:#555;-webkit-transition:all .1s ease;-moz-transition:all .1s ease;-o-transition:all .1s ease;transition:all .1s ease;width:100%;display:block}#filtros .box-list ul li ul li a:before{content:'\00BB '}#filtros .box-list ul li ul li a:hover{color:#000;-webkit-transition:all .1s ease;-moz-transition:all .1s ease;-o-transition:all .1s ease;transition:all .1s ease}#filtros .box-list ul li ul li.opened{line-height:2.8em}#filtros .box-list ul li.opened a{top:-4px;position:relative;font-weight:700}#filtros .box-list ul li ul li.opened a{color:#ff5a00}#filtros .box-list ul li p{background:#fff;border:0;margin-bottom:0;width:100%;text-decoration:none;padding:0;margin:0;-webkit-border-radius:0;-moz-border-radius:0;-ms-border-radius:0;border-radius:0}#filtros .box-list ul li p a span{display:none}section.ofertas{float:left}section.ofertas{margin-left:230px;min-height:550px}section.ofertas .productos{width:auto}section#carro{clear:left;margin:0 auto}section#carro .productosCarro>div{border-bottom:1px dashed #ccc;position:relative;padding:30px 10px;height:110px}section#carro .productosCarro>div:last-of-type{border-bottom:1px solid transparent}section#carro .productosCarro>div>a{float:left;width:67%}section#carro .productosCarro>div>a img{float:left;width:100px;height:auto;margin-right:10px}section#carro .productosCarro>div>a h3{color:#000;margin:0;padding:0;font-size:1em;height:44px;line-height:1.4;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;-o-text-overflow:ellipsis;text-overflow:ellipsis;max-width:94%;display:-webkit-box}section#carro .productosCarro>div>.envioExpress{background:url(https://statics.cdn1.buscalibre.com/images/diaEspecial/envioExpress/envioExpress.png) no-repeat;display:block;width:88px;height:47px;position:absolute;top:100px;left:0}section#carro .productosCarro>div>.despachoGratisIcono{background:url(https://statics.cdn1.buscalibre.com/images/diaEspecial/despachoGratis/20181001-1300etiqueta.png) no-repeat;display:block;width:88px;height:47px;position:absolute;top:100px;left:0}section#carro .productosCarro>div>ul{margin-left:110px;position:absolute;top:85px;z-index:0}section#carro .productosCarro>div>ul li span{font-weight:700}section#carro .productosCarro>div>ul li.stock span{color:#005a00}section#carro .productosCarro>div>select{width:6%;margin:0 1%;height:40px;cursor:pointer}section#carro .productosCarro>div>strong{width:6%;margin:0 1%;height:40px;display:inline-block;text-align:center}section#carro .productosCarro>div>p.total{width:11%;display:inline-block;text-align:center}section#carro .productosCarro>div>p.eliminarProductoCarro{color:#bbb;text-transform:capitalize;position:absolute;top:20px;right:0;line-height:1em;cursor:pointer;width:11%;font-size:.7em}section#carro .productosCarro>div>p.eliminarProductoCarro>span{background:#ccc;border-radius:50%;color:#fff;width:10px;height:10px;display:inline-block;text-align:center;font-size:.5em;margin-right:5px;line-height:1.9em;position:relative;top:-2px}section#carro form ul{margin:0 0 20px 0}section#carro form ul li{border:1px solid #888;color:#999;list-style:none;margin:10px 0 0 0;width:500px;padding:5px;height:30px;position:relative}section#carro form ul li label{width:150px;float:left;border-right:1px solid #888;margin:0 10px 0 0;padding:0 10px 0 10px;color:#333;text-align:left}section#carro form ul li strong{padding:0 10px 0 10px;color:#000}section#carro form ul li input,section#carro form ul li select{border:0 solid transparent;color:#000}section#carro form ul li select{cursor:pointer;width:315px;height:38px;position:absolute;top:0;background:#fff}section#carro form ul li select option{color:#000;background:#fff}section#carro form ul li input{width:310px;margin:0 0 0 7px;position:absolute;top:0;right:0;height:40px;padding:0 10px}section#carro form ul a{color:#ff5a00;cursor:pointer;float:right}section#carro form ul a:hover{color:#000;border:1px solid #000}section#login{width:960px;clear:both;margin:0 auto;font-size:.8em}section#teTraemos{height:267px;position:absolute;left:0;right:0;background:#fff;margin-left:10px;margin-right:10px;border:none;top:180px}section#teTraemos div{width:49%;height:100%;float:left}.modal-deseo-contenido form.creandounaLista{clear:left;display:none;width:100%;margin:30px auto 0;float:none;padding:0;border:none;float:left}.modal-deseo-contenido form.creandounaLista input[type=text]{height:32px;width:54%;margin-left:10px;float:left;padding:0 10px}.modal-deseo-contenido>a{color:#aaa;text-decoration:underline;text-align:right;width:100%;display:inline-block;margin:10px 0 0 0}#ventaEmpresas{width:95%;margin:0 auto;border:none}footer{background:#f5f5f5;padding-top:5px;clear:left;margin-top:100px;width:100%;float:left;padding-top:20px}footer nav.redes{display:inline-block;float:none;width:100%}footer nav.redes h5,footer nav.redes ul{margin:0;padding:0;float:left;display:inline-block}footer nav.redes ul{width:110px;clear:left;display:block;margin:20px auto 10px;float:none;height:25px}footer nav.redes h5{text-align:center;display:block;clear:left;width:100%}footer nav.redes ul li{display:block;float:left;width:23px;height:23px;margin:0 2px;display:inline-block;text-indent:-9999px;-webkit-transition:all 1s ease;-moz-transition:all 1s ease;-o-transition:all 1s ease;transition:all 1s ease}footer nav.redes ul li:hover{opacity:.6;-webkit-transition:all 1s ease;-moz-transition:all 1s ease;-o-transition:all 1s ease;transition:all 1s ease}footer nav.redes ul li.facebook{background-position:-43px 0}footer nav.redes ul li.twitter{background-position:-67px 0}footer nav.redes ul li.pinterest{background-position:-91px 0}footer nav.redes ul li.instagram{background-position:-19px 0}footer nav.redes ul li a{display:block}footer>div{text-align:center;padding:10px 20px 0;margin:10px auto 0;display:block;clear:left}footer>div h4{color:#000;text-transform:uppercase;font-weight:400;text-align:center;margin-bottom:11px;border-bottom:1px dotted gray;padding-bottom:5px}footer>div span{height:20px;display:inline-block;margin:10px 5px 0}footer>div span img{max-width:100%;height:auto}footer address{background:#e6e7e8;width:100%;height:50px;margin-top:30px;display:inline-block;padding:10px 0}footer address>span{background-position:-117px 0;width:36px;height:19px;display:block;margin:0 auto}footer address p{color:#808285;text-align:center;margin:10px 0 0 0;padding:0;font-size:.8em}footer>form.tuCorreo{clear:left;border:1px solid #ccc;width:400px;margin:10px auto 0;padding:10px}footer>form.tuCorreo>label{clear:left;width:100%;text-align:center;display:block;margin:0 0 10px 0;color:#000}footer>form.tuCorreo>input[type=email]{height:30px;padding:0 10px;border:1px solid #bbb;outline:0;width:250px}footer>form.tuCorreo>input[type=email]:focus{border:1px solid #ff5a00}footer>form.tuCorreo>input[type=submit]{height:31px;margin:0;float:right;border:1px solid #999;width:120px;background:#bbb;-webkit-transition:all .2s ease;-moz-transition:all .2s ease;-o-transition:all .2s ease;transition:all .2s ease}footer>form.tuCorreo>input[type=submit]:hover{background:#999;-webkit-transition:all .2s ease;-moz-transition:all .2s ease;-o-transition:all .2s ease;transition:all .2s ease}footer>form.tuCorreo>div{display:none;position:relative}footer>form.tuCorreo>div>svg{width:50px;position:absolute;top:0;left:0;right:0;margin:0 auto;-webkit-transition:all 1s ease;-moz-transition:all 1s ease;-o-transition:all 1s ease;transition:all 1s ease}footer>form.tuCorreo>div>svg#enana-der,footer>form.tuCorreo>div>svg#enana-izq{top:10px}footer>form.tuCorreo>div>svg#mediana{width:70px;display:block}footer>form.tuCorreo>div>p{text-align:center;text-transform:uppercase;padding-top:80px;font-weight:700}footer.teTraemos{margin-top:20px;padding:10px 0 20px;background:#f5f5f5}footer.teTraemos{background:#f5f5f5;margin-top:20px;padding:20px 0;border-top:1px solid #ccc}footer.teTraemos h6{text-align:center;border-bottom:1px dashed #ccc;font-size:1.3em;text-transform:uppercase;font-weight:400;color:#666;display:table;margin:0 auto}footer.teTraemos>div{width:350px;margin:20px auto 0}footer.teTraemos>div img{height:auto;width:160px}footer.teTraemos>div img:hover{opacity:.8}footer.teTraemos>div img:first-of-type{float:left}footer.teTraemos>div img:last-of-type{float:right}.productos{padding-top:10px}section#producto .thumbs ul li.slide_thumbs{display:block}section.contenedor.v2018#producto{max-width:1120px;width:auto;clear:left;margin:0 auto;float:inherit}.v2018 .marcador{overflow:hidden;margin:0 10px;box-shadow:0 9px 0 0 #fff,0 -5px 12px -1px #fff,10px 0 12px -5px rgba(0,0,0,.19),-10px 0 12px -10px rgba(0,0,0,.19);border-left:1px solid #ccc;border-right:1px solid #ccc;padding-bottom:15px;margin-bottom:30px;position:relative}.v2018 .ficha a{text-transform:capitalize}.v2018 .link-underline:hover{text-decoration:underline}.v2018 .border-bottom-light{border-bottom:1px solid #eee}.v2018 .info-libro{position:relative}.v2018 .marcador .share-icon{position:absolute;bottom:30px;right:15px}.v2018 #data-info-libro .share-icon{position:relative;right:30px;top:18px;float:right;width:110px;background:0 0; display: flex;}.mobile .v2018 #data-info-libro .share-icon{position:inherit;float:inherit;width:auto}.v2018 .share-icon{width:20px;height:22px;cursor:pointer}.v2018 .marcador-bottom-left{overflow:hidden;margin:10px;box-shadow:0 9px 0 0 #fff,0 -5px 12px -1px #fff,10px 0 15px -10px rgba(0,0,0,.19),-10px 0 12px -10px #fff;border-right:1px solid #ccc;height:7.99em;transform:rotate(70deg);position:relative;top:-18px;left:-7px}.v2018 .marcador-bottom-right{overflow:hidden;margin:10px;box-shadow:0 9px 0 0 #fff,0 -5px 12px -1px #fff,10px 0 15px -10px rgba(0,0,0,.19),-10px 0 12px -10px #fff;border-right:1px solid #ccc;height:7.99em;transform:rotate(110deg);position:relative;top:-18px;right:-7px}.v2018 .bottom-marcador{height:100px}.v2018 .ficha{margin-top:20px;margin-bottom:20px;padding:0 15px; font-size: 0.7em !important;}.v2018 .ficha .row{padding:2px 0}.v2018 .sprite-detalle{background:url(https://statics.cdn1.buscalibre.com/images/20181129-1150spritedetalle.png);content:"";display:inline-block}.v2018 .vistazo:after{width:17px;height:16px;top:0;right:0;margin-left:5px}.v2018 .box-descuento{background:#ff6000;color:#fff;padding:9px;float:left;display:inline-block;float:left}.v2018 .box-descuento-arrow{background:url(https://statics.cdn1.buscalibre.com/images/20181129-1150spritedetalle.png);height:40px;width:13px;background-position:-227px 0;display:inline-block;float:left}.v2018 .product-info{margin-bottom:70px}.v2018 .reviews-body-users em{display:block;margin:0 0 30px}.v2018 .reviews-body-users em strong{font-style:normal;margin-right:10px;font-size:1.1em}.v2018 .reviews-header h2{margin:0;padding:20px 40px}.v2018 .reviews-header .col{background:#fff;padding:0}.v2018 .reviews-header .active{background:#fff;border-top:1px solid #ddd;border-left:17px solid #ddd;border-right:1px solid #eee;border-bottom:0}.v2018 .reviews-body{border-left:17px solid #ddd;border-right:17px solid #ddd;border-bottom:1px solid #ddd;padding:20px 0}.v2018 .percent-parent{width:100px;display:inline-block;margin:0 3px}.v2018 .percent-parent .percent{background:#ffc800;height:15px;border-radius:3px}.v2018 .stars-4-li .percent-parent .percent{background:#ffaf00}.v2018 .stars-3-li .percent-parent .percent{background:#ff8100}.v2018 .stars-2-li .percent-parent .percent{background:#ff5f00}.v2018 .stars-1-li .percent-parent .percent{background:#ff3c00}.v2018 .stars{display:inline-block!important;margin-right:10px}.v2018 .reviews-body-resume{border-left:1px solid #ccc;padding:1px 20px;margin-top:5px}.v2018 .reviews-body-resume li{margin:10px 0;font-weight:300}.v2018 .reviews-body-users em{display:none}.v2018 .reviews-body-users em.review-n-1,.v2018 .reviews-body-users em.review-n-2,.v2018 .reviews-body-users em.review-n-3,.v2018 .reviews-body-users em.review-n-4,.v2018 .reviews-body-users em.review-n-5{display:block;margin-bottom: 30px;}.v2018 #related-by-user h4{margin-bottom:1em!important;margin-top:2em!important}.v2018 .etiqueta span{display:block}section#producto .v2018 form ul{padding:10px 0}section#producto.v2018 form ul li select{cursor:pointer}section#producto.v2018 .relacionados .productos{height:auto!important}.v2018 #load-comments:after{height:8px;width:13px;background-position:-151px -36px;margin-left:7px;vertical-align:middle}.v2018 .modal{background:#fff;padding:1.6em;background:#fff;border:solid 1px #666;box-shadow:0 0 10px rgba(0,0,0,.4);border-radius:3px;display:none;width:50%;border-top:solid 4px #f60}.modal span.close{width:32px;height:32px;background:#fff;border:1px solid #f60;-moz-border-radius:50%;-webkit-border-radius:50%;border-radius:50%;cursor:pointer;display:inline-block;margin:10px 20px;position:absolute;right:-30px;top:-25px}.modal span.close:before{left:50%;top:50%;margin-left:-9px;margin-top:-1px;width:18px;height:2px;background-color:#f60;content:"";position:absolute;-moz-transform:rotate(45deg);-ms-transform:rotate(45deg);-webkit-transform:rotate(45deg);transform:rotate(45deg)}.v2018 .modal span.close:after{width:18px;height:2px;background-color:#f60;content:"";left:50%;top:50%;margin-left:-9px;margin-top:-1px;position:absolute;-moz-transform:rotate(-45deg);-ms-transform:rotate(-45deg);-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}.textarea-reviews-qa{width:80%;height:30vh;border:1px solid #ccc;border-radius:5px;padding:10px}section#producto.v2018 .datos .valoracion{color:#ff4f00;margin:15px 0; cursor: pointer;}section#producto.v2018 .datos .valoracion:hover{color: black;}section#producto.v2018 .datos .valoracion .stars{margin-right:10px;position:relative;top:3px}section#producto.v2018 .imagen{float:inherit;margin:0;width:100%;position:relative}section#producto.v2018 .imagen img{display:block;margin:0 auto;max-height:100%;max-width:100%;border-top:1px solid #ddd}@media ( max-width: 500px ) { section#producto.v2018 .imagen img { border-bottom: none; border-top: none; } }.carruselRelacionados .productos .producto img{width:auto!important}section#producto.v2018 h1{font-size:2.2em}section#producto.v2018 .datos h2 span{color:#ff4f00}section#producto.v2018 p.precioAhora{color:#000;font-size:1.9em;letter-spacing:0}section#producto.v2018 p.precioAntes{min-height:22px;text-decoration:line-through}section#producto.v2018 p.descuento{color:#098200;font-size:1em}section#producto.v2018 p.stock{font-size:1em}section#producto.v2018 .datos .envioExpress{clear:left;border:0;border-left:0 solid #ff5a00}.v2018 .envioExpressRow{padding:20px 0;background-image:linear-gradient(to right,#fff .9%,#ecebeb 70%);margin-top:25px}.v2018 .envioNormalRow{padding:20px 0}.v2018 .envioExpressLogo{color:red}.v2018 .envioExpressLogo strong{display:inline-block;vertical-align:top;padding:5px 10px}.v2018 .envioExpressLogo:before{content:'';background:url(https://statics.cdn1.buscalibre.com/images/20181129-1150spritedetalle.png) -37px 0;height:36px;width:55px;display:inline-block}.v2018 .envioNormalLogo:before{content:'';background:url(https://statics.cdn1.buscalibre.com/images/20181129-1150spritedetalle.png) -92px 0;height:36px;width:37px;display:inline-block}.v2018 .envioNormalLogo span{display:inline-block;vertical-align:top;padding:5px 10px;color:#b4b4b4}section#producto.v2018 .datos .entrega{border:0}section#producto.v2018 .calcula-envio{margin-left:0;cursor:pointer}.v2018 .calcula-envio div:before{background-position:-122px -55px;height:19px;width:15px}section#producto .datos>p,section#producto.v2018 .datos p.tituloProducto{float:initial;text-align:left}section#producto.v2018 .datos p.tituloProducto{margin-top:20px;width:auto;padding-right:60px}section#producto.v2018 .relacionados{margin-bottom:0;padding-left:20px}section#producto.v2018 .datos .descripcionBreve h2{height:auto;-webkit-line-clamp:initial;max-width:95%;margin-top:0;font-weight:400!important}section#producto.v2018 .box-comprar form button{border-radius:5px;background:#ff3c00;width:190px;float:left;padding-left:0;color:#fff;height:50px;font-size:1.2em;border:1px solid #d55714}section#producto.v2018 form button:disabled p{color:#fff!important}.v2018 .stars.stars-one{width:18px!important;display:inline-block!important;background-size:initial!important}.v2018 .votacionEstrellas .stars{height:19px!important;margin-right:5px!important}.ingresar-reviews-qa button{margin-top:20px}.v2018 .box-comprar{padding:12px 20px 0;border:1px solid #ecebeb;width:100%;position:relative}.v2018 .box-comprar button{right:0;position:absolute}.v2018 .tiempoSameDay div{font-size:.9em;font-weight:300}.v2018 .tiempoSameDay strong{font-weight:700;font-size:1.1em}.v2018 .no-button{margin:0!important;line-height:1em;height:auto!important}.v2018 .calcula-envio div{line-height:1.5em}.v2018 .envio-gratis-img-etiqueta{position:absolute;bottom:0;left:0;background:#ff5a00;padding-left:10px;height:40px;display:inline-block;padding-right:10px}.v2018 .envio-gratis-img{top:5px;position:relative}.v2018 .sprite-detalle-before.envio-gratis-img:before{height:20px;width:27px;background-position:-190px -55px}.v2018 .envio-gratis-img-etiqueta:after{height:40px;width:12px;background-position:-264px 0;position:absolute;right:-12px;top:0}.button.util:before{height:15px;width:17px;background-position:-76px -15px;background-size:110px;margin-right:10px;vertical-align:bottom}.button.util.active:before{background-position:-76px 0}.button.inutil:before{height:15px;width:17px;background-position:-92px -15px;background-size:110px;margin-right:10px;vertical-align:bottom}.button.inutil.active:before{background-position:-92px 0}.opiniones-like{opacity:.6;-webkit-transition:all .2s ease;-moz-transition:all .2s ease;-o-transition:all .2s ease;transition:all .2s ease}.opiniones-like:hover{opacity:1;-webkit-transition:all .2s ease;-moz-transition:all .2s ease;-o-transition:all .2s ease;transition:all .2s ease}.counter-negativos,.opiniones-like .counter{display:inline-block;background:#ff4f00;padding:5px 10px 5px 8px;color:#fff;margin-right:10px;top:2px;position:relative;border-radius:5px 0 0 5px}.opiniones-like .counter-negativos:after,.opiniones-like .counter:after{content:'';background-image:url(https://statics.cdn1.buscalibre.com/images/20181129-1150spritedetalle.png);background-position:-264px 0!important;height:35px;width:9px;position:absolute;top:-6px;right:-9px;background-size:593px}.mobile .opiniones-fecha{display:block;margin-left:35px}@media (max-width:425px){section#producto.v2018 .datos p.tituloProducto{font-size:1.3em!important;font-weight:700!important;margin-top:10px!important}section#producto.v2018 .datos h2{font-size:1em!important}section#producto.v2018 .datos h2 a{font-weight:700!important}section#producto.v2018 h1:last-of-type,section#producto.v2018 h2{display:block!important}section#producto.v2018 #addToCart{position:relative!important;width:100%;margin:0!important}#cambiarPais{width:270px}.v2018 .ficha{padding:0 20px 20px;margin-top:0;}section#producto.v2018 .datos .descripcionBreve{display:block;margin-top:40px}section#producto.v2018 .datos .valoracion{text-align:left;margin:0;line-height:normal}.v2018 footer .formasDePago{height:120px}.v2018 .envioExpressRow{margin-top:0}section#producto.v2018 form.agregar-deseo button{float:left}.modal-deseo-contenido{width:400px}section#producto.v2018 .datos p.tituloProducto{font-size:1.8em}.v2018 .reviews-header .active{border:none}.v2018 .reviews-header h2{padding:0 25px}.v2018 h3.title{font-size:1em}.v2018 .reviews-body{padding:10px 0}.v2018 .calcula-envio div:before{margin-right:13px;margin-left:2px}section#producto.v2018 p.precioAntes{text-align:left;min-height:0}.v2018 .marcador{margin-bottom:0!important}.marcador .row.center-xs .col-xs-10{max-width:50%!important}section#producto form ul{margin-bottom:0!important}}@media (max-width:800px){.v2018 .marcador-bottom-left,.v2018 .marcador-bottom-right{display:none}.v2018 .marcador{border-bottom:1px solid #ccc}.v2018 .marcador .share-icon{display:none}.v2018 .marcador{border:0!important;box-shadow:none!important}.v2018 .bottom-marcador{display:none}.v2018 .box-comprar{padding:12px 20px;margin:10px 0}.v2018 .box-comprar.libro ul li{float:none!important;display:inline-block!important;width:auto!important;}.v2018 .box-comprar #addToCart{float:none!important;position:relative!important;margin:20px 0!important}section#producto.v2018 form.agregar-deseo{float:left!important;margin-bottom:20px!important;width:100%!important}section#producto.v2018 form.agregar-deseo button{text-align:left!important}.v2018 .col-comprar{top:0}section#producto.v2018 form.agregar-deseo button{margin-top:0}}@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900);@import url(https://fonts.googleapis.com/css?family=Raleway:100,300,400,700,900);body a,body div,body li,body p{font-family:Lato;font-display:swap}header.principal{margin-bottom:0!important;z-index:2!important}#cart_button,#iniciarSesion,.listaDeDeseos{height:75px!important}header.principal>section.inferior section.contenedor .logo{height:70px;overflow:hidden!important}.fixed{position:fixed!important;top:0!important;z-index:0}header.principal>section.inferior{height:auto!important}header.principal>section.inferior section.contenedor #iniciarSesion>a>span.usuarioContorno{width:19px!important;height:20px!important;display:inline-block!important;margin-top:30px!important;background-position:-71px 0!important}header.principal>section.inferior section.contenedor #iniciarSesion>a>h6{margin-left:8px!important;font-size:.8em!important;top:25px!important}header.principal>section.inferior section.contenedor .listaDeDeseos>a>.corazonContorno{width:22px;height:20px;display:block;float:left;margin-top:30px;background-position:-91px 0}header.principal>section.inferior section.contenedor #cart_button{width:auto!important;padding:0 10px 0 0!important}header.principal>section.inferior section.contenedor #cart_button>a>span.carroCompraHeader{width:16px;height:32px;display:block;float:left;margin-top:27px;background-position:-113px 0;position:relative;top:16px;left:10px}header.principal>section.inferior section.contenedor #iniciarSesion>a>p.texto{font-weight:300!important;top:28px important;margin-left:27px!important}header.principal>section.inferior section.contenedor .listaDeDeseos>a>p{line-height:3em!important;font-weight:300!important;margin-left:5px!important}header.principal>section.inferior section.contenedor .listaDeDeseos{width:auto!important}header.principal>section.inferior section.contenedor #iniciarSesion{width:160px!important}header.principal>section.inferior section.contenedor #cart_button>a>p{margin-top:27px!important}header.principal>section.superior>section.contenedor>nav{width:auto!important}header.principal>section.superior>section.contenedor>nav>ul>li>a{padding:0 15px!important}header.principal>section.superior>section.contenedor>aside .descargaNuestraApp>p{font-size:.8em!important}header .cambiarPais{padding-right:20px}header.principal>section.superior>section.contenedor>aside .cambiarPais{height:32px}header.principal>section.superior>section.contenedor>aside .cambiarPais>span{height:22px!important;width:22px!important;border-radius:12px;top:0!important;background-image:url(https://statics.cdn1.buscalibre.com/images/spirte20230907030727.png)!important;cursor:pointer}header.principal>section.superior>section.contenedor>aside .cambiarPais .opcionesPais{display:none}header.principal>section.superior>section.contenedor>aside .cambiarPais .opcionesPais nav ul li:hover a{color:#ff5a00}header .p42{background-position:-34px -119px!important}header .p131{background-position:-140px -119px!important}header .p46{background-position:-69px -119px!important}header .p10{background-position:-6px -119px!important}header .p64{background-position:-104px -119px!important}header .p160{background-position:-173px -119px!important}header .p211{background-position:-209px -119px!important}header .p29{background-position:-273px -118px!important}.opcionesPais{border:1px solid #ddd;position:absolute;display:block;background:#fff;top:32px;color:#333;padding:0 40px 20px 20px;z-index:1;min-width:160px;border-radius:0 0 10px 10px}.opcionesPais a{color:#333;font-weight:300}header .opcionesPais li a span{height:22px;width:22px;display:inline-block;border-radius:12px;position:relative;top:5px;left:-10px}#menu-mobile .opcionesPais li[value="10"] a span,header .opcionesPais li[value="10"] a span{background-position:-6px -119px!important}#menu-mobile .opcionesPais li[value="42"] a span,header .opcionesPais li[value="42"] a span{background-position:-34px -119px!important}#menu-mobile .opcionesPais li[value="46"] a span,header .opcionesPais li[value="46"] a span{background-position:-69px -119px!important}#menu-mobile .opcionesPais li[value="64"] a span,header .opcionesPais li[value="64"] a span{background-position:-104px -119px!important}#menu-mobile .opcionesPais li[value="131"] a span,header .opcionesPais li[value="131"] a span{background-position:-140px -119px!important}#menu-mobile .opcionesPais li[value="160"] a span,header .opcionesPais li[value="160"] a span{background-position:-173px -119px!important}#menu-mobile .opcionesPais li[value="211"] a span,header .opcionesPais li[value="211"] a span{background-position:-209px -119px!important}#menu-mobile .opcionesPais li[value="???"] a span,header .opcionesPais li[value="???"] a span{background-position:-273px -118px!important}header.principal>section.inferior section.contenedor #cart_button>a>p>span{vertical-align:top;font-size:.8em;position:absolute;top:16px;height:15px;width:15px;display:inline-block;text-align:center;left:12px;line-height:45px;font-weight:700}header.principal>section.inferior section.contenedor #cart_button>a>p>label{cursor:pointer}.sprite2018{background-image:url(https://statics.cdn1.buscalibre.com/images/20181026-1430sprite.png)!important;background-image:url(https://statics.cdn1.buscalibre.com/images/20190115-1734sprite.png)!important;background-image:url(https://statics.cdn1.buscalibre.com/images/20190117-1251sprite.png)!important;background-image:url(https://statics.cdn1.buscalibre.com/images/20190321-1818sprite.png)!important;background-repeat:no-repeat}@media (max-width:425px){header{height:auto!important}button#botonBuscarHeader:after{content:'';height:17px;width:17px;display:inline-block;background:url(https://statics.cdn1.buscalibre.com/images/20181012-1045sprite.png);background-position:-112px -129px;position:absolute;top:11px;right:13px}header .col{padding:0}header.principal>section.inferior section.contenedor #cart_button>a>span.carroCompraHeader{float:right!important;margin:8px 25px 0!important;background-image:url(https://statics.cdn1.buscalibre.com/images/mobile_sprite_20131024.png)!important;background-position:-28px -24px;width:30px}header.principal>section.inferior section.contenedor #cart_button>a>p{display:block!important}header.principal>section.inferior section.contenedor #cart_button>a>p>span{right:16px;top:-12px;left:inherit}#cart_button label{display:none}.col-cart{zoom:85%;margin:10px}}#buscador form{position:relative;display:inline-block;width:390px;margin-left:30px;margin-top:15px;margin-right:0}#buscador form>div.buscandoen-libros select[name=idxes]{border:1px solid #d5d5d5!important;border-radius:5px 0 0 5px;background-image:linear-gradient(to right,#e5e5e5 .9%,#d9d9d9 20%)!important}#buscador form button{right:0;top:8px;font-size:.9em;padding:10px 15px;background:#ff3c00;border-radius:3px;text-transform:none}header.principal>section.inferior section.contenedor #cart_button,header.principal>section.inferior section.contenedor #iniciarSesion,header.principal>section.inferior section.contenedor .listaDeDeseos{margin-right:0!important}header.principal>section.inferior section.contenedor #cart_button{width:50px;margin-right:0!important}@media (max-width:1150px){header.principal>section.inferior section.contenedor .row .col-cart{display:-webkit-inline-box;max-width:100%}}@media (max-width:800px){.col-cart{position:absolute!important;right:0!important;top:0!important}#buscador form{margin-left:0!important;margin-top:0!important;margin-right:0!important}}@media (max-width:425px){header.principal>section.inferior section.contenedor #cart_button{width:25px!important}#buscador form{width:350px!important}}header.principal{width:100%;clear:left;margin-bottom:50px;position:relative;z-index:1;border-top:1px solid #000}header.principal>section.superior{background:#000;width:100%;height:40px;clear:left;border-bottom:1.5px solid #ff5a00}header.principal>section.superior>section.contenedor>nav{height:40px;width:590px;display:inline-block}header.principal>section.superior>section.contenedor>nav>ul{margin:0;padding:0;height:100%}header.principal>section.superior>section.contenedor>nav>ul>li{display:inline-block;height:100%;position:relative}header.principal>section.superior>section.contenedor>nav>ul>li>a{color:#fff;padding:0 10px;height:100%;display:block;line-height:3em;font-size:.8em;font-weight:400;letter-spacing:.03em;-webkit-transition:all .2s ease;-moz-transition:all .2s ease;-o-transition:all .2s ease;transition:all .2s ease}header.principal>section.superior>section.contenedor>aside>div.activo>a,header.principal>section.superior>section.contenedor>aside>div>a:hover,header.principal>section.superior>section.contenedor>nav>ul>li.activo>a,header.principal>section.superior>section.contenedor>nav>ul>li>a:hover{background:#ff9800;background:-moz-linear-gradient(top,#ff9800 0,#ff5f00 100%);background:-webkit-linear-gradient(top,#ff9800 0,#ff5f00 100%);background:linear-gradient(to bottom,#ff9800 0,#ff5f00 100%);-webkit-transition:all .2s ease;-moz-transition:all .2s ease;-o-transition:all .2s ease;transition:all .2s ease}header.principal>section.superior>section.contenedor>nav>ul>li>a span.casaInicio{width:20px;height:20px;display:inline-block;position:relative;top:4px;margin-right:7px}header.principal>section.superior>section.contenedor>aside{float:right;height:100%}header.principal>section.superior>section.contenedor>aside>div{display:inline-block;height:100%;position:relative}header.principal>section.superior>section.contenedor>aside>div>a{color:#fff;padding:0 10px;height:100%;display:block;line-height:3.4em;font-size:.8em;font-weight:400;letter-spacing:.03em;-webkit-transition:all .2s ease;-moz-transition:all .2s ease;-o-transition:all .2s ease;transition:all .2s ease}header.principal>section.superior>section.contenedor>aside>div>a:hover{background:#ff9800;background:-moz-linear-gradient(top,#ff9800 0,#ff5f00 100%);background:-webkit-linear-gradient(top,#ff9800 0,#ff5f00 100%);background:linear-gradient(to bottom,#ff9800 0,#ff5f00 100%);-webkit-transition:all .2s ease;-moz-transition:all .2s ease;-o-transition:all .2s ease;transition:all .2s ease}header.principal>section.superior>section.contenedor>aside .cambiarPais>span{height:20px;width:20px;display:block;background:#0ff;text-indent:-9999px;position:relative;top:5px}header.principal>section.superior>section.contenedor>aside .cambiarPais .opcionesPais{display:none}header.principal>section.superior>section.contenedor>aside .descargaNuestraApp{-webkit-transition:all .2s ease;-moz-transition:all .2s ease;-o-transition:all .2s ease;transition:all .2s ease}header.principal>section.superior>section.contenedor>aside .descargaNuestraApp:hover{background:#ff9800;background:-moz-linear-gradient(top,#ff9800 0,#ff5f00 100%);background:-webkit-linear-gradient(top,#ff9800 0,#ff5f00 100%);background:linear-gradient(to bottom,#ff9800 0,#ff5f00 100%);-webkit-transition:all .2s ease;-moz-transition:all .2s ease;-o-transition:all .2s ease;transition:all .2s ease}header.principal>section.superior>section.contenedor>aside .descargaNuestraApp>p{cursor:pointer;color:#fff;padding:0 10px;margin:0;height:100%;display:block;line-height:3.4em;font-size:.8vw;font-weight:400;letter-spacing:.03em}.modal-contenido.descargaNuestraApp{width:400px}.modal-contenido.descargaNuestraApp>p{text-align:center;margin:0;text-transform:uppercase;font-weight:400;letter-spacing:.05em}.modal-contenido.descargaNuestraApp>div{cursor:pointer;display:inline-block;width:calc(42% - 10px);margin:calc(5% - 10px);padding:10px;-webkit-box-shadow:1px 1px 5px rgba(0,0,0,.2);-moz-box-shadow:1px 1px 5px rgba(0,0,0,.2);box-shadow:1px 1px 5px rgba(0,0,0,.2);-webkit-transition:all .2s ease;-moz-transition:all .2s ease;-o-transition:all .2s ease;transition:all .2s ease}.modal-contenido.descargaNuestraApp>div:hover{opacity:.7;-webkit-transition:all .2s ease;-moz-transition:all .2s ease;-o-transition:all .2s ease;transition:all .2s ease}.modal-contenido.descargaNuestraApp>div>a{width:100%;height:100%;display:inline-block;color:#000}.modal-contenido.descargaNuestraApp>div>a>p{text-align:center;padding:0;margin:0}.modal-contenido.descargaNuestraApp>div>a>span{margin:10px auto 20px;display:block;height:70px;width:80px;text-indent:-9999px}.modal-contenido.descargaNuestraApp>div>a>span.apple{background-position:0 -20px;width:58px;height:71px}.modal-contenido.descargaNuestraApp>div>a>span.android{background-position:-59px -20px;width:57px;height:69px}.modal-contenido.descargaNuestraApp>div>a>p.descargar{background:#ff5a00;text-align:center;color:#fff;display:block;margin:0 auto;font-size:.9em;font-weight:300;padding:10px 0;letter-spacing:.05em;border-radius:5px;-webkit-transition:all .2s ease;-moz-transition:all .2s ease;-o-transition:all .2s ease;transition:all .2s ease}.modal-contenido.descargaNuestraApp>div>a>p.descargar:hover{background:#ff7233;-webkit-transition:all .2s ease;-moz-transition:all .2s ease;-o-transition:all .2s ease;transition:all .2s ease}.modal-contenido.descargaNuestraApp>div>a>p.descargar:active{background:#d94300;-webkit-transition:all .2s ease;-moz-transition:all .2s ease;-o-transition:all .2s ease;transition:all .2s ease}header.principal>section.inferior{background:#f5f5f5;width:100%;height:70px;clear:left;-webkit-box-shadow:1px 1px 5px rgba(0,0,0,.2);-moz-box-shadow:1px 1px 5px rgba(0,0,0,.2);box-shadow:1px 1px 5px rgba(0,0,0,.2)}header.principal>section.inferior section.contenedor .row{width:100%}header.principal>section.inferior section.contenedor .logo{float:left;height:100%}header.principal>section.inferior section.contenedor .logo>a{display:inline-block;width:100%;height:100%}header.principal>section.inferior section.contenedor .logo>a>span{text-indent:-9999px;display:inline-block}header.principal>section.inferior section.contenedor .logo>a>img{margin-top:15px;margin-left:10px}header.principal>section.inferior section.contenedor #cart_button,header.principal>section.inferior section.contenedor #iniciarSesion,header.principal>section.inferior section.contenedor .listaDeDeseos{height:100%;position:relative;float:right;margin-right:10px;padding:0 10px}header.principal>section.inferior section.contenedor #cart_button:hover{background:#eceaea;-webkit-transition:all .2s ease;-moz-transition:all .2s ease;-o-transition:all .2s ease;transition:all .2s ease}header.principal>section.inferior section.contenedor #cart_button{height:100%;width:70px;position:relative}header.principal>section.inferior section.contenedor #cart_button>a{display:inline-block;width:100%;height:100%;color:#000}header.principal>section.inferior section.contenedor #cart_button>a>p{display:inline-block;font-weight:700;margin-top:25px;line-height:1.8em}header.principal>section.inferior section.contenedor .listaDeDeseos{width:170px;padding:0 10px;-webkit-transition:all .2s ease;-moz-transition:all .2s ease;-o-transition:all .2s ease;transition:all .2s ease}header.principal>section.inferior section.contenedor .listaDeDeseos:hover{background:#eceaea;-webkit-transition:all .2s ease;-moz-transition:all .2s ease;-o-transition:all .2s ease;transition:all .2s ease}header.principal>section.inferior section.contenedor .listaDeDeseos>a{width:100%;height:100%;display:inline-block;-webkit-transition:all .2s ease;-moz-transition:all .2s ease;-o-transition:all .2s ease;transition:all .2s ease}header.principal>section.inferior section.contenedor .listaDeDeseos>a:hover{color:#555;-webkit-transition:all .2s ease;-moz-transition:all .2s ease;-o-transition:all .2s ease;transition:all .2s ease}header.principal>section.inferior section.contenedor .listaDeDeseos>a>p{color:#000;font-weight:400;font-size:1em;line-height:2.2em;margin-left:10px;display:inline-block}header.principal>section.inferior section.contenedor #iniciarSesion{position:relative;z-index:0;width:180px;padding:0 10px;-webkit-transition:all .2s ease;-moz-transition:all .2s ease;-o-transition:all .2s ease;transition:all .2s ease}header.principal>section.inferior section.contenedor #iniciarSesion:hover{background:#eceaea;-webkit-transition:all .2s ease;-moz-transition:all .2s ease;-o-transition:all .2s ease;transition:all .2s ease}header.principal>section.inferior section.contenedor #iniciarSesion>a{width:100%;height:100%;display:inline-block}header.principal>section.inferior section.contenedor #iniciarSesion>a>span.usuarioContorno{width:33px;height:36px;display:inline-block;margin-top:20px;background-position:0 -128px}header.principal>section.inferior section.contenedor #iniciarSesion>a>h6{font-weight:500;font-size:1em;display:inline-block;color:#000;margin:0;position:absolute;top:20px;margin-left:5px}header.principal>section.inferior section.contenedor #iniciarSesion>a>p.texto{font-weight:400;font-size:.8em;position:absolute;top:30px;margin-left:45px;color:#000}header.principal>section.inferior section.contenedor #iniciarSesion>a>span.flechaAbajo{background-position:-22px 0;width:12px;height:7px;display:block;margin-top:20px;position:absolute;top:15px;right:10px}header.principal>section.inferior section.contenedor #iniciarSesion .opcionesCuenta{display:none;background:#eceaea;width:200px;position:relative;left:-10px;border-bottom-right-radius:10px;border-bottom-left-radius:10px;overflow:hidden}header.principal>section.inferior section.contenedor #iniciarSesion:hover .opcionesCuenta{display:block}header.principal>section.inferior section.contenedor #iniciarSesion .opcionesCuenta>nav ul li{height:40px;width:100%}header.principal>section.inferior section.contenedor #iniciarSesion .opcionesCuenta>nav ul li:first-of-type{padding-top:10px}header.principal>section.inferior section.contenedor #iniciarSesion .opcionesCuenta>nav ul li:hover{background:#e6e5e5}header.principal>section.inferior section.contenedor #iniciarSesion .opcionesCuenta>nav ul li a{line-height:2.2em;padding:0 10px;color:#000;height:100%;text-align:right;display:inline-block;width:calc(100% - 20px)}@media (max-width:800px){header.principal>section.inferior section.contenedor #iniciarSesion,header.principal>section.inferior section.contenedor .listaDeDeseos,header.principal>section.superior{display:none}}body .headerMargin{display:none}.avisoTop{background-color:#353b8a;height:50px;width:100%;color:#fff;font-weight:700;text-align:center;font-size:1.3em;text-shadow:0 0 10px #000;position:absolute;top:0;font-family:Arial,Helvetica,sans-serif;line-height:1.9em;-webkit-box-shadow:0 10px 20px -14px #000;-moz-box-shadow:0 10px 20px -14px #000;box-shadow:0 10px 20px -14px #000;-webkit-transition:all .2s ease;-moz-transition:all .2s ease;-o-transition:all .2s ease;transition:all .2s ease;background:#ff9800;background:-moz-linear-gradient(left,#ff9800 0,#ff5f00 100%);background:-webkit-linear-gradient(left,#ff9800 0,#ff5f00 100%);background:linear-gradient(to left,#ff9800 0,#ff5f00 100%);-webkit-transition:all .2s ease;-moz-transition:all .2s ease;-o-transition:all .2s ease;transition:all .2s ease}.avisoTop a{width:100%;height:100%;display:inline-block}.avisoTop p{margin:0;height:100%;text-shadow:none;color:#fff;display:inline-block;padding:0 20px;font-weight:300;line-height:2.3em;font-weight:400;letter-spacing:.03em}section#teTraemos{margin-top:60px!important;-webkit-transition:all .2s ease;-moz-transition:all .2s ease;-o-transition:all .2s ease;transition:all .2s ease}@media (max-width:1200px){body{margin-top:50!important}.avisoTop{height:60px}.avisoTop p{line-height:1.1em;font-size:.9em;height:auto;vertical-align:text-top}}header.mobile{top:0}body.mobile .headerMargin{display:none}body.mobile .avisoTop{height:50px;width:100%;top:0;color:#fff;font-weight:700;text-align:center;font-size:1.3em;text-shadow:0 0 10px #000;position:absolute;top:0;font-family:Arial,Helvetica,sans-serif;line-height:1.9em;-webkit-box-shadow:0 10px 20px -14px #000;-moz-box-shadow:0 10px 20px -14px #000;box-shadow:0 10px 20px -14px #000;-webkit-transition:all .2s ease;-moz-transition:all .2s ease;-o-transition:all .2s ease;transition:all .2s ease}body.mobile .avisoTop p{margin:0;color:#fff;height:100%;text-shadow:none;display:inline-block;padding:0 20px;font-weight:300}section#bannerPrincipal.mobile section#teTraemos{display:inline}@media (max-width:1200px){body.mobile .avisoTop{height:60px;margin-top:50px}body.mobile .avisoTop p{line-height:1.1em;font-size:.9em;height:auto;vertical-align:text-top;font-weight:400}}@media (max-width:575px){body.mobile .avisoTop{height:69px;margin-top:0;border-bottom:1px solid #000}body.mobile .avisoTop p{font-size:.8em}}.avisoTop{background:url(https://images.cdn0.buscalibre.com/eyJidWNrZXQiOiJzdGF0aWNzLnMzLmJ1c2NhbGlicmUuY29tIiwia2V5IjoiaW1hZ2VzL2VzdGF0aWNvLzIwMTkxMjIwYW5vTnVldm8vYmc0LmpwZyIsImVkaXRzIjp7ImZsYXR0ZW4iOnsiYmFja2dyb3VuZCI6eyJyIjoyNTUsImciOjI1NSwiYiI6MjU1LCJhbHBoYSI6bnVsbH19fX0=)}.avisoTop>p{text-shadow:-2px 2px 5px #000}#buscador form>ul .repuestos span{background-position:0 -23px;width:20px;height:30px}section.buscaVehiculo>label{font-weight:700;margin-right:10px}section.buscaVehiculo>select{padding:5px;outline:0;width:140px}section.buscaVehiculo>select:focus{border:1px solid #a01d27}section.buscaVehiculo>select>option{padding:6px}section.buscaVehiculo .select2-container{margin:0 3px}.autocomplete-suggestions{border:1px solid #999;background:#fff;overflow:auto}.autocomplete-suggestion{padding:2px 5px;white-space:nowrap;overflow:hidden}.autocomplete-selected{background:#f0f0f0}.autocomplete-suggestions strong{font-weight:400;color:#39f}.autocomplete-group{padding:2px 5px}.autocomplete-group strong{display:block;border-bottom:1px solid #000}header.principal>section.superior>section.contenedor>aside .cambiarPais:hover .opcionesPais{display:block}.preview{text-align:right;padding:5px 25px}.preview a:after{content:'';background-image:url(https://statics.cdn1.buscalibre.com/images/testab/preview-arrow.png);width:18px;height:18px;display:inline-block;background-size:18px;margin-left:8px;position:relative;top:6px;transform:scaleX(-1) rotate(-155deg)}#modal-preview{height:80%;width:620px;padding-top:0;overflow:hidden}#modal-preview .modal-header{background:#f5f5f5;padding:10px}#modal-preview .modal-header img{max-width:100%}#modal-preview .modal-header .cerrar{position:absolute;right:15px;top:15px;cursor:pointer;display:inline-block;}#modal-preview .modal-body{overflow-y:scroll;line-height:19px;letter-spacing:.5px;text-align:left;color:#444;font-size:14px}#modal-preview .modal-body p{font-family:Georgia,"Times New Roman",Times,serif}#modal-preview .modal-body h1{font-weight:400;line-height:30px}.mobile #modal-preview{top:2%!important;margin:0!important;left:2%!important;width:87%!important;height:94%!important}#compartir a{width:62px}.tabs div{border-top:solid 1px #ecebeb;border-left:solid 1px #ecebeb;border-right:solid 1px #ecebeb;border-bottom:solid 1px #fff;border-radius:5px;padding:5px 25px;position:relative;top:1px;left:3px;background:#fff;z-index:1;margin-right:0;color:#333;border-bottom:solid 1px #ecebeb;border-bottom-right-radius:0;border-bottom-left-radius:0;cursor:pointer;text-transform:capitalize}.tabs div.active{color:#ff5a00;font-weight:700;border-bottom:solid 1px #fff}.box-diff:first-of-type{display:flex}#div-costo{background:#f0f0f0;padding:10px}#div-costo select{background:#fff;padding:.5em 1em;border-radius:4px;width:100%;font-weight:300;height:40px}#div-costo button{margin-top:10px;width:190px;float:left;padding:.6em}#div-costo form>div label{color:#444}#div-costo form>div{margin-bottom:20px}.agregarEnLista{padding:9px 30px!important}.modal-deseo-contenido span.cerrar{position:absolute!important;right:10px!important;top:10px!important;cursor:pointer!important;background-image:url(https://statics.cdn1.buscalibre.com/images/20190321-1818sprite.png)!important;background-position:-151px 0!important;height:12px!important;width:13px!important;background-size:180px!important}.modal-deseo-contenido form.creandounaLista input[type=text]{width:94%!important}.modal-deseo-contenido p{line-height:22px;width:85%;margin:10px auto 0 auto!important}.mobile .modal-deseo-contenido.dialog-box{width:90%!important;padding:10px}section#producto.v2018 .datos .descripcionBreve>h4{color:#ff5a00;font-size:1.5em}@media (max-width:768px){.v2018 .reviews-header .tab-tab.active{border:none}.v2018 .reviews-body{border-top:transparent!important}.v2018 .reviews-body-resume{border-left:0}.v2018 .reviews-body{border-bottom:0}.v2018 h3.title{background:0 0;color:#ff5a00;border-top:1px dashed #ccc;font-size:1.5em;padding-top:30px}}.v2018 .reviews-header .tab-tab{border:1px solid #ddd;margin-right:10px;margin-left:16px;background:#efefef;cursor:pointer}.v2018 .reviews-header .tab-tab.active{border-bottom:0;background:#fff;background:#fff;cursor:initial}.v2018 .reviews-body{border-top:1px solid #ddd;margin-top:-1px}.tab-contenido{display:none}.tab-contenido.active{display:block}.tab-contenido .opinion .direccion{font-style:normal;margin-right:10px;font-weight:600}.tab-contenido .opinion .direccion:before{height:26px;width:27px;background-position:-200px 0;top:5px;position:relative;margin-right:10px;background-image:url(https://statics.cdn1.buscalibre.com/images/20181129-1150spritedetalle.png);content:"";display:inline-block}.tab-contenido .opinion .comentario{font-weight:300}.tab-contenido .verMasOpis{font-size:1.2em;font-weight:600}.tab-contenido .verMasOpis:after{background-image:url(https://statics.cdn1.buscalibre.com/images/20181129-1150spritedetalle.png);content:"";display:inline-block;height:12px;width:6px;background-position:-144px -36px;margin-left:7px;vertical-align:middle}.margin-top-40{margin-top:40px!important}section#producto .opinionesSobreBuscalibre{margin-top:30px;margin-bottom:50px}section#producto .opinionesSobreBuscalibre>h1,section#producto.v2018 .relacionados h3{background:#feedd3;font-size:1.5em;padding:10px;width:-webkit-fill-available;letter-spacing:.03em}
+@media (max-width:1000px){section#producto .opinionesSobreBuscalibre{margin-left:20px;margin-right:20px}section#producto .opinionesSobreBuscalibre>h1,section#producto.v2018 .datos .descripcionBreve h4,section#producto.v2018 .datos h4,section#producto.v2018 .relacionados h3{background:0 0;color:#ff5a00;border-top:1px dashed #ccc;font-size:1.5em;padding-top:30px}section#producto.v2018 .datos .descripcionBreve h4{color:#ff5a00;font-size:1.5em}.v2018 .ficha .row{font-weight:400;font-size:1.1em}}@import url(https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,700,900);b,strong{font-weight:600}.overflow-visible{overflow:visible}.max-width-100{max-width:100%}.font-weight-light{font-weight:300!important}.font-weight-medium,.font-weight-normal{font-weight:400}.font-weight-strong{font-weight:600!important}.font-size-smallest{font-size:.7em}.font-size-small{font-size:.85em!important}.font-size-normal{font-size:1em!important}.font-size-quote{font-size:1.1em}.font-size-medium{font-size:1.2em!important}.font-size-h1{font-size:1.4em}.font-size-lg{font-size:2em}.font-size-superbig{font-size:3em!important}.font-size-big{font-size:2.4em}.color-text,.font-color-text{color:#000}.color-light-text{color:#555}.color-gray,.font-color-gray{color:#b4b4b4!important}.color-dark-gray{color:#666!important}.color-white,.font-color-white{color:#fff}.color-primary,.font-color-bl{color:#ff4f00}.color-primary-light{color:#fca766}.color-error{color:#a94442}.color-green{color:#098200}.color-yellow{color:#ebb748}.float-right{float:right}.padding-10{padding:10px!important}.padding-30{padding:30px}.padding-top-10{padding-top:10px!important}.padding-top-20{padding-top:20px!important}.padding-top-50{padding-top:50px}.padding-left-0{padding-left:0}.padding-left-10{padding-left:10px}.padding-right-0{padding-right:0}.padding-right-10{padding-right:10px}.padding-left-30{padding-left:30px}.padding-bottom-5{padding-bottom:5px}.padding-bottom-10{padding-bottom:10px!important}.padding-0{padding:0!important}.margin-0{margin:0!important}.margin-left-0{margin-left:0!important}.margin-left-5{margin-left:5px}.margin-left-10{margin-left:10px}.margin-right-10{margin-right:10px}.margin-right-5{margin-right:5px!important}.margin-right-0{margin-right:0!important}.margin-bottom-0{margin-bottom:0!important}.margin-bottom-5{margin-bottom:5px!important}.margin-bottom-10{margin-bottom:10px!important}.margin-bottom-20{margin-bottom:20px!important}.margin-bottom-30{margin-bottom:30px!important}.margin-bottom-50{margin-bottom:50px!important}.margin-top-0{margin-top:0!important}.margin-top-5{margin-top:5px!important}.margin-top-10{margin-top:10px!important}.margin-top-20{margin-top:20px!important}.margin-center{margin:0 auto}.text-align-right{text-align:right}.text-align-left{text-align:left!important}.text-align-center{text-align:center!important}.font-style-italic{font-style:italic}.font-style-normal{font-style:normal}.float-left{float:left}.visibility-hidden{visibility:hidden}h3.title,h4.title{margin:10px 0}.display-none{display:none}.display-inline-block{display:inline-block!important}.display-block{display:block!important}.position-relative{position:relative}.vertical-align-top{vertical-align:top}.background-color-bl{background:#ff4f00}.background-color-light-bl{background:#feedd3}.background-color-white{background-color:#fff!important}.background-color-lightgray{background-color:#f7f7f7}.background-color-gray{background-color:#f0f0f0}.background-color-green{background-color:#e4f6e7!important}.link-bl{color:#ff4f00;cursor:pointer}button.no-button{background:0 0!important;border:none!important}.button{font-size:.9em;padding:12px 20px!important;border-radius:3px!important;vertical-align:top;box-sizing:border-box;cursor:pointer}.button.button-small{padding:8px 15px!important;font-size:.9em}.button.button-smallest{padding:7px 10px!important;font-size:.8em}.button-primary{background:#ff3c00!important;border:1px solid #d55714!important;color:#fff!important}.button-secondary{background:var(--naranjo)!important;border:1px solid #d55714!important;color:#fff!important}.button-secondary:hover{background:#dd4e00!important}.button-white{background:#fff;border:1px solid #bbb}.button-white.green{color:green!important;border:1px solid green!important}.button-white:hover{background:#f5f5f5!important}.button-facebook{background:#23589a;color:#fff}.border-primary{border:1px solid #ff8f00!important;border-radius:.25rem;box-shadow:0 0 2px #ff8f00}.width-100{width:100%}.width-80{width:80%}.modal{width:600px;border:1px solid #555;box-shadow:0 0 10px 2px #000;padding:15px}.modal i.cerrar,.modal .cerrar.v2{position:absolute;right:15px;top:15px;cursor:pointer;display:inline-block;background-position:-151px 0;height:12px;width:13px;background-size:180px}.modal .modal-header .cerrar.v2{width:13px!important;text-decoration:none!important}.mobile .modal .modal-header .cerrar,.mobile .modal .modal-header .cerrar.v2{background-position:-193px 0;height:20px;width:18px;background-size:230px}.border-bottom-0{border:0!important}.productos .producto{position:relative!important;min-height:246px;width:170px!important;margin:0 10px;margin-bottom:20px;display:inline-block;padding:0;vertical-align:top}.productos .producto a .nombre{font-weight:400!important;font-size:.9em!important;height:34px!important;border:none!important;padding:0!important;margin-top:10px!important;text-align:left!important;white-space:normal!important;letter-spacing:normal;line-height:16px!important}.productoLista a .autor,.productos .producto a .autor{color:#333;font-size:.8em!important;font-weight:300}.productoLista a div.title{color:#000;max-height:32px;overflow:hidden;padding-right:10px;line-height:16px;margin-left:160px}.productoLista a div.field{margin-left:160px;height:16px;overflow:hidden;text-transform:capitalize}.testgrillameta.productoLista a div.field{margin-left:0}.v2018 .productoLista a .margin-left-list{margin-left:160px}.v2018 .producto .etiqueta,.v2018 .productoLista .etiqueta{background-image:none!important;background-color:#ff5a00!important;height:32px!important;width:45px!important;font-size:.9em!important;left:0!important;top:inherit!important;bottom:-8px!important;position:absolute!important;bottom:0!important}.v2018 .productoLista .etiqueta{top:116px!important;left:160px!important;height:37px!important;text-indent:-9999px!important}.v2018 .producto .etiqueta:after,.v2018 .productoLista .etiqueta:after{content:"-"!important;height:40px!important;width:12px;background:url(https://statics.cdn1.buscalibre.com/images/20181129-1150spritedetalle.png)!important;display:inline-block!important;background-position:-264px 0!important;position:absolute!important;top:0!important;right:-12px!important;color:#ff5a00!important}.v2018 .producto.dcto10 .etiqueta:after,.v2018 .productoLista.dcto10 .etiqueta:after{background-position:-288px 0!important;color:#f4bf00!important}.v2018 .producto.dcto20 .etiqueta:after,.v2018 .productoLista.dcto20 .etiqueta:after{background-position:-276px 0!important;color:#ff9c00!important}.v2018 .producto.dcto30 .etiqueta:after,.v2018 .productoLista.dcto30 .etiqueta:after{background-position:-264px 0!important;color:#ff5a00!important}.v2018 .producto.dcto40 .etiqueta:after,.v2018 .productoLista.dcto40 .etiqueta:after{background-position:-252px 0!important;color:red!important}.v2018 .producto.dcto50 .etiqueta:after,.v2018 .productoLista.dcto50 .etiqueta:after{background-position:-240px 0!important;color:#cf0000!important}.v2018 .producto.dcto10 .etiqueta,.v2018 .productoLista.dcto10 .etiqueta{background-color:#f4bf00!important}.v2018 .producto.dcto20 .etiqueta,.v2018 .productoLista.dcto20 .etiqueta{background-color:#ff9c00!important}.v2018 .producto.dcto30 .etiqueta,.v2018 .productoLista.dcto30 .etiqueta{background-color:#ff5a00!important}.v2018 .producto.dcto40 .etiqueta,.v2018 .productoLista.dcto40 .etiqueta{background-color:red!important}.v2018 .producto.dcto50 .etiqueta,.v2018 .productoLista.dcto50 .etiqueta{background-color:#cf0000!important}.v2018 .productos{width:100%}.v2018 .productoLista a .precioAhora,.v2018 .productos .producto a .precioAhora{color:#000!important;float:right!important;font-size:1.3em!important;font-weight:700!important;position:relative;top:2px!important}.v2018 .productoLista a .precioAhora{top:128px!important;right:15px!important;text-align:right!important;position:absolute}.bestsellersPortada.v2018 .productoLista a .precioAhora{top:108px!important}.bestsellersPortada.v2018 .productoLista a .precioAntes{top:94px!important}.v2018 .productos .producto>a .envioExpress{background:url(https://statics.cdn1.buscalibre.com/images/20181129-1150spritedetalle.png)!important;background-position:0 -36px!important;height:36px!important;width:122px!important;top:154px!important}.v2018 .productos .producto a .precioAntes{display:block;position:relative;top:0;font-size:14px;text-align:right}.v2018 .productoLista a .precioAntes{right:16px!important;top:114px!important;float:right!important;font-size:.8em;position:absolute;text-align:right!important;width:100%}.v2018 .productoLista a .despachoGratisIcono{display:none}.v2018 .productos .producto .descuento,.v2018 .productos .producto .stock{display:none}.v2018 .productos .producto .imagen img{height:100%!important;max-width:100%}.v2018 .productos .producto .imagen{height:190px}.v2018 .productos .producto .despachoGratisIcono{top:105%;background:#fff;border:1px solid #eee;width:100%;height:30px;text-indent:0;display:none}.v2018 .productos .producto .despachoGratisIcono:before,.v2018 .productosLista .productoLista .despachoGratisIcono:before{content:'';color:#ff5a00;display:inline-block;height:19px;width:27px;background:url(https://statics.cdn1.buscalibre.com/images/20181129-1150spritedetalle.png) -190px -36px;top:5px;left:20px;position:relative}.v2018 .productos .producto .despachoGratisIcono:after,.v2018 .productosLista .productoLista .despachoGratisIcono:after{content:'EnvÃ­o gratis';color:#ff5a00;display:inline-block;top:2px;left:40px;position:relative}.v2018 .productos .producto .etiqueta,.v2018 .productos .producto .mesLibroSINIVA{font-weight:300!important;line-height:12px!important;padding-top:8px!important;padding-left:15px!important;z-index:0!important;text-indent:-99999px!important}.v2018 .productoLista .descuento-percent,.v2018 .productos .producto .descuento-percent{position:absolute;bottom:inherit;bottom:7px;left:15px;z-index:1;color:#fff;font-weight:400;font-size:.9em;display:block!important}.v2018 .productos .producto .descuento-percent{bottom:7px!important;height:29px;overflow:hidden}.v2018 .relacionados .productos .producto .descuento-percent{top:267px}.v2018 .productoLista .descuento-percent{left:175px;top:118px;font-size:1em}.v2018 .productoLista .descuento-percent:after,.v2018 .productos .producto .descuento-percent:after{content:'dcto.';display:block;position:absolute;top:14px;font-weight:300}#productosPortada.v2018 .productos .producto,.v2018.categoria .productos .producto{margin-bottom:80px;min-width: 170px;}.v2018.categoria .cantidadProductos{border-bottom:1px solid #f0f0f0;border-top:1px solid #f0f0f0;margin:15px}.v2018.categoria .breadcrumb{margin:15px}.v2018 .productosLista .productoLista a .envioExpress{background:url(https://statics.cdn1.buscalibre.com/images/20181129-1150spritedetalle.png)!important;background-position:0 -36px!important;height:36px!important;width:122px!important;top:120px!important;left:0}.v2018 .productosLista .productoLista .descuento,.v2018 .productosLista .productoLista .stock,.v2018 .productosLista .productoLista h6:nth-child(4){display:none!important}.v2018 .productosLista .productoLista .despachoGratisIcono{display:block;background:#fff;border:1px solid #eee;width:203px;height:30px;text-indent:0;top:160px;left:160px;position:absolute}.v2018 .productosLista .productoLista .despachoGratisIcono:after{left:45px}section.bestsellersPortada.v2018{width:225px}section.bestsellersPortada.v2018 .bestsellers .productosLista .productoLista .despachoGratisIcono{background:#fff!important;left:inherit!important;width:140px!important;font-size:.8em;height:30px!important;display:none}.mobile section.bestsellersPortada.v2018 .bestsellers .productosLista .productoLista .despachoGratisIcono{display:block}.bestsellersPortada.v2018 .productosLista .productoLista .despachoGratisIcono:after{left:35px;top:0}.bestsellersPortada.v2018 .productosLista .productoLista .despachoGratisIcono:before{top:5px;left:15px}.bestsellersPortada.v2018 .productosLista .productoLista h6:first-of-type{height:35px!important}.bestsellersPortada.v2018 .productosLista .productoLista .envioExpress{background-size:420px!important;background-position:0 -25px!important;width:85px!important;height:26px!important;top:85px!important}.bestsellersPortada.v2018 .productosLista .etiqueta{left:100px!important;width:20px!important;height:30px!important;top:100px!important}.bestsellersPortada.v2018 .productosLista .etiqueta:after{background-position:-205px 0!important;color:#ff5a00!important;background-size:465px!important;width:8px!important;height:30px!important;left:31px!important}.bestsellersPortada.v2018 .productosLista .productoLista.dcto10 .etiqueta:after{background-position:-224px 0!important}.bestsellersPortada.v2018 .productosLista .productoLista.dcto20 .etiqueta:after{background-position:-215px 0!important}.bestsellersPortada.v2018 .productosLista .productoLista.dcto40 .etiqueta:after{background-position:-195px 0!important}.bestsellersPortada.v2018 .productosLista .productoLista.dcto50 .etiqueta:after{background-position:-187px 0!important}.bestsellersPortada .productosLista a div.field,.bestsellersPortada .productosLista a div.title{margin-left:110px}.bestsellersPortada.v2018 .productosLista .descuento-percent{left:105px;z-index:3;font-size:.7em;top:100px}.bestsellersPortada.v2018 .productoLista .precioAntes{font-size:.8em}.bestsellersPortada.v2018 .productoLista .precioAhora{font-size:1em!important}.bestsellersPortada.v2018 .productosLista .productoLista{height:125px}.bestsellersPortada .stars{display:none!important}.mobile .v2018 .bestsellers h5{font-size:1.1em;margin:0;padding:0 0 0 5px;height:50px;line-height:2.3em;font-weight:400;border-bottom:1px dashed #ddd;float:left;width:100%;text-align:center}.v2018 .envio-gratis div:before{background-position:-190px -36px;height:19px;width:27px}.v2018 .sprite-detalle-after:after{background-image:url(https://statics.cdn1.buscalibre.com/images/20181129-1150spritedetalle.png);content:"";display:inline-block}.v2018 .sprite-detalle-before{overflow:visible}.box-gray{padding:25px 10px;background:#f7f7f7;border:1px solid #f0f0f0}.box-success{padding:10px;border:1px solid #fca766;border-radius:2px}.box-success.border-green{border:1px solid #093}.cursor-pointer{cursor:pointer}.form-control{display:inline-block;width:100%;padding:5px 10px;font-size:1rem;line-height:1.5;color:#495057;background-color:#fff;background-clip:padding-box;border:1px solid #ced4da;border-radius:.25rem;box-sizing:border-box}select.form-control{height:30px}.sprite-base-before:before{background:url(https://statics.cdn1.buscalibre.com/images/20190515-1111sprite.png);content:"";display:inline-block}.login-card-icon:before{width:45px;height:45px;margin-right:20px;background-position:0 -175px;vertical-align:top}.login-shipping-icon:before{width:45px;height:38px;margin-right:20px;background-position:0 -131px;vertical-align:top}.login-warranty-icon:before{width:45px;height:38px;margin-right:20px;background-position:-46px -176px;vertical-align:top}section#producto .relacionados .productos{padding-bottom:0!important}.v2018 .stars{background-image:url(https://statics.cdn1.buscalibre.com/images/20180914-1600sprite-estrellas.png);display:inline-block;width:95px;height:20px;background-position:-95px -28px}.v2018 .stars.stars-05{background-position:-276px -28px}.v2018 .small.stars.stars-05{background-position:-218px -23px}.v2018 .stars.stars-1{background-position:-76px -28px}.v2018 .stars.stars-15{background-position:-257px -28px}.v2018 .small.stars.stars-15{background-position:-203px -23px}.v2018 .stars.stars-2{background-position:-57px -28px}.v2018 .stars.stars-25{background-position:-238px -28px}.v2018 .small.stars.stars-25{background-position:-188px -23px}.v2018 .stars.stars-3{background-position:-38px -28px}.v2018 .stars.stars-35{background-position:-219px -28px}.v2018 .small.stars.stars-35{background-position:-173px -23px}.v2018 .stars.stars-4{background-position:-19px -28px}.v2018 .stars.stars-45{background-position:-200px -28px}.v2018 .small.stars.stars-45{background-position:-157px -23px}.v2018 .stars.stars-5{background-position:0 -28px}.v2018 .small.stars{background-size:310px;width:76px;height:14px}.v2018 .small.stars.stars-5,.v2018 .small.stars.stars-50{background-position:0 -23px}.v2018 .small.stars.stars-4,.v2018 .small.stars.stars-40{background-position:-15px -23px}.v2018 .small.stars.stars-3,.v2018 .small.stars.stars-30{background-position:-30px -23px}.v2018 .small.stars.stars-2,.v2018 .small.stars.stars-20{background-position:-45px -23px}.v2018 .small.stars.stars-1,.v2018 .small.stars.stars-10{background-position:-60px -23px}.v2018 .small.stars.stars-0,.v2018 .small.stars.stars-00{background-position:-75px -23px}.v2018 .bestsellers{float:left;overflow-x:hidden}.v2018 .productosLista .productoLista.testgrillameta{padding:15px 0;overflow-x:hidden}.v2018 .productosLista .productoLista.testgrillameta a img{max-width:124px;margin-left:10px;margin-top:0}.v2018 .productosLista .productoLista.testgrillameta a .envioExpress{top:155px!important;left:-140px!important;background-size:550px!important;background-position:0 -33px!important;width:110px!important}.v2018 .productosLista .productoLista.testgrillameta a .margin-left-list{margin-left:145px!important}.v2018 .productoLista.testgrillameta .etiqueta{left:2px!important;top:100px!important}.mobile .v2018 .productoLista.testgrillameta .etiqueta{top:120px!important}.v2018 .productoLista.testgrillameta .descuento-percent{left:15px!important;top:123px!important}.v2018 .productoLista.testgrillameta .despachoGratisIcono{left:2px!important;width:auto;top:165px}.v2018 .productoLista.testgrillameta .despachoGratisIcono:after{left:25%}.v2018 .productoLista.testgrillameta .despachoGratisIcono:before{left:20%}.v2018 .productoLista.testgrillameta a .precioAntes{right:15px!important;top:120px!important}.v2018 .productoLista.testgrillameta a .precioAhora{right:13px!important;top:135px!important;width:100%}.v2018 .productoLista.testgrillameta a .metas{text-transform:capitalize;font-size:14px!important;line-height:16px}.v2018 .productoLista.testgrillameta a div.title{margin-left:0}.v2018 .productoLista.testgrillameta a div.field{font-size:15px!important;height:18px}.bestsellersPortada.v2018 .productoLista.testgrillameta a .estrellas{display:none}.bestsellersPortada.v2018 .productoLista.testgrillameta a img{width:80px!important}.bestsellersPortada.v2018 .productoLista.testgrillameta a .margin-left-list{margin-left:110px!important}.bestsellersPortada.v2018 .productoLista.testgrillameta a .precioAhora{top:98px!important}.bestsellersPortada.v2018 .productoLista.testgrillameta a .precioAntes{top:112px!important}.bestsellersPortada.v2018 .productoLista.testgrillameta a .metas{display:none}.bestsellersPortada.v2018 .productosLista .productoLista.testgrillameta a .envioExpress{top:100px!important;background-size:420px!important;background-position:0 -25px!important;width:85px!important;left:-110px!important}.bestsellersPortada.v2018 .productosLista .productoLista.testgrillameta a div.field{margin-left:0}.bestsellersPortada.v2018 .productoLista.testgrillameta .descuento-percent{top:100px!important;left:7px!important}.v2018 .productos .producto a .autor{color:#000;height:18px;font-family:Raleway}.v2018 .productos .producto a .metas{height:35px;-webkit-line-clamp:2;font-family:Raleway}.v2018 .productos .producto{margin:0 21px 80px}#filtros h3{margin-bottom:0;margin-top:2px;border-bottom:#ff5a00 2px solid;color:#555;padding:13px}#filtros .box-list{border-top:0}#filtros .box-list>ul>li{border:1px solid #ddd}#filtros .box-list ul li{padding:10px 0 10px 4px;background:#eee;box-sizing:border-box}#filtros .box-list ul li ul{margin-top:5px}#filtros .box-list ul li ul li{height:auto;line-height:1em;width:98%}#filtros .box-list ul li ul li.opened{line-height:2em}#filtros .box-list ul li ul li.opened a{top:0;left:10px}#filtros .box-list ul li a{color:#333}@media (max-width:768px){.padding-sides-responsive{padding:0 25px!important}.padding-xs-0{padding:0!important}.padding-left-xs-0{padding-left:0!important}.padding-left-xs-10{padding-left:10px!important}.padding-top-xs-10{padding-top:10px!important}.margin-top-xs-0{margin-top:0!important}.margin-top-xs-20{margin-top:20px!important}.margin-top-xs-10{margin-top:10px!important}.margin-bottom-xs-10{margin-bottom:10px!important}.margin-bottom-xs-50{margin-bottom:50px!important}.margin-xs-0{margin:0!important}.margin-left-xs-0{margin-left:0!important}.margin-right-xs-0{margin-right:0!important}.display-xs-none{display:none!important}.box-filtros{margin:10px 0;padding:15px 10px}.bestsellersPortada .productosLista a div.field,.bestsellersPortada .productosLista a div.title{margin-left:80px}.bestsellersPortada .productosLista a div.title{height:16px}.font-size-xs-small{font-size:.85em}.font-size-xs-medium{font-size:1.2em}.width-xs-90{width:90%!important}.width-xs-100{width:100%!important}.width-xs-70{width:70%!important}.width-xs-30{width:30%!important}.text-align-xs-center{text-align:center}.mobile .modal{width:90%}}@media (max-width:800px){.v2018 .productosLista .productoLista{height:190px}}a{text-decoration:none}section.contenedor{width:1120px;clear:left;margin:0 auto}.productos .producto a .precioAntes.hide-on-hover{color:#666}.st0{fill:#ff5a00}section#bannerPrincipal{top:10px}footer section.arriba section.contenedor>.row{display:flex!important;max-width:100%}footer section.arriba section.contenedor ul li a{color:#4b4b4b!important;font-size:.8em!important;font-weight:400!important;letter-spacing:.03em!important}footer section.arriba section.contenedor ul{display:inline-grid!important;margin-left:60px!important;padding-top:30px}footer .datosContacto a{display:block!important;padding-left:5px}footer section.arriba section.contenedor .certificado{margin-left:0!important;top:0!important}footer section.arriba{padding:10px 0 40px!important}footer .box-contacto{position:relative;height:100%;padding-left:0}footer .logo{text-align:center}footer section.arriba section.contenedor .datosContacto{width:290px;position:relative!important;bottom:0!important;right:0;top:initial!important;margin:0 auto}footer section.arriba section.contenedor form.tuCorreo{float:initial!important;margin:25px auto 0!important;padding:0 0 20px!important}footer img{max-width:100%}.box-certificado{text-align:center;margin:60px 0}@media (max-width:425px){footer section.arriba section.contenedor .datosContacto{width:290px;position:relative;bottom:0!important;right:0;top:initial!important}}
+section#carro{position:relative;top:30px}.sprite2018{background-image:url(https://statics.cdn1.buscalibre.com/images/sprite20180907-1235.png);background-repeat:no-repeat}section.contenedor{width:1120px;clear:left;margin:0 auto}.botonNaranjo{background:#ff5a00;text-align:center;color:#fff;display:block;margin:0 auto;font-size:.9em;font-weight:300;padding:10px;border:none;letter-spacing:.05em;border-radius:3px;outline:0;-webkit-transition:all .2s ease;-moz-transition:all .2s ease;-o-transition:all .2s ease;transition:all .2s ease}.botonNaranjo:hover{background:#ff7233;-webkit-transition:all .2s ease;-moz-transition:all .2s ease;-o-transition:all .2s ease;transition:all .2s ease}.botonNaranjo:active{background:#d94300;-webkit-transition:all .2s ease;-moz-transition:all .2s ease;-o-transition:all .2s ease;transition:all .2s ease}.bodyv2018 section#teTraemos{top:170px;margin-top:0!important}header.principal~.tiendasTodas{margin-top:60px}.tiendasTodas{clear:left;width:100%;display:inline-block}.tiendasTodas section.contenedor h5,.tiendasTodas section.contenedor p{font-size:1em;margin:5px 0 0 0;font-weight:300}.tiendasTodas section.contenedor h5{font-size:1.8em;margin:0;font-weight:400;letter-spacing:.03em;line-height:1.2em}.tiendasTodas section.contenedor p{font-size:.9em;margin:0}.tiendasTodas section.contenedor>div{float:right;width:560px;margin:-40px 0 0 0;position:relative;z-index:1;top:-40px;z-index:-1;clear:right}.tiendasTodas section.contenedor>div>div{width:140px;height:80px;padding-top:20px;display:inline-block;-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;-webkit-box-shadow:3px 3px 15px -8px #000;-moz-box-shadow:3px 3px 15px -8px #000;box-shadow:3px 3px 15px -8px #000}.tiendasTodas section.contenedor>div>div:hover{-webkit-transition:all .2s ease;-moz-transition:all .2s ease;-o-transition:all .2s ease;transition:all .2s ease}.tiendasTodas section.contenedor>div>div a{display:inline-block;height:100%;width:100%}.tiendasTodas section.contenedor>div>div a:hover img{-webkit-filter:grayscale(100%);filter:grayscale(100%);-webkit-transition:all .2s ease;-moz-transition:all .2s ease;-o-transition:all .2s ease;transition:all .2s ease}.tiendasTodas section.contenedor>div>div a img{max-width:100px;max-height:70px;display:block;margin:0 auto;-webkit-filter:grayscale(0);filter:grayscale(0)}.tiendasTodas~.tetraemosForm{margin-top:30px}.tetraemosForm section.contenedor{position:relative;background:#fdedd3;border-radius:5px}.tetraemosForm section.contenedor>p{color:#000;font-size:1.3em;padding:0;margin:0;font-weight:400;margin-top:15px;margin-left:10px;display:inline-block}.tetraemosForm section.contenedor>a{color:#ff5a00;position:absolute;top:20px;right:20px}.tetraemosForm section.contenedor>a>strong{font-weight:900;position:relative;top:1px}.tetraemosForm section.contenedor>form{position:relative;height:60px;margin-top:20px;padding:0 10px}.tetraemosForm section.contenedor>form input{position:absolute;margin-right:10%;width:calc(100% - 180px);height:40px;border-radius:3px;border:1px solid #ccc;padding:0 10px;outline:0}.tetraemosForm section.contenedor>form button{width:130px;float:right;height:42px}.tetraemosForm~.agregarExtension{margin-top:50px}.agregarExtension{clear:left;width:100%}.agregarExtension>section.contenedor>p{width:100%;font-size:1.1em;font-weight:400}.agregarExtension>section.contenedor>p>span{color:#ff5a00}.agregarExtension>section.contenedor>div{float:left;width:calc(100% - 580px);height:183px;background:#f4f4f4;padding:20px}.agregarExtension>section.contenedor>div img{clear:left}.agregarExtension>section.contenedor>div p{font-size:.9em;font-weight:300}.agregarExtension>section.contenedor>div a{width:42%;display:inline-block}.agregarExtension>section.contenedor>div a.haciaChromeStore{color:#ff5a00;float:right;line-height:2.2em}.agregarExtension>section.contenedor>div a.haciaChromeStore:hover{color:#d94300}.agregarExtension~.teTraemosVentajas{margin-top:50px}.teTraemosVentajas>section.contenedor>p{width:100%;font-size:1.1em;font-weight:400}.teTraemosVentajas>section.contenedor>div{width:calc(66% - 10px);display:inline-block}.teTraemosVentajas>section.contenedor>div>.ventajitas{width:calc(45% - 10px);display:inline-grid;margin-right:calc(7% - 10px);margin-bottom:calc(5% - 10px);position:relative}.teTraemosVentajas>section.contenedor>div>.ventajitas>img{max-width:60px;max-height:80px;display:inline-block;position:absolute;top:0;left:0}.teTraemosVentajas>section.contenedor>div>.ventajitas>h6{color:#ff5a00;font-size:1.2em;margin:0;font-weight:400}.teTraemosVentajas>section.contenedor>div>.ventajitas>p{font-weight:300;margin:0}.teTraemosVentajas>section.contenedor>div>.ventajitas>h6,.teTraemosVentajas>section.contenedor>div>.ventajitas>p{margin-left:70px}.teTraemosVentajas>section.contenedor .tambien{float:right;width:calc(33% - 10px);border:1px solid #ff5a00;border-radius:4px;padding:10px}.teTraemosVentajas>section.contenedor .tambien>strong{font-size:1.2em;margin-bottom:10px;display:block}.teTraemosVentajas>section.contenedor .tambien>ul li{position:relative;height:35px;font-weight:300}.teTraemosVentajas>section.contenedor .tambien>ul li span{background-image:url(https://statics.cdn1.buscalibre.com/images/20180906-1742check.png)!important;margin-right:10px;width:12px;height:11px;display:inline-block;position:relative;top:0}.nuestrosClientesDicenDeBL section.contenedor>p{width:100%;font-size:1.1em;font-weight:400}.nuestrosClientesDicenDeBL section.contenedor>.opiniones>div{width:calc(48% - 10px);display:inline-block;margin-right:calc(3% - 10px);margin-bottom:calc(2% - 10px);position:relative;display:inline-grid}.nuestrosClientesDicenDeBL section.contenedor>.opiniones .cargandoOpiniones{color:#ccc;text-align:left}.nuestrosClientesDicenDeBL section.contenedor>.opiniones>div>span.avatarClientes{width:26px;height:27px;display:inline-block;position:absolute;top:0;left:0;background-position:-46px 0}.nuestrosClientesDicenDeBL section.contenedor>.opiniones>div>p{margin:0}.nuestrosClientesDicenDeBL section.contenedor>.opiniones>div>.nombreCliente{margin:5px 0 10px 40px;font-weight:500}.nuestrosClientesDicenDeBL section.contenedor>.opiniones>div>.comentario{font-weight:300;font-style:italic;font-size:.9em}.nuestrosClientesDicenDeBL section.contenedor>.opiniones>div>.comentario:before{content:" ''"}.nuestrosClientesDicenDeBL section.contenedor>.opiniones>div>.comentario:after{content:"'' "}.nuestrosClientesDicenDeBL section.contenedor>span.verMasDicen{color:#ff5a00;float:right;line-height:2.2em;text-align:left;width:100%;cursor:pointer}.nuestrosClientesDicenDeBL section.contenedor>span.verMasDicen:hover{color:#d94300}footer{padding:0}footer .formasDePago{background:#fafafa;margin:0;padding-bottom:60px}footer .formasDePago section.contenedor>p{width:100%;text-align:left;clear:left;font-size:1.1em;font-weight:400}footer .formasDePago section.contenedor>img{display:inline-block;width:calc(10% - 10px);margin-right:calc(6% - 10px);min-height:60px}footer .formasDePago section.contenedor .botones{display:none}footer section.arriba{padding:10px 0;background:#f4f4f4}footer section.arriba section.contenedor{position:relative}footer section.arriba section.contenedor .logo>a span{text-indent:-9999px;display:inline-block}footer section.arriba section.contenedor>*{display:inline-grid}footer section.arriba section.contenedor>ul{margin-left:70px}footer section.arriba section.contenedor>ul li a{color:#4b4b4b;font-size:.8em;font-weight:400;letter-spacing:.03em}footer section.arriba section.contenedor .certificado{position:relative;top:50px;margin-left:70px}footer section.arriba section.contenedor form.tuCorreo{clear:left;width:280px;margin:50px auto 0;padding:10px;float:right}footer section.arriba section.contenedor form.tuCorreo>label{clear:left;width:100%;text-align:center;display:block;margin:0 0 10px 0;color:#4b4b4b;font-size:.8em;font-weight:400;letter-spacing:.03em}footer section.arriba section.contenedor form.tuCorreo span.campos input[type=email]{height:40px;padding:0 10px;border:1px solid #ddd;outline:0;width:135px;border-radius:5px;margin-right:10px}footer section.arriba section.contenedor form.tuCorreo span.campos input[type=email]:focus{border:1px solid #ff5a00}footer section.arriba section.contenedor form.tuCorreo span.campos input[type=submit]{background:#ff5a00;text-align:center;border:none;color:#fff;margin:0;font-weight:300;padding:10px 0;letter-spacing:.05em;border-radius:3px;font-size:.8em;outline:0;height:40px;width:110px;-webkit-transition:all .2s ease;-moz-transition:all .2s ease;-o-transition:all .2s ease;transition:all .2s ease}footer section.arriba section.contenedor form.tuCorreo span.campos input[type=submit]:hover{background:#ff7233;-webkit-transition:all .2s ease;-moz-transition:all .2s ease;-o-transition:all .2s ease;transition:all .2s ease}footer section.arriba section.contenedor form.tuCorreo span.campos input[type=submit]:active{background:#d94300;-webkit-transition:all .2s ease;-moz-transition:all .2s ease;-o-transition:all .2s ease;transition:all .2s ease}footer section.arriba section.contenedor form.tuCorreo>input{display:inline-block}footer section.arriba section.contenedor form.tuCorreo>div{display:none;position:relative;top:-50px}footer section.arriba section.contenedor form.tuCorreo>div>svg{width:50px;position:absolute;top:0;left:0;right:0;margin:0 auto;-webkit-transition:all 1s ease;-moz-transition:all 1s ease;-o-transition:all 1s ease;transition:all 1s ease}footer section.arriba section.contenedor form.tuCorreo>div>svg#enana-der,footer section.arriba section.contenedor form.tuCorreo>div>svg#enana-izq{top:60px;width:30px}footer section.arriba section.contenedor form.tuCorreo>div>svg#mediana{width:40px;display:block;top:50px}footer section.arriba section.contenedor form.tuCorreo>div>p{text-align:center;text-transform:uppercase;padding-top:90px;font-weight:700;font-size:.8em}footer section.arriba section.contenedor .datosContacto{width:290px;position:absolute;top:150px;right:0}footer section.arriba section.contenedor .datosContacto a{color:#ff5a00;position:relative}footer section.arriba section.contenedor .datosContacto a>span{height:30px;width:30px;display:inline-block;position:relative;top:10px;margin-right:10px}footer section.arriba section.contenedor .datosContacto a .correo{background-position:-116px -62px;height:30px;top:9px}footer section.arriba section.contenedor .datosContacto a .telefono{background-position:-116px -40px;height:22px;top:5px}footer section.abajo{background:#e7e7e7}footer section.abajo section.contenedor address{width:calc(500px - 10px);margin-top:0}footer section.abajo section.contenedor address>p{color:#4b4b4b;text-align:left;font-style:normal}footer section.abajo section.contenedor address>p>span:first-of-type{color:#ff5a00}footer section.abajo section.contenedor .redes{width:calc(220px - 10px);display:inline-block;float:right;margin-top:20px;position:relative}footer section.abajo section.contenedor .redes>p{display:inline-block;color:#4b4b4b;text-align:left;font-style:normal;font-size:1em;font-weight:400;top:-4px;position:relative;margin-top:10px;margin-bottom:0}footer section.abajo section.contenedor .redes>ul{display:inline-block;position:relative;top:-10px}footer section.abajo section.contenedor .redes>ul li{width:38px;height:38px;display:inline-block;margin:0 0 0 10px;border-radius:50%}footer section.abajo section.contenedor .redes>ul li.facebook{background-position:0 -91px;width:37px}footer section.abajo section.contenedor .redes>ul li.twitter{background-position:-38px -91px;width:37px}footer section.abajo section.contenedor .redes>ul li.instagram{background-position:-75px -91px;width:37px}footer section.abajo section.contenedor .redes>ul li.pinterest{background-position:-111px -91px;width:38px}footer section.abajo section.contenedor .redes>ul li a{text-indent:-9999px;display:inline-block;width:100%;height:100%}@media (max-width:1150px){section.contenedor{width:95%;clear:left;height:100%;margin:0 auto}}@media (max-width:800px){header.principal>section.inferior section.contenedor #iniciarSesion,header.principal>section.inferior section.contenedor .listaDeDeseos,header.principal>section.superior{display:none}}@media (max-width:425px){header.principal>section.inferior section.contenedor .logo{background:0 0;display:inline-block;width:auto;margin:0}header.principal>section.inferior section.contenedor #cart_button{clear:none;top:0;margin:0;width:40px}header.principal>section.inferior section.contenedor #cart_button>a>p{display:none}}@media (max-width:1100px){.tiendasTodas section.contenedor>h5,.tiendasTodas section.contenedor>p{text-align:center}.tiendasTodas section.contenedor>div{top:0;margin:0 auto;display:block;float:none;width:100%}.tiendasTodas section.contenedor>div>div{width:calc(26% - 10px);padding-bottom:10px}.tiendasTodas section.contenedor>div>div a img{max-width:170px;max-height:80px}}@media (max-width:600px){.tiendasTodas section.contenedor>div>div{width:calc(51% - 10px)}.tiendasTodas section.contenedor>p{margin:10px 0}}@media (max-width:730px){.tetraemosForm section.contenedor>p{width:100%;text-align:center}.tetraemosForm section.contenedor>a{position:relative;top:0;margin-top:10px;width:100%;text-align:center;right:auto;display:block}.tetraemosForm section.contenedor>form{height:70px}}@media (max-width:500px){.tetraemosForm section.contenedor>form{height:auto}.tetraemosForm section.contenedor>form input{position:relative;width:calc(97% - 10px);margin:0 auto}.tetraemosForm section.contenedor>form button{width:100%;float:none;margin-top:10px;margin-bottom:20px;position:relative}}@media (max-width:1120px){.agregarExtension{display:none}}@media (max-width:876px){.teTraemosVentajas>section.contenedor>div{width:100%}.teTraemosVentajas>section.contenedor .tambien{width:100%;float:none;width:calc(98% - 10px)}}@media (max-width:500px){.teTraemosVentajas>section.contenedor>div>.ventajitas{width:100%;margin-bottom:6%}.teTraemosVentajas>section.contenedor .tambien>ul li{margin-bottom:10px}}@media (max-width:600px){.nuestrosClientesDicenDeBL{margin-top:50px}.nuestrosClientesDicenDeBL section.contenedor>.opiniones>div{width:100%;margin-bottom:30px}}@media (max-width:867px){footer .formasDePago section.contenedor>img{margin:0 10px;min-height:auto;width:calc(11.3% - 10px)}}@media (max-width:685px){footer .formasDePago section.contenedor .botones{display:block;width:100%;margin-top:30px}footer .formasDePago section.contenedor .botones>ul{width:70px;margin:0 auto;display:block}footer .formasDePago section.contenedor .botones>ul>li{background:#ccc;border-radius:50%;height:30px;width:30px;display:inline-block;cursor:pointer}footer .formasDePago section.contenedor .botones>ul>li:hover{background:#d94300}footer .formasDePago section.contenedor .botones>ul>li:first-of-type{margin-right:10px}footer .formasDePago section.contenedor .botones>ul>li.activo{background:#ff5a00}footer .formasDePago section.contenedor>img{display:none;margin-right:calc(4% - 10px);margin-left:calc(4% - 10px);margin-top:0;margin-bottom:0;display:inline-block}footer .formasDePago section.contenedor.slice1a3 img{width:calc(25% - 10px);display:inline-block}footer .formasDePago section.contenedor.slice4a7 img{width:calc(21% - 10px);display:inline-block}footer .formasDePago section.contenedor.slice1a3>img:nth-child(5),footer .formasDePago section.contenedor.slice1a3>img:nth-child(6),footer .formasDePago section.contenedor.slice1a3>img:nth-child(7),footer .formasDePago section.contenedor.slice1a3>img:nth-child(8){display:none}footer .formasDePago section.contenedor.slice4a7>img:nth-child(2),footer .formasDePago section.contenedor.slice4a7>img:nth-child(3),footer .formasDePago section.contenedor.slice4a7>img:nth-child(4){display:none}}@media (max-width:685px){footer section.abajo section.contenedor address{width:90%}}
+</style><style id="googleidentityservice_button_styles">.qJTHM{-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;color:#202124;direction:ltr;-webkit-touch-callout:none;font-family:Roboto-Regular,arial,sans-serif;-webkit-font-smoothing:antialiased;font-weight:400;margin:0;overflow:hidden;-webkit-text-size-adjust:100%}.ynRLnc{left:-9999px;position:absolute;top:-9999px}.L6cTce{display:none}.bltWBb{overflow-wrap:break-word;word-break:break-word}.hSRGPd{color:#1a73e8;cursor:pointer;font-weight:500;text-decoration:none}.Bz112c-W3lGp{height:16px;width:16px}.Bz112c-E3DyYd{height:20px;width:20px}.Bz112c-r9oPif{height:24px;width:24px}.Bz112c-u2z5K{height:36px;width:36px}.Bz112c-uaxL4e{border-radius:10px}.LgbsSe-Bz112c{display:block}.S9gUrf-YoZ4jf{border:none;margin:0;padding:0}.S9gUrf-YoZ4jf *{border:none;margin:0;padding:0}.fFW7wc-ibnC6b>.aZ2wEe>div{border-color:#4285f4}.P1ekSe-ZMv3u{-webkit-transition:height .2s linear;transition:height .2s linear}.P1ekSe-ZMv3u>div:first-child{background-color:#1a73e8!important;-webkit-transition:width .3s linear;transition:width .3s linear}.P1ekSe-ZMv3u>div:nth-child(2){background-image:-webkit-gradient(linear,left top,right top,from(rgba(255,255,255,.7)),to(rgba(255,255,255,.7))),-webkit-gradient(linear,left top,right top,from(#1a73e8),to(#1a73e8))!important;background-image:-webkit-linear-gradient(left,rgba(255,255,255,.7),rgba(255,255,255,.7)),-webkit-linear-gradient(left,#1a73e8,#1a73e8)!important;background-image:linear-gradient(90deg,rgba(255,255,255,.7),rgba(255,255,255,.7)),linear-gradient(90deg,#1a73e8,#1a73e8)!important}.P1ekSe-ZMv3u>div:nth-child(3){background-image:-webkit-gradient(linear,left top,right top,from(rgba(255,255,255,.7)),to(rgba(255,255,255,.7))),-webkit-gradient(linear,left top,right top,from(#1a73e8),to(#1a73e8))!important;background-image:-webkit-linear-gradient(left,rgba(255,255,255,.7),rgba(255,255,255,.7)),-webkit-linear-gradient(left,#1a73e8,#1a73e8)!important;background-image:linear-gradient(90deg,rgba(255,255,255,.7),rgba(255,255,255,.7)),linear-gradient(90deg,#1a73e8,#1a73e8)!important}.haAclf{display:inline-block}.nsm7Bb-HzV7m-LgbsSe{border-radius:4px;box-sizing:border-box;-webkit-transition:background-color .218s,border-color .218s;transition:background-color .218s,border-color .218s;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;-webkit-appearance:none;background-color:#fff;background-image:none;border:1px solid #dadce0;color:#3c4043;cursor:pointer;font-family:Google Sans,arial,sans-serif;font-size:14px;height:40px;letter-spacing:.25px;outline:none;overflow:hidden;padding:0 12px;position:relative;text-align:center;vertical-align:middle;white-space:nowrap;width:auto}@media screen and (-ms-high-contrast:active){.nsm7Bb-HzV7m-LgbsSe{border:2px solid windowText;color:windowText}}@media screen and (preferes-contrast:more){.nsm7Bb-HzV7m-LgbsSe{color:#000}}.nsm7Bb-HzV7m-LgbsSe.pSzOP-SxQuSe{font-size:14px;height:32px;letter-spacing:.25px;padding:0 10px}.nsm7Bb-HzV7m-LgbsSe.purZT-SxQuSe{font-size:11px;height:20px;letter-spacing:.3px;padding:0 8px}.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe{padding:0;width:40px}.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe.pSzOP-SxQuSe{width:32px}.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe.purZT-SxQuSe{width:20px}.nsm7Bb-HzV7m-LgbsSe.JGcpL-RbRzK{border-radius:20px}.nsm7Bb-HzV7m-LgbsSe.JGcpL-RbRzK.pSzOP-SxQuSe{border-radius:16px}.nsm7Bb-HzV7m-LgbsSe.JGcpL-RbRzK.purZT-SxQuSe{border-radius:10px}.nsm7Bb-HzV7m-LgbsSe.MFS4be-Ia7Qfc{border:none;color:#fff}.nsm7Bb-HzV7m-LgbsSe.MFS4be-v3pZbf-Ia7Qfc{background-color:#1a73e8}.nsm7Bb-HzV7m-LgbsSe.MFS4be-JaPV2b-Ia7Qfc{background-color:#202124;color:#e8eaed}@media screen and (prefers-contrast:more){.nsm7Bb-HzV7m-LgbsSe.MFS4be-JaPV2b-Ia7Qfc{color:#fff}}.nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c{height:18px;margin-right:8px;min-width:18px;width:18px}.nsm7Bb-HzV7m-LgbsSe.pSzOP-SxQuSe .nsm7Bb-HzV7m-LgbsSe-Bz112c{height:14px;min-width:14px;width:14px}.nsm7Bb-HzV7m-LgbsSe.purZT-SxQuSe .nsm7Bb-HzV7m-LgbsSe-Bz112c{height:10px;min-width:10px;width:10px}.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-Bz112c{margin-left:8px;margin-right:-4px}.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c{margin:0;padding:10px}.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe.pSzOP-SxQuSe .nsm7Bb-HzV7m-LgbsSe-Bz112c{padding:8px}.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe.purZT-SxQuSe .nsm7Bb-HzV7m-LgbsSe-Bz112c{padding:4px}.nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{border-top-left-radius:3px;border-bottom-left-radius:3px;display:-webkit-box;display:-webkit-flex;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-box-align:center;-webkit-align-items:center;align-items:center;background-color:#fff;height:36px;margin-left:-10px;margin-right:12px;min-width:36px;width:36px}.nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf .nsm7Bb-HzV7m-LgbsSe-Bz112c,.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf .nsm7Bb-HzV7m-LgbsSe-Bz112c{margin:0;padding:0}.nsm7Bb-HzV7m-LgbsSe.pSzOP-SxQuSe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{height:28px;margin-left:-8px;margin-right:10px;min-width:28px;width:28px}.nsm7Bb-HzV7m-LgbsSe.purZT-SxQuSe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{height:16px;margin-left:-6px;margin-right:8px;min-width:16px;width:16px}.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{border-radius:3px;margin-left:2px;margin-right:0;padding:0}.nsm7Bb-HzV7m-LgbsSe.JGcpL-RbRzK .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{border-radius:18px}.nsm7Bb-HzV7m-LgbsSe.pSzOP-SxQuSe.JGcpL-RbRzK .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{border-radius:14px}.nsm7Bb-HzV7m-LgbsSe.purZT-SxQuSe.JGcpL-RbRzK .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{border-radius:8px}.nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-bN97Pc-sM5MNb{display:-webkit-box;display:-webkit-flex;display:flex;-webkit-align-items:center;-webkit-box-align:center;align-items:center;-webkit-flex-direction:row;-webkit-box-orient:horizontal;-webkit-box-direction:normal;flex-direction:row;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;-webkit-flex-wrap:nowrap;flex-wrap:nowrap;height:100%;position:relative;width:100%}.nsm7Bb-HzV7m-LgbsSe .oXtfBe-l4eHX{-webkit-box-pack:center;-webkit-justify-content:center;justify-content:center}.nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-BPrWId{-webkit-flex-grow:1;-webkit-box-flex:1;flex-grow:1;font-family:Google Sans,arial,sans-serif;font-weight:500;overflow:hidden;text-overflow:ellipsis;vertical-align:top}.nsm7Bb-HzV7m-LgbsSe.purZT-SxQuSe .nsm7Bb-HzV7m-LgbsSe-BPrWId{font-weight:300}.nsm7Bb-HzV7m-LgbsSe .oXtfBe-l4eHX .nsm7Bb-HzV7m-LgbsSe-BPrWId{-webkit-flex-grow:0;-webkit-box-flex:0;flex-grow:0}.nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-MJoBVe{-webkit-transition:background-color .218s;transition:background-color .218s;bottom:0;left:0;position:absolute;right:0;top:0}.nsm7Bb-HzV7m-LgbsSe:focus,.nsm7Bb-HzV7m-LgbsSe:hover{box-shadow:none;border-color:rgb(210,227,252);outline:none}.nsm7Bb-HzV7m-LgbsSe:focus-within{outline:2px solid #00639b;border-color:transparent}.nsm7Bb-HzV7m-LgbsSe:hover .nsm7Bb-HzV7m-LgbsSe-MJoBVe{background:rgba(66,133,244,.08)}.nsm7Bb-HzV7m-LgbsSe:active .nsm7Bb-HzV7m-LgbsSe-MJoBVe,.nsm7Bb-HzV7m-LgbsSe:focus .nsm7Bb-HzV7m-LgbsSe-MJoBVe{background:rgba(66,133,244,.1)}.nsm7Bb-HzV7m-LgbsSe.MFS4be-Ia7Qfc:hover .nsm7Bb-HzV7m-LgbsSe-MJoBVe{background:rgba(255,255,255,.24)}.nsm7Bb-HzV7m-LgbsSe.MFS4be-Ia7Qfc:active .nsm7Bb-HzV7m-LgbsSe-MJoBVe,.nsm7Bb-HzV7m-LgbsSe.MFS4be-Ia7Qfc:focus .nsm7Bb-HzV7m-LgbsSe-MJoBVe{background:rgba(255,255,255,.32)}.nsm7Bb-HzV7m-LgbsSe .n1UuX-DkfjY{border-radius:50%;display:-webkit-box;display:-webkit-flex;display:flex;height:20px;margin-left:-4px;margin-right:8px;min-width:20px;width:20px}.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-BPrWId{font-family:Roboto;font-size:12px;text-align:left}.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-BPrWId .K4efff .fmcmS,.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-BPrWId .ssJRIf{overflow:hidden;text-overflow:ellipsis}.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-BPrWId .K4efff{display:-webkit-box;display:-webkit-flex;display:flex;-webkit-align-items:center;-webkit-box-align:center;align-items:center;color:#5f6368;fill:#5f6368;font-size:11px;font-weight:400}.nsm7Bb-HzV7m-LgbsSe.jVeSEe.MFS4be-Ia7Qfc .nsm7Bb-HzV7m-LgbsSe-BPrWId .K4efff{color:#e8eaed;fill:#e8eaed}@media screen and (prefers-contrast:more){.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-BPrWId .K4efff,.nsm7Bb-HzV7m-LgbsSe.jVeSEe.MFS4be-Ia7Qfc .nsm7Bb-HzV7m-LgbsSe-BPrWId .K4efff{color:#000;fill:#000}}.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-BPrWId .K4efff .Bz112c{height:18px;margin:-3px -3px -3px 2px;min-width:18px;width:18px}.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{border-top-left-radius:0;border-bottom-left-radius:0;border-top-right-radius:3px;border-bottom-right-radius:3px;margin-left:12px;margin-right:-10px}.nsm7Bb-HzV7m-LgbsSe.jVeSEe.JGcpL-RbRzK .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{border-radius:18px}.L5Fo6c-sM5MNb{border:0;display:block;left:0;position:relative;top:0}.L5Fo6c-bF1uUb{border-radius:4px;bottom:0;cursor:pointer;left:0;position:absolute;right:0;top:0}.L5Fo6c-bF1uUb:focus{border:none;outline:none}sentinel{}</style>
+<style>
+/* Ir agregando nuevos estilos desde acá para testear y luego comprimir */
+.mobile .bestsellers {
+	width: 98%;
+	margin: 0 auto;
+	float: none;
+}
+</style>
+<script async="" src="https://script.hotjar.com/modules.6a0f3932cb1341a35c18.js" charset="utf-8"></script><script type="text/javascript" async="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1053284526/?random=1779577326417&amp;cv=11&amp;fst=1779577326417&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;gtm=45be65k1v9172465855z86748349za20gzb6748349zd6748349xea&amp;gcd=13l3l3l3l1l1&amp;dma=0&amp;tag_exp=0~115938465~115938468~116701381~118689382&amp;u_w=1366&amp;u_h=768&amp;url=https%3A%2F%2Fwww.buscalibre.com.mx%2Flibro-la-ciencia-del-caos%2F9789681668631%2Fp%2F2510172&amp;ref=https%3A%2F%2Fwww.buscalibre.com.mx%2Flibros%2Fsearch%2F%3Fq%3Dciencia&amp;rcb=4&amp;frm=0&amp;tiba=Libro%20La%20Ciencia%20del%20Caos%20De%20Isaac%20Schifter%20-%20Buscalibre%20M%C3%A9xico&amp;hn=www.googleadservices.com&amp;npa=0&amp;pscdl=noapi&amp;auid=598535398.1779577235&amp;uaa=&amp;uab=&amp;uafvl=&amp;uamb=0&amp;uam=&amp;uap=Windows&amp;uapv=&amp;uaw=0&amp;_tu=CA&amp;data=ecomm_prodid%3D2510172%3Becomm_pagetype%3Dproduct%3Becomm_totalvalue%3D3.64&amp;rfmt=3&amp;fmt=4"></script><link id="googleidentityservice" type="text/css" media="all" href="https://accounts.google.com/gsi/style" rel="stylesheet"><meta http-equiv="origin-trial" content="A7JYkbIvWKmS8mWYjXO12SIIsfPdI7twY91Y3LWOV/YbZmN1ZhYv8O+Zs6/IPCfBE99aV9tIC8sWZSCN09vf7gkAAACWeyJvcmlnaW4iOiJodHRwczovL2N0LnBpbnRlcmVzdC5jb206NDQzIiwiZmVhdHVyZSI6IkRpc2FibGVUaGlyZFBhcnR5U3RvcmFnZVBhcnRpdGlvbmluZzIiLCJleHBpcnkiOjE3NDIzNDIzOTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"></head>
+<body class=""><!--<script>
+dataLayer = dataLayer || [];
+dataLayer.push({
+    'BL_analytics_account': 'UA-41147306-4'
+})
+</script>--><!-- Google Tag Manager --><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-KHLPCQ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KHLPCQ');</script><!-- End Google Tag Manager --><script>
+    dataLayer.push({"c_pais":"131","deviceType":"desktop","ip":"177.245.238.89","emmd5":"","webview":0,"page_type":"detalle_producto","currency":"MXN","re":"https:\/\/www.buscalibre.com.mx\/libros\/search\/?q=ciencia"});
+</script><script src="https://statics.cdn0.buscalibre.com/js/jquery-1.8.0_3-20211110.min.js"></script><style type="text/css">
+        	header#principal {
+		--width_logo: 150px;
+		--width_bloque_izquierdo: 170px;
+		--width_bloque_derecho: 470px;
+		--width_componente_enviaradireccion: 10px;
+
+		height: auto;
+		font-family: var( --montserrat ) !important;
+		background: var( --headerfondo );
+		margin: 0;
+		display: flex;
+		align-items: center;
+		position: relative;
+		z-index: 5;
+		justify-content: space-between;
+		overflow: hidden;
+	}
+	header#principal .bloque {
+		display: flex;
+		align-items: center;
+		gap: 30px;
+	}
+	header#principal .izquierdo {
+		width: 110px;
+		width: var( --width_bloque_izquierdo );
+	}
+	header#principal .buscador {
+		width: calc(100% - var(--width_logo) - var(--width_bloque_derecho) - 220px - var(--width_componente_enviaradireccion));
+		max-width: 800px;
+	}
+	header#principal .derecho {
+		margin-right: 2%;
+		width: 580px;
+		width: calc( var( --width_bloque_derecho ) - var( --width_componente_enviaradireccion ) );
+		display: flex;
+		justify-content: flex-end;
+	}
+	section.modalfondo {
+		display: none;
+		background: black;
+		opacity: .5;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		z-index: 4;
+	}
+    header#principal .menu {
+        display: flex;
+        padding: 5px 18px 5px 0px;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+    }
+    header#principal .menu > .rayitas {
+        height: 40px;
+        width: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        justify-content: center;
+        -webkit-transition: all 0.2s ease-out;
+        -moz-transition:    all 0.2s ease-out;
+        -o-transition:      all 0.2s ease-out;
+        transition:         all 0.2s ease-out;
+    }
+        header#principal .menu > .rayitas > span {
+        background: white;
+        display: block;
+        height: 2px;
+        width: 100%;
+        -webkit-transition: all 0.2s ease-out;
+        -moz-transition:    all 0.2s ease-out;
+        -o-transition:      all 0.2s ease-out;
+        transition:         all 0.2s ease-out;
+    }
+    header#principal .menu > .rayitas.desplegado > span {
+        position: relative;
+    }
+    header#principal .menu > .rayitas.desplegado > span:nth-child( 1 ) {
+        transform: rotate(45deg);
+        top: 5px;
+    }
+    header#principal .menu > .rayitas.desplegado > span:nth-child( 2 ) {
+        display: none;
+    }
+    header#principal .menu > .rayitas.desplegado > span:nth-child( 3 ) {
+        transform: rotate(-45deg);
+        top: -5px;
+    }
+    header#principal .menu > p {
+        color: #FFF;
+        font-family: var( --montserrat );
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: -0.408px;
+        text-transform: capitalize;
+    }
+
+    header#principal .menu {
+        margin-left: 5%;
+        margin-right: 10px;
+        padding-right: 0;
+    }
+    header#principal .menu > .rayitas {
+        width: 25px;
+    }
+    header#principal .menu > .rayitas.desplegado {}
+    header#principal .menu > .rayitas.desplegado > span {
+        position: relative;
+    }
+    header#principal .menu > .rayitas.desplegado > span:nth-child( 1 ) {
+        transform: rotate(45deg);
+        top: 7px;
+    }
+    header#principal .menu > .rayitas.desplegado > span:nth-child( 2 ) {
+        display: none;
+    }
+    header#principal .menu > .rayitas.desplegado > span:nth-child( 3 ) {
+        transform: rotate(-45deg);
+        top: -3px;
+    }
+	section#menudesplegado {
+		display: flex;
+		flex-direction: column;
+		position: fixed;
+		position: absolute;
+		z-index: 4;
+	}
+    section#menudesplegado > section.menu {
+        display: flex;
+        justify-content: flex-start;
+        position: relative;
+        z-index: 1;
+    }
+    section#menudesplegado > section.menu > nav {
+        background: white;
+    }
+    section#menudesplegado > section.menu > nav > ul > li {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        gap: 40px;
+        border-bottom: 1px solid #bbb;
+        position: relative;
+    }
+    section#menudesplegado > section.menu > nav > ul > li > a {
+        width: 100%;
+    }
+    section#menudesplegado > section.menu > nav > ul > li > div ,
+    section#menudesplegado > section.menu > nav > ul > li > a > div {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+    }
+    section#menudesplegado > section.menu > nav > ul > li:hover {
+        background: var(--headerfondo);
+    }
+    section#menudesplegado > section.menu > nav > ul > li > div > a {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+    }
+    section#menudesplegado > section.menu > nav > ul > li.libreria > ul {
+        height: 460px;
+        overflow-y: scroll;
+        overflow: hidden;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        flex-direction: column;
+    }
+    section#menudesplegado > section.menu > nav > ul > li.libreria > ul::-webkit-scrollbar {
+        width:12px;
+        height:10px;
+        background-color:#f5f5f5;
+
+    }
+    section#menudesplegado > section.menu > nav > ul > li.libreria > ul::-webkit-scrollbar-thumb {
+        border-radius:10px;
+        background-color:#ff5a00;
+        -webkit-box-shadow:inset 0 0 6px rgba(0,0,0,.3);
+        -moz-box-shadow:inset 0 0 6px rgba(0,0,0,.3);
+        box-shadow:inset 0 0 6px rgba(0,0,0,.3);
+    }
+    section#menudesplegado > section.menu > nav > ul > li.libreria > ul::-webkit-scrollbar-thumb:hover {
+        background-color:#e54c00
+    }
+    section#menudesplegado > section.menu > nav > ul > li.libreria > ul > li > a {
+        display: flex;
+        gap: 20px;
+    }
+    section#menudesplegado > section.menu > nav > ul > li.libreria > ul > li > a > p {
+        text-align: left;
+        text-transform: capitalize;
+    }
+    section#menudesplegado > section.menu > nav > ul > li.libreria > ul > li > a > span {
+        background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAICAYAAAAx8TU7AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABmSURBVHgBbU49DkAwGH2tOoJwBl26GLhFj+IkjmSVdOnG2KWJO5B+qATB295f3kMu6w4vsEI2RIBladCzHdwh8ugACgvrs7JSV/JZpUAtxweBxB0hl2DVfjRWnHwfCqT9ZOIQ/i5t4xsjox17+CwAAAAASUVORK5CYII=");
+        display: block;
+        height: 8px;
+        width: 9px;
+        background-size: auto;
+        background-repeat: no-repeat;
+    }
+    section#menudesplegado > section.menu > nav > ul > li.libreria > ul > li:hover > a > p {
+        color: white
+    }
+    section#menudesplegado > section.menu > nav > ul > li.libreria > ul > li:hover > a > span {
+        background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAICAYAAAAx8TU7AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAA5SURBVHgBdY5BDQAgFELRJEawmkmMZgSj4Gfe+Po2DrAxAMkJh5cVah6KHerKipyVR0WGz/p3KF06N+BAVLUg24IAAAAASUVORK5CYII=");
+    }
+    section#menudesplegado > section.menu > nav > ul > li.libreria > ul > div.libreria-categorias > p.libreria-categoria {
+        padding: 14px 20px;
+        border-bottom: 1px solid #bbb;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        text-transform: capitalize;
+        justify-content: space-between;
+    }
+    section#menudesplegado > section.menu > nav > ul > li.libreria > ul > div.libreria-categorias > p.libreria-categoria > span {
+        background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAICAYAAAAx8TU7AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABYSURBVHgBXYrBDYBACAQ5tAD9+SSEQvTpy1iRdmBJtnKVgJCoUSbZBGYXiKgTkRE+oHOo6snM+ytLKXTf21O08CcKwCTBzBZMonpWTGKqTtM7/gyeOUQMLkwUKAAGHz+XAAAAAElFTkSuQmCC");
+        display: block;
+        height: 8px;
+        width: 5px;
+    }
+    section#menudesplegado > section.menu > nav > ul > li.libreria > ul > div.libreria-categorias > p.libreria-categoria > span.desplegado {
+        background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAYAAAB4ka1VAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABSSURBVHgBfY2xDcAgDATfqZwuI7BCRkiVbJd16BgFxnAHNkJIgMQ1lu17PeWPIwCHlQTh+8AOlsuEp9pzWu/kJZFtWuN0hFbVn0PEpPyef5M7Bd57FQWt+Z94AAAAAElFTkSuQmCC");
+        width: 8px;
+        height: 5px;
+    }
+    section#menudesplegado > section.menu > nav > ul > li.libreria > ul > div.libreria-categorias > ul {
+        display: none;
+        height: 300px;
+        overflow-y: scroll;
+        padding: 10px 20px;
+    }
+    section#menudesplegado > section.menu > nav > ul > li.libreria > ul > div.libreria-categorias > ul > li {
+        height: 38px;
+    }
+    section#menudesplegado > section.menu > nav > ul > li.libreria > ul > div.libreria-categorias > ul > li > a {
+        color: black;
+        min-height: 60px;
+        width: 100%;
+        display: block;
+    }
+    section#menudesplegado > section.menu > nav > ul > li.libreria > ul > div.libreria-categorias > ul > li > a > span {
+        background-image: none;
+    }
+    section#menudesplegado > section.menu > nav > ul > li > a > div > p ,
+    section#menudesplegado > section.menu > nav > ul > li > div p {
+        color: #222;
+        text-align: center;
+        font-family: var( --montserrat );
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: -0.24px;
+    }
+    section#menudesplegado > section.menu > nav > ul > li:hover > a > div > p ,
+    section#menudesplegado > section.menu > nav > ul > li:hover > div > p {
+        color: white;
+    }
+    section#menudesplegado > section.menu > nav > ul > li > a > div > span.arrow-right ,
+    section#menudesplegado > section.menu > nav > ul > li > div > span.arrow-right {
+        background-image: url("https://statics.cdn1.buscalibre.com/images/20230907125036arrowright_on.png");
+        width: 6px;
+        height: 8px;
+        display: block;
+        background-size: auto;
+    }
+    section#menudesplegado > section.menu > nav > ul > li:hover > a > div > span.arrow-right ,
+    section#menudesplegado > section.menu > nav > ul > li:hover > div > span.arrow-right {
+        background-image: url("https://statics.cdn1.buscalibre.com/images/20230907125036arrowright_off.png");
+    }
+    section#menudesplegado > section.menu > nav > ul > li > a > div > p {
+        color: #222;
+    }
+    section#menudesplegado > section.menu > nav > ul > li > ul {
+        width: 300px;
+        display: none;
+        position: absolute;
+        top: 0;
+        background: white;
+    }
+    section#menudesplegado > section.menu > nav > ul > li:hover > ul {
+        display: flex;
+        flex-direction: column;
+    }
+    section#menudesplegado > section.menu > nav > ul > li > ul > li:hover {
+        background: var(--headerfondo);
+    }
+    section#menudesplegado > section.menu > nav > ul > li > ul > li > a {
+        width: 100%;
+        height: 55px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    section#menudesplegado > section.menu > nav > ul > li > ul > li > a > p {
+        margin: 0;
+        color: #222;
+        text-align: center;
+        font-family: var( --montserrat );
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: -0.24px;
+    }
+    section#menudesplegado > section.menu > nav > ul > li > ul > li:hover > a > p {
+        color: white;
+    }
+    section#menudesplegado > section.menu > nav > ul > li > ul > li > a > span.icono {
+        width: 30px;
+        height: 30px;
+        display: block;
+        background-repeat: no-repeat;
+    }
+    section#menudesplegado > section.menu > nav > ul > li > ul > li > a > span.arrow-right {
+        background-image: url("https://statics.cdn1.buscalibre.com/images/20230907125036arrowright_on.png");
+        background-size: 0.4em;
+        width: 6px;
+        height: 8px;
+        display: block;
+    }
+    section#menudesplegado > section.menu > nav > ul > li > ul > li:hover > a > span.arrow-right {
+        background-image: url("https://statics.cdn1.buscalibre.com/images/20230907125036arrowright_off.png");
+    }
+    section#menudesplegado ul > li > a > div > span {
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDE1IDE1IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGZpbGw9IiMwMDAwMDAiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTcuNS44NzdhNi42MjMgNi42MjMgMCAwIDAtNS4wMjMgMTAuOTRsLS44My44M2EuNS41IDAgMSAwIC43MDcuNzA3bC44My0uODNhNi42MjMgNi42MjMgMCAwIDAgOS4zNC05LjM0bC44My0uODNhLjUuNSAwIDEgMC0uNzA4LS43MDhsLS44My44M0E2LjU5NyA2LjU5NyAwIDAgMCA3LjUuODc4Wm0zLjY0MiAyLjI3NGE1LjY3MyA1LjY3MyAwIDAgMC03Ljk5MiA3Ljk5Mmw3Ljk5Mi03Ljk5MlptLTcuMjg0IDguNjk4YTUuNjczIDUuNjczIDAgMCAwIDcuOTkyLTcuOTkyTDMuODU3IDExLjg1WiIgY2xpcC1ydWxlPSJldmVub2RkIi8+PC9zdmc+");
+        background-size: 29px;
+    }
+    section#menudesplegado ul > li:hover > a > div > span {
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDE1IDE1IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTcuNS44NzdhNi42MjMgNi42MjMgMCAwIDAtNS4wMjMgMTAuOTRsLS44My44M2EuNS41IDAgMSAwIC43MDcuNzA3bC44My0uODNhNi42MjMgNi42MjMgMCAwIDAgOS4zNC05LjM0bC44My0uODNhLjUuNSAwIDEgMC0uNzA4LS43MDhsLS44My44M0E2LjU5NyA2LjU5NyAwIDAgMCA3LjUuODc4Wm0zLjY0MiAyLjI3NGE1LjY3MyA1LjY3MyAwIDAgMC03Ljk5MiA3Ljk5Mmw3Ljk5Mi03Ljk5MlptLTcuMjg0IDguNjk4YTUuNjczIDUuNjczIDAgMCAwIDcuOTkyLTcuOTkyTDMuODU3IDExLjg1WiIgY2xpcC1ydWxlPSJldmVub2RkIi8+PC9zdmc+");
+    }
+    section#menudesplegado > section.menu > nav > ul > li > ul > li {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px 20px;
+        gap: 40px;
+        border-bottom: 1px solid #bbb;
+        position: relative;
+        cursor: pointer;
+    }
+    section#menudesplegado > section.menu > nav > ul > li > ul > li > p {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #222;
+        width: 100%;
+        text-align: center;
+        font-family: var(--montserrat );
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: -0.24px;
+    }
+    section#menudesplegado > section.menu > nav > ul > li > ul > li:hover > p {
+        color: white;
+    }
+    section#menudesplegado > section.menu > nav > ul > li > ul > li.desplegado {
+        padding: 0;
+        gap: 0;
+    }
+    section#menudesplegado > section.menu > nav > ul > li > ul > li.desplegado:hover {
+        background: white;
+    }
+    section#menudesplegado > section.menu > nav > ul > li > ul > li.desplegado > p {
+        width: 80%;
+    }
+    section#menudesplegado > section.menu > nav > ul > li > ul > li.desplegado:hover > p {
+        color: #222;
+    }
+    section#menudesplegado > section.menu > nav > ul > li > ul > li > p > span.arrow-down {
+        background-image: url("https://statics.cdn1.buscalibre.com/images/20230912181026arrowdown_on.png");
+        width: 8px;
+        height: 6px;
+        display: block;
+    }
+    section#menudesplegado > section.menu > nav > ul > li > ul > li:hover > p > span.arrow-down {
+        background-image: url("https://statics.cdn1.buscalibre.com/images/20230912181026arrowdown_off.png");
+    }
+    section#menudesplegado > section.menu > nav > ul > li > ul > li.desplegado > p > span.arrow-down {
+        background-image: url("https://statics.cdn1.buscalibre.com/images/20230912181026arrowup_on.png");
+    }
+    section#menudesplegado > section.menu > nav > ul > li > ul > li > div.subcategoria {
+        display: none;
+    }
+    section#menudesplegado > section.menu > nav > ul > li > ul > li.desplegado > div.subcategoria {
+        background-color: whitesmoke;
+        width: 100%;
+        height: 500px;
+        overflow: hidden;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    section#menudesplegado > section.menu > nav > ul > li > ul > li.desplegado > div.subcategoria > a {
+        width: 84%;
+        padding: 10px 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #bbb;
+    }
+    section#menudesplegado > section.menu > nav > ul > li > ul > li.desplegado > div.subcategoria > a:hover {
+        background-color: var( --headerfondo );
+    }
+    section#menudesplegado > section.menu > nav > ul > li > ul > li.desplegado > div.subcategoria > a > p {
+        width: 90%;
+        margin: 0;
+        color: #222;
+    }
+    section#menudesplegado > section.menu > nav > ul > li > ul > li.desplegado > div.subcategoria > a:hover > p {
+        color: white;
+    }
+    section#menudesplegado > section.menu > nav > ul > li > ul > li.desplegado > div.subcategoria > a > span.arrow-right {
+        background-image: url("https://statics.cdn1.buscalibre.com/images/20230907125036arrowright_on.png");
+        width: 6px;
+        height: 8px;
+        display: block;
+        background-size: auto;
+    }
+    section#menudesplegado > section.menu > nav > ul > li > ul > li.desplegado > div.subcategoria > a:hover > span.arrow-right {
+        background-image: url("https://statics.cdn1.buscalibre.com/images/20230907125036arrowright_off.png");
+    }
+</style><style type="text/css">
+	@media ( max-width: 800px ) {
+		header#principal .izquierdo {
+			display: flex;
+			justify-content: flex-end;
+		}
+		header#principal .izquierdo {
+			width: 45%;
+		}
+		header#principal .buscador {
+			width: 100%;
+			margin: 0 auto;
+		}
+		header#principal .buscador #buscador > form {
+			width: 90% !important;
+			margin: 0 auto !important;
+		}
+		#buscador > form > .buscandoen-libros > button {
+			top: 0;
+			background-position: 10px 7px;
+		}
+		button#botonBuscarHeader:after {
+			background: none;
+		}
+		header#principal .derecho {
+			margin: 0 auto 10px;
+			width: 90%;
+			display: flex;
+			justify-content: center;
+			gap: 8%;
+		}
+		section#menudesplegado {
+			width: 100%;
+		}
+		section#menudesplegado > section.menu > nav {
+			width: 100%;
+            overflow: hidden;
+            overflow-y: scroll;
+            height: 60vh;
+		}
+		section#menudesplegado > section.menu > nav > ul > li {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+		}
+		section#menudesplegado > section.menu > nav > ul > li:hover {
+            background: white;
+		}
+		section#menudesplegado > section.menu > nav > ul > li:hover > a > div > p,
+		section#menudesplegado > section.menu > nav > ul > li:hover > div > p {
+            color: black;
+		}
+		section#menudesplegado > section.menu > nav > ul > li:hover > a > div > span.arrow-right,
+		section#menudesplegado > section.menu > nav > ul > li:hover > div > span.arrow-right {
+            background-image: url(https://statics.cdn1.buscalibre.com/images/20230907125036arrowright_on.png);
+		}
+		section#menudesplegado > section.menu > nav > ul > li > ul {
+			position: static !important;
+            width: 100%;
+		}
+		section#menudesplegado > section.menu > nav > ul > li:hover > ul {
+            display: none;
+		}
+		section#menudesplegado > section.menu > nav > ul > li[data-acordeon="true"] {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			padding: 0;
+		}
+		section#menudesplegado > section.menu > nav > ul > li[data-acordeon="false"]:hover {
+			background: white;
+		}
+		section#menudesplegado > section.menu > nav > ul > li[data-acordeon="false"]:hover > div > p {
+			color: black;
+		}
+		section#menudesplegado > section.menu > nav > ul > li[data-acordeon="false"]:hover > div > span.arrow-right {
+			background-image: url("https://statics.cdn1.buscalibre.com/images/20230907125036arrowright_on.png");
+		}
+		section#menudesplegado > section.menu > nav > ul > li[data-acordeon="true"] > div {
+			padding: 0 5%;
+			width: 90%;
+		}
+		section#menudesplegado > section.menu > nav > ul > li[data-acordeon="true"] > div > ul {
+			display: block;
+		}
+
+	}
+</style><section class="barraSuperiorInformaciones"><link rel="stylesheet" href="https://statics.cdn0.buscalibre.com/css/barrasuperior202111221655.min.css"><div class="avisoTop"><style type="text/css">
+						.barraSuperiorInformaciones .avisoTop {
+				background: linear-gradient(to left, #ff5f00 0%,#ff9800 100%);
+				background: -moz-linear-gradient(left, #ff5f00 0%, #ff9800 100%);
+				background: -webkit-linear-gradient(left, #ff5f00 0%,#ff9800 100%);
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff5f00', endColorstr='#ff9800',GradientType=0 );
+			}
+			
+		    
+			.avisoTop a strong {
+				color: white;
+				text-shadow: none;
+				letter-spacing: 0.05em;
+			}
+			@media ( max-width: 1200px ) {
+				body.mobile .avisoTop {
+					margin-top: 0;
+				}
+			}
+			@media ( max-width: 450px ) {
+				body .avisoTop p {
+					font-size: 0.7em;
+				}
+			}
+		</style><a href="/mex-importados-mas-vendidos-2026_t.html" title="MEGA SALE en Buscalibre hasta 70% dcto"><p>MEGA SALE en Buscalibre hasta 70% dcto&nbsp; <u class="boton"><strong>Ver más</strong></u></p></a><script type="text/javascript">
+			if ( Boolean( $( ".avisoTop a" ).attr( "href" ) ) == false ) {
+				$( ".avisoTop a p u.boton" ).hide();
+			};
+			
+			if (location.pathname == "/mex-importados-mas-vendidos-2026_t.html" ) 
+				$( ".avisoTop a p u.boton" ).hide();
+		</script></div></section><header id="principal" class="row "><style type="text/css">
+        header#principal .logo {
+            position: relative;
+            display: flex;
+            width: 198px;
+            width: var( --width_logo );
+            padding: 10px;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            flex-shrink: 0;
+            margin-left: 10px;
+        }
+        header#principal .logo > svg.isotipo {
+            width: 25px;
+            height: 21px;
+        }
+        header#principal .logo > svg.logotipo {
+            width:106;
+            height:17;
+        }
+        @media ( max-width: 1100px ) {
+            header#principal .logo {
+                display: flex;
+                justify-content: flex-start;
+            }
+            header#principal .logo {
+                width: 45%;
+            }
+        }
+        header#principal .logo.ismobile {
+            width: 144px;
+            margin-left: 0;
+            margin-top: 4px;
+            padding-left: 0;
+        }
+        header#principal .logo.ismobile img {
+            width: 100%;
+        }
+    </style><a class="logo " href="/" title="Buscalibre.com"><img class=" lazyloaded" data-src="https://statics.cdn0.buscalibre.com/images/logos/20231208132739buscalibre.png" alt="Buscalibre" src="https://statics.cdn0.buscalibre.com/images/logos/20231208132739buscalibre.png"></a><div class="bloque izquierdo"><div onclick="selectDireccion()" class="box-header-direccion cursor-pointer color-white padding-5"><span id="header-icon-map-point" class="icon-map-point position-absolute display-block "></span><div title="Enviar a" class="font-size-smallest font-weight-light margin-top-5 padding-left-30 limited-text"><span>
+		Enviar a
+	</span><span class="text-transform-capitalize"></span></div><strong title="CUAUHTÉMOC, Ciudad de México" class="direccion-calle-numero padding-left-30 padding-left-xs-10 font-size-small display-inline-block text-transform-capitalize limited-text">
+	CUAUHTÉMOC, Ciudad de México
+</strong></div><div id="modal-select-direccion" class="dialog-box modal"><div class="modal-header"><i class="cerrar fas fa-times color-gray fa-lg"></i></div><div class="row"><div class="col-xs-12"><h3 class="margin-bottom-0">
+			Selecciona tu ubicación
+		</h3><p class="font-weight-light margin-top-0">Los costos de envío se calcularán en base a esta dirección en todo el sitio.</p></div></div><div class="row"><div class="col-xs-12 center-xs"><div class="margin-top-10" id="loading" style="display:none;"></div></div></div><div class="row hide-on-send" style="height:220px;overflow-y:auto;"><div class="col-xs-12"><h4></h4><div id="box-input-select-direccion"></div></div></div><div class="row margin-top-20 end-xs hide-on-send"><div class="col-xs-12"><div class=""><button class="cerrar button button-white button-small margin-right-10">Cancelar</button><button id="set-direccion-predeterminada" class="button button-secondary button-small margin-right-10" onclick="setDireccionPredeterminada()">Guardar</button></div></div></div></div><style>
+			.box-header-direccion {
+			max-width: 152px;
+			min-width: 100px;
+			overflow: hidden;
+		}
+		
+	.icon-map-point {
+		background: url(https://statics.cdn1.buscalibre.com/images/20181211-1700spritecheckout.png);
+		height: 27px;
+		width: 21px;
+		position: absolute;
+		margin-top: 10px;
+		background-position: 0px -19px;
+	}
+	#modal-select-direccion {
+		width: 700px;
+		height: auto;
+		border: 1px solid #555;
+		box-shadow: 0px 0px 10px 2px rgb(0,0,0,0.5);
+		max-width: 85%;
+	}
+		.position-absolute {
+		position: absolute;
+	}
+	.margin-left-30 {
+		margin-left:30px;
+	}
+	.text-transform-capitalize {
+		text-transform: capitalize;
+	}
+	.hover-gray:hover {
+		background-color: #eee;
+	}
+	.border-top-gray {
+		border-top: 1px solid #ddd;
+	}
+	.border-bottom-gray {
+		border-bottom: 1px solid #ddd;
+	}
+	.limited-text {
+		text-overflow: ellipsis;
+		max-width: 125px;
+		white-space: nowrap;
+		overflow: hidden;
+	}
+	.padding-5 {
+		padding: 5px;
+	}
+	#loading {
+		display: inline-block;
+		width: 50px;
+		height: 50px;
+		border: 3px solid #ff5a00;
+		border-radius: 50%;
+		border-top-color: #fff;
+		animation: spin 1s ease-in-out infinite;
+		-webkit-animation: spin 1s ease-in-out infinite;
+	}
+	@keyframes spin {
+	to { -webkit-transform: rotate(360deg); }
+	}
+	@-webkit-keyframes spin {
+	to { -webkit-transform: rotate(360deg); }
+	}
+</style><script>
+	let selectDireccion = function() {
+		$("#box-input-direcciones").html("");
+		$("#loading").show();
+		
+									
+					$.getJSON( "/v2/u/get-form-region-comuna", function(response) {
+				$("#loading").hide();		
+				$("#box-input-select-direccion").html( response.html );
+				getRegionesSelectHeader();
+			});
+		
+		
+		$("#modal-select-direccion").lightbox_me({
+			closeClick: true,
+			closeEsc: true,
+			appearEffect:'fadeIn',
+			closeSelector: '.cerrar'
+		});
+	}
+	let setDireccionPredeterminada = function() {
+		
+		let errors = 0;
+		let c_direccion = $("input[name=direccion_defecto]:checked").val();
+		let selecciono_comuna_o_region = $("#header_direccion_c_comuna").val() || $("#header_direccion_c_region").val(); ;
+
+		if (!c_direccion) {
+			$.each($("#box-input-select-direccion").find('input, select'), function( idx, input ) {
+				if ( $( input ).prop('required') && ( $( input ).val() == '' || $( input ).val() <= 0 ) ) {
+					errors++;
+				}
+			});
+			if (errors > 0) {
+				alert("El formulario está incompleto o contiene valores erróneos");
+				return false;
+			}
+		}
+
+		if (selecciono_comuna_o_region !== undefined && selecciono_comuna_o_region != 0) {
+			c_direccion = 0;
+		}
+
+		let params = {
+			"c_direccion"	: c_direccion,
+			"c_comuna"		: $("#header_direccion_c_comuna").val(),
+			"comuna"		: $("#header_direccion_c_comuna option:selected").text(),
+			"ciudad"		: $("#header_direccion_ciudad").val(),
+			"codigo_postal"	: $("#header_direccion_codigo_postal").val(),
+			"c_region"		: $("#header_direccion_c_region").val(),
+			"region"		: $("#header_direccion_c_region option:selected").text(),
+			"c_pais"		: $("#header_direccion_c_pais").val(),
+			"pais"			: $("#header_direccion_c_pais option:selected").text(),
+			"path" 			: window.location.pathname + window.location.search,
+		};
+		$("#loading").show();
+		$(".hide-on-send").hide();
+		$.getJSON( "/v2/u/set-direccion-defecto", params, function(response) {
+			if (response.success) {
+				if (response.redirect_to) {
+					window.location.href = response.redirect_to;
+				} else {
+					window.location.reload();
+				}
+			}
+		}) ;
+	}
+	
+	$("body").on("click", ".box-direccion-input", function() {
+		$(this).find('input').prop('checked', true);
+	});
+</script></div><div class="buscador"><div id="buscador" style=""><style type="text/css">
+		#buscador {
+			width: 100%;
+		}
+		#buscador > form {
+			width: auto;
+			margin: 0;
+			display: block;
+		}
+		#buscador > form > .buscandoen-libros {
+			position: relative;
+			display: flex;
+			align-items: center;
+			border-radius: 5px;
+			background: #FFF;
+			padding: 0;
+			width: 100%;
+		}
+		#buscador > form > .buscandoen-libros > input[type=search] {
+			display: flex;
+			width: calc( 100% - 55px );
+			height: 100%;
+			padding: 0px 5px;
+			align-items: center;
+			gap: 328px;
+			flex-shrink: 0;
+			border-radius: 10px;
+			background: #efeff0;
+			color: black;
+			font-family: var(--montserrat);
+			font-size: 16px;
+			font-weight: 500;
+			line-height: 22px;
+			letter-spacing: -0.408px;
+			border: none;
+			padding: 6px 0px 6px 8px;
+			margin: 5px 0;
+		}
+        #buscador > form > .buscandoen-libros > input[type='search']::-moz-placeholder {
+            color: #555;
+            font-style: italic;
+            font-weight: 400;
+        }
+        #buscador > form > .buscandoen-libros > input[type='search']::-ms-placeholder {
+            color: #555;
+            font-style: italic;
+            font-weight: 400;
+        }
+        #buscador > form > .buscandoen-libros > input[type='search']::placeholder {
+            color: #555;
+            font-style: italic;
+            font-weight: 400;
+        }
+        #buscador > form > .buscandoen-libros > input[type='search']::-webkit-input-placeholder {
+            color: #555;
+            font-style: italic;
+            font-weight: 400;
+        }
+		#buscador > form > .buscandoen-libros > button {
+			background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAZCAYAAAArK+5dAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIWSURBVHgBtVXZccIwEF0Bwzcd4BJIBdjDMTB8ECqAVBBSAVBBoANSQfLHjU0H0AElOAx/XHlLpMRjy1whb8bWYem93ZV2LegERqOReTgcDCFEksf7/X4Rj8fnlmUt6UII/4Rt24ntdlsH6TPIEyH75vjezmazb3SNAMhTu93una32TLsgc7njmyfMd6PRaOuUR8JHbiur0XbRdPP5/My7AWEro2niSUmRJUSsMBEhyQ1JbuDhhTU/sR+TyaSBM2nKoZPL5Szdugi/QN6Q7rvoW+fIGZlMpoXmRQ7Nfr9f1wrIm1I7uiNEvVgsLulCwOo2W899hKmhFQBplTscmktuhQYt2SZ6vZ4ZEACxOqwPugHwwuGD5n4sFisHBOj3Nszpdjj80uVNhO4IGGnoBFz6I1QCyiseEDiGBnfapBvhsTwQ5gjgyEWPXIfoSgyHw5ryYLPZzHQCHfoOExe5Bl0J7Fd7nFKpFPQANcTForYc18fjcZUuBKzvKutRAfSZLK1gL47qXOQGg0HzFDHXLlQA25Ok80KhsNCt/ammyEID6W6rA5PJ00ZceeNSGpLCk8a3mv/Oc+lGJXgKFZCWJUD4ygR0Hi5EmmgflCc6EaHbKb3hwzP9ycOecRjX63WnUqkcc4jPIkxEK+AF6n6SRTiJVqvVpyL1I0zkrMA10IncVUAnctdix8DfkG+Y+q849F+YTqdpbr8AlKUX89mJ1pgAAAAASUVORK5CYII=");
+			background-position: 0px 3px;
+			background-color: white;
+			background-repeat: no-repeat;
+			position: relative;
+			top: auto;
+			right: 0px;
+			text-indent: -99999px;
+			color: black;
+			height: 30px;
+			width: 40px;
+			padding: 0;
+			border: none;
+			border-left: 1px solid #ddd;
+			margin-left: 5px;
+			padding-left: 30px;
+			background-position: 7px 1px;
+		}
+	</style><form action="/libros/search/"><div class="buscandoen-libros"><input type="search" name="q" required="required" value="" placeholder="Título, Autor o ISBN" autocomplete="off"><button id="botonBuscarHeader">Buscar</button></div></form></div></div><div class="bloque derecho"><style type="text/css">
+		header#principal .carrito {
+			display: flex;
+			padding: 5px;
+			justify-content: center;
+			align-items: center;
+			gap: 8px;
+		}
+		header#principal .carrito > .isotipo {
+			position: relative;
+		}
+		header#principal .carrito > .isotipo > span {
+			position: absolute;
+			right: -15px;
+			top: -10px;
+			color: var( --naranjo );
+			text-align: center;
+			font-family: var( --montserrat );
+			font-style: normal;
+			font-weight: 500;
+			line-height: normal;
+			border: 1px solid white;
+			border-radius: 50%;
+			font-size: 0.9em;
+			min-width: 20px;
+			min-height: 20px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: var( --headerfondo );
+		}
+		header#principal .carrito > p {
+			color: #FFF;
+			font-family: var( --montserrat );
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 500;
+			line-height: normal;
+			margin-left: 10px;
+		}
+		@media ( max-width: 450px ) {
+			header#principal .carrito > p {
+				visibility: hidden;
+				width: 1px;
+				height: 35px;
+			}
+		}
+		header#principal .carrito.ismobile {
+			margin-right: 5%;
+			padding-right: 0;
+		}
+		header#principal .carrito.ismobile > .isotipo {
+			width: 20px;
+		}
+	</style><a class="carrito " href="/v2/carro" title="Carrito"><div class="isotipo"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none"><path d="M1.42722e-05 1.62447C-0.000693304 1.47659 0.0249155 1.33002 0.0753589 1.19324C0.125802 1.05646 0.200079 0.932186 0.29389 0.827615C0.387702 0.723043 0.499186 0.640248 0.621891 0.584019C0.744597 0.52779 0.876088 0.499244 1.00876 0.500032H2.93551C3.38246 0.49756 3.82077 0.637319 4.19894 0.902893C4.57711 1.16847 4.87944 1.54883 5.07041 1.99929H22.3364C22.5944 2.00231 22.8484 2.07149 23.0785 2.20146C23.3087 2.33144 23.5089 2.51872 23.6638 2.74881C23.8186 2.9789 23.9238 3.24562 23.9713 3.52832C24.0188 3.81102 24.0072 4.10212 23.9376 4.37906L22.2137 11.5184C22.0401 12.2352 21.6596 12.8683 21.131 13.32C20.6023 13.7716 19.9549 14.0166 19.2889 14.0171H7.20531L7.43481 15.3557C7.47837 15.612 7.60089 15.8432 7.78119 16.0094C7.96149 16.1756 8.18823 16.2664 8.4222 16.266H20.5485C20.804 16.2867 21.043 16.4145 21.2175 16.6236C21.392 16.8328 21.489 17.1078 21.489 17.3934C21.489 17.679 21.392 17.9541 21.2175 18.1632C21.043 18.3724 20.804 18.5001 20.5485 18.5208H8.39552C7.69135 18.5197 7.00951 18.2453 6.46704 17.7449C5.92457 17.2444 5.55532 16.549 5.42267 15.7781L3.25574 3.05233C3.24122 2.96873 3.2016 2.89313 3.14339 2.83798C3.08518 2.78283 3.01187 2.75142 2.93551 2.74891H1.00876C0.876088 2.7497 0.744597 2.72116 0.621891 2.66493C0.499186 2.6087 0.387702 2.5259 0.29389 2.42133C0.200079 2.31676 0.125802 2.19249 0.0753589 2.05571C0.0249155 1.91893 -0.000693304 1.77236 1.42722e-05 1.62447ZM5.38531 22.2511C5.38531 21.8063 5.50363 21.3715 5.72531 21.0017C5.947 20.6319 6.26208 20.3436 6.63073 20.1734C6.99938 20.0032 7.40503 19.9587 7.79638 20.0455C8.18773 20.1322 8.54721 20.3464 8.82936 20.6609C9.11152 20.9754 9.30366 21.3761 9.38151 21.8124C9.45935 22.2486 9.4194 22.7008 9.2667 23.1117C9.114 23.5227 8.85542 23.8739 8.52364 24.121C8.19187 24.3681 7.80181 24.5 7.40279 24.5C7.13785 24.5 6.8755 24.4418 6.63073 24.3288C6.38596 24.2158 6.16355 24.0501 5.97621 23.8413C5.78887 23.6325 5.64027 23.3846 5.53888 23.1117C5.43749 22.8389 5.38531 22.5464 5.38531 22.2511ZM19.513 20.0022C20.0481 20.0022 20.5612 20.2392 20.9396 20.6609C21.318 21.0827 21.5305 21.6547 21.5305 22.2511C21.5305 22.8476 21.318 23.4196 20.9396 23.8413C20.5612 24.2631 20.0481 24.5 19.513 24.5C18.978 24.5 18.4648 24.2631 18.0864 23.8413C17.7081 23.4196 17.4955 22.8476 17.4955 22.2511C17.4955 21.6547 17.7081 21.0827 18.0864 20.6609C18.4648 20.2392 18.978 20.0022 19.513 20.0022Z" fill="white"></path></svg><span class="cantidad">0</span></div></a><a class="wishlist" href="/v2/u/dashboard#lista-deseos" title="Mis Listas"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none"><path d="M1.10443 12.5674C1.21586 12.7926 3.90314 18.0855 11.7464 24.4108C11.8193 24.4718 11.9093 24.5 11.9993 24.5C12.0893 24.5 12.1793 24.4718 12.2522 24.4108C20.0955 18.0855 22.7828 12.7926 22.9071 12.5392C23.55 11.0095 23.9143 9.52669 23.9871 8.13307C23.9957 7.99231 24 7.85151 24 7.71545C24 3.98972 21.2698 0.742616 17.8711 0.512695C14.6523 0.296837 12.7622 2.99964 11.9993 4.41671C11.2364 2.99964 9.34632 0.29214 6.12756 0.512695C2.60023 0.751982 -0.202778 4.23842 0.0115199 8.13307C0.0843725 9.52669 0.448662 11.0095 1.10443 12.5674Z" fill="white"></path></svg></a><a class="ayuda" href="/ayuda" title="Ayuda"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none"><path d="M10.7385 0.626169C5.33762 1.27059 1.19492 5.13711 0.212945 10.2311C-1.01452 16.706 3.18955 23.0275 9.60307 24.347C9.94063 24.4084 13.4082 24.7459 16.0166 23.8867C20.4355 22.1682 23.1359 19.0075 23.9338 14.2817C23.9644 14.1897 24.3634 10.3232 22.7677 7.19312C20.6503 2.8663 15.9859 -0.0182517 10.7385 0.626169ZM11.8125 19.8667C10.8305 19.8667 10.0941 19.1302 10.0941 18.179C10.0941 17.1356 10.7999 16.3991 11.8125 16.3991C12.8252 16.3684 13.5923 17.1356 13.5923 18.1483C13.5923 19.1302 12.8559 19.8667 11.8125 19.8667ZM15.6177 11.8575C15.188 12.2257 14.7584 12.5633 14.2981 12.8702C13.623 13.3305 13.2241 14.0363 13.2241 14.9569C12.3342 14.9569 11.3829 14.9569 10.4623 14.9569C10.3396 13.9749 10.4009 12.8702 11.2908 12.1644C11.8125 11.7654 12.3649 11.4279 12.7945 10.9983C13.1934 10.5687 13.5923 10.047 13.7765 9.52531C13.9913 8.8502 13.4696 8.05235 12.8865 7.83754C12.0273 7.53067 10.984 7.77617 10.6157 8.48196C10.4009 8.88089 10.2782 9.37188 10.0941 9.86286C9.23483 9.86286 8.3756 9.86286 7.51638 9.86286C7.2402 8.48196 8.00736 6.79419 9.29621 5.96565C11.076 4.86093 14.114 5.10643 15.679 6.51801C17.2441 7.89891 17.2134 10.4766 15.6177 11.8575Z" fill="white"></path></svg></a><a class="opinionesclientes" href="/opiniones-clientes_st.html" title="Opiniones de Clientes"><svg width="26" viewBox="0 0 56 53" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.9378 22.5878C20.8378 22.0878 20.9378 21.5878 21.3378 21.1878L24.4378 18.2878L20.3378 17.6878C19.8378 17.6878 19.3378 17.3878 19.1378 16.8878L17.3378 13.1878L15.5378 16.8878C15.2378 17.2878 14.8378 17.5878 14.3378 17.6878L10.2378 18.2878L13.1378 21.1878C13.4378 21.5878 13.6378 22.0878 13.5378 22.5878L12.8378 26.5878L16.6378 24.6878C17.0378 24.4878 17.5378 24.4878 18.0378 24.6878L21.6378 26.5878L20.9378 22.5878Z" fill="white"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M9.3999 0H46.5C51.7002 0 55.8999 4.20001 56 9.40002V30.8C56 36 51.7998 40.2 46.6001 40.2H24.7998L12.7002 52.3C12.3999 52.6 12 52.8 11.6001 52.8C11.3999 52.8 11.2002 52.8 11 52.7C10.3999 52.5 10 51.9 10 51.3V40.3H9.3999C4.2002 40.3 0 36.1 0 30.9V9.40002C0 4.20001 4.2002 0 9.3999 0ZM32.2998 11.1H45.8998C46.7998 11.1 47.3998 11.8 47.3998 12.6C47.3998 13.4 46.7998 14.1 45.8998 14.1H32.2998C31.4998 14.1 30.7998 13.5 30.7998 12.6C30.7998 11.8 31.3998 11.1 32.2998 11.1ZM32.2998 18.6H45.8998C46.7998 18.6 47.3998 19.3 47.3998 20.1C47.3998 20.9 46.7998 21.6 45.8998 21.6H32.2998C31.4998 21.6 30.7998 20.9 30.7998 20.1C30.7998 19.3 31.3998 18.6 32.2998 18.6ZM45.8998 26.1H32.2998C31.3998 26.1 30.7998 26.8 30.7998 27.6C30.7998 28.5 31.4998 29.1 32.2998 29.1H45.8998C46.7998 29.1 47.3998 28.4 47.3998 27.6C47.3998 26.8 46.7998 26.1 45.8998 26.1ZM21.4378 14.7878L26.6378 15.4878C27.4378 15.5878 28.0378 16.1878 28.3378 16.9878C28.6378 17.7878 28.4378 18.5878 27.8378 19.1878L24.0378 22.8878L24.9378 28.0878C25.1378 28.7878 24.7378 29.5878 24.1378 30.0878C23.7378 30.3878 23.2378 30.4878 22.8378 30.4878C22.4378 30.4878 22.1378 30.4878 21.8378 30.2878L17.1378 27.7878L12.4378 30.2878C11.7378 30.6878 10.9378 30.5878 10.2378 30.0878C9.63783 29.5878 9.33783 28.7878 9.43783 27.9878L10.4378 22.8878L6.63783 19.1878C6.03783 18.5878 5.83783 17.7878 6.13783 16.9878C6.43783 16.1878 7.03783 15.6878 7.83783 15.5878L13.0378 14.7878L15.3378 10.0878C16.0378 8.68782 18.4378 8.58782 19.1378 10.0878L21.4378 14.7878Z" fill="white"></path></svg></a><style type="text/css">
+		header#principal .micuenta {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			position: relative;
+			top: 6px;
+			padding-bottom: 14px;
+			cursor: pointer;
+		}
+		header#principal .micuenta > ul > li {
+			color: white;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 10px;
+			position: relative;
+		}
+		header#principal .micuenta > ul > li > p {
+			display: -webkit-box;
+			-webkit-line-clamp: 1;
+			-webkit-box-orient: vertical;
+			overflow: hidden;
+		}
+		header#principal .micuenta > ul > li > span {
+			width: 0px;
+			height: 0px;
+			border-left: 6px solid transparent;
+			border-right: 6px solid transparent;
+			border-top: 5px solid white;
+		}
+		header#principal .micuenta > a {
+			display: flex;
+			padding: 5px;
+			justify-content: center;
+			align-items: center;
+			gap: 8px;
+		}
+		header#principal .micuenta > a > p {
+			color: #FFF;
+			font-family: var( --montserrat );
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 500;
+			line-height: normal;
+		}
+		@media ( max-width: 450px ) {
+			header#principal .micuenta > a > p {
+				visibility: hidden;
+				width: 1px;
+				height: 35px;
+			}
+		}
+		header#principal .micuenta.ismobile > svg {
+			width: 25px;
+		}
+	</style><div class="micuenta deslogeado"><a href="/v2/u" title="Mi Cuenta"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none"><path d="M12 14.3274C14.7614 14.3274 17 12.0888 17 9.32739C17 6.56597 14.7614 4.32739 12 4.32739C9.23858 4.32739 7 6.56597 7 9.32739C7 12.0888 9.23858 14.3274 12 14.3274Z" fill="white"></path><path d="M12 0.5C5.37931 0.5 0 5.86552 0 12.5C0 19.1207 5.36552 24.5 12 24.5C18.6345 24.5 24 19.1345 24 12.5C24 5.87931 18.6207 0.5 12 0.5ZM20.0828 19.969V19.6034C20.0828 17.2724 18.1862 15.369 15.8483 15.369H8.06207C5.73103 15.369 3.82759 17.2655 3.82759 19.6034V19.9C2.05517 17.9483 0.972414 15.3552 0.972414 12.5C0.972414 6.42414 5.90345 1.4931 11.9793 1.4931C18.0552 1.4931 22.9931 6.42414 22.9931 12.5C23.0069 15.3897 21.9103 18.0034 20.0828 19.969Z" fill="white"></path></svg><p>Mi Cuenta</p></a></div><style type="text/css">
+		header#principal .cambiopais {
+			cursor: pointer;
+		}
+		header#principal .cambiopais > span.pais {
+			background-image: url("https://statics.cdn0.buscalibre.com/images/202604291728cambiodepais.png");
+			background-repeat: no-repeat;
+			background-color: red;
+			border-radius: 50%;
+			height: 30px;
+			width: 30px;
+			display: block;
+		}
+		header#principal .cambiopais > span.pais[data-pais="10"] {
+			background-position: -9px 0px;
+		}
+		header#principal .cambiopais > span.pais[data-pais="13"] {
+			background-position: -807px 0;
+		}
+		header#principal .cambiopais > span.pais[data-pais="29"] {
+			background-position: -527px 0px;
+		}
+		header#principal .cambiopais > span.pais[data-pais="42"] {
+			background-position: -48px 0px;
+		}
+		header#principal .cambiopais > span.pais[data-pais="46"] {
+			background-position: -103px 0;
+		}
+		header#principal .cambiopais > span.pais[data-pais="60"] {
+			background-position: -150px 0;
+		}
+		header#principal .cambiopais > span.pais[data-pais="64"] {
+			background-position: -189px 0;
+		}
+		header#principal .cambiopais > span.pais[data-pais="71"] {
+			background-position: -668px 0;
+		}
+		header#principal .cambiopais > span.pais[data-pais="76"] {
+			background-position: -627px 0;
+		}
+		header#principal .cambiopais > span.pais[data-pais="98"] {
+			background-position: -573px 0;
+		}
+		header#principal .cambiopais > span.pais[data-pais="131"] {
+			background-position: -290px 0;
+		}
+		header#principal .cambiopais > span.pais[data-pais="160"] {
+			background-position: -339px 0px;
+		}
+		header#principal .cambiopais > span.pais[data-pais="165"] {
+			background-position: -715px 0px;
+		}
+		header#principal .cambiopais > span.pais[data-pais="100"] {
+			background-position: -761px 0px;
+		}
+		header#principal .cambiopais > span.pais[data-pais="14"] {
+			background-position: -850px 0px;
+		}
+		header#principal .cambiopais > span.pais[data-pais="37"] {
+			background-position: -948.5px 0px;
+		}
+		header#principal .cambiopais > span.pais[data-pais="143"] {
+			background-position: -905px 0px;
+		}
+		header#principal .cambiopais > span.pais[data-pais="91"] {
+			background-position: -996px 0px;
+		}
+		header#principal .cambiopais > span.pais[data-pais="183"] {
+			background-position: -1036px 0px;
+		}
+		header#principal .cambiopais > span.pais[data-pais="80"] {
+			background-position: -1129px 0px;
+		}
+		header#principal .cambiopais > span.pais[data-pais="21"] {
+			background-position: -1231px 0px;
+		}
+		header#principal .cambiopais > span.pais[data-pais="51"] {
+			background-position: -1089px 0px;
+		}
+		header#principal .cambiopais > span.pais[data-pais="126"] {
+			background-position: -1176px 0px;
+		}
+		header#principal .cambiopais > span.pais[data-pais="103"] {
+			background-position: -1278px 0px;
+		}
+		header#principal .cambiopais > span.pais[data-pais="123"] {
+			background-position: -1318px 0px;
+		}
+		header#principal .cambiopais > span.pais[data-pais="146"] {
+			background-position: -1369px 0px;
+		}
+		header#principal .cambiopais > span.pais[data-pais="181"] {
+			background-position: -1411px 0px;
+		}
+		header#principal .cambiopais > span.pais[data-pais="193"] {
+			background-position: -1465px -1px;
+		}
+		header#principal .cambiopais > span.pais[data-pais="30"] {
+			background-position: -1653px -1px;
+		}
+		header#principal .cambiopais > span.pais[data-pais="99"] {
+			background-position: -1558px -1px;
+		}
+		header#principal .cambiopais > span.pais[data-pais="186"] {
+			background-position: -1603px -1px;
+		}
+		header#principal .cambiopais > span.pais[data-pais="187"] {
+			background-position: -1700px -1px;
+		}
+		header#principal .cambiopais > span.pais[data-pais="196"] {
+			background-position: -1507px -1px;
+		}
+		header#principal .cambiopais > span.pais[data-pais="58"] {
+			background-position: -1746px 0px;
+		}
+		header#principal .cambiopais > span.pais[data-pais="50"] {
+				background-position: -1975px 0px;
+		}
+		header#principal .cambiopais > span.pais[data-pais="62"] {
+			background-position: -2028px 0px;
+		}
+		header#principal .cambiopais > span.pais[data-pais="95"] {
+			background-position: -1790px 0px;
+		}
+		header#principal .cambiopais > span.pais[data-pais="161"] {
+			background-position: -1832px 0px;
+		}
+		header#principal .cambiopais > span.pais[data-pais="198"] {
+			background-position: -1930px 0px;
+		}
+		header#principal .cambiopais > span.pais[data-pais="217"] {
+			background-position: -1886px 0px;
+		}
+        header#principal .cambiopais > span.pais[data-pais="54"] {
+			background-position: -2215px 0px;
+		}
+        header#principal .cambiopais > span.pais[data-pais="70"] {
+			background-position: -2070px 0px;
+		}
+        header#principal .cambiopais > span.pais[data-pais="92"] {
+			background-position: -2260px 0px;
+		}
+        header#principal .cambiopais > span.pais[data-pais="111"] {
+			background-position: -2120px 0px;
+		}
+        header#principal .cambiopais > span.pais[data-pais="182"] {
+			background-position: -2162px 0px;
+		}
+		header#principal .cambiopais > span.pais[data-pais="210"] {
+			background-position: -385px 0px;
+		}
+		header#principal .cambiopais > span.pais[data-pais="211"] {
+			background-position: -241px 0;
+		}
+		header#principal .cambiopais > span.pais[data-pais="212"] {
+			background-position: -425px 0px;
+		}
+		header#principal .cambiopais > ul {
+			display: none;
+		}
+	</style><div class="cambiopais" data-parent="header"><span data-pais="131" class="pais"></span><ul class="restopaises"><li data-pais="argentina">argentina</li><li data-pais="chile">chile</li><li data-pais="colombia">colombia</li><li data-pais="españa">españa</li><li data-pais="méxico">méxico</li><li data-pais="perú">perú</li><li data-pais="estados unidos">estados unidos</li><li data-pais="internacional">internacional</li></ul></div></div></header><style type="text/css">
+    #barrainferior {
+        background: #314154;
+        position: relative;
+        z-index: 5;
+        clear: left;
+        display: flex;
+        height: 40px;
+    }
+    #barrainferior > .menu {
+        display: flex;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        gap: 10px;
+        margin-left: 20px;
+        cursor: pointer;
+    }
+    #barrainferior > .menu > .rayitas {
+        height: 40px;
+        width: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        justify-content: center;
+        -webkit-transition: all 0.2s ease-out;
+        -moz-transition: all 0.2s ease-out;
+        -o-transition: all 0.2s ease-out;
+        transition: all 0.2s ease-out;
+    }
+    #barrainferior > .menu > .rayitas > span {
+        background: white;
+        display: block;
+        height: 2px;
+        width: 100%;
+        -webkit-transition: all 0.2s ease-out;
+        -moz-transition: all 0.2s ease-out;
+        -o-transition: all 0.2s ease-out;
+        transition: all 0.2s ease-out;
+    }
+    #barrainferior > .menu > .rayitas.desplegado > span {
+        position: relative;
+    }
+    #barrainferior > .menu > .rayitas.desplegado > span:nth-child( 1 ) {
+        transform: rotate(45deg);
+        top: 3px;
+    }
+    #barrainferior > .menu > .rayitas.desplegado > span:nth-child( 2 ) {
+        display: none;
+    }
+    #barrainferior > .menu > .rayitas.desplegado > span:nth-child( 3 ) {
+        transform: rotate(-45deg);
+        top: -3px;
+    }
+    #barrainferior > .menu > p {
+        color: #FFF;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: -0.408px;
+        text-transform: capitalize;
+    }
+    #barrainferior > ul {
+        margin: 6px 20px;
+        width: 100%;
+        display: flex;
+        gap: 30px;
+        clear: left;
+        flex-direction: row;
+        overflow: auto;
+        white-space: nowrap;
+        padding: 0;
+        scrollbar-color: #567a97 #182B3A;
+        scrollbar-width: thin;
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+    #barrainferior > ul > li {
+        display: flex;
+        align-items: center;
+        margin: 0;
+    }
+    #barrainferior > ul > li > a {
+        color: white;
+        font-size: .9em;
+        -webkit-transition: all 0.2s ease-out;
+        -moz-transition:    all 0.2s ease-out;
+        -o-transition:      all 0.2s ease-out;
+        transition:         all 0.2s ease-out;
+    }
+    #barrainferior > ul > li > a:hover, #barrainferior .menu p:hover {
+        text-decoration: underline;
+    }
+</style><section id="barrainferior"><div class="menu"><div class="rayitas"><span></span><span></span><span></span></div><p style="text-transform:uppercase;">menú</p></div><ul><li><a href="/mx-lo-mas-vendido-del-2024-25_t.html" title="Libros más vendidos">Libros más vendidos</a></li><li><a href="/mex-importados-241206_t.html" title="Libros importados más vendidos">Libros importados más vendidos</a></li><li><a href="/libros-envio-express-mexico_t.html" title="Libros con envío Rápido">Libros con envío Rápido</a></li><li><a href="/opiniones-clientes_st.html" title="Opiniones de clientes">Opiniones de clientes</a></li></ul></section><style type="text/css">
+        @media ( max-width: 1100px ) {
+        header#principal .logo {
+            width: 170px;
+        }
+        header#principal .buscador {
+            width: calc( 90% - 170px );
+        }
+    }
+    @media ( max-width: 500px ) {
+        header#principal .buscador {
+            width: 100%;
+        }
+    }
+</style><style>
+    .autocomplete-suggestions { border: 1px solid #eee; background: #FFF; overflow: auto;overflow-y: hidden;}
+    .autocomplete-suggestion { padding: 10px 12px; white-space: nowrap; overflow: hidden; color:#333; cursor: pointer;}
+    .autocomplete-selected { background: #F0F0F0; }
+    .autocomplete-suggestions strong { font-weight: normal; color: #3399FF; }
+    .autocomplete-group { padding: 2px 5px; }
+    .autocomplete-group strong { display: block; border-bottom: 1px solid #000; }
+</style><script src="https://statics.cdn0.buscalibre.com/js/jquery.autocomplete.min.comp.js?version=1"></script><script>
+   $(document).ready(function(){
+       $('#buscador input[name=q]').attr('autocomplete', 'off');
+
+        $('#buscador  input[name=q]').autocomplete({
+            serviceUrl: '/v2/autocomplete',
+            paramName: "keyword" + $(this).val(),
+            minChars: 3,
+            params: {},
+            dataType: 'json',
+            onSelect: function(suggestion){
+                if($(".autocomplete-selected").length){
+                    $('#buscador button').trigger("click");
+                }
+            },
+            transformResult: function(response) {
+                return {
+                    suggestions: $.map(response.suggestions, function(dataItem) {
+                        return { value: dataItem.name, data: dataItem.name };
+                    })
+                };
+            }
+        });
+
+   });
+</script><section class="modalfondo"></section><section id="menudesplegado" style="display: none;"><section class="menu"><nav><ul><li class="libreria"><div><p>Categorías</p><span class="arrow-right"></span></div><ul><li><a href="/libros/arte" title="Arte"><p>Arte</p><span></span></a></li><li><a href="/libros/filologia" title="Biografías,literaturas y estudios literarios"><p>Biografías,literaturas y estudios literarios</p><span></span></a></li><li><a href="/libros/tierra-medio-ambiente" title="Ciencias de la Tierra y Medioambiente"><p>Ciencias de la Tierra y Medioambiente</p><span></span></a></li><li><a href="/libros/ciencias-economicas" title="Ciencias económicas sobre finanzas,empresa y gestión"><p>Ciencias económicas sobre finanzas,empresa y gestión</p><span></span></a></li><li><a href="/libros/computacion" title="Computación y tecnología de la información"><p>Computación y tecnología de la información</p><span></span></a></li><li><a href="/libros/deportes-actividades-ocio-aire-libre" title="Deportes y actividades de ocio al aire libre"><p>Deportes y actividades de ocio al aire libre</p><span></span></a></li><li><a href="/libros/derecho" title="Derecho"><p>Derecho</p><span></span></a></li><li><a href="/libros/aficiones-ocio" title="Estilos de vida,aficiones y ocio"><p>Estilos de vida,aficiones y ocio</p><span></span></a></li><li><a href="/libros/ficcion" title="Ficción"><p>Ficción</p><span></span></a></li><li><a href="/libros/filosofia-religion" title="Filosofía y Religión"><p>Filosofía y Religión</p><span></span></a></li><li><a href="/libros/historia-arqueologia" title="Historia y arqueología"><p>Historia y arqueología</p><span></span></a></li><li><a href="/libros/infantiles-juveniles-didactico" title="Infantiles,juveniles y didácticos"><p>Infantiles,juveniles y didácticos</p><span></span></a></li><li><a href="/libros/lenguaje" title="Lenguaje y lingüística"><p>Lenguaje y lingüística</p><span></span></a></li><li><a href="/libros/matematicas-ciencias" title="Matemáticas y ciencias"><p>Matemáticas y ciencias</p><span></span></a></li><li><a href="/libros/materia-interdisciplinar" title="Materia indisciplinar"><p>Materia indisciplinar</p><span></span></a></li><li><a href="/libros/medicina" title="Medicina,enfermería y veterinaria"><p>Medicina,enfermería y veterinaria</p><span></span></a></li><li><a href="/libros/novela-grafica" title="Novelas gráficas"><p>Novelas gráficas</p><span></span></a></li><li><a href="/libros/salud-relaciones-desarrollo-personal" title="Salud,relaciones y desarrollo personal"><p>Salud,relaciones y desarrollo personal</p><span></span></a></li><li><a href="/libros/ciencias-sociedad" title="Sociedad y ciencias sociales"><p>Sociedad y ciencias sociales</p><span></span></a></li><li><a href="/libros/tecnologia-ingenieria-agricultura" title="Tecnología,ingeniería,agricultura,procesos industriales"><p>Tecnología,ingeniería,agricultura,procesos industriales</p><span></span></a></li><li><a href="/libros/calificadores-de-estilo" title="Calificadores de ESTILO"><p>Calificadores de ESTILO</p><span></span></a></li><li><a href="/libros/calificadores-de-fines-educativos" title="Calificadores de Fines Educativos"><p>Calificadores de Fines Educativos</p><span></span></a></li><li><a href="/libros/calificadores-de-interes" title="Calificadores de INTERÉS"><p>Calificadores de INTERÉS</p><span></span></a></li><li><a href="/libros/calificadores-de-lugar" title="Calificadores de LUGAR"><p>Calificadores de LUGAR</p><span></span></a></li><li><a href="/libros/calificadores-de-lengua" title="Calificadores de Lengua"><p>Calificadores de Lengua</p><span></span></a></li><li><a href="/libros/calificadores-de-periodo-de-tiempo" title="Calificadores de Periodo de Tiempo"><p>Calificadores de Periodo de Tiempo</p><span></span></a></li><li><a href="/libros/search/libros?ff[]=tapa+blanda" title="tapa blanda"><p>tapa blanda</p><span></span></a></li><li><a href="/libros/search/libros?ff[]=tapa+dura" title="tapa dura"><p>tapa dura</p><span></span></a></li><li><a href="/libros/search/libros?ff[]=antiguo+o+usado" title="antiguo o usado"><p>antiguo o usado</p><span></span></a></li><li><a href="/libros/search/libros?ff[]=libro+de+carton" title="libro de carton"><p>libro de carton</p><span></span></a></li><li><a href="/libros/search/libros?ff[]=nuevo" title="nuevo"><p>nuevo</p><span></span></a></li><li><a href="/libros/search/libros?ff[]=libro+de+bolsillo" title="libro de bolsillo"><p>libro de bolsillo</p><span></span></a></li><li><a href="/libros/search/libros?ff[]=encuadernacion+en+espiral" title="encuadernacion en espiral"><p>encuadernacion en espiral</p><span></span></a></li><li><a href="/libros/search/libros?ff[]=tapa+blanda+con+solapas" title="tapa blanda con solapas"><p>tapa blanda con solapas</p><span></span></a></li><li><a href="/libros/search/libros?ff[]=rustica" title="rustica"><p>rustica</p><span></span></a></li><li><a href="/libros/search/libros?ff[]=sheet+music" title="sheet music"><p>sheet music</p><span></span></a></li><li><a href="/libros/search/libros?ff[]=mapa" title="mapa"><p>mapa</p><span></span></a></li><li><a href="/libros/search/libros?ff[]=otros" title="otros"><p>otros</p><span></span></a></li><li><a href="/libros/search/libros?ff[]=calendar" title="calendar"><p>calendar</p><span></span></a></li><li><a href="/libros/search/libros?ff[]=buen+estado+de+conservacion" title="buen estado de conservacion"><p>buen estado de conservacion</p><span></span></a></li><li><a href="/libros/search/libros?ff[]=cd+de+audio" title="cd de audio"><p>cd de audio</p><span></span></a></li><li><a href="/libros/search/libros?ff[]=partitura" title="partitura"><p>partitura</p><span></span></a></li><li><a href="/libros/search/libros?ff[]=cards" title="cards"><p>cards</p><span></span></a></li><li><a href="/libros/search/libros?ff[]=rustica+con+solapas" title="rustica con solapas"><p>rustica con solapas</p><span></span></a></li><li><a href="/libros/search/libros?ff[]=cartas" title="cartas"><p>cartas</p><span></span></a></li><li><a href="/libros/search/libros?fl[]=ingles" title="ingles"><p>ingles</p><span></span></a></li><li><a href="/libros/search/libros?fl[]=espanol" title="espanol"><p>espanol</p><span></span></a></li><li><a href="/libros/search/libros?fl[]=aleman" title="aleman"><p>aleman</p><span></span></a></li><li><a href="/libros/search/libros?fl[]=frances" title="frances"><p>frances</p><span></span></a></li><li><a href="/libros/search/libros?fl[]=catala" title="catala"><p>catala</p><span></span></a></li><li><a href="/libros/search/libros?fl[]=portugues" title="portugues"><p>portugues</p><span></span></a></li><li><a href="/libros/search/libros?fl[]=italiano" title="italiano"><p>italiano</p><span></span></a></li><li><a href="/libros/search/libros?fl[]=euskera" title="euskera"><p>euskera</p><span></span></a></li><li><a href="/libros/search/libros?fl[]=gallego" title="gallego"><p>gallego</p><span></span></a></li><li><a href="/libros/search/libros?fl[]=castellano" title="castellano"><p>castellano</p><span></span></a></li><li><a href="/libros/search/libros?fl[]=catalan" title="catalan"><p>catalan</p><span></span></a></li><li><a href="/libros/search/libros?fl[]=hindi" title="hindi"><p>hindi</p><span></span></a></li><li><a href="/libros/search/libros?fl[]=ruso" title="ruso"><p>ruso</p><span></span></a></li><li><a href="/libros/search/libros?fl[]=latin" title="latin"><p>latin</p><span></span></a></li><li><a href="/libros/search/libros?fl[]=chino" title="chino"><p>chino</p><span></span></a></li><li><a href="/libros/search/libros?fl[]=valenciano" title="valenciano"><p>valenciano</p><span></span></a></li><li><a href="/libros/search/libros?fl[]=holandes" title="holandes"><p>holandes</p><span></span></a></li><li><a href="/libros/search/libros?fl[]=sueco" title="sueco"><p>sueco</p><span></span></a></li><li><a href="/libros/search/libros?fl[]=arabe" title="arabe"><p>arabe</p><span></span></a></li><li><a href="/libros/search/libros?fa[]=martha+day+zschock" title="martha day zschock"><p>martha day zschock</p><span></span></a></li><li><a href="/libros/search/libros?fa[]=william+shakespeare" title="william shakespeare"><p>william shakespeare</p><span></span></a></li><li><a href="/libros/search/libros?fa[]=disney" title="disney"><p>disney</p><span></span></a></li><li><a href="/libros/search/libros?fa[]=garcia+santiago" title="garcia santiago"><p>garcia santiago</p><span></span></a></li><li><a href="/libros/search/libros?fa[]=arthur+conan+doyle" title="arthur conan doyle"><p>arthur conan doyle</p><span></span></a></li><li><a href="/libros/search/libros?fa[]=charles+dickens" title="charles dickens"><p>charles dickens</p><span></span></a></li><li><a href="/libros/search/libros?fa[]=mark+twain" title="mark twain"><p>mark twain</p><span></span></a></li><li><a href="/libros/search/libros?fa[]=jules+verne" title="jules verne"><p>jules verne</p><span></span></a></li><li><a href="/libros/search/libros?fa[]=national+learning+corporation" title="national learning corporation"><p>national learning corporation</p><span></span></a></li><li><a href="/libros/search/libros?fa[]=jane+austen" title="jane austen"><p>jane austen</p><span></span></a></li><li><a href="/libros/search/libros?fa[]=wowpooch+press" title="wowpooch press"><p>wowpooch press</p><span></span></a></li><li><a href="/libros/search/libros?fa[]=ulrich+renz" title="ulrich renz"><p>ulrich renz</p><span></span></a></li><li><a href="/libros/search/libros?fa[]=oscar+wilde" title="oscar wilde"><p>oscar wilde</p><span></span></a></li><li><a href="/libros/search/libros?fa[]=shelley+admont+kidkiddos+books" title="shelley admont kidkiddos books"><p>shelley admont kidkiddos books</p><span></span></a></li><li><a href="/libros/search/libros?fa[]=cgp+books" title="cgp books"><p>cgp books</p><span></span></a></li><li><a href="/libros/search/libros?fa[]=ordnance+survey" title="ordnance survey"><p>ordnance survey</p><span></span></a></li><li><a href="/libros/search/libros?fa[]=charles+river+editors" title="charles river editors"><p>charles river editors</p><span></span></a></li><li><a href="/libros/search/libros?fa[]=equipo+editorial" title="equipo editorial"><p>equipo editorial</p><span></span></a></li><li><a href="/libros/search/libros?fa[]=shakespeare+william" title="shakespeare william"><p>shakespeare william</p><span></span></a></li><li><a href="/libros/search/libros?fe[]=createspace" title="createspace"><p>createspace</p><span></span></a></li><li><a href="/libros/search/libros?fe[]=wentworth+press" title="wentworth press"><p>wentworth press</p><span></span></a></li><li><a href="/libros/search/libros?fe[]=routledge" title="routledge"><p>routledge</p><span></span></a></li><li><a href="/libros/search/libros?fe[]=lap+lambert+academic+publishing" title="lap lambert academic publishing"><p>lap lambert academic publishing</p><span></span></a></li><li><a href="/libros/search/libros?fe[]=springer" title="springer"><p>springer</p><span></span></a></li><li><a href="/libros/search/libros?fe[]=cambridge+university+press" title="cambridge university press"><p>cambridge university press</p><span></span></a></li><li><a href="/libros/search/libros?fe[]=textstream" title="textstream"><p>textstream</p><span></span></a></li><li><a href="/libros/search/libros?fe[]=nabu+press" title="nabu press"><p>nabu press</p><span></span></a></li><li><a href="/libros/search/libros?fe[]=authorhouse" title="authorhouse"><p>authorhouse</p><span></span></a></li><li><a href="/libros/search/libros?fe[]=british+library+historical+print+editions" title="british library historical print editions"><p>british library historical print editions</p><span></span></a></li><li><a href="/libros/search/libros?fe[]=lulu+com" title="lulu com"><p>lulu com</p><span></span></a></li><li><a href="/libros/search/libros?fe[]=createspace+independent+publishing+platform" title="createspace independent publishing platform"><p>createspace independent publishing platform</p><span></span></a></li><li><a href="/libros/search/libros?fe[]=kessinger+publishing" title="kessinger publishing"><p>kessinger publishing</p><span></span></a></li><li><a href="/libros/search/libros?fe[]=independently+published" title="independently published"><p>independently published</p><span></span></a></li><li><a href="/libros/search/libros?fe[]=iuniverse" title="iuniverse"><p>iuniverse</p><span></span></a></li><li><a href="/libros/search/libros?fe[]=palgrave+macmillan" title="palgrave macmillan"><p>palgrave macmillan</p><span></span></a></li><li><a href="/libros/search/libros?fe[]=gale+making+of+modern+law" title="gale making of modern law"><p>gale making of modern law</p><span></span></a></li><li><a href="/libros/search/libros?fe[]=vdm+verlag" title="vdm verlag"><p>vdm verlag</p><span></span></a></li><li><a href="/libros/search/libros?fe[]=legare+street+press" title="legare street press"><p>legare street press</p><span></span></a></li><li><a href="/libros/search/libros?fy[]=2022" title="2022"><p>2022</p><span></span></a></li><li><a href="/libros/search/libros?fy[]=2021" title="2021"><p>2021</p><span></span></a></li><li><a href="/libros/search/libros?fy[]=2020" title="2020"><p>2020</p><span></span></a></li><li><a href="/libros/search/libros?fy[]=2019" title="2019"><p>2019</p><span></span></a></li><li><a href="/libros/search/libros?fy[]=2018" title="2018"><p>2018</p><span></span></a></li><li><a href="/libros/search/libros?fy[]=2017" title="2017"><p>2017</p><span></span></a></li><li><a href="/libros/search/libros?fy[]=2016" title="2016"><p>2016</p><span></span></a></li><li><a href="/libros/search/libros?fy[]=2015" title="2015"><p>2015</p><span></span></a></li><li><a href="/libros/search/libros?fy[]=2014" title="2014"><p>2014</p><span></span></a></li><li><a href="/libros/search/libros?fy[]=2013" title="2013"><p>2013</p><span></span></a></li><li><a href="/libros/search/libros?fy[]=2012" title="2012"><p>2012</p><span></span></a></li><li><a href="/libros/search/libros?fy[]=2011" title="2011"><p>2011</p><span></span></a></li><li><a href="/libros/search/libros?fy[]=2010" title="2010"><p>2010</p><span></span></a></li><li><a href="/libros/search/libros?fy[]=2009" title="2009"><p>2009</p><span></span></a></li><li><a href="/libros/search/libros?fy[]=2008" title="2008"><p>2008</p><span></span></a></li><li><a href="/libros/search/libros?fy[]=2007" title="2007"><p>2007</p><span></span></a></li><li><a href="/libros/search/libros?fy[]=2006" title="2006"><p>2006</p><span></span></a></li><li><a href="/libros/search/libros?fy[]=2005" title="2005"><p>2005</p><span></span></a></li><li><a href="/libros/search/libros?fy[]=2004" title="2004"><p>2004</p><span></span></a></li></ul></li><li><div><p>Libros</p><span class="arrow-right"></span></div><ul class="menu-secundario"><li><a href="/libros"><style type="text/css">
+				ul.menu-secundario li a span.icono.librosfisicos {
+					background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEYSURBVHgB7VXtDYIwED2J/2UDcQJxAt1AN9ANdAPdQDZgBHUCcAJ1AnACcAK8k0eoULAx4R8veUm17+OsSUtUwlbWC6ZD5nDgqcFS1h5zjfWIGTBd+g3R3OAR7JgnnVACM2aEaTZYr1vCNwhfwVNkBDrxnplAIPRhOjIPGv0Oe64SnCHjWIgsbErYgzlDqKcYX8yw8ktEE2OvmNbD9xNkSUkwoPwYHMV8R+CFmaJois8hlUczhfYK/xIF6v8W6wqqCJlnTBUrpQvmHGu7wSv6T0FmSB801UcWdYy+oC/oC/oCw4KUukM8pPyRccHiTrfpP8iwIZVX/LNJKPf8lr6fQt11nUCzhaeGAZlBzCtMKM/kmMpHqPWI37V9YkMtKLF0AAAAAElFTkSuQmCC") !important;
+					background-size: 34px;
+				}
+				ul.menu-secundario li:hover a span.icono.librosfisicos {
+					background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAE2SURBVHgB7VbRcYJAFHzn+B9KoAQ7gA6gg9iBlkAHtpBUEFMBUEGkgmAFsQOyG/fCDaIyzvjHzuzcY27f7vHz7syEruuioM7B1CaCWjAb21sE9QdEOzBmD1ii3tp98zW1/pBgAZZjQhoS3+Arg1QXN8wL9SU8DPgjjzIURVo34FfXg+YZT8jAEfOtetJBH+uN93Y0Qt2CFVirTsFM6x58Z4NzrlJjLt0OXEnDvU99sy8BYx8QB4c7SewDX9TQaK+VPpHmqMPkMo8Cr3Zpl4gkzr1IRlwPConF/cDwAmN/cAtvWtcT9e3Cnow5YA6YA+aAiQGNPQecuoclLpG/scxrz/qZntpjqOw80jnGG3if/u8DfPByqRXGGR8Grq4YttbfZjUNhwJnE6CXRmrn14bTWsHweK/3FyOv5UgUVollAAAAAElFTkSuQmCC") !important;
+				}
+			</style><span class="icono librosfisicos"></span><p>Libros fisicos</p></a></li><li><a href="/recomendados-para-ti"><style type="text/css">
+				ul.menu-secundario li a span.icono.recomendadosparati {
+					background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAYCAYAAAAVibZIAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAD0SURBVHgBtZTNEYIwEIWfysGblJCjRzqQEuxASrAD6cASoANKQCvQErQDOsBdWWYgEBIn8Zv5+BngDZtkAwAxWZAJmZKtr2s6XMmM3CEQHHpEYDg0RmAiy/OGLOWcisxNZDJS6R/2A3zAeKIqTKu4iDoVxpNlDFVwJ4Y2+yZecKcZ3iyFnuHO5F1T+WwOt0C9ARZDbcE55rvKGsoWWhhPTAlzqzqFsg90K0LJtbH3bYt/CG84tVyrpRd/CbWGzYUmCMQKMrAhWeMPDMt/Qms3H+bWoRd9+aH+8ETWkQRm6Mp/w49U/G66bUg3dLij6+U9uUUAPivQhHO1dgd+AAAAAElFTkSuQmCC") !important;
+					background-size: 34px;
+				}
+				ul.menu-secundario li:hover a span.icono.recomendadosparati {
+					background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAYCAYAAAAVibZIAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAD6SURBVHgBtZThDYIwEIWvhP8yAiN0AxlBJ5AR3EA3YATYgBFwBEfQCWSD8w6KgVraGs4veSlNX19brikgYkaqSZpUoAAJAFSkkrQDITj0AMJwaAbCpIHxntSYtjBibkZMScoXs2b/d28VquUiWt4Ly17ZeD/4QnOIBMcbtKi+E6XUAyIhbz/vJ57VzxDJl9dzfOYaE2jNwVCoN5jHHP6oUKa2wrgwzYoXQ/d0oiSvpvZo+i1Jr5ljQ8GEdOY79xl/CQ2GuUI1CKGGagmTwB+YH/8O42u0Hdc93Mp0fJEd0uZOpC41gXy5+fhP2EYxCMeHV5Rp2xXphUK8AaKTL8v98N16AAAAAElFTkSuQmCC") !important;
+				}
+			</style><span class="icono recomendadosparati"></span><p>Recomendados para ti</p></a></li></ul></li><li><a class="" href="/libros-recomendados" title="Libros Recomendados"><div><p>Libros Recomendados</p><span style="background: yellow;border-radius: 10px;font-weight: 900;font-size: 0.7em;padding: 5px;margin-left: 10px;">Nuevo</span></div></a></li><li><a class="" href="/v2/recomendador" title="Chat Recomendador"><div><p>Chat Recomendador</p></div></a></li><li><div><p>Envío Rápido</p><span class="arrow-right"></span></div><ul class="menu-secundario"><li><a href="/libros-envio-express-mexico_t.html"><style type="text/css">
+				ul.menu-secundario li a span.icono.envioexpress-libros {
+					background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbD0iIzAwMDAwMCIgZD0iTTQ2NCA0OGMtNjcuNjEuMjktMTE3Ljg3IDkuNi0xNTQuMjQgMjUuNjljLTI3LjE0IDEyLTM3Ljc2IDIxLjA4LTM3Ljc2IDUxLjg0VjQ0OGM0MS41Ny0zNy41IDc4LjQ2LTQ4IDIyNC00OFY0OFpNNDggNDhjNjcuNjEuMjkgMTE3Ljg3IDkuNiAxNTQuMjQgMjUuNjljMjcuMTQgMTIgMzcuNzYgMjEuMDggMzcuNzYgNTEuODRWNDQ4Yy00MS41Ny0zNy41LTc4LjQ2LTQ4LTIyNC00OFY0OFoiLz48L3N2Zz4=") !important;
+					background-size: 34px;
+				}
+				ul.menu-secundario li:hover a span.icono.envioexpress-libros {
+					background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbD0iI2ZmZmZmZiIgZD0iTTQ2NCA0OGMtNjcuNjEuMjktMTE3Ljg3IDkuNi0xNTQuMjQgMjUuNjljLTI3LjE0IDEyLTM3Ljc2IDIxLjA4LTM3Ljc2IDUxLjg0VjQ0OGM0MS41Ny0zNy41IDc4LjQ2LTQ4IDIyNC00OFY0OFpNNDggNDhjNjcuNjEuMjkgMTE3Ljg3IDkuNiAxNTQuMjQgMjUuNjljMjcuMTQgMTIgMzcuNzYgMjEuMDggMzcuNzYgNTEuODRWNDQ4Yy00MS41Ny0zNy41LTc4LjQ2LTQ4LTIyNC00OFY0OFoiLz48L3N2Zz4=") !important;
+				}
+			</style><span class="icono envioexpress-libros"></span><p>Libros</p></a></li></ul></li><li><a href="/afiliados" title="Sé Afiliado"><div><p>Sé Afiliado</p></div></a></li><li><a href="/club-buscalibre" title="Club Buscalibre"><div><p>Club Buscalibre</p><span style="background: yellow;border-radius: 10px;font-weight: 900;font-size: 0.7em;padding: 5px;margin-left: 10px;">Nuevo</span></div></a></li><li><a class="opinionesclientes" href="/opiniones-clientes_st.html" title="Opiniones de Clientes"><div><p>Opiniones de Clientes</p></div></a></li><li><a href="/v2/u/dashboard/pedidos" title="Seguimiento de Pedido"><div><p>Seguimiento de Pedido</p></div></a></li><li class="cambiopais"><a title="Cambiar País"><div><p>Cambiar País</p></div></a></li><li><a class="ayuda" href="/ayuda" title="Ayuda"><div><p>Ayuda</p></div></a></li> <li> <a class="contactotelefono" href="tel:+525592746508" title="+52 55 9274 6508 (9 a 18hrs)"> <p>+52 55 9274 6508 (9 a 18hrs)</p> <span class="arrow-right"></span> </a> </li> </ul></nav></section></section><style type="text/css">
+        section.desplegablecambiodepais[ data-tipo="fondo" ] {
+            display: none;
+            background: black;
+            opacity: .5;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 9;
+            cursor: pointer;
+        }
+        section.desplegablecambiodepais[ data-tipo="contenido" ] {
+            display: none;
+            position: fixed;
+            z-index: 9;
+            right: 20px;
+            background: white;
+            margin: 0 auto;
+            border-radius: 5px;
+            border: 3px solid transparent;
+            padding: 20px 30px;
+            overflow-x: hidden;
+            overflow-y: auto;
+            width: 400px;
+            height: 60vh;
+            -webkit-transition: all 0.2s ease-out;
+            -moz-transition:    all 0.2s ease-out;
+            -o-transition:      all 0.2s ease-out;
+            transition:         all 0.2s ease-out;
+        }
+        section.desplegablecambiodepais[ data-tipo="contenido" ]::-webkit-scrollbar {
+          width: 10px;
+          cursor: pointer;
+        }
+        section.desplegablecambiodepais[ data-tipo="contenido" ]::-webkit-scrollbar-track {
+            background:rgb(205, 205, 205);
+            cursor: pointer;
+        }
+        section.desplegablecambiodepais[ data-tipo="contenido" ]::-webkit-scrollbar-thumb {
+          background: var( --naranjo );
+          border-radius: 10px;
+          cursor: pointer;
+        }
+        section.desplegablecambiodepais[ data-tipo="contenido" ]::-webkit-scrollbar-thumb:hover {
+            background: #b30000;
+        }
+        section.desplegablecambiodepais[ data-tipo="contenido" ][ data-estado="true" ] {
+            height: auto;
+        }
+        section.desplegablecambiodepais[ data-tipo="contenido" ] > .paisseleccionado {
+            display: none;
+        }
+        section.desplegablecambiodepais[ data-tipo="contenido" ] > .paisseleccionado > nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        section.desplegablecambiodepais[ data-tipo="contenido" ] > .paisseleccionado > nav > .volver {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+        section.desplegablecambiodepais[ data-tipo="contenido" ] > .paisseleccionado > nav > .volver > svg {}
+        section.desplegablecambiodepais[ data-tipo="contenido" ] > .paisseleccionado > nav > .volver > p {
+            margin: 0;
+        }
+        section.desplegablecambiodepais[ data-tipo="contenido" ] > .paisseleccionado > nav > p {
+            margin: 0;
+            font-size: 1.2em;
+        }
+        section.desplegablecambiodepais[ data-tipo="contenido" ] > .paisseleccionado > nav > .cerrar {
+            cursor: pointer;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            font-size: 1.9em;
+            font-weight: 500;
+        }
+        section.desplegablecambiodepais[ data-tipo="contenido" ] > .paisseleccionado > nav > .cerrar > svg {}
+        section.desplegablecambiodepais[ data-tipo="contenido" ] > .paisseleccionado > .seleccion {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 30px;
+        }
+        section.desplegablecambiodepais[ data-tipo="contenido" ] > .paisseleccionado > .seleccion > .pais {}
+        section.desplegablecambiodepais[ data-tipo="contenido" ] > .paisseleccionado > .seleccion > .pais > li {}
+        section.desplegablecambiodepais[ data-tipo="contenido" ] > .paisseleccionado > .seleccion > .pais > li > span {}
+        section.desplegablecambiodepais[ data-tipo="contenido" ] > .paisseleccionado > .seleccion > .pais > li > p {}
+        section.desplegablecambiodepais[ data-tipo="contenido" ] > .paisseleccionado > .seleccion > .idioma {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+        section.desplegablecambiodepais[ data-tipo="contenido" ] > .paisseleccionado > .seleccion > .idioma > a {
+            color: var( --naranjo );
+            text-decoration: underline;
+            font-size: .9em;
+        }
+        section.desplegablecambiodepais[ data-tipo="contenido" ] > .paisseleccionado > .seleccion > .idioma > a:nth-child( 1 ) {
+            border-right: 1px solid #BBB;
+            padding-right: 10px;
+        }
+        section.desplegablecambiodepais > p {
+            font-size: 1.2em;
+            margin: 0 0 20px 0;
+            padding: 0;
+            font-weight: 500;
+        }
+        section.desplegablecambiodepais > div.listapaises > p {
+            margin: 0 0 10px 0;
+            font-weight: 500;
+        }
+        section.desplegablecambiodepais > div.listapaises > ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px 0;
+            margin-bottom: 30px;
+        }
+        section.desplegablecambiodepais > div.listapaises > ul > li {
+            --medida-bandera: 50px;
+            --gap-entre-bandera-y-pais: 10px;
+            width: 45%;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            gap: 10px;
+            color: black;
+            cursor: pointer;
+            -webkit-transition: all 0.2s ease-out;
+            -moz-transition:    all 0.2s ease-out;
+            -o-transition:      all 0.2s ease-out;
+            transition:         all 0.2s ease-out;
+        }
+        section.desplegablecambiodepais > div.listapaises > ul > li:hover {
+            opacity: 0.7;
+        }
+        section.desplegablecambiodepais > div.listapaises > ul > li > a {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: var( --gap-entre-bandera-y-pais );
+            color: black;
+        }
+        section.desplegablecambiodepais[ data-tipo="contenido" ] > .paisseleccionado > .seleccion > .pais > div {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        section.desplegablecambiodepais[ data-tipo="contenido" ] > .paisseleccionado > .seleccion > .pais > div > span ,
+        section.desplegablecambiodepais > div.listapaises > ul > li span {
+            width: var( --medida-bandera );
+            height: var( --medida-bandera );
+            display: block;
+            border-radius: 50%;
+            background-image: url("https://statics.cdn0.buscalibre.com/images/202604291728cambiodepaisModal.png");
+        }
+        section.desplegablecambiodepais[ data-tipo="contenido" ] > .paisseleccionado > .seleccion > .pais > .pais10 > span ,
+        section.desplegablecambiodepais > div.listapaises > ul > li.pais10 span {
+            background-position: -12px 0;
+        }
+        section.desplegablecambiodepais[ data-tipo="contenido" ] > .paisseleccionado > .seleccion > .pais > .pais13 > span ,
+        section.desplegablecambiodepais > div.listapaises > ul > li.pais13 span {
+            background-position: -1307px 0;
+        }
+        section.desplegablecambiodepais[ data-tipo="contenido" ] > .paisseleccionado > .seleccion > .pais > .pais29 > span ,
+        section.desplegablecambiodepais > div.listapaises > ul > li.pais29 span {
+            background-position: -850px 0;
+        }
+        section.desplegablecambiodepais[ data-tipo="contenido" ] > .paisseleccionado > .seleccion > .pais > .pais42 > span ,
+        section.desplegablecambiodepais > div.listapaises > ul > li.pais42 span {
+            background-position: -76px 0;
+        }
+        section.desplegablecambiodepais[ data-tipo="contenido" ] > .paisseleccionado > .seleccion > .pais > .pais46 > span ,
+        section.desplegablecambiodepais > div.listapaises > ul > li.pais46 span {
+            background-position: -176px 0;
+        }
+        section.desplegablecambiodepais[ data-tipo="contenido" ] > .paisseleccionado > .seleccion > .pais > .pais60 > span ,
+        section.desplegablecambiodepais > div.listapaises > ul > li.pais60 span {
+            background-position: -240px 0;
+        }
+        section.desplegablecambiodepais[ data-tipo="contenido" ] > .paisseleccionado > .seleccion > .pais > .pais64 > span ,
+        section.desplegablecambiodepais > div.listapaises > ul > li.pais64 span {
+            background-position: -307px 0;
+        }
+        section.desplegablecambiodepais[ data-tipo="contenido" ] > .paisseleccionado > .seleccion > .pais > .pais71 > span ,
+        section.desplegablecambiodepais > div.listapaises > ul > li.pais71 span {
+            background-position: -1076px 0;
+        }
+        section.desplegablecambiodepais[ data-tipo="contenido" ] > .paisseleccionado > .seleccion > .pais > .pais76 > span ,
+        section.desplegablecambiodepais > div.listapaises > ul > li.pais76 span {
+            background-position: -1010px 0;
+        }
+        section.desplegablecambiodepais[ data-tipo="contenido" ] > .paisseleccionado > .seleccion > .pais > .pais98 > span ,
+        section.desplegablecambiodepais > div.listapaises > ul > li.pais98 span {
+            background-position: -924px 0;
+        }
+        section.desplegablecambiodepais[ data-tipo="contenido" ] > .paisseleccionado > .seleccion > .pais > .pais131 > span ,
+        section.desplegablecambiodepais > div.listapaises > ul > li.pais131 span {
+            background-position: -468px 0;
+        }
+        section.desplegablecambiodepais[ data-tipo="contenido" ] > .paisseleccionado > .seleccion > .pais > .pais160 > span ,
+        section.desplegablecambiodepais > div.listapaises > ul > li.pais160 span {
+            background-position: -545px 0;
+        }
+        section.desplegablecambiodepais[ data-tipo="contenido" ] > .paisseleccionado > .seleccion > .pais > .pais165 > span ,
+        section.desplegablecambiodepais > div.listapaises > ul > li.pais165 span {
+            background-position: -1153px 0;
+        }
+        section.desplegablecambiodepais[ data-tipo="contenido" ] > .paisseleccionado > .seleccion > .pais > .pais100 > span ,
+        section.desplegablecambiodepais > div.listapaises > ul > li.pais100 span {
+            background-position: -1226px 0;
+        }
+        section.desplegablecambiodepais[ data-tipo="contenido" ] > .paisseleccionado > .seleccion > .pais > .pais14 > span ,
+        section.desplegablecambiodepais > div.listapaises > ul > li.pais14 span {
+            background-position: -1370px 0;
+        }
+        section.desplegablecambiodepais[ data-tipo="contenido" ] > .paisseleccionado > .seleccion > .pais > .pais37 > span ,
+        section.desplegablecambiodepais > div.listapaises > ul > li.pais37 span {
+            background-position: -1529px 0;
+        }
+        section.desplegablecambiodepais[ data-tipo="contenido" ] > .paisseleccionado > .seleccion > .pais > .pais143 > span ,
+        section.desplegablecambiodepais > div.listapaises > ul > li.pais143 span {
+            background-position: -1450px 0;
+        }
+        section.desplegablecambiodepais[ data-tipo="contenido" ] > .paisseleccionado > .seleccion > .pais > .pais91 > span ,
+        section.desplegablecambiodepais > div.listapaises > ul > li.pais91 span {
+            background-position: -1604px 0;
+        }
+		section.desplegablecambiodepais[ data-tipo="contenido" ] > .paisseleccionado > .seleccion > .pais > .pais183 > span ,
+        section.desplegablecambiodepais > div.listapaises > ul > li.pais183 span {
+            background-position: -1671px 0;
+        }
+		section.desplegablecambiodepais[ data-tipo="contenido" ] > .paisseleccionado > .seleccion > .pais > .pais80 > span ,
+        section.desplegablecambiodepais > div.listapaises > ul > li.pais80 span {
+            background-position: -1822px 0;
+        }
+		section.desplegablecambiodepais[ data-tipo="contenido" ] > .paisseleccionado > .seleccion > .pais > .pais21 > span ,
+        section.desplegablecambiodepais > div.listapaises > ul > li.pais21 span {
+            background-position: -1984px 0;
+        }
+		section.desplegablecambiodepais[ data-tipo="contenido" ] > .paisseleccionado > .seleccion > .pais > .pais51 > span ,
+        section.desplegablecambiodepais > div.listapaises > ul > li.pais51 span {
+            background-position: -1755px 0;
+        }
+		section.desplegablecambiodepais[ data-tipo="contenido" ] > .paisseleccionado > .seleccion > .pais > .pais126 > span ,
+        section.desplegablecambiodepais > div.listapaises > ul > li.pais126 span {
+            background-position: -1898px 0;
+        }
+				section.desplegablecambiodepais[ data-tipo="contenido" ] > .paisseleccionado > .seleccion > .pais > .pais103 > span ,
+        section.desplegablecambiodepais > div.listapaises > ul > li.pais103 span {
+            background-position: -2059px 0;
+        }
+		section.desplegablecambiodepais[ data-tipo="contenido" ] > .paisseleccionado > .seleccion > .pais > .pais123 > span ,
+        section.desplegablecambiodepais > div.listapaises > ul > li.pais123 span {
+            background-position: -2124px 0;
+        }
+		section.desplegablecambiodepais[ data-tipo="contenido" ] > .paisseleccionado > .seleccion > .pais > .pais146 > span ,
+        section.desplegablecambiodepais > div.listapaises > ul > li.pais146 span {
+            background-position: -2210px 0;
+        }
+		section.desplegablecambiodepais[ data-tipo="contenido" ] > .paisseleccionado > .seleccion > .pais > .pais181 > span ,
+        section.desplegablecambiodepais > div.listapaises > ul > li.pais181 span {
+            background-position: -2274px 0;
+        }
+		section.desplegablecambiodepais[ data-tipo="contenido" ] > .paisseleccionado > .seleccion > .pais > .pais193 > span ,
+        section.desplegablecambiodepais > div.listapaises > ul > li.pais193 span {
+            background-position: -2362px -1px;
+        }
+		section.desplegablecambiodepais[ data-tipo="contenido" ] > .paisseleccionado > .seleccion > .pais > .pais30 > span ,
+        section.desplegablecambiodepais > div.listapaises > ul > li.pais30 span {
+            background-position: -2665px -1px;
+        }
+		section.desplegablecambiodepais[ data-tipo="contenido" ] > .paisseleccionado > .seleccion > .pais > .pais99 > span ,
+        section.desplegablecambiodepais > div.listapaises > ul > li.pais99 span {
+            background-position: -2513px -1px;
+        }
+		section.desplegablecambiodepais[ data-tipo="contenido" ] > .paisseleccionado > .seleccion > .pais > .pais186 > span ,
+        section.desplegablecambiodepais > div.listapaises > ul > li.pais186 span {
+            background-position: -2584px -1px;
+        }
+		section.desplegablecambiodepais[ data-tipo="contenido" ] > .paisseleccionado > .seleccion > .pais > .pais187 > span ,
+        section.desplegablecambiodepais > div.listapaises > ul > li.pais187 span {
+            background-position: -2740px -1px;
+        }
+		section.desplegablecambiodepais[ data-tipo="contenido" ] > .paisseleccionado > .seleccion > .pais > .pais196 > span ,
+        section.desplegablecambiodepais > div.listapaises > ul > li.pais196 span {
+            background-position: -2430px -1px;
+        }
+		section.desplegablecambiodepais[ data-tipo="contenido" ] > .paisseleccionado > .seleccion > .pais > .pais58 > span ,
+        section.desplegablecambiodepais > div.listapaises > ul > li.pais58 span {
+            background-position: -2816px -0px;
+        }
+		section.desplegablecambiodepais[ data-tipo="contenido" ] > .paisseleccionado > .seleccion > .pais > .pais50 > span ,
+        section.desplegablecambiodepais > div.listapaises > ul > li.pais50 span {
+            background-position: -3190px -0px;
+        }
+		section.desplegablecambiodepais[ data-tipo="contenido" ] > .paisseleccionado > .seleccion > .pais > .pais62 > span ,
+        section.desplegablecambiodepais > div.listapaises > ul > li.pais62 span {
+            background-position: -3269px -0px;
+        }
+		section.desplegablecambiodepais[ data-tipo="contenido" ] > .paisseleccionado > .seleccion > .pais > .pais95 > span ,
+        section.desplegablecambiodepais > div.listapaises > ul > li.pais95 span {
+            background-position: -2885px -0px;
+        }
+		section.desplegablecambiodepais[ data-tipo="contenido" ] > .paisseleccionado > .seleccion > .pais > .pais161 > span ,
+        section.desplegablecambiodepais > div.listapaises > ul > li.pais161 span {
+            background-position: -2954px -0px;
+        }
+		section.desplegablecambiodepais[ data-tipo="contenido" ] > .paisseleccionado > .seleccion > .pais > .pais198 > span ,
+        section.desplegablecambiodepais > div.listapaises > ul > li.pais198 span {
+            background-position: -3110px -0px;
+        }
+		section.desplegablecambiodepais[ data-tipo="contenido" ] > .paisseleccionado > .seleccion > .pais > .pais217 > span ,
+        section.desplegablecambiodepais > div.listapaises > ul > li.pais217 span {
+            background-position: -3041px -0px;
+        }
+        section.desplegablecambiodepais[ data-tipo="contenido" ] > .paisseleccionado > .seleccion > .pais > .pais54 > span ,
+        section.desplegablecambiodepais > div.listapaises > ul > li.pais54 span {
+            background-position: -3570px -0px;
+        }
+        section.desplegablecambiodepais[ data-tipo="contenido" ] > .paisseleccionado > .seleccion > .pais > .pais70 > span ,
+        section.desplegablecambiodepais > div.listapaises > ul > li.pais70 span {
+            background-position: -3340px -0px;
+        }
+        section.desplegablecambiodepais[ data-tipo="contenido" ] > .paisseleccionado > .seleccion > .pais > .pais92 > span ,
+        section.desplegablecambiodepais > div.listapaises > ul > li.pais92 span {
+            background-position: -3640px -0px;
+        }
+        section.desplegablecambiodepais[ data-tipo="contenido" ] > .paisseleccionado > .seleccion > .pais > .pais111 > span ,
+        section.desplegablecambiodepais > div.listapaises > ul > li.pais111  span {
+            background-position: -3430px -0px;
+        }
+        section.desplegablecambiodepais[ data-tipo="contenido" ] > .paisseleccionado > .seleccion > .pais > .pais182 > span ,
+        section.desplegablecambiodepais > div.listapaises > ul > li.pais182 span {
+            background-position: -3490px -0px;
+        }
+        section.desplegablecambiodepais[ data-tipo="contenido" ] > .paisseleccionado > .seleccion > .pais > .pais210 > span ,
+        section.desplegablecambiodepais > div.listapaises > ul > li.pais210 span {
+            background-position: -621px 0;
+        }
+        section.desplegablecambiodepais[ data-tipo="contenido" ] > .paisseleccionado > .seleccion > .pais > .pais211 > span ,
+        section.desplegablecambiodepais > div.listapaises > ul > li.pais211 span {
+            background-position: -386px 0;
+        }
+        section.desplegablecambiodepais[ data-tipo="contenido" ] > .paisseleccionado > .seleccion > .pais > .pais212 > span ,
+        section.desplegablecambiodepais > div.listapaises > ul > li.pais212 span {
+            background-position: -686px 0;
+        }
+        section.desplegablecambiodepais > div.listapaises > ul > li p {
+            font-size: 0.9em;
+            width: calc( 100% - var( --medida-bandera ) - var( --gap-entre-bandera-y-pais ) );
+        }
+
+        @media ( max-width: 800px ) {
+            section.desplegablecambiodepais[ data-tipo="contenido" ] {
+                --padding: 10px;
+                padding: var(--padding);
+                height: 50vh;
+                width: calc( 100vw - calc( var( --padding ) * 3 ) );
+                position: relative;
+                top: 0;
+                left: 0;
+                right: 0;
+                border-radius: 0;
+            }
+        }
+    </style><section class="desplegablecambiodepais" data-tipo="fondo"></section><section class="desplegablecambiodepais" data-estado="false" data-tipo="contenido"><div class="paisseleccionado"><nav><div class="volver"><svg width="24" height="30" viewBox="0 0 24 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.3791 22.4963L9.07114 14.9993L16.3791 7.50226C16.51 7.36831 16.5832 7.1885 16.5832 7.00126C16.5832 6.81402 16.51 6.63421 16.3791 6.50026C16.3156 6.4354 16.2397 6.38388 16.156 6.3487C16.0723 6.31353 15.9824 6.29541 15.8916 6.29541C15.8008 6.29541 15.711 6.31353 15.6272 6.3487C15.5435 6.38388 15.4677 6.4354 15.4041 6.50026L7.62814 14.4758C7.49162 14.6158 7.41521 14.8037 7.41521 14.9993C7.41521 15.1948 7.49162 15.3827 7.62814 15.5228L15.4026 23.4983C15.4662 23.5636 15.5423 23.6155 15.6263 23.6509C15.7102 23.6864 15.8005 23.7046 15.8916 23.7046C15.9828 23.7046 16.073 23.6864 16.157 23.6509C16.241 23.6155 16.317 23.5636 16.3806 23.4983C16.5115 23.3643 16.5847 23.1845 16.5847 22.9973C16.5847 22.81 16.5115 22.6302 16.3806 22.4963H16.3791Z" fill="black"></path></svg><p>Volver</p></div><p>Selecciona un idioma</p><div class="cerrar"><svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.62516 21.2084L0.583496 19.1667L8.75016 11L0.583496 2.83335L2.62516 0.791687L10.7918 8.95836L18.9585 0.791687L21.0002 2.83335L12.8335 11L21.0002 19.1667L18.9585 21.2084L10.7918 13.0417L2.62516 21.2084Z" fill="black"></path></svg></div></nav><!-- Estructura a reemplazar con la informacion de pais e idioma para paises con mas de 1 --><div class="seleccion"><div class="pais"></div><div class="idioma"></div></div></div><p class="titulo">Selecciona tu país</p><div class="listapaises"><p>América</p><ul><li class="pais10" data-codigopais="10" data-cambiodeidioma="false"><a href="https://www.buscalibre.com.ar/libro-la-ciencia-del-caos/9789681668631/p/2510172" title="Argentina"><span></span><p>Argentina</p></a></li><li class="pais30" data-codigopais="30" data-cambiodeidioma="false"><a href="https://www.bookdelivery.com/br-en/book-la-ciencia-del-caos/9789681668631/p/2510172" title="Brasil"><span></span><p>Brasil</p></a></li><li class="pais37" data-codigopais="37" data-cambiodeidioma="false"><a href="https://www.bookdelivery.com/ca-en/book-la-ciencia-del-caos/9789681668631/p/2510172" title="Canadá"><span></span><p>Canadá</p></a></li><li class="pais42" data-codigopais="42" data-cambiodeidioma="false"><a href="https://www.buscalibre.cl/libro-la-ciencia-del-caos/9789681668631/p/2510172" title="Chile"><span></span><p>Chile</p></a></li><li class="pais46" data-codigopais="46" data-cambiodeidioma="false"><a href="https://www.buscalibre.com.co/libro-la-ciencia-del-caos/9789681668631/p/2510172" title="Colombia"><span></span><p>Colombia</p></a></li><li class="pais50" data-codigopais="50" data-cambiodeidioma="false"><a href="https://www.buscalibre.cr/libro-la-ciencia-del-caos/9789681668631/p/2510172" title="Costa Rica"><span></span><p>Costa Rica</p></a></li><li class="pais60" data-codigopais="60" data-cambiodeidioma="false"><a href="https://www.buscalibre.ec/libro-la-ciencia-del-caos/9789681668631/p/2510172" title="Ecuador"><span></span><p>Ecuador</p></a></li><li class="pais62" data-codigopais="62" data-cambiodeidioma="false"><a href="https://www.buscalibre.com/sv-es/libro-la-ciencia-del-caos/9789681668631/p/2510172" title="El Salvador"><span></span><p>El Salvador</p></a></li><li class="pais211" data-codigopais="211" data-cambiodeidioma="true"><span></span><p>Estados Unidos</p><div class="idioma hidden"><a href="https://www.buscalibre.us/libro-la-ciencia-del-caos/9789681668631/p/2510172">
+															Español
+							                        </a><a href="https://www.bookdelivery.com/us-en/book-la-ciencia-del-caos/9789681668631/p/2510172">
+							                            	Inglés
+							                        </a></div></li><li class="pais131" data-codigopais="131" data-cambiodeidioma="false"><a href="https://www.buscalibre.com.mx/libro-la-ciencia-del-caos/9789681668631/p/2510172" title="México"><span></span><p>México</p></a></li><li class="pais160" data-codigopais="160" data-cambiodeidioma="false"><a href="https://www.buscalibre.pe/libro-la-ciencia-del-caos/9789681668631/p/2510172" title="Perú"><span></span><p>Perú</p></a></li><li class="pais58" data-codigopais="58" data-cambiodeidioma="false"><a href="https://www.buscalibre.com/do-es/libro-la-ciencia-del-caos/9789681668631/p/2510172" title="República Dominicana"><span></span><p>República Dominicana</p></a></li><li class="pais212" data-codigopais="212" data-cambiodeidioma="false"><a href="https://www.buscalibre.uy/libro-la-ciencia-del-caos/9789681668631/p/2510172" title="Uruguay"><span></span><p>Uruguay</p></a></li></ul><p>Europa</p><ul><li class="pais76" data-codigopais="76" data-cambiodeidioma="false"><a href="https://www.bookdelivery.com/de-en/book-la-ciencia-del-caos/9789681668631/p/2510172" title="Alemania"><span></span><p>Alemania</p></a></li><li class="pais14" data-codigopais="14" data-cambiodeidioma="false"><a href="https://www.bookdelivery.at/book-la-ciencia-del-caos/9789681668631/p/2510172" title="Austria"><span></span><p>Austria</p></a></li><li class="pais21" data-codigopais="21" data-cambiodeidioma="false"><a href="https://www.bookdelivery.com/be-en/book-la-ciencia-del-caos/9789681668631/p/2510172" title="Bélgica"><span></span><p>Bélgica</p></a></li><li class="pais51" data-codigopais="51" data-cambiodeidioma="false"><a href="https://www.bookdelivery.com/hr-en/book-la-ciencia-del-caos/9789681668631/p/2510172" title="Croacia"><span></span><p>Croacia</p></a></li><li class="pais182" data-codigopais="182" data-cambiodeidioma="false"><a href="https://www.bookdelivery.com/sk-en/book-la-ciencia-del-caos/9789681668631/p/2510172" title="Eslovaquia"><span></span><p>Eslovaquia</p></a></li><li class="pais183" data-codigopais="183" data-cambiodeidioma="false"><a href="https://www.bookdelivery.com/si-en/book-la-ciencia-del-caos/9789681668631/p/2510172" title="Eslovenia"><span></span><p>Eslovenia</p></a></li><li class="pais64" data-codigopais="64" data-cambiodeidioma="false"><a href="https://www.buscalibre.es/libro-la-ciencia-del-caos/9789681668631/p/2510172" title="España"><span></span><p>España</p></a></li><li class="pais70" data-codigopais="70" data-cambiodeidioma="false"><a href="https://www.bookdelivery.com/fi-en/book-la-ciencia-del-caos/9789681668631/p/2510172" title="Finlandia"><span></span><p>Finlandia</p></a></li><li class="pais71" data-codigopais="71" data-cambiodeidioma="true"><span></span><p>Francia</p><div class="idioma hidden"><a href="https://www.bookdelivery.com/fr-en/book-la-ciencia-del-caos/9789681668631/p/2510172">
+							                            	Inglés
+							                        </a><a href="https://www.bookdelivery.com/fr-fr/livre-la-ciencia-del-caos/9789681668631/p/2510172">
+															Francés
+							                        </a></div></li><li class="pais80" data-codigopais="80" data-cambiodeidioma="false"><a href="https://www.bookdelivery.com/gr-en/book-la-ciencia-del-caos/9789681668631/p/2510172" title="Grecia"><span></span><p>Grecia</p></a></li><li class="pais92" data-codigopais="92" data-cambiodeidioma="false"><a href="https://www.bookdelivery.com/hu-en/book-la-ciencia-del-caos/9789681668631/p/2510172" title="Hungría"><span></span><p>Hungría</p></a></li><li class="pais98" data-codigopais="98" data-cambiodeidioma="false"><a href="https://www.bookdelivery.com/ie-en/book-la-ciencia-del-caos/9789681668631/p/2510172" title="Irlanda"><span></span><p>Irlanda</p></a></li><li class="pais100" data-codigopais="100" data-cambiodeidioma="false"><a href="https://www.bookdelivery.com/it-en/book-la-ciencia-del-caos/9789681668631/p/2510172" title="Italia"><span></span><p>Italia</p></a></li><li class="pais111" data-codigopais="111" data-cambiodeidioma="false"><a href="https://www.bookdelivery.com/lv-en/book-la-ciencia-del-caos/9789681668631/p/2510172" title="Letonia"><span></span><p>Letonia</p></a></li><li class="pais126" data-codigopais="126" data-cambiodeidioma="false"><a href="https://www.bookdelivery.com/mt-en/book-la-ciencia-del-caos/9789681668631/p/2510172" title="Malta"><span></span><p>Malta</p></a></li><li class="pais143" data-codigopais="143" data-cambiodeidioma="false"><a href="https://www.bookdelivery.nl/book-la-ciencia-del-caos/9789681668631/p/2510172" title="Países Bajos"><span></span><p>Países Bajos</p></a></li><li class="pais165" data-codigopais="165" data-cambiodeidioma="false"><a href="https://www.bookdelivery.com/pt-en/book-la-ciencia-del-caos/9789681668631/p/2510172" title="Portugal"><span></span><p>Portugal</p></a></li><li class="pais210" data-codigopais="210" data-cambiodeidioma="false"><a href="https://www.bookdelivery.com/gb-en/book-la-ciencia-del-caos/9789681668631/p/2510172" title="Reino Unido"><span></span><p>Reino Unido</p></a></li><li class="pais54" data-codigopais="54" data-cambiodeidioma="false"><a href="https://www.bookdelivery.com/cz-en/book-la-ciencia-del-caos/9789681668631/p/2510172" title="República Checa"><span></span><p>República Checa</p></a></li><li class="pais193" data-codigopais="193" data-cambiodeidioma="false"><a href="https://www.bookdelivery.com/ch-en/book-la-ciencia-del-caos/9789681668631/p/2510172" title="Suiza"><span></span><p>Suiza</p></a></li></ul><p>Resto del mundo</p><ul><li class="pais13" data-codigopais="13" data-cambiodeidioma="false"><a href="https://www.bookdelivery.com/au-en/book-la-ciencia-del-caos/9789681668631/p/2510172" title="Australia"><span></span><p>Australia</p></a></li><li class="pais187" data-codigopais="187" data-cambiodeidioma="false"><a href="https://www.bookdelivery.com/kr-en/book-la-ciencia-del-caos/9789681668631/p/2510172" title="Corea del Sur"><span></span><p>Corea del Sur</p></a></li><li class="pais161" data-codigopais="161" data-cambiodeidioma="false"><a href="https://www.bookdelivery.com/ph-en/book-la-ciencia-del-caos/9789681668631/p/2510172" title="Filipinas"><span></span><p>Filipinas</p></a></li><li class="pais91" data-codigopais="91" data-cambiodeidioma="false"><a href="https://www.bookdelivery.com/hk-en/book-la-ciencia-del-caos/9789681668631/p/2510172" title="Hong Kong"><span></span><p>Hong Kong</p></a></li><li class="pais95" data-codigopais="95" data-cambiodeidioma="false"><a href="https://www.bookdelivery.com/id-en/book-la-ciencia-del-caos/9789681668631/p/2510172" title="Indonesia"><span></span><p>Indonesia</p></a></li><li class="pais99" data-codigopais="99" data-cambiodeidioma="false"><a href="https://www.bookdelivery.com/il-en/book-la-ciencia-del-caos/9789681668631/p/2510172" title="Israel"><span></span><p>Israel</p></a></li><li class="pais103" data-codigopais="103" data-cambiodeidioma="false"><a href="https://www.bookdelivery.com/jp-en/book-la-ciencia-del-caos/9789681668631/p/2510172" title="Japón"><span></span><p>Japón</p></a></li><li class="pais123" data-codigopais="123" data-cambiodeidioma="false"><a href="https://www.bookdelivery.com/my-en/book-la-ciencia-del-caos/9789681668631/p/2510172" title="Malasia"><span></span><p>Malasia</p></a></li><li class="pais146" data-codigopais="146" data-cambiodeidioma="false"><a href="https://www.bookdelivery.co.nz/book-la-ciencia-del-caos/9789681668631/p/2510172" title="Nueva Zelanda"><span></span><p>Nueva Zelanda</p></a></li><li class="pais29" data-codigopais="29" data-cambiodeidioma="true"><span></span><p>Otros paises</p><div class="idioma hidden"><a href="https://www.buscalibre.com/int-es/libro-la-ciencia-del-caos/9789681668631/p/2510172">
+															Español
+							                        </a><a href="https://www.bookdelivery.com/int-en/book-la-ciencia-del-caos/9789681668631/p/2510172">
+							                            	Inglés
+							                        </a></div></li><li class="pais181" data-codigopais="181" data-cambiodeidioma="false"><a href="https://www.bookdelivery.com/sg-en/book-la-ciencia-del-caos/9789681668631/p/2510172" title="Singapur"><span></span><p>Singapur</p></a></li><li class="pais186" data-codigopais="186" data-cambiodeidioma="false"><a href="https://www.bookdelivery.co.za/book-la-ciencia-del-caos/9789681668631/p/2510172" title="Sudáfrica"><span></span><p>Sudáfrica</p></a></li><li class="pais198" data-codigopais="198" data-cambiodeidioma="false"><a href="https://www.bookdelivery.com/th-en/book-la-ciencia-del-caos/9789681668631/p/2510172" title="Tailandia"><span></span><p>Tailandia</p></a></li><li class="pais196" data-codigopais="196" data-cambiodeidioma="false"><a href="https://www.bookdelivery.tw/book-la-ciencia-del-caos/9789681668631/p/2510172" title="Taiwán"><span></span><p>Taiwán</p></a></li><li class="pais217" data-codigopais="217" data-cambiodeidioma="false"><a href="https://www.bookdelivery.com/vn-en/book-la-ciencia-del-caos/9789681668631/p/2510172" title="Vietnam"><span></span><p>Vietnam</p></a></li></ul></div></section><style type="text/css">
+		section#modalmicuenta-fondo {
+			display: none;
+			background: black;
+			opacity: .5;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			z-index: 4;
+		}
+		section#modalmicuenta-contenido {
+			display: flex;
+			flex-direction: column;
+			position: fixed;
+			top: 160px;
+            right: 0;
+			z-index: 4;
+			display: none;
+		}
+		section#modalmicuenta-contenido > ul.desplegable {
+			display: none;
+		}
+		section#modalmicuenta-contenido > ul.desplegable > li {
+			flex-direction: column;
+		}
+		section#modalmicuenta-contenido > ul.desplegable {
+			display: block;
+			background: white;
+			position: absolute;
+            top: 0;
+			width: 220px;
+		}
+		section#modalmicuenta-contenido > ul.desplegable > li {}
+		section#modalmicuenta-contenido > ul.desplegable > li > a {
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			justify-content: space-between;
+			color: #222;
+            /*
+			width: 100%;
+            */
+			height: 50px;
+			background: white;
+			padding: 0 10px;
+		}
+		section#modalmicuenta-contenido > ul.desplegable > li > a > span {
+			width: 0px;
+			height: 0px;
+			border-top: 5px solid transparent;
+			border-bottom: 5px solid transparent;
+			border-left: 5px solid var(--headerfondo);
+		}
+		section#modalmicuenta-contenido > ul.desplegable > li > a:hover {
+			background: var(--headerfondo);
+			color: white;
+		}
+		section#modalmicuenta-contenido > ul.desplegable > li > a:hover > span {
+			border-left: 5px solid white;
+		}
+		@media ( max-width: 800px ) {
+            section#modalmicuenta-contenido {
+                top: 270px;
+                top: 0;
+                position: relative;
+            }
+		}
+	</style><section id="modalmicuenta-fondo"></section><section id="modalmicuenta-contenido"><ul class="desplegable"><li><a href="/v2/u/dashboard/">Mi Cuenta</a></li><li><a href="/v2/u/dashboard/pedidos">Seguimiento de Pedido</a></li><li><a href="/v2/u/out">Cerrar Sesión</a></li></ul></section><script type="text/javascript">const inyectaSubCategorias=function(){let lassubcategorias=JSON.parse('[{"title":"Arte","url":"/libros/arte"},{"title":"Biografías,literaturas y estudios literarios","url":"/libros/filologia"},{"title":"Ciencias de la Tierra y Medioambiente","url":"/libros/tierra-medio-ambiente"},{"title":"Ciencias económicas sobre finanzas,empresa y gestión","url":"/libros/ciencias-economicas"},{"title":"Computación y tecnología de la información","url":"/libros/computacion"},{"title":"Deportes y actividades de ocio al aire libre","url":"/libros/deportes-actividades-ocio-aire-libre"},{"title":"Derecho","url":"/libros/derecho"},{"title":"Estilos de vida,aficiones y ocio","url":"/libros/aficiones-ocio"},{"title":"Ficción","url":"/libros/ficcion"},{"title":"Filosofía y Religión","url":"/libros/filosofia-religion"},{"title":"Historia y arqueología","url":"/libros/historia-arqueologia"},{"title":"Infantiles,juveniles y didácticos","url":"/libros/infantiles-juveniles-didactico"},{"title":"Lenguaje y lingüística","url":"/libros/lenguaje"},{"title":"Matemáticas y ciencias","url":"/libros/matematicas-ciencias"},{"title":"Materia indisciplinar","url":"/libros/materia-interdisciplinar"},{"title":"Medicina,enfermería y veterinaria","url":"/libros/medicina"},{"title":"Novelas gráficas","url":"/libros/novela-grafica"},{"title":"Salud,relaciones y desarrollo personal","url":"/libros/salud-relaciones-desarrollo-personal"},{"title":"Sociedad y ciencias sociales","url":"/libros/ciencias-sociedad"},{"title":"Tecnología,ingeniería,agricultura,procesos industriales","url":"/libros/tecnologia-ingenieria-agricultura"},{"title":"Calificadores de ESTILO","url":"/libros/calificadores-de-estilo"},{"title":"Calificadores de Fines Educativos","url":"/libros/calificadores-de-fines-educativos"},{"title":"Calificadores de INTERÉS","url":"/libros/calificadores-de-interes"},{"title":"Calificadores de LUGAR","url":"/libros/calificadores-de-lugar"},{"title":"Calificadores de Lengua","url":"/libros/calificadores-de-lengua"},{"title":"Calificadores de Periodo de Tiempo","url":"/libros/calificadores-de-periodo-de-tiempo"},{"title":"tapa blanda","url":"/libros/search/libros?ff[]=tapa+blanda"},{"title":"tapa dura","url":"/libros/search/libros?ff[]=tapa+dura"},{"title":"antiguo o usado","url":"/libros/search/libros?ff[]=antiguo+o+usado"},{"title":"libro de carton","url":"/libros/search/libros?ff[]=libro+de+carton"},{"title":"nuevo","url":"/libros/search/libros?ff[]=nuevo"},{"title":"libro de bolsillo","url":"/libros/search/libros?ff[]=libro+de+bolsillo"},{"title":"encuadernacion en espiral","url":"/libros/search/libros?ff[]=encuadernacion+en+espiral"},{"title":"tapa blanda con solapas","url":"/libros/search/libros?ff[]=tapa+blanda+con+solapas"},{"title":"rustica","url":"/libros/search/libros?ff[]=rustica"},{"title":"sheet music","url":"/libros/search/libros?ff[]=sheet+music"},{"title":"mapa","url":"/libros/search/libros?ff[]=mapa"},{"title":"otros","url":"/libros/search/libros?ff[]=otros"},{"title":"calendar","url":"/libros/search/libros?ff[]=calendar"},{"title":"buen estado de conservacion","url":"/libros/search/libros?ff[]=buen+estado+de+conservacion"},{"title":"cd de audio","url":"/libros/search/libros?ff[]=cd+de+audio"},{"title":"partitura","url":"/libros/search/libros?ff[]=partitura"},{"title":"cards","url":"/libros/search/libros?ff[]=cards"},{"title":"rustica con solapas","url":"/libros/search/libros?ff[]=rustica+con+solapas"},{"title":"cartas","url":"/libros/search/libros?ff[]=cartas"},{"title":"ingles","url":"/libros/search/libros?fl[]=ingles"},{"title":"espanol","url":"/libros/search/libros?fl[]=espanol"},{"title":"aleman","url":"/libros/search/libros?fl[]=aleman"},{"title":"frances","url":"/libros/search/libros?fl[]=frances"},{"title":"catala","url":"/libros/search/libros?fl[]=catala"},{"title":"portugues","url":"/libros/search/libros?fl[]=portugues"},{"title":"italiano","url":"/libros/search/libros?fl[]=italiano"},{"title":"euskera","url":"/libros/search/libros?fl[]=euskera"},{"title":"gallego","url":"/libros/search/libros?fl[]=gallego"},{"title":"castellano","url":"/libros/search/libros?fl[]=castellano"},{"title":"catalan","url":"/libros/search/libros?fl[]=catalan"},{"title":"hindi","url":"/libros/search/libros?fl[]=hindi"},{"title":"ruso","url":"/libros/search/libros?fl[]=ruso"},{"title":"latin","url":"/libros/search/libros?fl[]=latin"},{"title":"chino","url":"/libros/search/libros?fl[]=chino"},{"title":"valenciano","url":"/libros/search/libros?fl[]=valenciano"},{"title":"holandes","url":"/libros/search/libros?fl[]=holandes"},{"title":"sueco","url":"/libros/search/libros?fl[]=sueco"},{"title":"arabe","url":"/libros/search/libros?fl[]=arabe"},{"title":"martha day zschock","url":"/libros/search/libros?fa[]=martha+day+zschock"},{"title":"william shakespeare","url":"/libros/search/libros?fa[]=william+shakespeare"},{"title":"disney","url":"/libros/search/libros?fa[]=disney"},{"title":"garcia santiago","url":"/libros/search/libros?fa[]=garcia+santiago"},{"title":"arthur conan doyle","url":"/libros/search/libros?fa[]=arthur+conan+doyle"},{"title":"charles dickens","url":"/libros/search/libros?fa[]=charles+dickens"},{"title":"mark twain","url":"/libros/search/libros?fa[]=mark+twain"},{"title":"jules verne","url":"/libros/search/libros?fa[]=jules+verne"},{"title":"national learning corporation","url":"/libros/search/libros?fa[]=national+learning+corporation"},{"title":"jane austen","url":"/libros/search/libros?fa[]=jane+austen"},{"title":"wowpooch press","url":"/libros/search/libros?fa[]=wowpooch+press"},{"title":"ulrich renz","url":"/libros/search/libros?fa[]=ulrich+renz"},{"title":"oscar wilde","url":"/libros/search/libros?fa[]=oscar+wilde"},{"title":"shelley admont kidkiddos books","url":"/libros/search/libros?fa[]=shelley+admont+kidkiddos+books"},{"title":"cgp books","url":"/libros/search/libros?fa[]=cgp+books"},{"title":"ordnance survey","url":"/libros/search/libros?fa[]=ordnance+survey"},{"title":"charles river editors","url":"/libros/search/libros?fa[]=charles+river+editors"},{"title":"equipo editorial","url":"/libros/search/libros?fa[]=equipo+editorial"},{"title":"shakespeare william","url":"/libros/search/libros?fa[]=shakespeare+william"},{"title":"createspace","url":"/libros/search/libros?fe[]=createspace"},{"title":"wentworth press","url":"/libros/search/libros?fe[]=wentworth+press"},{"title":"routledge","url":"/libros/search/libros?fe[]=routledge"},{"title":"lap lambert academic publishing","url":"/libros/search/libros?fe[]=lap+lambert+academic+publishing"},{"title":"springer","url":"/libros/search/libros?fe[]=springer"},{"title":"cambridge university press","url":"/libros/search/libros?fe[]=cambridge+university+press"},{"title":"textstream","url":"/libros/search/libros?fe[]=textstream"},{"title":"nabu press","url":"/libros/search/libros?fe[]=nabu+press"},{"title":"authorhouse","url":"/libros/search/libros?fe[]=authorhouse"},{"title":"british library historical print editions","url":"/libros/search/libros?fe[]=british+library+historical+print+editions"},{"title":"lulu com","url":"/libros/search/libros?fe[]=lulu+com"},{"title":"createspace independent publishing platform","url":"/libros/search/libros?fe[]=createspace+independent+publishing+platform"},{"title":"kessinger publishing","url":"/libros/search/libros?fe[]=kessinger+publishing"},{"title":"independently published","url":"/libros/search/libros?fe[]=independently+published"},{"title":"iuniverse","url":"/libros/search/libros?fe[]=iuniverse"},{"title":"palgrave macmillan","url":"/libros/search/libros?fe[]=palgrave+macmillan"},{"title":"gale making of modern law","url":"/libros/search/libros?fe[]=gale+making+of+modern+law"},{"title":"vdm verlag","url":"/libros/search/libros?fe[]=vdm+verlag"},{"title":"legare street press","url":"/libros/search/libros?fe[]=legare+street+press"},{"title":"2022","url":"/libros/search/libros?fy[]=2022"},{"title":"2021","url":"/libros/search/libros?fy[]=2021"},{"title":"2020","url":"/libros/search/libros?fy[]=2020"},{"title":"2019","url":"/libros/search/libros?fy[]=2019"},{"title":"2018","url":"/libros/search/libros?fy[]=2018"},{"title":"2017","url":"/libros/search/libros?fy[]=2017"},{"title":"2016","url":"/libros/search/libros?fy[]=2016"},{"title":"2015","url":"/libros/search/libros?fy[]=2015"},{"title":"2014","url":"/libros/search/libros?fy[]=2014"},{"title":"2013","url":"/libros/search/libros?fy[]=2013"},{"title":"2012","url":"/libros/search/libros?fy[]=2012"},{"title":"2011","url":"/libros/search/libros?fy[]=2011"},{"title":"2010","url":"/libros/search/libros?fy[]=2010"},{"title":"2009","url":"/libros/search/libros?fy[]=2009"},{"title":"2008","url":"/libros/search/libros?fy[]=2008"},{"title":"2007","url":"/libros/search/libros?fy[]=2007"},{"title":"2006","url":"/libros/search/libros?fy[]=2006"},{"title":"2005","url":"/libros/search/libros?fy[]=2005"},{"title":"2004","url":"/libros/search/libros?fy[]=2004"}]');for(let count=0;count<=lassubcategorias.length-1;count++){const{title,url}=lassubcategorias[count];$("section#menudesplegado>section.menu>nav>ul>li.libreria>ul").append(`<li><a href="${url}" title="${title}"><p>${title}</p><span></span></a></li>`);}};const toggleMenuPrincipalDesktop=function(){$("section.modalfondo,section#menudesplegado").toggle();$("body").css("overflow",$("body").css("overflow")==="hidden" ? "visible":"hidden");$("section#menudesplegado>section.menu>nav>ul>li>ul").css("left",$("section#menudesplegado").width());$("#barrainferior>.menu .rayitas").toggleClass("desplegado");$("header#principal .menu>.rayitas").toggleClass("desplegado");};const toggleMenuMiCuenta=function(){const barrasuperior=$(".avisoTop").length ? $(".avisoTop").height():0;const header=$("#principal").length ? $("#principal").height():0;const barrainferior=$("#barrainferior").length ? $("#barrainferior").height():0;$("section#modalmicuenta-contenido").css("top",barrainferior+barrasuperior+header).css("position","absolute");$("section#modalmicuenta-fondo,section#modalmicuenta-contenido").toggle();$("body").css("overflow",$("body").css("overflow")==="hidden" ? "visible":"hidden");const $div_mi_cuenta=$("header#principal .micuenta");const ancho_pantalla=$("body").width();const desde_la_izquierda=$div_mi_cuenta.offset().left;const ancho_div_mi_cuenta=$div_mi_cuenta.outerWidth();const margin_desde_la_derecha=ancho_pantalla-(desde_la_izquierda+ancho_div_mi_cuenta);$("section#modalmicuenta-contenido>ul.desplegable").css("right",margin_desde_la_derecha);};const toggleCambioIdioma=function({cerrardeltodo=false,c_pais,pais_html,idioma_html}){let estado=$('section.desplegablecambiodepais[ data-tipo="contenido" ]>.paisseleccionado').is(":visible")? "visible":"no visible";if(cerrardeltodo){$("section.desplegablecambiodepais>div.listapaises").fadeIn();$("section.desplegablecambiodepais>p").fadeIn();$("section.desplegablecambiodepais[ data-tipo='contenido' ]>.paisseleccionado").fadeOut();$("section.desplegablecambiodepais[ data-tipo='contenido' ]").attr("data-estado",false);}else if(estado=="visible"){$("section.desplegablecambiodepais>div.listapaises").fadeIn();$("section.desplegablecambiodepais>p").fadeIn();$("section.desplegablecambiodepais[ data-tipo='contenido' ]>.paisseleccionado").fadeOut();$("section.desplegablecambiodepais[ data-tipo='contenido' ]").attr("data-estado",false);}else{const html_seleccion_idioma=`<div class="pais"><div class="pais${c_pais}">${pais_html}</div></div><div class="idioma">${idioma_html}</div>`;$("section.desplegablecambiodepais[ data-tipo='contenido' ]>.paisseleccionado>.seleccion").html(html_seleccion_idioma);$("section.desplegablecambiodepais[ data-tipo='contenido' ]>.paisseleccionado").fadeIn();$("section.desplegablecambiodepais>div.listapaises").fadeOut();$("section.desplegablecambiodepais>p").fadeOut();$("section.desplegablecambiodepais[ data-tipo='contenido' ]").attr("data-estado",true);}};$(document).ready(function(){inyectaSubCategorias();});const trigger_menu=[ "#barrainferior>.menu","header#principal .menu","section.modalfondo" ];$(trigger_menu.join(",")).on("click",function(){toggleMenuPrincipalDesktop();});if($("body").width()<=800){$("body").on("click","section#menudesplegado>section.menu>nav>ul>li",function(){$(this).find(">ul").is(":visible")? $(this).find(">ul").hide():$(this).find(">ul").show();});};const trigger_menu_micuenta=[ "header#principal .micuenta","section#modalmicuenta-fondo" ];$(trigger_menu_micuenta.join(",")).on("click",function(){toggleMenuMiCuenta();});const trigger_menu_cambiopais=[ "header#principal .cambiopais","section#menudesplegado>section.menu>nav>ul>li.cambiopais","section.desplegablecambiodepais[ data-tipo='fondo' ]" ];$("body").on("click",trigger_menu_cambiopais.join(","),function(){$("section.desplegablecambiodepais[ data-tipo='fondo' ]").toggle();$("section.desplegablecambiodepais[ data-tipo='contenido' ]").toggle();});$("section.desplegablecambiodepais>div.listapaises>ul>li[ data-cambiodeidioma='true' ],section.desplegablecambiodepais[ data-tipo='contenido' ]>.paisseleccionado>nav>.volver").on("click",function(){const c_pais=$(this).attr("data-codigopais");const idioma_html=$(this).find('.idioma').html();const $contenedor_pais=$('<div>');$contenedor_pais.append($(this).html());$contenedor_pais.find('.idioma').remove();const pais_html=$contenedor_pais.html();toggleCambioIdioma({c_pais,pais_html,idioma_html});});$("section.desplegablecambiodepais>div.listapaises>ul>li[ data-cambiodeidioma='true' ]").on("click",function(){const $contenido=$("section.desplegablecambiodepais[ data-tipo='contenido' ]");setTimeout(()=>{$contenido.css({background:"#f8e8d5",border:"3px solid #ff5a00"});setTimeout(()=>{$contenido.css({background:"white",border:"3px solid transparent"});},700);},500);});</script><div class="block-content"><script type="application/ld+json">
+    {
+    "@context": "https://schema.org/",
+    "@type": "Book",
+    "identifier": "2510172",
+    "url": "https://www.buscalibre.com.mx/libro-la-ciencia-del-caos/9789681668631/p/2510172",
+    "image": "https://images.cdn3.buscalibre.com/fit-in/360x360/ae/58/ae583931b7df64bb4eda7c97a26649e4.jpg",
+    "name": "La Ciencia del Caos",
+    "description": "En años recientes, parte de la comunidad científica en todo el mundo ha comenzado a hablar incesantemente de caos, desorden, para explicar muchos fenómenos que suceden en la naturaleza y en experimentos caracterizados por tener un comportamiento que no puede ser descrito por leyes matemáticas sencillas. ¿Por qué existe este caos?, ¿cómo interviene en nuestra vida cotidiana y cuáles son sus consecuencias?En 1776 Laplace afirmaba que si se conociera la velocidad y posición de todas las partículas del Universo en un momento determinado, se podría conocer su pasado y predecir su futuro con certeza. Durante más de cien años, nos dice el doctor Schifter, esta suposición pareció correcta, hasta el punto de que la aplicación de tal principio al comportamiento humano llegó a poner en duda la existencia del libre albedrío. La experiencia nos ha enseñado, sin embargo, que existen fenómenos impredecibles, y los cambios climáticos son un ejemplo. El desorden- nos dice el autor - es precisamente el personaje principal de este relato, el cual intenta dar a conocer el estudio del comportamiento caótico en diversos campos de la ciencia y hacer que el lector se interese en indagar más sobre el tema.",
+    "bookFormat": "https://schema.org/Paperback",
+    "inLanguage": "es",
+    "isbn": "9789681668631",
+    "author": {
+        "@type": "Person",
+        "url": "https://www.buscalibre.com.mx/libros/autor/isaac-schifter",
+        "name": "Isaac Schifter"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "url": "https://www.buscalibre.com.mx/libros/editorial/fondo-de-cultura-economica",
+        "name": "Fondo De Cultura Economica"
+    },
+    "review": [
+        {
+            "@type": "Review",
+            "inLanguage": "es",
+            "datePublished": "2021-03-01T06:25:56-03:00",
+            "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "5"
+            },
+            "author": {
+                "@type": "Person",
+                "name": "Ramiro Sebastian Galeano Carrano"
+            },
+            "reviewBody": "Muy buen libro"
+        },
+        {
+            "@type": "Review",
+            "inLanguage": "es",
+            "datePublished": "2021-05-24T09:30:50-04:00",
+            "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "5"
+            },
+            "author": {
+                "@type": "Person",
+                "name": "Giovanni Suarez"
+            },
+            "reviewBody": "Excelente edición."
+        }
+    ],
+    "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": 5,
+        "reviewCount": 2,
+        "ratingCount": 2
+    },
+    "offers": [
+        {
+            "@type": "Offer",
+            "priceCurrency": "MXN",
+            "price": "63.00",
+            "itemCondition": "http://schema.org/NewCondition",
+            "availability": "http://schema.org/InStock"
+        }
+    ]
+}
+</script><style type="text/css">
+    @media ( min-width: 768px ) {
+    #producto {
+        padding-top: 20px;
+    }
+    }
+</style><section id="producto" class="contenedor v2018 1"><div class="row product-info"><div class="col-xs-12 col-md-3"><div class="box"><div class="row"><div class="col-xs"><div class="box"><div class="marcador"><div class="preview" style="display:none;"><a class="color-bl" href="javascript:;">Empezar a Leer</a></div><div class="modal background-color-white width-xs-90 top-xs-0" id="modal-preview"><div class="modal-content"><div class="modal-header row"><i class="cerrar fas fa-times fa-lg color-gray"></i><div class="col-xs-2 col-md-1 padding-left-0 padding-right-0 margin-right-10"><img src="https://images.cdn3.buscalibre.com/fit-in/360x360/ae/58/ae583931b7df64bb4eda7c97a26649e4.jpg" alt="portada La Ciencia del Caos" title="La Ciencia del Caos"></div><div class="col-xs-9 col-md-10 padding-left-0"><p class="font-weight-light margin-top-0 margin-bottom-0 font-size-xs-medium">La Ciencia del Caos</p><p class="font-weight-light color-primary margin-top-0 font-size-small-xs margin-bottom-0">Isaac Schifter</p><p id="preview-enlace-ventana" style="display:none;" class="font-weight-light margin-top-5 font-size-small"><a class="color-dark-gray" href="javascript:;">Abrir en una ventana nueva <i class="fas fa-external-link-alt fa-lg margin-left-5"></i></a></p></div></div><div class="modal-body"></div></div></div><style>
+.preview{
+    text-align: right;
+    padding: 5px 25px;
+    
+}
+.preview a:after{
+    content: '';
+    background-image: url(https://statics.cdn1.buscalibre.com/images/testab/preview-arrow.png);
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    background-size: 18px;
+    margin-left: 8px;
+    position: relative;
+    top:6px;
+    transform: scaleX(-1) rotate(-155deg);
+    }
+#modal-preview{
+    height: 80%;
+    width: 620px;
+    padding-top: 0;
+    overflow: hidden;
+}
+#modal-preview .modal-header{
+    background: #f5f5f5;
+    padding: 10px;
+}
+#modal-preview .modal-header img{
+    max-width: 100%;
+}
+#modal-preview .modal-body{
+      overflow-y: scroll;
+      line-height: 19px;
+      letter-spacing: 0.5px;
+      text-align: left;
+      color:#444;
+      font-size: 14px;
+}
+#modal-preview .modal-body p{
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+#modal-preview .modal-body h1{
+    font-weight: normal;
+    line-height: 30px;
+}
+
+.mobile #modal-preview{
+    top: 2% !important;
+    margin:0 !important;
+    left: 2% !important;
+    width: 87% !important;
+    height: 94% !important;
+}
+
+#modal-preview img{
+    max-width: 100%;
+}
+
+</style><script>
+$(document).ready(
+    function(){
+
+        
+        var isbns_json = $.trim($("#metadata-isbn13").text());
+
+        $.getJSON("/libro/preview/" + isbns_json + "/libro físico?no-cache", function(data) {
+            if(!jQuery.isEmptyObject(data)){
+                $(".marcador .preview").show();
+
+            }
+
+        });
+    }
+);
+
+$("#preview-enlace-ventana a").click(
+    function(){
+        $.getJSON("/libro/preview/" + $.trim($("#metadata-isbn13").text()) + "/libro físico?no-cache" , function(data) {
+            window.open(data.link);
+        });
+    }
+);
+
+$(".preview a").click(
+    function(){
+        $.getJSON("/libro/preview/" + $.trim($("#metadata-isbn13").text()) + "/libro físico?no-cache" , function(data) {
+
+            // if(data.url_pdf){
+            //     data.html = "<object data='"+ data.url_pdf +"' width='100%' height='100%' ><iframe height='100%' width='100%' src='" + data.url_pdf + "' />Tu navegador no soporta PDFs. <a href='" + data.url_pdf + "'>Descárga el archivo Aquí</a></iframe></object>";
+            // }
+
+            if(data.url_pdf){
+                //data.html = "<div style='height:100%;width:100%;background: transparent url(https://statics.cdn0.buscalibre.com/images/big-loader.gif) no-repeat;background-position:48% 20%;'><object data='https://docs.google.com/gview?embedded=true&url="+ data.url_pdf +"' width='100%' height='100%' ><iframe height='100%' width='100%' src='" + data.url_pdf + "' />Tu navegador no soporta PDFs. <a href='" + data.url_pdf + "'>Descárga el archivo Aquí</a></iframe></object></div>";
+                                    data.html = "<div style='height:100%;width:100%;background: transparent url(https://statics.cdn0.buscalibre.com/images/big-loader.gif) no-repeat;background-position:48% 20%;'><iframe height='100%' width='100%' src='" + data.url_pdf + "' />Si tu navegador no soporta PDFs. <a href='" + data.url_pdf + "'>Descárga el archivo Aquí</a></iframe></div>";
+                
+            }
+
+            if(data.link){
+                data.html = "<div style='height:100%;width:100%;background: transparent url(https://statics.cdn0.buscalibre.com/images/big-loader.gif) no-repeat;background-position:48% 20%;'><object data='" + data.link + "' height='100%' width='100%'></object></div>";
+                //$('#preview-enlace-ventana a').attr('href',data.link);
+                $('#preview-enlace-ventana').show();
+            }
+
+            $('#modal-preview .modal-body').html(data.html);
+
+            $('#modal-preview').lightbox_me({
+                centered: true,
+                closeSelector: '.cerrar',
+                onLoad: function() {
+                    //$('#sign_up').find('input:first').focus()
+                    var height = parseInt($("#modal-preview").height()) - parseInt($("#modal-preview .modal-header").height()) - 10;
+
+                                            if(data.url_pdf){
+                            height = '85%';
+                            $("#modal-preview .modal-content").height('100%');
+                            $("#modal-preview .modal-body").css('overflow-y', 'hidden');
+                        }
+                    
+                    $("#modal-preview .modal-body").height(height);
+
+                    }
+            });
+        });
+    }
+);
+</script><div class="row center-xs"><div class="col-xs-10 col-sm-6 col-md-12"><div><div class="imagen"><div></div><img id="imgPortada" class=" lazyloaded" data-src="https://images.cdn3.buscalibre.com/fit-in/360x360/ae/58/ae583931b7df64bb4eda7c97a26649e4.jpg" alt="portada La Ciencia del Caos" title="La Ciencia del Caos" src="https://images.cdn3.buscalibre.com/fit-in/360x360/ae/58/ae583931b7df64bb4eda7c97a26649e4.jpg"><style type="text/css">
+    body.modal_miniaturas_visible {
+        overflow: hidden;
+    }
+    section#producto.v2018 #miniaturas {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+    section#producto.v2018 #miniaturas > * {
+        width: calc( 100% / 4 );
+        margin: 0;
+        height: auto;
+        max-height: fit-content;
+        display: none;
+    }
+    section#producto.v2018 #miniaturas > *:nth-child( -n+3 ) {
+        display: block;
+    }
+    section#producto.v2018 #miniaturas > img {}
+    section#producto.v2018 #miniaturas > .video {
+        position: relative;
+    }
+    section#producto.v2018 #miniaturas > .video > img {}
+    section#modal_miniaturas[ data-trigger="fondo" ] {
+        display: none;
+    }
+    section#modal_miniaturas[ data-trigger="fondo" ] {
+        background: black;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        opacity: 75%;
+    }
+    section#modal_miniaturas[ data-trigger="contenido" ] {
+        background: white;
+        width: 70vw;
+        z-index: 3;
+        position: fixed;
+        top: 100vh;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        -webkit-transition: all 0.2s ease-out;
+        -moz-transition:    all 0.2s ease-out;
+        -o-transition:      all 0.2s ease-out;
+        transition:         all 0.2s ease-out;
+    }
+    body.modal_miniaturas_visible section#modal_miniaturas[ data-trigger="contenido" ] {
+        min-height: 50vh;
+        top: 20vh;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        -webkit-transition: all 0.2s ease-out;
+        -moz-transition:    all 0.2s ease-out;
+        -o-transition:      all 0.2s ease-out;
+        transition:         all 0.2s ease-out;
+    }
+    body.modal_miniaturas_visible section#modal_miniaturas[ data-trigger="fondo" ] {
+        display: block;
+    }
+    
+    section#producto.v2018 section#modal_miniaturas {}
+    section#producto.v2018 section#modal_miniaturas > header {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    section#producto.v2018 section#modal_miniaturas > header > p {
+        margin: 0;
+        padding: 0;
+    }
+    section#producto.v2018 section#modal_miniaturas > header > svg {
+        width: 20px;
+        cursor: pointer;
+    }
+    section#producto.v2018 section#modal_miniaturas > .contenido {
+        display: flex;
+        justify-content: flex-start;
+        gap: 30px;
+    }
+    section#producto.v2018 section#modal_miniaturas > .contenido > .minis {
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+        max-height: 400px;
+        overflow-x: hidden;
+        scrollbar-width: thin;
+        padding: 0 10px 0 0;
+    }
+    section#producto.v2018 section#modal_miniaturas > .contenido > .minis > * {
+        width: 90px;
+        cursor: pointer;
+    }
+    section#producto.v2018 section#modal_miniaturas > .contenido > .minis > img {
+        width: 70px;
+    }
+    section#producto.v2018 section#modal_miniaturas > .contenido > .minis > iframe {}
+    section#producto.v2018 section#modal_miniaturas > .contenido > .minis > .video {
+        position: relative;
+    }
+    section#producto.v2018 section#modal_miniaturas > .contenido > .visor {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        width: 100%;
+    }
+    section#producto.v2018 section#modal_miniaturas > .contenido > .visor > * {
+        display: none;
+    }
+    section#producto.v2018 section#modal_miniaturas > .contenido > .visor > *:nth-child( 1 ) {
+        display: block;
+    }
+    section#producto.v2018 section#modal_miniaturas > .contenido > .visor > iframe {
+        width: 100%;
+        height: 50vh;
+    }
+    
+    @media ( max-width: 800px ) {
+        body.modal_miniaturas_visible section#producto.v2018 section#modal_miniaturas[ data-trigger="contenido" ] {
+            top: 30vh;
+        }
+        body.modal_miniaturas_visible section#producto.v2018 section#modal_miniaturas > .contenido {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        body.modal_miniaturas_visible section#producto.v2018 section#modal_miniaturas > .contenido > .minis {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            gap: 10px;
+            overflow-x: auto;
+            overflow-y: hidden;
+            max-height: 130px;
+            padding: 0 10px 0 0;
+            scrollbar-width: thin;
+        }
+        body.modal_miniaturas_visible section#producto.v2018 section#modal_miniaturas > .contenido > .minis > img {
+            margin: 0;
+        }
+        body.modal_miniaturas_visible section#producto.v2018 section#modal_miniaturas > .contenido > .visor > img {
+            max-height: 30vh;
+            max-width: min-content;
+        }
+        body.modal_miniaturas_visible section#producto.v2018 section#modal_miniaturas > .contenido > .visor > iframe {
+            height: 40vh;
+        }
+    }
+</style><section id="modal_miniaturas" data-trigger="fondo"></section><section id="modal_miniaturas" data-trigger="contenido"><header><svg viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg"><path d="M36 43.4667L9.86668 69.6C8.8889 70.5778 7.64446 71.0667 6.13335 71.0667C4.62224 71.0667 3.37779 70.5778 2.40001 69.6C1.42224 68.6222 0.93335 67.3778 0.93335 65.8667C0.93335 64.3556 1.42224 63.1111 2.40001 62.1333L28.5334 36L2.40001 9.86667C1.42224 8.88889 0.93335 7.64445 0.93335 6.13333C0.93335 4.62222 1.42224 3.37778 2.40001 2.4C3.37779 1.42222 4.62224 0.933334 6.13335 0.933334C7.64446 0.933334 8.8889 1.42222 9.86668 2.4L36 28.5333L62.1333 2.4C63.1111 1.42222 64.3556 0.933334 65.8667 0.933334C67.3778 0.933334 68.6222 1.42222 69.6 2.4C70.5778 3.37778 71.0667 4.62222 71.0667 6.13333C71.0667 7.64445 70.5778 8.88889 69.6 9.86667L43.4667 36L69.6 62.1333C70.5778 63.1111 71.0667 64.3556 71.0667 65.8667C71.0667 67.3778 70.5778 68.6222 69.6 69.6C68.6222 70.5778 67.3778 71.0667 65.8667 71.0667C64.3556 71.0667 63.1111 70.5778 62.1333 69.6L36 43.4667Z"></path></svg></header><div class="contenido"><div class="minis"><img data-posicion="1" src="https://images.cdn3.buscalibre.com/fit-in/360x360/ae/58/ae583931b7df64bb4eda7c97a26649e4.jpg" alt="La Ciencia del Caos"></div><div class="visor"><img data-posicion="1" src="https://images.cdn3.buscalibre.com/fit-in/360x360/ae/58/ae583931b7df64bb4eda7c97a26649e4.jpg" alt="La Ciencia del Caos"></div></div></section><script type="module">
+            const disparadores_modal = [
+            "#miniaturas", 
+            "section#modal_miniaturas[ data-trigger='fondo' ]", 
+            "section#modal_miniaturas > header > svg" 
+        ];
+        $( disparadores_modal.join(",") ).on("click", function(){
+            $("body").toggleClass("modal_miniaturas_visible");
+
+            $.each($(`section#modal_miniaturas > .contenido > .visor > iframe`), function () {
+                const src = $( this ).attr("src");
+                $( this ).attr("src", src );
+            });
+        });
+        
+            $("section#modal_miniaturas > .contenido > .minis > *").on("click", function(){
+            const posicion = $( this ).attr("data-posicion");
+            
+            $(`section#modal_miniaturas > .contenido > .visor > *`).hide();
+            $(`section#modal_miniaturas > .contenido > .visor > *[ data-posicion='${ posicion }' ]`).show();
+        });
+    </script></div></div></div></div><div class="row"><div class="col-xs-12 padding-xs-0"><div class="ficha font-weight-light font-size-normal color-text"><div class="row"><div class="col-xs-5"><div class="box">Formato</div></div><div class="col-xs-7"><div class="box">Libro Físico</div></div></div><div class="row"><div class="col-xs-5"><div class="box">
+                Editorial
+                </div></div><div class="col-xs-7"><div class="box" id="metadata-editorial"><a class="color-primary font-weight-medium link-underline" href="/libros/editorial/fondo-de-cultura-economica">
+                                  Fondo De Cultura Economica</a></div></div></div><div class="row"><div class="col-xs-5"><div class="box">
+                Autor
+                </div></div><div class="col-xs-7"><div class="box" id="metadata-autor"><a class="color-primary font-weight-medium link-underline" href="/libros/autor/isaac-schifter">
+                                  Isaac Schifter</a><a href="/v2/centro-de-autores?idp=2510172" rel="nofollow" style="margin-left: 3px"><i class="fas fa-user"></i></a></div></div></div><div class="row"><div class="col-xs-5"><div class="box">
+                Categoría
+                </div></div><div class="col-xs-7"><div class="box" id="metadata-categoría">
+
+                                                    Física
+                              </div></div></div><div class="row"><div class="col-xs-5"><div class="box">
+                Colección
+                </div></div><div class="col-xs-7"><div class="box" id="metadata-colección">
+
+                                                    la ciencia para todos
+                              </div></div></div><div class="row"><div class="col-xs-5"><div class="box">
+                Año
+                </div></div><div class="col-xs-7"><div class="box" id="metadata-ano">
+
+                                                    2008
+                              </div></div></div><div class="row"><div class="col-xs-5"><div class="box">
+                Idioma
+                </div></div><div class="col-xs-7"><div class="box" id="metadata-idioma">
+
+                                                    Español
+                              </div></div></div><div class="row"><div class="col-xs-5"><div class="box">
+                N° páginas
+                </div></div><div class="col-xs-7"><div class="box" id="metadata-número páginas">
+
+                                                    108
+                              </div></div></div><div class="row"><div class="col-xs-5"><div class="box">
+                Encuadernación
+                </div></div><div class="col-xs-7"><div class="box" id="metadata-encuadernación">
+
+                                                    Tapa Blanda
+                              </div></div></div><div class="row"><div class="col-xs-5"><div class="box">
+                ISBN
+                </div></div><div class="col-xs-7"><div class="box" id="metadata-isbn">
+
+                                                    9681668634
+                              </div></div></div><div class="row"><div class="col-xs-5"><div class="box">
+                ISBN13
+                </div></div><div class="col-xs-7"><div class="box" id="metadata-isbn13">
+
+                                                    9789681668631
+                              </div></div></div><div class="row"><div class="col-xs-5"><div class="box">Editado en</div></div><div class="col-xs-7"><div class="box" id="metadata-isbn-pais">México</div></div></div><div class="row"><div class="col-xs-5"><div class="box">
+                N° edición
+                </div></div><div class="col-xs-7"><div class="box" id="metadata-número edición">
+
+                                                    3
+                              </div></div></div></div></div></div><div class="row bottom-marcador"><div class="col-xs-6"><div class="box"><div class="marcador-bottom-left"></div></div></div><div class="col-xs-6"><div class="box"><div class="marcador-bottom-right"></div></div></div></div><style>
+                                    @media (min-width: 768px) and (max-width: 1024px) {
+                                        .v2018 .share-icon{
+                                            width: auto;
+                                        }
+                                    }
+                                </style><div class="share-icon share"><i class="fas fa-share fa-lg color-primary"></i></div><div class="modal background-color-white" id="modal-share"><style type="text/css">
+	.modal-header h3 {
+		margin-bottom: 10px;
+	}
+	.modal-header p {
+		margin-top: 0;
+	}
+	.modal-header p a.linkafiliado {
+		color: var(--naranjo);
+		text-decoration: underline var(--naranjo);
+	}
+	#compartir a {
+		width: 62px;
+		cursor: pointer;
+	}
+	#compartir a.portapapeles > svg {
+		max-height: 24px;
+		padding: 11px;
+		margin-bottom: -4px;
+	}
+	a.copiarEnlace {
+		color: white;
+		background: #ff5a00;
+		padding: 7px 13px;
+		margin-top: 12px;
+		display: inline-block;
+		border: 1px solid #cb4a04;
+		line-height: 1.3em;
+		border-radius: 7px;
+		-webkit-transition: all 0.2s ease-out;
+		-moz-transition:    all 0.2s ease-out;
+		-o-transition:      all 0.2s ease-out;
+		transition:         all 0.2s ease-out;
+	}
+		a.copiarEnlace:hover {
+			background: #cb4a04;
+		}
+</style><div class="modal-header"><i class="cerrar v2 fas fa-times color-gray fa-lg" aria-hidden="true"></i><h3 class="font-weight-light"><strong id="modal-title"></strong></h3><p>( Si fueras Afiliado podrías ganar dinero solo compartiendo. <a class="linkafiliado" href="/afiliados/registro">Quiero ser Afiliado</a> )</p></div><div id="compartir" class="padding-top-10 text-align-center" style="border-top:1px solid #eee;"><a data-href="https://web.whatsapp.com/send?text=&lt;content&gt;" onclick="shareLink(this)" data-canal="whatsapp" class="margin-right-10 margin-right-xs-0 display-inline-block" rel="noopener noreferrer" target="_blank" href="javascript:;"><svg viewBox="0 0 488 512" width="34" height="34" xmlns="http://www.w3.org/2000/svg"><path fill="#25D366" d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.2-99.6 224.2-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54.5-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"></path></svg><span class="color-dark-gray font-size-smallest display-block">WhatsApp</span></a><a data-href="https://twitter.com/share?text=&lt;content&gt;" onclick="shareLink(this)" data-canal="twitter" class="margin-right-10 margin-right-xs-0 display-inline-block" rel="noopener noreferrer" target="_blank" href="javascript:;"><svg viewBox="0 0 512 512" width="34" height="34" xmlns="http://www.w3.org/2000/svg"><path fill="#000000" d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"></path></svg><span class="color-dark-gray font-size-smallest display-block">X</span></a><a data-href="https://www.facebook.com/sharer/sharer.php?u=&lt;content&gt;" onclick="shareLink(this)" data-canal="facebook" class="margin-right-10 margin-right-xs-0 display-inline-block" rel="noopener noreferrer" target="_blank" href="javascript:;"><svg viewBox="0 0 512 512" width="34" height="34" xmlns="http://www.w3.org/2000/svg"><path fill="#1877F2" d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z"></path></svg><span class="color-dark-gray font-size-smallest display-block">Facebook</span></a><a data-href="https://www.pinterest.com/pin/create/button?url=&lt;content&gt;" onclick="shareLink(this)" data-canal="pinterest" class="margin-right-10 margin-right-xs-0 display-inline-block" rel="noopener noreferrer" target="_blank" href="javascript:;"><svg viewBox="0 0 512 512" width="34" height="34" xmlns="http://www.w3.org/2000/svg"><path fill="#E60023" d="M204 6.5C101.4 6.5 0 74.9 0 185.6 0 256 39.6 296 63.6 296c9.9 0 15.6-27.6 15.6-35.4 0-9.3-23.7-29.1-23.7-67.8 0-80.4 61.2-137.4 140.4-137.4 68.1 0 118.5 38.7 118.5 109.8 0 53.1-21.3 152.7-90.3 152.7-24.9 0-46.2-18-46.2-43.8 0-37.8 26.4-74.4 26.4-113.4 0-66.2-93.9-54.2-93.9 25.8 0 16.8 2.1 35.4 9.6 50.7-13.8 59.4-42 147.9-42 209.1 0 18.9 2.7 37.5 4.5 56.4 3.4 3.8 1.7 3.4 6.9 1.5 50.4-69 48.6-82.5 71.4-172.8 12.3 23.4 44.1 36 69.3 36 106.2 0 153.9-103.5 153.9-196.8C384 71.3 298.2 6.5 204 6.5z"></path></svg><span class="color-dark-gray font-size-smallest display-block">Pinterest</span></a><a data-href="https://www.linkedin.com/sharing/share-offsite?url=&lt;content&gt;" onclick="shareLink(this)" data-canal="linkedin" class="display-inline-block" rel="noopener noreferrer" target="_blank" href="javascript:;"><svg viewBox="0 0 512 512" width="34" height="34" xmlns="http://www.w3.org/2000/svg"><path fill="#0077b5" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg><span class="color-dark-gray font-size-smallest display-block">LinkedIn</span></a><a class="display-inline-block portapapeles" onclick="copyLink()"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="34" height="34"><path fill="currentColor" d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"></path></svg><span class="color-dark-gray font-size-smallest display-block">Copiar</span></a></div><div class="box-gray padding-10 margin-top-10 row margin-0"><div class="col-xs-12 padding-0 text-align-center" style="overflow:hidden;"><input type="hidden" id="shared-url" value="https://www.buscalibre.com.mx/libro-la-ciencia-del-caos/9789681668631/p/2510172"><a id="copy-link-a" href="https://www.buscalibre.com.mx/libro-la-ciencia-del-caos/9789681668631/p/2510172" target="_blank" class="color-text">https://www.buscalibre.com.mx/libro-la-ciencia-del-caos/9789681668631/p/2510172</a></div><div class="col-xs-12 padding-0 text-align-center"><a class="copiarEnlace" onclick="copyLink()" href="javascript:;">copiar link</a><span class="margin-left-10" id="msg-enlace-copiado" style="display:none;">¡Enlace copiado!</span></div><script type="text/javascript">
+		let parameters_afiliado = '';
+		
+					$("#copy-link-a").html( "https://www.buscalibre.com.mx/libro-la-ciencia-del-caos/9789681668631/p/2510172" );
+			$("#copy-link-a").attr( 'href', "https://www.buscalibre.com.mx/libro-la-ciencia-del-caos/9789681668631/p/2510172" );
+		
+		function copyLink() {
+			const link = document.getElementById("copy-link-a");
+			const range = document.createRange();
+			range.selectNode(link);
+			const selection = window.getSelection();
+			selection.removeAllRanges();
+			selection.addRange(range);
+			const successful = document.execCommand('copy');
+			$("#msg-enlace-copiado").fadeIn('1000');
+			setTimeout(function() {
+				$("#msg-enlace-copiado").fadeOut('1000');
+			}, 2000);
+		}
+	</script><script>
+					function shareLink(element) {
+				
+			}
+		
+		function shareLink(element) {
+
+			let url_share = $(element).attr('data-href');
+			let canal = $(element).attr('data-canal');
+			let url_location   = location.href;
+			
+							url_location = "https://www.buscalibre.com.mx/libro-la-ciencia-del-caos/9789681668631/p/2510172";
+			
+			if ( !location.href.includes("dashboard") ) {
+				if (canal == 'facebook' || canal == 'linkedin') {
+					content_replace = url_location;
+				} else {
+					content_replace = "Encontré este libro en Buscalibre: " + $(".tituloProducto").text() + " " + url_location;
+				}
+			} else {
+				if (canal == 'facebook' || canal == 'linkedin') {
+					content_replace = $("#shared-url").val();
+				} else {
+					content_replace = "Mira mi lista de deseos en Buscalibre " + $("#shared-url").val();
+				}
+			}
+
+			url_share = url_share.replace("<content>", content_replace);
+
+			
+			
+			window.open(
+				url_share,
+				'_blank'
+			);
+		}
+
+		function setShareUrl(url) {
+							$("#shared-url").val(url);
+			
+							$("#shared-url").val("https://www.buscalibre.com.mx/libro-la-ciencia-del-caos/9789681668631/p/2510172");
+					}
+	</script></div></div></div><!-- marcador END--></div></div></div></div></div><div class="col-xs-12 col-md-9 padding-sides-responsive" id="data-info-libro"><div class="info-libro"><div class="datos  position-relative"><div class="share share-icon color-dark-gray font-weight-light">Compartir<i class="fas fa-share fa-lg color-primary margin-left-10"></i></div><style type="text/css">
+    section#producto.v2018 .datos p.tituloProducto {
+        font-size: 2.2em;
+        cursor: pointer;
+    }
+    section#producto.v2018 .datos p.tituloProducto.todovisible {
+        -webkit-line-clamp: inherit;
+    }
+</style><p class="tituloProducto" title="La Ciencia del Caos">La Ciencia del Caos
+    </p><script type="text/javascript">
+    $("p.tituloProducto").on( "click", function(){
+        $("p.tituloProducto.todovisible").length >= 1 ? $("p.tituloProducto.todovisible").removeClass("todovisible") : $("p.tituloProducto").addClass("todovisible");
+    });
+</script><p class="font-weight-light margin-0 font-size-h1"><a class="font-color-bl link-underline" href="/libros/autor/isaac-schifter">Isaac Schifter</a> (Autor)
+            ·
+                                    <a class="font-color-text link-underline" href="/libros/editorial/fondo-de-cultura-economica">Fondo De Cultura Economica</a>
+                            · Tapa Blanda
+            </p><div style="display:none;"><h1>La Ciencia del Caos - Isaac Schifter</h1><h2>Física</h2></div><a class="valoracion font-size-normal display-block margin-bottom-xs-10" id="valoracion"><span class="stars stars-5"><span style="display:none;"><span>5</span> estrellas - de un total de <span>5</span> estrellas</span></span>
+    
+        2 opiniones
+    
+    
+                            <script>
+    $(document).ready(
+        function(){
+            location.hash = location.hash;
+        }
+    );
+    </script><span class="trianguloBajo"></span></a><script type="text/javascript">
+    // Al hacer click en .valoracion se genera un scroll hasta el #reviews-header
+    $( ".valoracion" ).click(function(){
+        $('html, body').animate({
+            scrollTop: $( '#reviews-header' ).offset().top
+        }, 1000);
+    });
+</script><style>
+                .tabs div {
+                    border-top: solid 1px #ecebeb;
+                    border-left: solid 1px #ecebeb;
+                    border-right: solid 1px #ecebeb;
+                    border-bottom: solid 1px white;
+                    border-radius: 5px;
+                    padding: 5px 25px;
+                    position: relative;
+                    top: 1px;
+                    left: 3px;
+                    background: white;
+                    z-index: 1;
+                    margin-right: 0px;
+                    color: #333;
+                    border-bottom: solid 1px #ecebeb;
+                    border-bottom-right-radius: 0;
+                    border-bottom-left-radius: 0;
+                    cursor: pointer;
+                    text-transform: capitalize;
+                }
+
+                .tabs div.active {
+                    color: #ff5a00;
+                    font-weight: bold;
+                    border-bottom: solid 1px white;
+                }
+
+                .box-diff:first-of-type{
+                    display: flex;
+                }
+                .font-size-pxsmall{
+                    font-size: 14.5px!important;
+                }
+                .half::before{
+                    background-size: 310px 300px !important;
+                    height: 18px !important;
+                    width: 28px !important;
+                    background-position: -20px 0px !important;
+                }
+                .margin-right-20{
+                    margin-right: 20px;
+                }
+                .top-5{
+                    top:5px;
+                }
+            </style><style>
+    #detallePrecio {
+        display: flex;
+        gap: 33px;
+    }
+
+    #detallePrecio #opciones .opcionPrecio {
+        display: flex;
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 10px 5px;
+        border-radius: 5px;
+        border: 1px #FF4808 solid;
+        align-items: center;
+        gap: 27px;
+        cursor: pointer;
+        gap: 24px;
+    }
+
+    #detallePrecio #opciones .opcionPrecio.selected {
+        background: #FDF5E4;
+    }
+
+    section#producto.v2018 .datos p.tituloProducto{
+        font-size: 1.5em;
+        font-weight: 500 !important;
+        line-height: normal;
+        margin-top: 0px;
+    }
+
+    section#producto.v2018 .datos .font-weight-light.margin-0.font-size-h1{
+        font-size: 1.1em;
+        font-weight: 400 !important;
+    }
+
+    .v2018 #data-info-libro .share-icon{
+        display: none;
+    }
+
+    section#producto.v2018 .datos .valoracion{
+        margin: 0px 0 20px 0px;
+    }
+
+    section#producto.v2018 .datos .descripcionBreve > h2.titulo.title {
+        color: #FF5A00;
+        font-size: 1.2em;
+        font-weight: 500 !important;
+    }
+
+    #texto-descripcion{
+        font-size: 0.95em !important;
+    }
+
+    .opcionPrecio div {
+        flex-direction: column;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .opcionPrecio .usadoBuenEstado {
+        display: none;
+    }
+
+    .opcionPrecio .colRadio{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 10px;
+        display: inline-flex;
+    }
+
+    .opcionPrecio .colOrigen{
+        width: 195px;
+        width: 211px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        display: inline-flex;
+    }
+
+    .opcionPrecio .colOrigen .diferenciador span::before {
+        content: "(";
+    }
+
+    .opcionPrecio .colOrigen .diferenciador span::after {
+        content: ")";
+    }
+
+    .opcionPrecio .colOrigen .paisOrigen{
+        font-weight: 500;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        flex-direction: row;
+        gap: 4px;
+    }
+
+    .tooltip .tooltipText {
+        visibility: hidden;
+        width: 380px;
+        background-color: white;
+        border-radius: 6px;
+        padding: 13px 5px 13px 6px;
+        position: absolute;
+        z-index: 1;
+        border: solid 1px #ccc;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    .tooltip:hover .tooltipText {
+        visibility: visible;
+    }
+
+    .opcionPrecio .colOrigen strong {
+        font-weight: 700;
+    }
+
+    .opcionPrecio .colOrigen .envioExpress{
+        color: #E14942;
+        font-weight: 700;
+        /*font-size: 1.1em;*/
+    }
+
+    .opcionPrecio .colPrecio{
+        width: 112px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 0;
+        display: inline-flex;
+        align-items: center;
+    }
+
+    .opcionPrecio .colDescuento{
+        width: 48px;
+        height: 31px;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        display: flex;
+        font-size: 1.1em;
+    }
+
+    .opcionPrecio .colDescuento > div {
+        width: 70px;
+        height: 31px;
+        padding: 5px 0px;
+        background: #FF4808;
+        border-radius: 5px;
+        text-align: center;
+        font-size: 18px;
+    }
+
+
+    .opcionPrecio .colPrecio > span {
+        font-weight: 500;
+        word-wrap: break-word;
+    }
+
+    .opcionPrecio .colPrecio > span.pvp {
+        color: #BBBBBB;
+        text-decoration: line-through;
+    }
+
+    .opcionPrecio .colPrecio span.ped {
+        font-size: 1.25em;
+        font-weight: 600;
+    }
+
+    .opcionPrecio .detalle strong {
+        font-weight: 700;
+    }
+
+    .opcionPrecio .detalle span {
+        font-weight: 700;
+    }
+
+    .opcionPrecio .radioButton {
+        width: 20px;
+        height: 20px;
+        position: relative;
+        left: 5px;
+    }
+
+    .opcionPrecio .radioButton .radioBorder{
+        width: 20px;
+        height: 20px;
+        background: white;
+        border-radius: 9999px;
+        border: 1px #FF4808 solid;
+    }
+
+    .opcionPrecio.selected .radioButton  .radioContent{
+        width: 12px;
+        height: 12px;
+        border-radius: 4px;
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        background: #FF4808;
+        border-radius: 10px;
+    }
+
+    .opcionForm {
+        border-radius: 5px;
+        border: 1px solid #BBB;
+        display: flex;
+        width: 340px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        flex-direction: column;
+        align-items: center;
+        gap: 2px;
+        margin-left: auto;
+        margin-right: 1rem;
+        max-height: 275px;
+        /* Evita que el padre flex #detallePrecio estire la tarjeta a la altura de #opciones. */
+        align-self: flex-start;
+    }
+
+    .opcionForm .tituloProducto{
+        font-size: 1.2em;
+    }
+
+    .opcionForm strong {
+        font-weight: 700;
+    }
+
+    .opcionForm .precio {
+        font-size: 1.5em;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    .opcionForm .stock {
+        color: #188D39;
+        font-weight: 500;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .opcionForm form{
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .opcionForm form button{
+        width: calc(100% - 20px );
+        margin: 0 auto;
+        font-size: 1em;
+    }
+
+    .opcionForm .tiempoEnvio {
+        padding: 15px 8px;
+        display: flex;
+        justify-content: space-between;
+        gap: 5px;
+    }
+    .opcionForm .tiempoEnvio .diaEnvio {
+        font-size: 0.90em;
+    }
+
+    .opcionForm .tiempoEnvio .tiempoSameDay strong {
+        font-size: 1em;
+    }
+
+    .opcionForm .tiempoEnvio .masInfo{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        cursor: pointer;
+    }
+
+    .opcionForm .tiempoEnvio .masInfo .icono-mas-info{
+        width: 20px;
+        padding: 1px;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        display: flex;
+    }
+
+    .opcionForm .tiempoEnvio .masInfo .texto-mas-info{
+        color: black;
+        font-size: 11px;
+        font-weight: 500;
+        word-wrap: break-word;
+        width: 55px;
+    }
+
+    .book-tools {
+        display: flex;
+        justify-content: space-between;
+        margin: 30px 0px;
+        margin-right: 1rem;
+        font-size: 14px;
+    }
+
+    .book-tools > div {
+        min-width: 200px;
+    }
+
+    .book-tools > div::last-of-type label{
+        text-align: right;
+    }
+
+    .book-tools div label {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .book-tools div:first-child label {
+        justify-content: flex-start;
+    }
+
+    .book-tools div i {
+        color: #ff5a00;
+        font-size: 25px;
+    }
+
+    .calcula-envio{
+        display: none;
+    }
+
+    section#producto.v2018 .label-envio-gratis{
+        margin-left: 0;
+        cursor: pointer;
+        text-align: left;
+        justify-content: flex-start;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .modalMasInfo .cerrar{
+        position: absolute;
+        padding: 12px;
+        top: 0;
+        right: 0;
+        cursor: pointer;
+    }
+
+    #modalEnvioGratis {
+        border-radius: 5px;
+        border: 2px solid #BBB;
+        background: #FFF;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        text-align: center;
+    }
+
+    #modalEnvioGratis .cerrar {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        display: block;
+        padding: 15px;
+        cursor: pointer;
+    }
+
+    #modalEnvioGratis .cerrar i {
+        color: #444;
+    }
+
+    .div-detalle-libro-colaborador .div-colaborador-detail{
+        background-color: #f5f5f5;
+    }
+
+    .envio-gratis{
+        display: none;
+    }
+
+    /*
+    .book-tools div div {
+        width: 100%;
+        border-top: 1px solid #ccc;
+    }*/
+
+    #detallePrecio .opcionPrecio .tiempoEnvio .envioExpress{
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        flex-direction: row;
+        gap: 4px;
+    }
+
+    @media ( max-width: 991px ) {
+        #detallePrecio {
+            display: block;
+        }
+
+        #detallePrecio #opciones{
+            width: 97%;
+            display: block;
+        }
+
+        #detallePrecio #opciones .opcionPrecio {
+            gap: 10px;
+            font-size: 0.9em;
+        }
+
+        #detallePrecio .opcionForm{
+            display: flex;
+            border: none;
+            width: 100%;
+            padding: 0px;
+            margin: 15px 0px 20px 0px;
+        }
+
+        .opcionPrecio .usadoBuenEstado {
+            display: block;
+        }
+
+        #detallePrecio .opcionForm strong,
+        #detallePrecio .opcionForm p,
+        #detallePrecio .opcionForm .tiempoEnvio,
+        #detallePrecio .opcionForm .usadoBuenEstado{
+            display: none;
+        }
+
+        #detallePrecio .opcionForm form {
+            order: 1;
+        }
+
+        
+        #detallePrecio .opcionForm .tiempoEnvio{
+            order: 3;
+            padding-left: 0px;
+            width: 99%;
+            justify-content: flex-start;
+            gap: 10px;
+            display: flex;
+            margin-top: 5px;
+        }
+
+        #detallePrecio .opcionForm .tiempoEnvio strong {
+            display: inline;
+        }
+
+        .opcionForm .tiempoEnvio .diaEnvio {
+            /*width: 270px;*/
+            height: 40px;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 8px;
+            display: flex;
+            order: 2;
+        }
+
+        .opcionForm .tiempoEnvio .masInfo{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            display: inline-flex;
+            cursor: pointer;
+            width: 102px;
+            order: 1;
+            margin-right: 0px;
+        }
+
+        #detallePrecio .opcionForm form button {
+            background: #FF4808 !important;
+            width: 100%;
+            font-size: 1.2em;
+            font-family: Montserrat;
+        }
+
+        #detallePrecio #opciones .opcionPrecio .paisOrigen{
+            font-weight: 500;
+        }
+
+        .opcionPrecio .colOrigen .diferenciador span{
+            display: block;
+        }
+
+        .opcionPrecio .colOrigen .diferenciador span::before {
+            content: "( ";
+        }
+
+        .opcionPrecio .colOrigen .diferenciador span::after {
+            content: " )";
+        }
+
+
+        #detallePrecio #opciones .opcionPrecio .tiempoEnvio{
+            font-size: 0.9em;
+        }
+
+        #detallePrecio #opciones .opcionPrecio .paisOrigen .tooltip{
+            display: none;
+        }
+
+        .tituloRelacionados{
+            font-size: 1.2em;
+        }
+
+        .book-tools{
+            --gap_book-tools: 10px;
+            gap: var(--gap_book-tools);
+            width: 100%;
+            margin-top: 0px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .book-tools > div {
+            min-width: auto;
+            padding: 8px 4px;
+            border-radius: 5px;
+            display: flex;
+            width: calc(100% / 2 - 20px);
+        }
+
+        .book-tools div label {
+            text-align: center;
+        }
+
+        .opcionPrecio .colOrigen {
+            width: 190px;
+        }
+        .opcionPrecio .colPrecio {
+            gap: 0;
+        }
+        .opcionPrecio .colRadio {
+            width: 30px;
+        }
+
+        .opcionPrecio .colDescuento {
+            width: 44px;
+            margin-right: 5px;
+        }
+
+        .opcionPrecio .colDescuento > div {
+            width: 52px;
+            font-size: 16px;
+        }
+
+        section#producto.v2018 .datos p.tituloProducto{
+            padding-right: 0px;
+        }
+
+        section#producto p.tituloProducto{
+            -webkit-line-clamp: 3;
+        }
+
+        .dialog-box{
+            max-height: 400px;
+            overflow: auto;
+        }
+
+        .opcionPrecio .colDescuento > div {
+            width: 52px;
+            font-size: 16px;
+        }
+
+        .costosImportacionIncluidos{
+            font-size: 0.9em;
+        }
+    }
+
+</style><div id="detallePrecio"><div id="opciones"><div class="opcionPrecio selected" data-form="1"><div class="colRadio"><div class="radioButton"><div class="radioBorder"></div><div class="radioContent"></div></div></div><div class="colOrigen"><strong class="diferenciador">Libro Nuevo</strong><span class="paisOrigen">
+                            Origen: México
+                                    </span><div class="tiempoEnvio">
+            
+                                                            Envío: 4 a 5 días háb.
+                                    
+                    </div></div><div class="colPrecio"><span class="pvp">$ 90.00</span><span class="ped">$ 63.00</span></div><div class="colDescuento" style="margin-right: 10px; flex-direction: column; gap: 4px;"><div><span style="color: white; font-weight: 600; word-wrap: break-word;">-30%</span></div></div></div></div><script>
+                $('.opcionPrecio').click(function(){
+                    $('.opcionPrecio').removeClass('selected');
+                    $(this).addClass('selected');
+
+                    $('.opcionForm').hide();
+                    $('.opcionForm.idx' + $(this).attr('data-form') ).show();
+                });
+            </script><div class="opcionForm idx1" style=""><strong class="tituloProducto">Libro Nuevo</strong><p class="stock">
+                                    Quedan 15 unidades
+                            </p><strong class="precio">$ 63.00</strong><form action="/carro/agregar"><input type="hidden" name="c_producto" value="2562376"><input type="hidden" name="c_proveedor" value="3862"><button id="addToCart" class="button button-secondary">Comprar</button></form><div class="tiempoEnvio"><div class="diaEnvio"><div><span data-solo="0">
+                    Llega entre <strong style="color: green">el 29 May</strong> y <strong style="color: green">el 03 Jun</strong><span class="detalle-direccion-envio"> a <strong>CUAUHTÉMOC, Ciudad de México</strong>. <a href="javascript:void(0)" onclick="selectDireccion()" class="link-seleccionar-ubicacion">Seleccionar ubicación</a></span></span></div></div></div></div></div><div class="book-tools"><div><label onclick="javascript:$('#agregar-deseo button').click()"><i class="far fa-heart margin-right-10"></i>Agregar a lista de deseos</label><div style="display:none"><form id="agregar-deseo" class="agregar-deseo" action="/v2/u"><input type="hidden" name="rto" value="/pb/2510172"><button class="padding-left-xs-10 float-right no-button" type="submit"><div class="menu-icon-wrapper"><div class="margin-top-xs-10 font-color-bl overflow-visible"><i class="far fa-heart fa-lg margin-right-10"></i>Agregar a lista de deseos</div></div></button></form><!-- MODAL lista de deseos --><div class="modal modal-deseo-contenido dialog-box"><i class="cerrar fas fa-times color-gray fa-lg"></i><p class="font-size-medium margin-top-xs-10 text-align-center">Elige la lista en la que quieres agregar tu producto o crea una <span class="nuevaLista color-primary cursor-pointer">nueva lista</span></p><form class="agregandoaLista margin-top-20 margin-bottom-20 display-inline-block width-100" action="/v2/lista-deseos"><input type="hidden" name="action" value="add_product"><input type="hidden" name="id_producto" value="2510172"><input type="hidden" name="precio" value=""><!-- <div class="row"><div class="col-xs-12 col-md-6"> --><select class="margin-left-0 cursor-pointer width-100" name="id_lista"><option value="-1">Cargando, espera por favor...</option></select><!-- </div><div class="col-xs-12 col-md-6"> --><button class="agregarEnLista button button-secondary margin-right-0 margin-top-10 font-size-small width-100" type="button">Agregar</button><!-- </div></div> --></form><form class="creandounaLista display-none margin-top-20" action="/v2/lista-deseos"><input type="hidden" name="action" value="create_add_product"><input type="hidden" name="id_producto" value="2510172"><input type="hidden" name="precio" value=""><!-- <div class="row"><div class="col-xs-12 col-md-6"> --><input class="margin-left-0" type="text" name="nombre" placeholder="Nombre nueva lista"><!-- </div><div class="col-xs-12 col-md-6"> --><button class="agregarEnLista button button-secondary margin-right-0 margin-top-10 font-size-small width-100" type="button">Crear y Agregar</button><!-- </div></div> --></form><p class="agregadoAlCarro font-size-normal text-align-center" style="display:none;"><span>✓</span> Producto agregado <strong>correctamente</strong> a la lista de deseos.</p><a class="margin-top-20" href="/u" title="Ir a Mis Listas">Ir a Mis Listas</a></div><!-- /MODAL lista de deseos --><script type="text/javascript">
+    var data_listas;
+    $('#agregar-deseo button').click( function() {
+        $.getJSON("/v2/lista-deseos",{ 'action': 'get_all' }, function( data ){
+            $('.agregandoaLista select').html('');
+            data_listas = data.listas;
+            if ( Object.keys(data_listas).length > 0 ){
+                $.each(data.listas, function( idx, itm  ){
+                    $('.agregandoaLista select').append('<option value="'+ itm.id +'">'+ itm.nombre +'('+ itm.cantidad_productos +')</option>');
+                });
+            } else {
+                $(".modal-deseo-contenido form.agregandoaLista").attr("style","display:none !important;");
+                $(".modal-deseo-contenido form.creandounaLista").fadeIn();
+            }
+
+            $(".modal-deseo-contenido").lightbox_me({
+                closeClick: false,
+                closeEsc: true,
+                appearEffect:'fadeIn',
+                closeSelector: '.cerrar'
+            });
+        });
+    });
+
+    $(".modal-deseo-contenido p span").click(function(){
+        $(".modal-deseo-contenido form.creandounaLista").fadeIn();
+    });
+
+
+</script><style>
+.agregarEnLista{
+    padding: 9px 30px !important;
+}
+.modal-deseo-contenido span.cerrar{
+    position: absolute !important;
+   right: 10px !important;
+   top: 10px !important;
+   cursor: pointer !important;
+   background-image: url(https://statics.cdn1.buscalibre.com/images/20190321-1818sprite.png) !important;
+   background-position: -151px -0px !important;
+   height: 12px !important;
+   width: 13px !important;
+   background-size: 180px !important;
+}
+.modal-deseo-contenido form.creandounaLista input[type=text]{
+    width: 94% !important;
+}
+.modal-deseo-contenido p{
+    line-height: 22px;
+    width: 85%;
+    margin: 10px auto 0px auto !important;
+}
+.mobile .modal-deseo-contenido.dialog-box{
+    width: 90% !important;
+    padding: 10px;
+}
+</style></div></div><div><label class="share"><i class="fas fa-share-alt margin-right-10"></i>Comparte y gana dinero</label><div style="display:none"></div></div></div><script>
+            $('.masInfo').click(function(){
+                var idx = $(this).attr('data-idx');
+                $("#modalMasInfo" + idx ).lightbox_me({
+                    closeClick: true,
+                    closeEsc: true,
+                    appearEffect:'fadeIn',
+                    closeSelector: '.cerrar',
+                });
+            });
+        </script><div class="row calcula-envio font-color-bl padding-left-xs-10"><div class="menu-icon-wrapper"><div class=""><i class="fas fa-calculator fa-lg margin-right-10"></i>Calcula el costo de envío</div></div></div><div id="div-costo" class="margin-top-10" style="display: none"><div class="row margin-left-0 margin-bottom-10 margin-top-10"><div class="menu-icon-wrapper"><div class=""><strong style="color: green">Envío gratis</strong> a todo México por compras superiores a $ 500.00 </div></div></div><div class="row font-weight-light font-size-normal"><div class="col-xs-12 col-md-5"><form><input type="hidden" name="c_producto" value="2562376"><input type="hidden" name="c_proveedor" value="3862"><input type="hidden" name="precio_producto" value="63.00"><div><label for="regiones">Provincia o Región *</label><select id="regiones" name="c_region"><option>Seleccione</option></select></div><!--
+              <div><label for="comunas">Comuna *</label><select id="comunas"><option>Selecciona la comuna</option></select></div>
+               --></form></div><div class="col-xs-12 col-md-7"><p class="costo_total margin-top-xs-0"></p></div></div></div><script>
+    $('.calcula-envio').click(
+      function() {
+        $.getJSON('/v2/info/direccion',{ 'get' : 'regiones', 'c_pais' : 131 }, function( data ) {
+                $('#regiones').html('<option value="0" disabled>Seleccione</option>');
+                $('#regiones').val(0);
+                $.each( data, function(idx,value) {
+                    $('#regiones')
+                    $('#regiones').append('<option value="'+ value.c_region +'">' + value.region + '</option>' );
+                });
+        });
+
+                  $("#div-costo").insertAfter($("#box-precio-compra"));
+        
+        $('#div-costo').show();
+      }
+    );
+
+
+    $("#regiones").change(
+      function() {
+        const c_region = +$(this).closest('#div-costo form').find("#regiones").val();
+
+        if (c_region > 0) {
+
+          $.getJSON( '/v2/calcular-envio', $(this).closest('#div-costo form').serialize(), function(data) {
+            $('#div-costo .costo_total').html('Costos de envío hasta la puerta de tu casa.');
+
+            $('#div-costo .costo_total').append('<br>Envío normal: ' + data.precio_transporte_normal + '.');
+
+              if (typeof data.precio_transporte_express !== 'undefined') {
+                $('#div-costo .costo_total').append('<br>Envío Express: ' + data.precio_transporte_express + '.');
+              }
+          });
+        }
+      }
+    );
+</script><style>
+  #div-costo{
+    background: #f0f0f0;
+    padding: 10px;
+  }
+    #div-costo select{
+        background: white;
+        padding: 0.5em 1em;
+        border-radius: 4px;
+        width: 100%;
+        font-weight: 300;
+        height: 40px;
+    }
+    #div-costo button{
+        margin-top: 10px;
+        width: 190px;
+        float: left;
+        padding: 0.6em;
+    }
+
+    #div-costo form > div label {
+        color: #444;
+    }
+
+    #div-costo form > div {
+        margin-bottom: 20px;
+    }
+
+    </style><div id="2562376_3862" data-producto="2510172" class="filas-precios"></div><div class="modal background-color-white width-xs-90 top-xs-0" id="modal-mas-imagenes"><div class="modal-content"><div class="modal-header row padding-10"><i class="cerrar fas fa-times fa-lg color-gray"></i><div class="col-xs-2 col-md-1 padding-left-0 padding-right-0 margin-right-10"><img src="https://images.cdn3.buscalibre.com/fit-in/360x360/ae/58/ae583931b7df64bb4eda7c97a26649e4.jpg" alt="portada La Ciencia del Caos" title="La Ciencia del Caos"></div><div class="col-xs-9 col-md-10 padding-left-0"><p class="font-weight-light margin-top-0 margin-bottom-0 font-size-xs-medium">La Ciencia del Caos</p><p class="font-weight-light color-primary margin-top-0 font-size-xs-small">Isaac Schifter</p></div></div><div class="modal-body"><div class="row margin-top-10"><div class="col-xs-12 col-md-2 thumbs-mas-imagenes"></div><div class="col-xs-12 col-md-10"><img id="mas-imagenes-selected" src=""></div></div></div></div></div><style>
+.thumbs-mas-imagenes img{
+    height: 60px;
+    width: 60px!important;
+    border:2px solid #ccc;
+}
+.thumbs-mas-imagenes img:hover, .thumbs-mas-imagenes img.selected{
+    border:2px solid #eb6a40;
+}
+#modal-mas-imagenes img{
+    max-width: 100%;
+}
+#modal-mas-imagenes .modal-header{
+    background: #f5f5f5;
+}
+#modal-mas-imagenes{
+    height: 70%;
+    width: 680px;
+    padding-top: 0;
+    overflow: hidden;
+}
+.mobile #modal-mas-imagenes{
+    top:2%!important;
+    margin: 0!important;
+    left:2%!important;
+    width: 87%!important;
+    height: 90%!important;
+}
+#mas-imagenes-selected{
+    max-height: 400px;
+}
+</style><script>
+$(".mas-imagenes .thumbs-mas-imagenes img").click(
+    function(){
+        $("#mas-imagenes-selected").attr("src", $(this).attr("data-imagen"));
+        $(".modal .thumbs-mas-imagenes img").removeClass("selected");
+        $(".modal .thumbs-mas-imagenes img[data-imagen='"+ $(this).attr("src") +"']").addClass("selected");
+
+        $('#modal-mas-imagenes').lightbox_me({
+            centered: true,
+            closeSelector: '.cerrar'
+        });
+    }
+);
+
+$(".modal .thumbs-mas-imagenes img").click(
+    function(){
+        $("#mas-imagenes-selected").attr("src", $(this).attr("src"));
+        $(".modal .thumbs-mas-imagenes img").removeClass("selected");
+        $(this).addClass("selected");
+    }
+);
+</script><div class="descripcionBreve margin-top-20"><style type="text/css">
+                section#producto.v2018 .datos .descripcionBreve > h2.titulo {
+                    color: #FF5A00;
+                    font-size: 1.5em;
+                }
+                .div-detalle-libro-colaborador{
+                    margin: 25px 0px 0px 0px;
+                }
+                .div-detalle-libro-colaborador .div-colaborador-detail{
+                    margin: 0px;
+                }
+            </style><h2 class="titulo title font-weight-medium">Reseña del libro "La Ciencia del Caos"</h2><div style="font-size: 1em !important; font-weight: 400 !important; width: 98%;" class="font-weight-light font-size-small color-text"><span id="texto-descripcion">En años recientes, parte de la comunidad científica en todo el mundo ha comenzado a hablar incesantemente de caos, desorden, para explicar muchos fenómenos que suceden en la naturaleza y en experimentos caracterizados por tener un comportamiento que no puede ser descrito por leyes matemáticas sencillas. ¿Por qué existe este caos?, ¿cómo interviene en nuestra vida cotidiana y cuáles son sus consecuencias?En 1776 Laplace afirmaba que si se conociera la velocidad y posición de todas las partículas del Universo en un momento determinado, se podría conocer su pasado y predecir su futuro con certeza. Durante más de cien años, nos dice el doctor Schifter, esta suposición pareció correcta, hasta el punto de que la aplicación de tal principio al comportamiento humano llegó a poner en duda la existencia del libre albedrío. La experiencia nos ha enseñado, sin embargo, que existen fenómenos impredecibles, y los cambios climáticos son un ejemplo. El desorden- nos dice el autor - es precisamente el personaje principal de este relato, el cual intenta dar a conocer el estudio del comportamiento caótico en diversos campos de la ciencia y hacer que el lector se interese en indagar más sobre el tema.</span><span id="texto-descripcion-translated"></span></div><!--<a href="#descripcion">Continuar Leyendo</a>--></div></div></div><!-- fin box datos --></div></div><style type="text/css">
+        @media (max-width: 768px) {
+            .v2018 .reviews-header .tab-tab.active {
+                border: none;
+            }
+            .v2018 .reviews-body {
+                border-top: transparent !important;
+            }
+            .v2018 .reviews-body-resume {
+                border-left: 0;
+            }
+            .v2018 .reviews-body {
+                border-bottom: 0;
+            }
+            .v2018 h3.title {
+                background: none;
+                color: #ff5a00;
+                border-top: 1px dashed #ccc;
+                font-size: 1.5em;
+                padding-top: 30px;
+            }
+        }
+    </style><div class="row grilla-productos"><div class="col-xs-12 relacionados-agotado"></div></div><script>
+$(document).ready(
+    function(){
+                                    $.getJSON("/libro/similars.json?id_producto=2510172&field=similars-agotado&max-price=3267.7281&q=isaac-schifter+la-ciencia-del-caos", function(data) {
+            if( data.count ){
+                $(".relacionados-agotado").prepend("<div class='carruselRelacionados'><div class='arrowDespla arrowIzq'><span class='gris'></span></div><p class='tituloRelacionados'>Otras ediciones del libro 'La Ciencia del Caos' por Isaac Schifter </p>" + data.html + "<div class='arrowDespla arrowDer'><span></span></div></div>");
+                $("#ver-otras-ediciones").show();
+            }
+        });
+    }
+
+);
+</script><style>
+.relacionados-agotado h3{
+    margin: 0;
+}
+
+.relacionados-agotado .carruselRelacionados .arrowDer{
+    width: 51px;
+}
+.
+</style><style>
+        .datos .carruselRelacionados{
+            display: none;
+        }
+        </style><div class="row reviews-header" id="reviews-header"><div data-tab="contenido-opinionesLibro" class="tab-tab tab-opinionesLibro col col-xs-12 col-md-4 active"><div class=""><h2 style="margin-left: 30px;font-size: 1.2em;" class="font-weight-medium title">Opiniones del libro</h2></div></div></div><div class="row reviews-body"><div class="col-xs-12 col-md-8"><div class="tab-contenido contenido-opinionesLibro reviews-body-users font-size-small active"><div><em style="font-size: 1.1em;" data-id="346088" class="review-n-1"><strong class="sprite-detalle-before">
+                                Ramiro Sebastian Galeano Carrano
+                                </strong><span class="small stars stars-5"></span><span style="margin-left: 0;" class="font-weight-strong opiniones-fecha">Lunes 01 de Marzo, 2021</span><div style="display: flex; align-items: center; gap: 5px;" class="font-weight-strong color-primary"><i style="margin-top: 3px;" class="fas fa-check"></i>Compra Verificada</div><p style="margin-bottom: 5px; margin-top: 5px;" class="font-weight-normal color-text font-size-quote"><span id="texto-review-346088">Muy buen libro</span><span id="texto-review-346088-translated"></span></p><div class="opiniones-like reviews-vote margin-top-10"><span class="counter font-weight-strong">0</span><button class="button button-white button-small util sprite-base-before">Esta opinión es útil</button><span class="counter-negativos margin-left-10 font-weight-strong">0</span><button class="button button-white button-small sprite-base-before inutil">No es útil</button><div class="msg"></div></div></em><em style="font-size: 1.1em;" data-id="378794" class="review-n-2"><strong class="sprite-detalle-before">
+                                Giovanni Suarez
+                                </strong><span class="small stars stars-5"></span><span style="margin-left: 0;" class="font-weight-strong opiniones-fecha">Lunes 24 de Mayo, 2021</span><div style="display: flex; align-items: center; gap: 5px;" class="font-weight-strong color-primary"><i style="margin-top: 3px;" class="fas fa-check"></i>Compra Verificada</div><p style="margin-bottom: 5px; margin-top: 5px;" class="font-weight-normal color-text font-size-quote"><span id="texto-review-378794">Excelente edición.</span><span id="texto-review-378794-translated"></span></p><div class="opiniones-like reviews-vote margin-top-10"><span class="counter font-weight-strong">0</span><button class="button button-white button-small util sprite-base-before">Esta opinión es útil</button><span class="counter-negativos margin-left-10 font-weight-strong">0</span><button class="button button-white button-small sprite-base-before inutil">No es útil</button><div class="msg"></div></div></em></div><div id="dejarValoracion"><p class="font-weight-normal font-size-medium"><a class="color-text" href="/v2/u?rto=/pb/2510172"><strong class="margin-right-5">¿Leíste este libro? </strong><span class="color-primary">Inicia sesión</span> para poder agregar tu propia evaluación</a>.
+                                    </p></div></div><div class="tab-contenido contenido-pizzaconbordes reviews-body-users font-size-small"><div class="opinion"><p class="direccion">Guillermo Chávez Terrez</p><p class="comentario">"Mi pedido de dos libros llegó en dos partes. El primero llegó pronto porque estaba en México y el segundo tardó un poco más porque era importado. Ambos llegaron en muy buen estado y sin problemas."</p></div><div class="opinion"><p class="direccion">Marcos Casillas Almazán</p><p class="comentario">"Desde hace un par de años utilizo Busca Libre y la verdad, no lo cambio por nada. los titulos que he buscaco los encuentro de manera fácil y práctica, las entregas siempre puntuales o hasta antes de la fecha, en poca palabras muchas gracias por su servicio.   "</p></div><div class="opinion"><p class="direccion">Adrian Leonardo Barrios Gómez</p><p class="comentario">"Muy buen servicio y entrega a tiempo"</p></div><div class="opinion"><p class="direccion">Isabel Rosel</p><p class="comentario">"Me encanta, tienen buenas ofertas, los envíos de de un día para otro me encantan."</p></div><div class="opinion"><p class="direccion">Fabii Antunez</p><p class="comentario">"Rápido, seguro y mejor precio en linea qué cualquier librería "</p></div><a class="verMasOpis" href="/opiniones-clientes_st.html">Ver más opiniones de clientes</a></div></div><div class="col-xs-12 col-md-4"><div class="reviews-body-resume"><ul class="evaluacion"><!--<li> 5 de 5 estrellas</li>--><li class="stars-5-li"><span class="small stars stars-5"></span><div class="percent-parent"><div class="percent" style="width:100%;"></div></div> 100% (2)</li><li class="stars-4-li"><span class="small stars stars-4"></span><div class="percent-parent"><div class="percent" style="width:0%;"></div></div> 0% (0)</li><li class="stars-3-li"><span class="small stars stars-3"></span><div class="percent-parent"><div class="percent" style="width:0%;"></div></div> 0% (0)</li><li class="stars-2-li"><span class="small stars stars-2"></span><div class="percent-parent"><div class="percent" style="width:0%;"></div></div> 0% (0)</li><li class="stars-1-li"><span class="small stars stars-1"></span><div class="percent-parent"><div class="percent" style="width:0%;"></div></div> 0% (0)</li></ul></div></div></div><style type="text/css">
+        .v2018 .reviews-header .tab-tab {
+            border: 1px solid #ddd;
+            margin-right: 10px;
+            margin-left: 16px;
+            background: #efefef;
+            cursor: pointer;
+        }
+        .v2018 .reviews-header .tab-tab.active {
+            border-bottom: 0;
+            background: white;
+            background: white;
+            cursor: initial;
+        }
+        .v2018 .reviews-body {
+            border-top: 1px solid #ddd;
+            margin-top: -1px;
+        }
+        .tab-contenido {
+            display: none;
+        }
+        .tab-contenido.active {
+            display: block;
+        }
+        .tab-contenido .opinion {}
+        .tab-contenido .opinion .direccion {
+            font-style: normal;
+            margin-right: 10px;
+            font-weight: 600;
+        }
+        .tab-contenido .opinion .direccion:before {
+            height: 26px;
+            width: 27px;
+            background-position: -200px 0px;
+            top: 5px;
+            position: relative;
+            margin-right: 10px;
+            background-image: url( "https://statics.cdn1.buscalibre.com/images/20181129-1150spritedetalle.png" );
+            content: "";
+            display: inline-block;
+        }
+        .tab-contenido .opinion .comentario {
+                font-weight: 300;
+        }
+        .tab-contenido .verMasOpis {
+            font-size: 1.2em;
+            font-weight: 600;
+        }
+        .tab-contenido .verMasOpis:after {
+            background-image: url( "https://statics.cdn1.buscalibre.com/images/20181129-1150spritedetalle.png" );
+            content: "";
+            display: inline-block;
+            height: 12px;
+            width: 6px;
+            background-position: -144px -36px;
+            margin-left: 7px;
+            vertical-align: middle;
+        }
+    </style><script type="text/javascript">
+
+        $( ".tab-tab" ).click(function(){
+
+            // CAMBIO DE TAB ACTIVE
+            $( ".tab-tab" ).removeClass( "active" );
+            $( this ).addClass( "active" );
+
+            // CAMBIO DE CONTENIDO
+            var tabContenido = $( this ).attr( "data-tab" );
+            $( ".tab-contenido" ).hide();
+            $( "." + tabContenido ).fadeIn();
+
+        });
+
+    </script><style type="text/css">
+        .margin-top-40 {
+            margin-top: 40px !important;
+        }
+        section#producto .opinionesSobreBuscalibre {
+            margin-top: 30px;
+            margin-bottom: 50px;
+        }
+        section#producto.v2018 .relacionados h3 ,
+        section#producto .opinionesSobreBuscalibre > .titulo {
+            background: #feedd3;
+            font-size: 1.5em;
+            padding: 10px;
+            width: -webkit-fill-available;
+            letter-spacing: .03em;
+        }
+        section#producto .opinionesSobreBuscalibre > div {
+            --color-bg-opinion: whitesmoke;
+            border-left: 4px solid var( --color-bg-opinion );
+            padding-left: 30px;
+            margin-left: 20px;
+        }
+        section#producto .opinionesSobreBuscalibre > div > .opinion {
+            position: relative;
+            background: var( --color-bg-opinion );
+            padding: 5px 10px 20px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+        }
+        section#producto .opinionesSobreBuscalibre > div > .opinion > .triangulo {
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            border-right: 14px solid var( --color-bg-opinion );
+            width: 0;
+            height: 0;
+            position: absolute;
+            left: -11px;
+            top: 10px;
+        }
+        section#producto .opinionesSobreBuscalibre > div > .opinion > img {
+            border-radius: 50%;
+            margin: 0 0 50px 0;
+            border: 1px solid #aaa;
+            padding: 2px;
+            background: white;
+            position: absolute;
+            left: -48px;
+            top: 0;
+            width: 22px;
+        }
+        section#producto .opinionesSobreBuscalibre > div > .opinion > .direccion ,
+        section#producto .opinionesSobreBuscalibre > div > .opinion > .fecha {
+            font-weight: bold;
+            color: #999;
+            margin: 0;
+        }
+        section#producto .opinionesSobreBuscalibre > div > .opinion > .fecha {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 15px;
+            margin-bottom: 10px;
+        }
+        section#producto .opinionesSobreBuscalibre > div > .opinion > .comentario {
+            color: black;
+            font-weight: normal;
+            margin: 0;
+            width: auto;
+        }
+        @media ( max-width: 500px ) {
+            section#producto .opinionesSobreBuscalibre > div > .opinion {
+                padding: 5px 10px;
+            }
+        }
+
+        @media( max-width: 1000px ) {
+            section#producto .opinionesSobreBuscalibre {
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+            section#producto.v2018 .relacionados h3 ,
+            section#producto.v2018 .datos .descripcionBreve h4 ,
+            section#producto.v2018 .datos h4 ,
+            section#producto .opinionesSobreBuscalibre > h2.titulo {
+                background: none;
+                color: #ff5a00;
+                border-top: 1px dashed #ccc;
+                font-size: 1.5em;
+                padding-top: 30px;
+            }
+            section#producto.v2018 .datos .descripcionBreve h4 {
+                color: #ff5a00;
+                font-size: 1.5em;
+            }
+            .v2018 .ficha .row {
+                font-weight: 400;
+                font-size: 1.2em;
+            }
+        }
+
+        .calcula-envio i, .agregar-deseo i, .share-icon i{
+        width: 25px;
+        }
+    </style><style type="text/css">
+    .allreviews {
+        font-size: 1.1em;
+    }
+    h4.bloquepregunta {
+        margin: 0 0 10px 0;
+    }
+    .col-respuestas div span {
+        font-weight: 600;
+        font-size: 1.1em;
+    }
+    @media ( max-width: 500px ) {
+        h4.bloquepregunta a span {
+            margin-top: 0 !important;
+        }
+        .col-respuestas div span {
+            margin-top: 0 !important;
+        }
+    }
+</style><div class="allreviews"><div class="row reviews-header margin-top-40" id="qa-header"><div data-tab="contenido-opinionesLibro" class="tab-tab tab-opinionesLibro col col-xs-12 col-md-5 active"><div class=""><h2 style="font-size: 1.2em;" class="font-weight-medium title">Preguntas frecuentes sobre el libro</h2></div></div></div><div class="row reviews-body"><div class="col-xs-12"><div class="tab-contenido contenido-opinionesLibro reviews-body-users font-size-small active"><div><div class="row qa"><div class="col-xs-9 col-md-10"><div class="row middle-xs font-size-quote"><h4 class="col-xs-12 col-md-10 bloquepregunta"><a class="pregunta"><span style="line-height:24px;" class="">¿El libro es original?</span></a></h4></div><div class="row"><div class="col-xs-12 col-md-10 col-respuestas"><div class="margin-bottom-10"><span class="">Todos los libros de nuestro catálogo son Originales.</span></div></div></div></div></div><div class="row qa"><div class="col-xs-9 col-md-10"><div class="row middle-xs font-size-quote"><h4 class="col-xs-12 col-md-10 bloquepregunta"><a class="pregunta"><span style="line-height:24px;" class="">¿En qué Idioma está escrito el libro?</span></a></h4></div><div class="row"><div class="col-xs-12 col-md-10 col-respuestas"><div class="margin-bottom-10"><span class="">El libro está escrito en Español.</span></div></div></div></div></div><div class="row qa"><div class="col-xs-12 col-md-10 padding-top-10"><div class="row middle-xs font-size-quote"><h4 class="col-xs-12 col-md-10 bloquepregunta"><a class="pregunta"><span style="line-height:24px;" class="">¿Cuál es la encuadernación de este libro?</span></a></h4></div><div class="row"><div class="col-xs-12 col-md-10 col-respuestas"><div class="margin-bottom-10"><span class="">La encuadernación de esta edición es Tapa Blanda.</span></div></div></div></div></div></div></div></div></div></div><style type="text/css">
+    .row.qa {
+        margin-top: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #eee;
+    }
+    .modal-detalle-mini {
+        width: 620px;
+        padding-top: 0;
+        overflow: hidden;
+    }
+    .modal-detalle-mini .modal-header {
+        background: #f5f5f5;
+        padding: 10px;
+    }
+    .modal-detalle-mini .modal-header img {
+        max-width: 100%;
+    }
+    .modal-detalle-mini .modal-body h1 {
+        line-height: 30px;
+    }
+    .mobile .modal-detalle-mini {
+        top: 2% !important;
+        margin:0 !important;
+        left: 2% !important;
+        width: 87% !important;
+        height: 94% !important;
+    }
+    
+    .modal-detalle-mini img {
+        max-width: 100%;
+    }
+    .box-respuesta {
+        border-bottom: 1px solid #eee;
+        padding-bottom: 10px;
+    }
+    .allqa .reviews-body .bloquepreguntas {
+        margin-top: -20px;
+    }
+    .allqa .reviews-body .preguntas-response {
+        font-size: 1.1em;
+    }
+    .allqa .reviews-body .preguntas-response .qa {}
+    .allqa .reviews-body .ingresar-reviews-qa textarea.escribeaquitupreguntasobreellibro {
+        height: 100px;
+        font-size: 1.2em;
+    }
+    @media ( max-width: 500px ) {
+        .allqa .reviews-header h2 {
+            margin-bottom: 0;
+        }
+        .allqa .reviews-body .preguntas-response {
+            font-size: 1em;
+        }
+        .reviews-body .ingresar-reviews-qa textarea.escribeaquitupreguntasobreellibro {
+            height: 100px;
+            font-size: 1em;
+        }
+    }
+</style><div class="allqa"><div class="row reviews-header margin-top-40" id="qa-header"><div data-tab="contenido-opinionesLibro" class="tab-tab tab-opinionesLibro col col-xs-12 col-md-5 active"><div class=""><h2 style="margin: 20px; font-size: 1.2em; padding: 10px;" class="font-weight-medium title">Preguntas y respuestas sobre el libro</h2></div></div></div><div class="row reviews-body"><div class="col-xs-12 bloquepreguntas"><div class="tab-contenido contenido-opinionesLibro reviews-body-users font-size-small active"><div id="preguntas-response"></div></div></div><div class="col-xs-12"><div id="dejarValoracion"><p class="font-weight-normal" style="font-size:1.1em;"><a href="/v2/u?rto=/pb/2510172"><strong style="color:black;">¿Tienes una pregunta sobre el libro?</strong> Inicia sesión  </a> para poder agregar tu propia pregunta.
+    			</p></div></div></div></div><script type="text/javascript">
+$(document).ready(
+	function(){
+		$.getJSON('/v2/qa/get-preguntas',{ id_producto: 2510172 },function(data) {
+			var html_preguntas = "";
+			data.forEach((item, i) => {
+
+				html_respuestas = ( !item.respuestas.length ? "<div style='padding-top:10px;'>Sin Respuestas</div>" : "" );
+				var count_respuestas = 0;
+
+				item.respuestas.forEach((itemr, ir) => {
+
+					template_respuestas = `
+					<div class="box-respuesta margin-bottom-10 ${count_respuestas > 1 ? 'display-none' : '' }" data-id-respuesta="${itemr.respuesta.id}"><strong class="sprite-detalle-before color-dark-gray margin-right-10">Respuesta de ${itemr.user.nombre} ${itemr.user.apellido}</strong><span class="">${itemr.respuesta.texto_respuesta ?? 'Sin Respuestas'}</span> 
+						${itemr.respuesta.texto_respuesta ? '<div class="margin-top-10"><button class="button button-white button-small util sprite-base-before">Buena Respuesta</button><button class="button button-white button-small sprite-base-before inutil margin-left-5" style="width:50px;"></button></div>' : ''}
+					<div>
+					`;
+
+					html_respuestas = html_respuestas + template_respuestas;
+
+					count_respuestas++;
+				});
+
+				if (item.respuestas.length > 2) {
+					html_respuestas = html_respuestas + '<div class="margin-top-10"><a class="mas-respuestas" href="javascript:;"><i class="fas fa-share margin-right-5"></i>Ver más respuestas</a></div>';
+				}
+
+				var html_pregunta = `
+				<span><div class="row qa margin-bottom-20 padding-top-10" data-id-pregunta="${item.preguntas.id}"><div class="col-xs-3 col-md-2 padding-right-0" style="max-width:12%;"><div class="opiniones-like" style="border-right:1px solid #ddd; padding:15px 0px;opacity:1;"><div class="margin-bottom-10"><span class="counter display-xs-none">${item.preguntas.cantidad_votos_positivos_pregunta ?? '0'}</span><button class="button button-white button-small util sprite-base-before"></button></div><div></div><span class="counter-negativos display-xs-none">${item.preguntas.cantidad_votos_negativos_pregunta ?? '0'}</span><button class="button button-white button-small sprite-base-before inutil"></button></div></div><div class="col-xs-9 col-md-10 padding-top-10"><div class="margin-bottom-20 row middle-xs"><!--
+								<div class="col-xs-12 col-md-1"><span class="display-inline-block" style="width:80px;padding-top:9px;">Pregunta: </span></div>
+                                --><div class="col-xs-12 col-md-10"><a class="pregunta" href="javascript:;" class="color-primary"><strong class="sprite-detalle-before color-dark-gray margin-right-10">Pregunta de ${item.preguntas.user.nombre} ${item.preguntas.user.apellido}</strong><span style="line-height:24px;" class="">${item.preguntas.texto_pregunta}</span></a></div></div><div class="row"><!--
+								<div class="col-xs-12 col-md-1" style="padding-top:10px;"><span class="display-inline-block">Respuesta: </span></div>
+                                --><div class="col-xs-12 col-md-10 col-respuestas"></div></div></div><div class="col-xs-12 margin-top-10"><div class="msg"></div></div></div></span>`;
+
+
+				var html_pregunta_j = $(html_pregunta);
+
+				html_pregunta_j.find('.col-respuestas').html(html_respuestas);
+
+				html_preguntas = html_preguntas + html_pregunta_j.html();
+
+			});
+
+			$("#preguntas-response").html(html_preguntas);
+
+		});
+	}
+);
+
+$("#enviar-pregunta").click(
+	function(){
+		var pregunta = $("#ingresar-pregunta textarea").val();
+		var autoriza_vista_publica = $("#checkbox_autorizo_vista_publica").is(":checked") ? 1 : 0;
+		if(pregunta){
+			$.getJSON('/v2/qa/add-pregunta',{ id_producto: 2510172, pregunta_text: pregunta, autoriza_vista_publica: autoriza_vista_publica },function(data){
+				if ( data.success == 1 ){
+					$("#ingresar-pregunta .hide-after-send").hide();
+					$("#ingresar-pregunta .box-success").show();
+				}
+			});
+		}else{
+			alert('Debes ingresar una pregunta');
+		}
+	}
+);
+
+$("#preguntas-response").on("click",".pregunta", function(){
+	var clicked_button = $(this);
+	$('#modal-form-respuesta .pregunta-text').text( clicked_button.find('span').text() );
+	$('#id-pregunta-modal').val( clicked_button.parents('.qa').data('id-pregunta') );
+
+	$('#modal-form-respuesta').lightbox_me({
+		centered: true,
+		closeSelector: '.cerrar'
+	});
+});
+
+$("#enviar-respuesta").click(
+	function(){
+		var respuesta = $("#modal-form-respuesta textarea").val();
+		if(respuesta){
+			$.post('/v2/qa/add-respuesta',{ id_pregunta: $("#id-pregunta-modal").val(), respuesta_text: respuesta },function(data){
+				if ( data.success == 1 ){
+					$("#modal-form-respuesta .modal-body").hide();
+					$("#modal-form-respuesta .box-success").show();
+				}
+			});
+		}
+	}
+);
+
+$("#preguntas-response").on("click",".mas-respuestas", function(){
+	clicked_button = $(this);
+	clicked_button.hide();
+	clicked_button.parents('.col-respuestas').find('.box-respuesta').removeClass('display-none');
+	// var pregunta_id     = clicked_button.parents('.qa').data('id-pregunta');
+	// $.getJSON('/v2/qa/get-respuestas',{ pregunta_id:pregunta_id }, function( data ){
+	// 	$.each( data, function( idx, respuesta ){
+	// 		//console.log(idx);
+	// 		if(idx){
+	// 			row_respuesta = "<div class='box-respuesta margin-bottom-10' data-id-respuesta='" + respuesta.id + "' ><span>" + respuesta.texto_respuesta + "</span><div class='margin-top-10'><button class='button button-white button-small util sprite-base-before'>Es útil</button><button class='button button-white button-small sprite-base-before inutil margin-left-5'>No es útil</button></div></div>";
+	// 			clicked_button.parents('.qa').find(".col-respuestas").append(row_respuesta);
+	// 		}
+	// 	});
+	// });
+});
+
+$("#preguntas-response").on("click",".box-respuesta button", function(){
+	var clicked_button = $(this);
+	var voto     =  clicked_button.hasClass("util") ? "1" : "0";
+	var respuesta_id     = clicked_button.parents('.box-respuesta').data('id-respuesta');
+
+			clicked_button.parents('.qa').find(".msg").addClass("box-success margin-top-20 font-style-normal").html("Para evaluar esta respuesta por favor <a href='/v2/u?rto=/pb/2510172'>Ingresa o Regístrate.</a>")
+	});
+
+$("#preguntas-response").on("click",".qa .opiniones-like button", function(){
+	var clicked_button = $(this);
+	var voto     =  clicked_button.hasClass("util") ? "1" : "0";
+	var pregunta_id     = clicked_button.parents('.qa').data('id-pregunta');
+
+			clicked_button.parents(".qa").find(".msg").addClass("box-success margin-top-20 font-style-normal").html("Para evaluar esta pregunta por favor <a href='/v2/u?rto=/pb/2510172'>Ingresa o Regístrate.</a>")
+	});
+
+</script><div class="opinionesSobreBuscalibre"><h2 class="titulo">Opiniones sobre Buscalibre</h2><div>
+                        <div class="opinion"><span class="triangulo"></span><img class="lazyload" data-src="https://statics.cdn1.buscalibre.com/images/clienteOpinaa.png" alt="Fabii Antunez"><p class="direccion">Fabii Antunez, NEZAHUALCÓYOTL, México</p><p class="fecha">Opinión recibida el viernes, 22 de mayo de 2026</p><p class="comentario" id="texto-opinion-0">Rápido, seguro y mejor precio en linea qué cualquier librería </p><p class="comentario" id="texto-opinion-0-translated"></p></div>
+                        <div class="opinion"><span class="triangulo"></span><img class="lazyload" data-src="https://statics.cdn1.buscalibre.com/images/clienteOpinaa.png" alt="Isabel Rosel"><p class="direccion">Isabel Rosel, IZTACALCO, México</p><p class="fecha">Opinión recibida el viernes, 22 de mayo de 2026</p><p class="comentario" id="texto-opinion-1">Me encanta, tienen buenas ofertas, los envíos de de un día para otro me encantan.</p><p class="comentario" id="texto-opinion-1-translated"></p></div>
+                        <div class="opinion"><span class="triangulo"></span><img class="lazyload" data-src="https://statics.cdn1.buscalibre.com/images/clienteOpinaa.png" alt="Adrian Leonardo Barrios Gómez"><p class="direccion">Adrian Leonardo Barrios Gómez, BENITO JUÁREZ, México</p><p class="fecha">Opinión recibida el viernes, 22 de mayo de 2026</p><p class="comentario" id="texto-opinion-2">Muy buen servicio y entrega a tiempo</p><p class="comentario" id="texto-opinion-2-translated"></p></div>
+                        <div class="opinion"><span class="triangulo"></span><img class="lazyload" data-src="https://statics.cdn1.buscalibre.com/images/clienteOpinaa.png" alt="Marcos Casillas Almazán"><p class="direccion">Marcos Casillas Almazán, IZTAPALAPA, México</p><p class="fecha">Opinión recibida el viernes, 22 de mayo de 2026</p><p class="comentario" id="texto-opinion-3">Desde hace un par de años utilizo Busca Libre y la verdad, no lo cambio por nada. los titulos que he buscaco los encuentro de manera fácil y práctica, las entregas siempre puntuales o hasta antes de la fecha, en poca palabras muchas gracias por su servicio.   </p><p class="comentario" id="texto-opinion-3-translated"></p></div>
+                        <div class="opinion"><span class="triangulo"></span><img class="lazyload" data-src="https://statics.cdn1.buscalibre.com/images/clienteOpinaa.png" alt="Guillermo Chávez Terrez"><p class="direccion">Guillermo Chávez Terrez, La Quebrada, México</p><p class="fecha">Opinión recibida el viernes, 22 de mayo de 2026</p><p class="comentario" id="texto-opinion-4">Mi pedido de dos libros llegó en dos partes. El primero llegó pronto porque estaba en México y el segundo tardó un poco más porque era importado. Ambos llegaron en muy buen estado y sin problemas.</p><p class="comentario" id="texto-opinion-4-translated"></p></div></div><script type="text/javascript">
+            $.getJSON( "/opiniones-ajax" , { 'c_pais': '131' }, function( opinines ){
+                var i=0;
+
+
+                $.each( opinines,function(idx,opinion){
+                    i++;
+                    var fecha_string = opinion.fecha + ' 00:00:00';
+                    var fecha = new Date(fecha_string.replace(' ', 'T'));
+
+                    var opciones = {
+                        weekday: 'long', // Día de la semana (nombre completo)
+                        year: 'numeric', // Año (numérico)
+                        month: 'long', // Mes (nombre completo)
+                        day: 'numeric' // Día del mes (numérico)
+                    };
+
+                    let div_opinion = `
+                        <div class="opinion"><span class="triangulo"></span><img class="lazyload" data-src="https://statics.cdn1.buscalibre.com/images/clienteOpinaa.png" alt="${opinion.nombre_cliente}" /><p class="direccion">${opinion.nombre_cliente}, ${opinion.ciudad}, ${opinion.pais}</p><p class="fecha">Opinión recibida el ${fecha.toLocaleDateString('es-CL', opciones)}</p><p class="comentario" id="texto-opinion-${idx}">${opinion.opinion}</p><p class="comentario" id="texto-opinion-${idx}-translated"></p></div>`;
+
+                    
+                    $('.opinionesSobreBuscalibre > div').append('' + div_opinion);
+
+                    $('.contenido-pizzaconbordes').prepend('' +
+                            '<div class="opinion">' +
+                            '<p class="direccion">' + opinion.nombre_cliente + '</p>' +
+                            '<p class="comentario">"' + opinion.opinion + '"</p>' +
+                            '</div>');
+
+                    if( i == 5 ) return false;
+                });
+
+
+            });
+        </script><a class="verMasOpis" href="/opiniones-clientes_st.html">Ver más opiniones de clientes</a></div><div class="otrosLibrosRelacionados"></div><div class="relacionadoPorUsuario"></div><div style="display:none;" class="relacionadoPorAutor"></div><!-- <script async src="https://statics.cdn0.buscalibre.com/js/modernizr-2.6.2_2.max-min.js"></script> --><!--jqueryCookie --><script type="text/javascript">
+        (function(e){if(typeof define==="function"&&define.amd){define(["jquery"],e)}else{e(jQuery)}})(function(e){function n(e){return u.raw?e:encodeURIComponent(e)}function r(e){return u.raw?e:decodeURIComponent(e)}function i(e){return n(u.json?JSON.stringify(e):String(e))}function s(e){if(e.indexOf('"')===0){e=e.slice(1,-1).replace(/\\"/g,'"').replace(/\\\\/g,"\\")}try{e=decodeURIComponent(e.replace(t," "))}catch(n){return}try{return u.json?JSON.parse(e):e}catch(n){}}function o(t,n){var r=u.raw?t:s(t);return e.isFunction(n)?n(r):r}var t=/\+/g;var u=e.cookie=function(t,s,a){if(s!==undefined&&!e.isFunction(s)){a=e.extend({},u.defaults,a);if(typeof a.expires==="number"){var f=a.expires,l=a.expires=new Date;l.setDate(l.getDate()+f)}return document.cookie=[n(t),"=",i(s),a.expires?"; expires="+a.expires.toUTCString():"",a.path?"; path="+a.path:"",a.domain?"; domain="+a.domain:"",a.secure?"; secure":""].join("")}var c=t?undefined:{};var h=document.cookie?document.cookie.split("; "):[];for(var p=0,d=h.length;p<d;p++){var v=h[p].split("=");var m=r(v.shift());var g=v.join("=");if(t&&t===m){c=o(g,s);break}if(!t&&(g=o(g))!==undefined){c[m]=g}}return c};u.defaults={};e.removeCookie=function(t,n){if(e.cookie(t)!==undefined){e.cookie(t,"",e.extend({},n,{expires:-1}));return true}return false}})
+        </script><!--lightbox --><script type="text/javascript">
+         !function(e){e.fn.lightbox_me=function(o){return this.each(function(){function t(){var o=d[0].style;l.destroyOnClose?d.add(c).remove():d.add(c).hide(),l.parentLightbox&&l.parentLightbox.fadeIn(200),r.remove(),d.undelegate(l.closeSelector,"click"),e(window).unbind("reposition",n),e(window).unbind("reposition",s),e(window).unbind("scroll",s),e(window).unbind("keyup.lightbox_me"),a&&o.removeExpression("top"),l.onClose()}function i(e){(27==e.keyCode||27==e.DOM_VK_ESCAPE&&0==e.which)&&l.closeEsc&&t()}function n(){e(window).height()<e(document).height()?(c.css({height:e(document).height()+"px"}),r.css({height:e(document).height()+"px"})):(c.css({height:"100%"}),a&&(e("html,body").css("height","100%"),r.css("height","100%")))}function s(){var o=d[0].style;if(d.css({left:"50%",marginLeft:d.outerWidth()/2*-1,zIndex:l.zIndex+3}),d.height()+80>=e(window).height()&&(d.css("position")!=l.position||a)){var t=e(document).scrollTop()+40;d.css({position:l.position,top:t+"px",marginTop:0}),a&&o.removeExpression("top")}else d.height()+80<e(window).height()&&(a?(o.position="absolute",o.setExpression("top",'(document.documentElement.clientHeight || document.body.clientHeight) / 2 - (this.offsetHeight / 2) + (blah = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop) + "px"'),o.marginTop=0):d.css({position:"fixed",top:"50%",marginTop:d.outerHeight()/2*-1}))}var l=e.extend({},e.fn.lightbox_me.defaults,o),c=e(),d=e(this),r=e('<iframe id="foo" style="z-index: '+(l.zIndex+1)+';border: none; margin: 0; padding: 0; position: absolute; width: 100%; height: 100%; top: 0; left: 0; filter: mask();"/>'),a=e.browser.msie&&e.browser.version<7;if(l.showOverlay){var h=e(".js_lb_overlay:visible");c=e(h.length>0?'<div class="lb_overlay_clear js_lb_overlay"/>':'<div class="'+l.classPrefix+'_overlay js_lb_overlay"/>')}if(a){var p=/^https/i.test(window.location.href||"")?"javascript:false":"about:blank";r.attr("src",p),e("body").append(r)}e("body").append(d.hide()).append(c),l.showOverlay&&(n(),c.css({position:"absolute",width:"100%",top:0,left:0,right:0,bottom:0,zIndex:l.zIndex+2,display:"none"}),c.hasClass("lb_overlay_clear")||c.css(l.overlayCSS)),l.showOverlay?c.fadeIn(250,function(){s(),d.fadeIn(300,function(){n(),s(),l.onLoad()})}):(s(),d.fadeIn(300,function(){l.onLoad()})),l.parentLightbox&&l.parentLightbox.fadeOut(200),e(window).resize(n).resize(s).scroll(s),e(window).bind("keyup.lightbox_me",i),l.closeClick&&c.click(function(e){t(),e.preventDefault}),d.delegate(l.closeSelector,"click",function(e){t(),e.preventDefault()}),d.bind("close",t),d.bind("reposition",s)})},e.fn.lightbox_me.defaults={closeSelector:".close-lightbox",closeClick:!0,closeEsc:!0,destroyOnClose:!1,showOverlay:!0,parentLightbox:!1,position:"fixed",onLoad:function(){},onClose:function(){},classPrefix:"lb",zIndex:999,modalCSS:{top:"40px"},overlayCSS:{background:"black",opacity:.3}}}(jQuery);
+         </script><script>
+            $('header article #buscador form > ul li').click(function(){
+                $('header article #buscador form > ul li').removeClass('activo');
+                $(this).addClass('activo');
+            });
+
+            $('header article #buscador form > ul li.amazon').click(function(){
+                $('header article #buscador form > div').hide();
+
+                $('header article #buscador form').attr('action','https://www.buscalibre.com.mx/amazon/search');
+
+                $('header article #buscador form .buscandoen-libros input').attr('disabled',true);
+                $('header article #buscador form .buscandoen-amazon input').attr('disabled',false);
+
+                $('header article #buscador form .buscandoen-amazon').show();
+            });
+
+            $('header article #buscador form > ul li.libros').click(function(){
+                $('header article #buscador form').attr('action','https://www.buscalibre.com.mx/libros/search/');
+
+                $('header article #buscador form .buscandoen-libros input').attr('disabled',false);
+                $('header article #buscador form .buscandoen-amazon input').attr('disabled',true);
+
+                $('header article #buscador form > div').hide();
+                $('header article #buscador form .buscandoen-libros').show();
+            });
+        </script><script type="text/javascript">
+            $('#submenu ul li').click(function(){
+                $('#submenu ul li').removeClass('activo');
+                $(this).addClass('activo');
+            });
+            // Desplegable Mobile
+            $('#submenu span.desplegar, .bgMenu').click(function(){
+                $("#submenu > ul").slideToggle();
+                $('#submenu span.desplegar').toggle();
+                $('.bgMenu').toggle();
+            });
+        </script><script></script><script>
+    var similars = {
+        get: function(data){
+            /*$.getJSON("/libro/similars.json?q=" + Array.prototype.join.call(arguments, ' '), function(data) {
+                var show = true;
+                if( data.hasOwnProperty('count') && data.count == 0 ) show = false;
+                if( show ){
+                    $('.relacionados.agotado').html("<h4 class='deal' style='text-align:center'>Otros Libros que podrían interesarte</h4>" + data.html);
+                    $("html, body").animate({ scrollTop: 210 }, 600);
+                }
+            });*/
+        }
+    };
+    </script><script>
+        $('#addToCart').click(function(){
+            // dataLayer.push({
+            //   'event': 'addToCart',
+            //   'ecommerce': {
+            //       'currencyCode': 'CLP',
+            //       'add': {
+            //         'products': [{
+            //               'name': 'La Ciencia del Caos',
+            //               'id': '2510172',
+            //               'price': '3267.7281',
+            //               'brand': '',
+            //               'category': '',
+            //               'variant': '',
+            //               'quantity': $('#cantidad').val(),
+            //              }]
+            //       }
+            //   }
+            // });
+            //
+            // return true;
+
+            // push facebook event
+            var id_producto = 2510172;
+
+            var ids = [id_producto];
+
+            var product = {
+            content_type:'product',
+                content_ids: ids
+            };
+
+            fbq("track", "AddToCart", product);
+            return true;
+
+        });
+    </script><p class="agregadoAlCarro" style="display:none;"><span>✓</span> Producto agregado <strong>correctamente</strong> al carro, <a href="/carro">Ir a Pagar</a>.</p><div id="otrosAutor"></div><script>
+        // $.getJSON('/v2/libro/get-top-busquedas',{ id_producto:2510172 },function(data){
+        //      data.forEach((item, i) => {
+        //              console.log(item);
+        //              $("#busquedas-populares ul").append("<li><a style='text-transform:capitalize;' href='https://www.buscalibre.com.mx/v2/" + item.busqueda.replaceAll(' ','-') + "_b.html'>" + item.busqueda + "</a></li>");
+        //      });
+        // });
+    </script></section><script>
+dataLayer.push({
+  'ecommerce': {
+    'detail': {
+      'actionField': {'list': 'DetalleProducto'},
+      'products': [{
+        'name': 'La Ciencia del Caos',
+        'id': '2510172',
+        'price': '3267.7281',
+        'brand': '',
+        'category': '99',
+        'variant': ''
+       }]
+     }
+   }
+});
+</script><script>
+stock_verificado = function( datos ){
+
+
+    var relacionados_agotado = $(".relacionados-agotado");
+    if(relacionados_agotado.length > 0){
+        datos_html = $(datos.html);
+        datos_html.find(".descripcionBreve").before(relacionados_agotado.html());
+        datos.html = datos_html.html();
+    }
+
+    $('#data-info-libro').html(datos.html);
+    var $parent = $('.datos');
+    $('#icon-verificar').remove();
+    $parent.removeClass('verificarStock');
+    $('.info-libro .datos').addClass('padding-sides-responsive')
+}
+</script><script type="text/javascript">
+
+    $("body").on("click", ".agregarEnLista", function(){
+        console.log("clic");
+        $form   = $(this).parent();
+        var vars = $form.serialize();
+
+        $.getJSON( $form.attr('action'), vars, function( data ){
+            $('.modal-deseo-contenido .agregadoAlCarro').show('slow');
+        });
+
+        return false;
+    });
+
+    // $(".modal-deseo-contenido button").click(function(){
+    //       console.log("agregar-lista-detalle");
+    //       $form  = $(this).parent();
+    //       var vars = $form.serialize();
+    //
+    //       $.getJSON( $form.attr('action'), vars, function( data ){
+    //               $('.modal-deseo-contenido .agregadoAlCarro').show('slow');
+    //       });
+    //
+    //       return false;
+    // });
+</script><script type="text/javascript"></script><script>
+(function(){
+    $('#producto').on('click','.thumbs img',function() {
+        var src_image = $(this).attr('data-imagen');
+        $(this).parents('.imagen').children('img').attr('src',src_image);
+    });
+
+  //  setTimeout(function(){
+  //      $.get("/pbi", {id: 2510172 });
+  //  }, 2000);
+})();
+</script><script>
+$("#load-comments").click(
+  function(){
+    $(".reviews-body-users em").show("fast");
+    $(".reviews-body-users em").css("display","block");
+    $(this).hide();
+  }
+);
+
+$('.share').click(function(e) {
+    $("#modal-title").text("Comparte y gana dinero");
+    $('#modal-share').lightbox_me({
+        centered: true,
+        closeSelector: ".cerrar"
+    });
+    e.preventDefault();
+});
+
+$("#valoracion").click(
+  function(){
+    $("html,body").animate({
+      'scrollTop' : $("#reviews-header").position().top
+    });
+  }
+);
+
+</script></div><script type="application/ld+json">
+{
+    "@context": "https://schema.org/",
+    "@type": "Store",
+    "image": "https://statics.cdn0.buscalibre.com/icons/20240422180100/apple-touch-icon.png",
+    "name": "Buscalibre S.A.",
+    "email": "ventas@buscalibre.com",
+    "address": {
+        "@type": "PostalAddress",
+        "name": "Buscalibre México S.A. de C.V.",
+        "streetAddress": "Av Mexiquense, Parcela 208 Z-1 Bodega 4D-1",
+        "addressLocality": "Tultitlan col. Ejidos de Santiago Teyahualco",
+        "addressRegion": "Estado de México",
+        "addressCountry": {
+            "@type": "Country",
+            "name": "México"
+        }
+    },
+    "priceRange": "50-30000 MXN"
+}
+</script><footer class=""><div class="formasDePago"><section class="contenedor row center-xs"><p>Nuestras Formas de Pago</p><div class="col-xs-6 col-md-3 margin-top-20"><img class="lazyload" data-src="https://statics.cdn1.buscalibre.com/images/formas_pago/20180914-1157formasDePago/paypal.png" alt="Paypal"></div><div class="col-xs-6 col-md-3 margin-top-20"><img class="lazyload" data-src="https://statics.cdn1.buscalibre.com/images/formas_pago/20180914-1157formasDePago/american5.png" alt="American Express"></div><div class="col-xs-6 col-md-3 margin-top-20"><img class="lazyload" data-src="https://statics.cdn1.buscalibre.com/images/formas_pago/20180914-1157formasDePago/dinnersclub2.png" alt="Dinners Club"></div><div class="col-xs-6 col-md-3 margin-top-20"><img class="lazyload" data-src="https://statics.cdn1.buscalibre.com/images/formas_pago/20180914-1157formasDePago/visa2.png" alt="Visa"></div><div class="col-xs-6 col-md-3 margin-top-20"><img class="lazyload" data-src="https://statics.cdn1.buscalibre.com/images/formas_pago/20180914-1157formasDePago/master1.png" alt="Master Card"></div><div class="col-xs-6 col-md-3 margin-top-20"><img class="lazyload" data-src="https://statics.cdn1.buscalibre.com/images/formas_pago/20180914-1157formasDePago/oxxo1.png" alt="Oxxo"></div><div class="col-xs-6 col-md-3 margin-top-20"><img class="lazyload" data-src="https://statics.cdn1.buscalibre.com/images/formas_pago/20180914-1157formasDePago/7eleven1.png" alt="7 Eleven"></div><div class="col-xs-6 col-md-3 margin-top-20"><img class="lazyload" data-src="https://statics.cdn1.buscalibre.com/images/formas_pago/20180914-1157formasDePago/bbvabancomer1.png" alt="BBVA Bancomer"></div><div class="col-xs-6 col-md-3 margin-top-20"><img class="lazyload" data-src="https://statics.cdn1.buscalibre.com/images/formas_pago/20180914-1157formasDePago/banorte2.png" alt="Banorte"></div><div class="col-xs-6 col-md-3 margin-top-20"><img class="lazyload" data-src="https://statics.cdn1.buscalibre.com/images/formas_pago/20180914-1157formasDePago/farmaciasdelahorro2.png" alt="Farmacias del Ahorro"></div><div class="col-xs-6 col-md-3 margin-top-20"><img class="lazyload" data-src="https://statics.cdn1.buscalibre.com/images/formas_pago/20180914-1157formasDePago/farmaciasbenavides2.png" alt="Farmacias Benavides"></div></section></div><section class="arriba"><section class="contenedor"><div class="row"><div class="col-xs-12 col-sm-3 col-md-2"><div class="box-logo margin-top-40"><div class="logo"><a href="/" title="Buscalibre.com"><img class="lazyload" data-src="https://statics.cdn0.buscalibre.com/img/logo_bl_2024_png.png" alt="Buscalibre.com"></a></div></div><style type="text/css">
+						.box-descargapp {
+							border-top: 1px solid #b9b9b9;
+							margin-top: 20px;
+						}
+						.box-descargapp > p {
+							text-align: center;
+							padding: 5px 0 0 0;
+							margin: 0 0 15px 0;
+						}
+						.box-descargapp > div {
+							display: flex;
+							flex-direction: column;
+							flex-wrap: nowrap;
+							align-items: center;
+							justify-content: space-between;
+						}
+					</style><div class="box-descargapp"><p>¡Descárgate la App GRATIS!</p><div><a href="https://apps.apple.com/cl/app/buscalibre/id1524316331" title="Descágate la App GRATIS" target="_blank"><img class="lazyload" data-src="https://statics.cdn1.buscalibre.com/images/app-ios-202109211027.png" alt="iOs"></a><a href="https://play.google.com/store/apps/details?id=com.buscalibre.app2" title="Descágate la App GRATIS" target="_blank"><img class="lazyload" data-src="https://statics.cdn1.buscalibre.com/images/app-android-202109211027.png" alt="Android"></a></div></div></div><div class="col-xs-12 col-sm-4"><div class="box"><ul><li><a href="https://www.buscalibre.com.mx/inscripcion-proveedor" title="Vender Libros en Buscalibre">Vender Libros en Buscalibre</a></li><li><a href="https://www.buscalibre.com.mx/v2/inscripcion-instituciones" title="Venta Empresas">Venta a Instituciones y Empresas</a></li></ul><ul><li><a href="/terminos-y-condiciones-mexico_st.html" title="Términos y Condiciones">Términos y Condiciones</a></li><li><a href="/politicas-de-devolucion" title="Políticas de Devolución">Políticas de Devolución</a></li><li><a href="/privacidad-y-seguridad-mx_st.html" title="Privacidad y Seguridad">Privacidad y Seguridad</a></li><li><a href="/ayuda" title="Como Comprar">Cómo Comprar</a></li><li><a href="/formas-de-pago-mexico_st.html" title="Formas de Pago">Nuestras Formas de Pago</a></li><li><a href="https://www.buscalibre.com.mx/opiniones-clientes_st.html" title="Opiniones de clientes">Opiniones de Clientes</a></li><li><a href="/despacho-mx_st.html" title="Costos de Despacho">Costos de Envío</a></li><li><a href="https://www.buscalibre.com.mx/cuentas-falsas_st.html " title="Seguridad Redes Sociales">Seguridad Redes Sociales</a></li><li><a href="/lista-autores?c=a" title="Lista de autores">Lista de autores</a></li><li><a href="/incentivo-a-la-lectura_st.html" title="Incentivo a la Lectura">
+                Incentivo a la Lectura
+            </a></li><li><a href="/libros-recomendados" title="Libros Recomendados">
+                Libros Recomendados
+            </a></li></ul></div></div><div class="col-xs-12 col-sm-3"><div class="box-certificado"><div class="certificado afiliadoAliado"><a target="_blank" href="https://www.amvo.org.mx/" title="Asociación Mexicana de Venta Online"><img class="lazyload" data-src="https://statics.cdn1.buscalibre.com/images/footer-amvo.png" alt="Asociación Mexicana de Venta Online"></a></div></div></div><div class="col-xs-12 col-sm-4 col-md-3"><div class="box-contacto"><form class="tuCorreo" action="/v2/u/registrar_express/" method="POST"><label for="emailSubs">Suscríbete para recibir ofertas y promociones</label><span class="campos"><input id="emailSubs" type="email" name="email" placeholder="Email" required=""><input class="margin-top-10" type="submit" value="Recibir ofertas"></span><div><svg version="1.1" id="enana-izq" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20 20" style="enable-background:new 0 0 20 20;" xml:space="preserve"><style type="text/css">.st0{fill:#FF5A00;}</style><g><path class="st0" d="M10,0C4.5,0,0,4.5,0,9.9c0,2.7,1,5.2,2.9,7.1c1.9,1.9,4.4,3,7,3H10c5.5,0,10-4.5,10-9.9C20,4.6,15.6,0,10,0zM15.8,8.4l-3.3,2.1c-0.1,0.1-0.2,0.2-0.1,0.4l1.5,4.2c0.1,0.3-0.2,0.5-0.5,0.3l-3.2-2.8c-0.1-0.1-0.3-0.1-0.4,0l-3.2,2.8c-0.2,0.2-0.6,0-0.5-0.3l1.4-4.2c0-0.1,0-0.3-0.1-0.3L4.2,8.4C3.9,8.3,4,7.9,4.3,7.9h3.8c0.1,0,0.2-0.1,0.3-0.2l1.3-3.4c0.1-0.2,0.4-0.2,0.6,0l1.3,3.4c0,0.1,0.2,0.2,0.3,0.2h3.8C16,7.9,16.1,8.3,15.8,8.4z"></path></g></svg><svg version="1.1" id="mediana" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20 20" style="enable-background:new 0 0 20 20;" xml:space="preserve"><style type="text/css">.st0{fill:#FF5A00;}</style><g><path class="st0" d="M10,0C4.5,0,0,4.5,0,9.9c0,2.7,1,5.2,2.9,7.1c1.9,1.9,4.4,3,7,3H10c5.5,0,10-4.5,10-9.9C20,4.6,15.6,0,10,0zM15.8,8.4l-3.3,2.1c-0.1,0.1-0.2,0.2-0.1,0.4l1.5,4.2c0.1,0.3-0.2,0.5-0.5,0.3l-3.2-2.8c-0.1-0.1-0.3-0.1-0.4,0l-3.2,2.8c-0.2,0.2-0.6,0-0.5-0.3l1.4-4.2c0-0.1,0-0.3-0.1-0.3L4.2,8.4C3.9,8.3,4,7.9,4.3,7.9h3.8c0.1,0,0.2-0.1,0.3-0.2l1.3-3.4c0.1-0.2,0.4-0.2,0.6,0l1.3,3.4c0,0.1,0.2,0.2,0.3,0.2h3.8C16,7.9,16.1,8.3,15.8,8.4z"></path></g></svg><svg version="1.1" id="enana-der" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20 20" style="enable-background:new 0 0 20 20;" xml:space="preserve"><style type="text/css">.st0{fill:#FF5A00;}</style><g><path class="st0" d="M10,0C4.5,0,0,4.5,0,9.9c0,2.7,1,5.2,2.9,7.1c1.9,1.9,4.4,3,7,3H10c5.5,0,10-4.5,10-9.9C20,4.6,15.6,0,10,0zM15.8,8.4l-3.3,2.1c-0.1,0.1-0.2,0.2-0.1,0.4l1.5,4.2c0.1,0.3-0.2,0.5-0.5,0.3l-3.2-2.8c-0.1-0.1-0.3-0.1-0.4,0l-3.2,2.8c-0.2,0.2-0.6,0-0.5-0.3l1.4-4.2c0-0.1,0-0.3-0.1-0.3L4.2,8.4C3.9,8.3,4,7.9,4.3,7.9h3.8c0.1,0,0.2-0.1,0.3-0.2l1.3-3.4c0.1-0.2,0.4-0.2,0.6,0l1.3,3.4c0,0.1,0.2,0.2,0.3,0.2h3.8C16,7.9,16.1,8.3,15.8,8.4z"></path></g></svg><span class="sprite registroUsuario"></span><p>¡Pronto recibirás nuestras ofertas!</p></div><script type="text/javascript">
+								var agregadoBD = function(){
+									$('footer section.arriba section.contenedor form.tuCorreo > *').hide();
+									$('footer section.arriba section.contenedor form.tuCorreo > div').show();
+								};
+								var ag = function(){
+									setTimeout(function(){
+										$("footer section.arriba section.contenedor form.tuCorreo svg#enana-izq").css("left","-80px");
+										$("footer section.arriba section.contenedor form.tuCorreo svg#enana-der").css("right","-80px");
+									},300);
+								}
+
+								$('.tuCorreo' ).submit(function(){
+									agregadoBD();
+									ag();
+									$form = $(this);
+									$.getJSON( $form.attr('action'), $form.serialize(), function(data){
+										console.log(data);
+										if ( data ){
+											agregadoBD();
+											ag();
+										}
+									} ) ;
+
+									return false;
+
+								});
+
+															</script></form><style type="text/css">
+							.necesitasAyuda > p {
+								color: #4b4b4b;
+								margin-top: 0;
+							}
+							.necesitasAyuda > form > button {
+								background: #ff5a00;
+								text-align: center;
+								border: none;
+								color: #fff;
+								margin: 0;
+								font-weight: 300;
+								padding: 10px 0;
+								letter-spacing: .05em;
+								border-radius: 3px;
+								font-size: .8em;
+								outline: 0;
+								height: 50px;
+								width: 170px;
+								-webkit-transition: all .2s ease;
+								-moz-transition: all .2s ease;
+								-o-transition: all .2s ease;
+								transition: all .2s ease;
+							}
+							.necesitasAyuda > form > button:hover {
+								background: #ff7233;
+								-webkit-transition: all .2s ease;
+								-moz-transition: all .2s ease;
+								-o-transition: all .2s ease;
+								transition: all .2s ease;
+							}
+							@media( max-width: 760px ) {
+								.necesitasAyuda {
+									margin-left: 10px;
+								}
+							}
+						</style><div class="necesitasAyuda"><p>¿Necesitas ayuda?</p><form action="/ayuda"><button>Ir a Centro de Soporte</button></form></div></div></div></div></section></section><section class="abajo"><section class="contenedor"><address><p><span itemprop="name">Buscalibre México S.A. de C.V.</span>. Dirección fiscal: Parque logístico Tultipark 3 Av, Mexiquense, Parcela 208 Z-1 Bodega 4D-1 Col. Ejidos de Santiago Teyahualco Tultitlán, Estado de México, C.P. 54900. <br><a href="mailto:ventas@buscalibre.com">ventas@buscalibre.com</a></p></address><div class="redes"><ul><li class="sprite2018 facebook"><a href="http://www.facebook.com/buscalibre.mx" title="Facebook" rel="noopener noreferrer" target="_blank">Facebook</a></li><li class="sprite2018 instagram"><a href="https://www.instagram.com/buscalibre_mx" title="Instagram" target="_blank" rel="noopener noreferrer">Instagram</a></li><li class="sprite2018 twitter"><a href="http://twitter.com/buscalibre" title="Twitter" rel="noopener noreferrer" target="_blank">Twitter</a></li><li class="spotify"><style type="text/css">
+							li.spotify {
+								background-image: url("https://statics.cdn0.buscalibre.com/images/spotify202301181850.png");
+								background-position: 0 0;
+							}
+						</style><a href="https://open.spotify.com/playlist/2Eu0Mpw4meHnfX9T7H1e3h" title="Spotify" rel="noopener noreferrer" target="_blank">Spotify</a></li></ul></div><div class="row center-xs start-md width-100"><div class="font-size-small padding-bottom-10 color-gray col-xs-12"><a href="https://www.buscalibre.com.ar">Buscalibre Argentina</a> |
+					<a href="https://www.buscalibre.cl">Buscalibre Chile</a> |
+					<a href="https://www.buscalibre.com.co">Buscalibre Colombia</a> |
+					<a href="https://www.buscalibre.ec">Buscalibre Ecuador</a> |
+					<a href="https://www.buscalibre.es">Buscalibre España</a> |
+					<a href="https://www.buscalibre.uy">Buscalibre Uruguay</a> |
+					<a href="https://www.buscalibre.com.mx">Buscalibre México</a> |
+					<a href="https://www.buscalibre.pe">Buscalibre Perú</a> |
+					<a href="https://www.buscalibre.us">Buscalibre Estados Unidos</a> |
+					<a href="https://www.buscalibre.co">Buscalibre Otros Países</a> |
+					<a href="https://www.bookdelivery.com">Bookdelivery Reino Unido</a></div></div></section></section></footer><style type="text/css">
+	section#bannerPrincipal {
+		top: 10px;
+	}
+	footer section.arriba section.contenedor > .row{
+
+			 display: flex !important;
+			 max-width: 100%;
+	}
+	footer section.arriba section.contenedor ul li a{
+		color: #4b4b4b !important;
+		font-size: 0.8em !important;
+		font-weight: 400 !important;
+		letter-spacing: 0.03em !important;
+	}
+	footer section.arriba section.contenedor ul {
+		display: inline-grid !important;
+			margin-left: 60px !important;
+			padding-top: 30px;
+	}
+	footer .datosContacto a{
+		display: block !important;
+		padding-left: 5px;
+	}
+	footer section.arriba section.contenedor .certificado{
+		margin-left:0 !important;
+		top:0 !important;
+	}
+	footer section.arriba{
+		padding: 10px 0 40px !important;
+	}
+	footer .box-contacto {
+		position: relative;
+		height: 100%;
+			padding-left: 0px;
+	}
+	footer .logo{
+		text-align: center;
+	}
+	footer section.arriba section.contenedor .datosContacto {
+		width: 290px;
+		position: relative !important;
+		bottom: 0 !important;
+		right: 0;
+			top:initial !important;
+			margin:0 auto;
+	}
+	footer section.arriba section.contenedor form.tuCorreo{
+		float: initial !important;
+		margin: 25px auto 0 !important;
+		padding: 0px 0px 20px !important;
+	}
+
+	footer img{
+		max-width: 100%;
+	}
+
+	.box-certificado{
+		text-align: center;
+	margin: 60px 0px;
+	}
+
+	@media (max-width: 425px){
+		footer section.arriba section.contenedor .datosContacto {
+			width: 290px;
+			position: relative;
+			bottom: 0 !important;
+			right: 0;
+				top:initial !important;
+		}
+
+	}
+
+</style><!-- MODAL: DESCARGA NUESTRA APP --><!-- /MODAL: DESCARGA NUESTRA APP --><!-- CSS NUEVO --><style type="text/css">
+/* .v2018 .productosCarro h3{
+  margin-top:5px;
+}
+
+.v2018 .eliminarProductoCarro{
+  border: 1px solid #FF4F00;
+  border-radius: 20px;
+  font-size: 19px;
+  height: 28px;
+  width: 28px;
+  font-family: 'Arial';
+  cursor: pointer;
+}
+
+.v2018 .productosCarro select{
+  height: 40px;
+  cursor: pointer;
+} */
+
+section#carro{
+  position: relative;
+  padding-top: 20px;
+}
+
+<style><style type="text/css">
+	/*
+	|==============| INDICE |==============|
+
+	=> GENERAL
+	=> HEADER
+	=> GRILLA
+	=> TETRAEMOS => TIENDAS
+	=> TETRAEMOS => COTIZADOR
+	=> TETRAEMOS => AGREGAR EXTENSION
+	=> TETRAEMOS => VENTAJAS
+	=> TETRAEMOS => NUESTROS CLIENTES DICEN
+	=> FOOTER
+	=> FOOTER => FORMAS DE PAGO
+	=> FOOTER => ARRIBA
+	=> FOOTER => LOGO
+	=> FOOTER => PAGINAS ESTATICAS
+	=> FOOTER => CERTIFICADOS IMAGENES
+	=> FOOTER => REGISTRAR CORREO
+	=> FOOTER => ABAJO
+	=> FOOTER => DIRECCION
+	=> FOOTER => REDES
+
+	*/
+
+	/*
+	========================================================
+	=> GENERAL
+	========================================================
+	*/
+
+	@import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,700,900');
+
+	body {
+		font-family: 'Roboto', sans-serif !important;
+	}
+	.sprite2018 {
+		background-image: url("https://statics.cdn1.buscalibre.com/images/sprite20180907-1235.png");
+		background-repeat: no-repeat;
+	}
+	section.contenedor {
+		width: 1120px;
+		clear: left;
+		margin: 0 auto;
+	}
+	.botonNaranjo {
+		background: #FF5A00;
+		text-align: center;
+		color: white;
+		display: block;
+		margin: 0 auto;
+		font-size: .9em;
+		font-weight: 300;
+		padding: 10px;
+		border: none;
+		letter-spacing: .05em;
+		border-radius: 3px;
+		outline: none;
+		-webkit-transition: all .2s ease;
+		-moz-transition: all .2s ease;
+		-o-transition: all .2s ease;
+		transition: all .2s ease;
+	}
+		.botonNaranjo:hover {
+			background: #FF7233;
+			-webkit-transition: all .2s ease;
+			-moz-transition: all .2s ease;
+			-o-transition: all .2s ease;
+			transition: all .2s ease;
+		}
+		.botonNaranjo:active {
+			background: #d94300;
+			-webkit-transition: all .2s ease;
+			-moz-transition: all .2s ease;
+			-o-transition: all .2s ease;
+			transition: all .2s ease;
+		}
+
+
+
+
+
+	/*
+	========================================================
+	=> HOME
+	========================================================
+	*/
+
+	.bodyv2018 section#teTraemos{
+		top:170px;
+		margin-top: 0 !important;
+	}
+
+	/*
+	========================================================
+	=> GRILLA
+	========================================================
+	*/
+	
+	.v2018 .productos .producto .despachoGratisIcono {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		margin: 0 0 10px;
+		border: none;
+	}
+	.v2018 .productos .producto .despachoGratisIcono:after ,
+	.v2018 .productos .producto .despachoGratisIcono:before {
+		display: none;
+	}
+	.v2018 .productos .producto .despachoGratisIcono > span {
+		background: url(https://statics.cdn0.buscalibre.com/images/20181129-1150spritedetalle.png) -190px -36px;
+		height: 19px;
+		width: 29px;
+		display: block;
+	}
+	.v2018 .productos .producto .despachoGratisIcono > p {
+		color: #ff5a00;
+		width: 80%;
+	}
+
+	/*
+	========================================================
+	=> TETRAEMOS => TIENDAS
+	========================================================
+	*/
+
+	header.principal ~ .tiendasTodas {
+		margin-top: 60px;
+	}
+	.tiendasTodas {
+		clear: left;
+		width: 100%;
+		display: inline-block;
+	}
+	.tiendasTodas section.contenedor {}
+	.tiendasTodas section.contenedor h5 ,
+	.tiendasTodas section.contenedor p {
+		font-size: 1em;
+		margin: 5px 0 0 0;
+		font-weight: 300;
+	}
+	.tiendasTodas section.contenedor h5 {
+		font-size: 1.8em;
+		margin: 0;
+		font-weight: 400;
+		letter-spacing: .03em;
+		line-height: 1.2em;
+	}
+	.tiendasTodas section.contenedor p {
+		font-size: .9em;
+		margin: 0;
+	}
+	.tiendasTodas section.contenedor > div {
+		float: right;
+		width: 560px;
+		margin: -40px 0 0 0;
+		position: relative;
+		z-index: 1;
+		top: -40px;
+		z-index: -1;
+		clear: right;
+	}
+	.tiendasTodas section.contenedor > div > div {
+		width: 140px;
+		height: 80px;
+		padding-top: 20px;
+		display: inline-block;
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
+		box-shadow: none;
+		-webkit-box-shadow: 3px 3px 15px -8px black;
+		-moz-box-shadow: 3px 3px 15px -8px black;
+		box-shadow: 3px 3px 15px -8px black;
+	}
+		.tiendasTodas section.contenedor > div > div:hover {
+			-webkit-transition: all .2s ease;
+			-moz-transition:    all .2s ease;
+			-o-transition:      all .2s ease;
+			transition:         all .2s ease;
+		}
+	.tiendasTodas section.contenedor > div > div a {
+		display: inline-block;
+		height: 100%;
+		width: 100%;
+	}
+		.tiendasTodas section.contenedor > div > div a:hover img {
+			-webkit-filter: grayscale(100%);
+			filter: grayscale(100%);
+			-webkit-transition: all .2s ease;
+			-moz-transition:    all .2s ease;
+			-o-transition:      all .2s ease;
+			transition:         all .2s ease;
+		}
+	.tiendasTodas section.contenedor > div > div a img {
+		max-width: 100px;
+		max-height: 70px;
+		display: block;
+		margin: 0 auto;
+		-webkit-filter: grayscale(0%);
+		filter: grayscale(0%);
+	}
+
+	/*
+	========================================================
+	=> TETRAEMOS => COTIZADOR
+	========================================================
+	*/
+
+	.tiendasTodas ~ .tetraemosForm {
+	    margin-top: 30px;
+	}
+	.tetraemosForm {
+	}
+	.tetraemosForm section.contenedor {
+		position: relative;
+		background: #fdedd3;
+		border-radius: 5px;
+	}
+	.tetraemosForm section.contenedor > p {
+		color: black;
+		font-size: 1.3em;
+		padding: 0;
+		margin: 0;
+		font-weight: 400;
+		margin-top: 15px;
+		margin-left: 10px;
+		display: inline-block;
+	}
+	.tetraemosForm section.contenedor > a {
+		color: #ff5a00;
+		position: absolute;
+		top: 20px;
+		right: 20px;
+	}
+	.tetraemosForm section.contenedor > a > strong {
+		font-weight: 900;
+		position: relative;
+		top: 1px;
+	}
+	.tetraemosForm section.contenedor > form {
+		position: relative;
+		height: 60px;
+		margin-top: 20px;
+		padding: 0px 10px;
+	}
+	.tetraemosForm section.contenedor > form input {
+		position: absolute;
+		margin-right: 10%;
+		width: calc( 100% - 180px );
+		height: 40px;
+		border-radius: 3px;
+		border: 1px solid #ccc;
+		padding: 0px 10px;
+		outline: none;
+	}
+	.tetraemosForm section.contenedor > form button {
+		width: 130px;
+		float: right;
+		height: 42px;
+	}
+
+	/*
+	========================================================
+	=> TETRAEMOS => AGREGAR EXTENSION
+	========================================================
+	*/
+
+	.tetraemosForm ~ .agregarExtension {
+		margin-top: 50px;
+	}
+	.agregarExtension {
+		clear: left;
+		width: 100%;
+	}
+	.agregarExtension > section.contenedor > p {
+		width: 100%;
+		font-size: 1.1em;
+		font-weight: 400;
+	}
+	.agregarExtension > section.contenedor > p > span {
+		color: #FF5A00;
+	}
+	.agregarExtension > section.contenedor > div {
+		float: left;
+		width: calc( 100% - 580px );
+		height: 183px;
+		background: #F4F4F4;
+		padding: 20px;
+	}
+	.agregarExtension > section.contenedor > div img {
+		clear: left;
+	}
+	.agregarExtension > section.contenedor > div p {
+		font-size: .9em;
+		font-weight: 300;
+	}
+	.agregarExtension > section.contenedor > div a {
+		width: 42%;
+		display: inline-block;
+	}
+	.agregarExtension > section.contenedor > div a.haciaChromeStore {
+		color: #FF5A00;
+		float: right;
+		line-height: 2.2em;
+	}
+		.agregarExtension > section.contenedor > div a.haciaChromeStore:hover {
+			color: #D94300;
+		}
+
+	/*
+	========================================================
+	=> TETRAEMOS => VENTAJAS
+	========================================================
+	*/
+
+	.agregarExtension ~ .teTraemosVentajas {
+		margin-top: 50px;
+	}
+	.teTraemosVentajas {}
+	.teTraemosVentajas > section.contenedor {}
+	.teTraemosVentajas > section.contenedor > p {
+		width: 100%;
+		font-size: 1.1em;
+		font-weight: 400;
+	}
+	.teTraemosVentajas > section.contenedor > div {
+		width: calc( 66% - 10px );
+		display: inline-block;
+	}
+	.teTraemosVentajas > section.contenedor > div > .ventajitas {
+		width: calc( 45% - 10px );
+		display: inline-grid;
+		margin-right: calc( 7% - 10px );
+		margin-bottom: calc( 5% - 10px );
+		position: relative;
+	}
+	.teTraemosVentajas > section.contenedor > div > .ventajitas > img {
+		max-width: 60px;
+		max-height: 80px;
+		display: inline-block;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	.teTraemosVentajas > section.contenedor > div > .ventajitas > h6 {
+		color: #FF5A00;
+		font-size: 1.2em;
+		margin: 0;
+		font-weight: 400;
+	}
+	.teTraemosVentajas > section.contenedor > div > .ventajitas > p {
+		font-weight: 300;
+		margin: 0;
+	}
+	.teTraemosVentajas > section.contenedor > div > .ventajitas > h6 ,
+	.teTraemosVentajas > section.contenedor > div > .ventajitas > p {
+		margin-left: 70px;
+	}
+	.teTraemosVentajas > section.contenedor .tambien {
+		float: right;
+		width: calc( 33% - 10px );
+		border: 1px solid #ff5a00;
+		border-radius: 4px;
+		padding: 10px;
+	}
+	.teTraemosVentajas > section.contenedor .tambien > strong {
+		font-size: 1.2em;
+		margin-bottom: 10px;
+		display: block;
+	}
+	.teTraemosVentajas > section.contenedor .tambien > ul {}
+	.teTraemosVentajas > section.contenedor .tambien > ul li {
+		position: relative;
+		height: 35px;
+		font-weight: 300;
+	}
+	.teTraemosVentajas > section.contenedor .tambien > ul li span {
+		background-image: url(https://statics.cdn1.buscalibre.com/images/20180906-1742check.png) !important;
+		margin-right: 10px;
+		width: 12px;
+		height: 11px;
+		display: inline-block;
+		position: relative;
+		top: 0px;
+	}
+
+	/*
+	========================================================
+	=> TETRAEMOS => NUESTROS CLIENTES DICEN
+	========================================================
+	*/
+
+	.nuestrosClientesDicenDeBL {}
+	.nuestrosClientesDicenDeBL section.contenedor {}
+	.nuestrosClientesDicenDeBL section.contenedor > p {
+		width: 100%;
+		font-size: 1.1em;
+		font-weight: 400;
+	}
+	.nuestrosClientesDicenDeBL section.contenedor > .opiniones > div {
+		width: calc( 48% - 10px );
+		display: inline-block;
+		margin-right: calc( 3% - 10px );
+		margin-bottom: calc( 2% - 10px );
+		position: relative;
+		display: inline-grid;
+	}
+	.nuestrosClientesDicenDeBL section.contenedor > .opiniones .cargandoOpiniones {
+		color: #ccc;
+		text-align: left;
+	}
+	.nuestrosClientesDicenDeBL section.contenedor > .opiniones > div > span.avatarClientes {
+		width: 26px;
+		height: 27px;
+		display: inline-block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-position: -46px 0px;
+	}
+	.nuestrosClientesDicenDeBL section.contenedor > .opiniones > div > p {
+		margin: 0;
+	}
+	.nuestrosClientesDicenDeBL section.contenedor > .opiniones > div > .nombreCliente {
+		margin: 5px 0 10px 40px;
+		font-weight: 500;
+	}
+	.nuestrosClientesDicenDeBL section.contenedor > .opiniones > div > .nombreCliente > span.valoracionBL {}
+	.nuestrosClientesDicenDeBL section.contenedor > .opiniones > div > .comentario {
+		font-weight: 300;
+		font-style: italic;
+		font-size: .9em;
+	}
+		.nuestrosClientesDicenDeBL section.contenedor > .opiniones > div > .comentario:before {
+			content: " ''";
+		}
+		.nuestrosClientesDicenDeBL section.contenedor > .opiniones > div > .comentario:after {
+			content: "'' ";
+		}
+	.nuestrosClientesDicenDeBL section.contenedor > span.verMasDicen {
+		color: #FF5A00;
+		float: right;
+		line-height: 2.2em;
+		text-align: left;
+		width: 100%;
+		cursor: pointer;
+	}
+	.nuestrosClientesDicenDeBL section.contenedor > span.verMasDicen:hover {
+			color: #D94300;
+	}
+</style><style type="text/css">
+	/*
+	========================================================
+	=> FOOTER
+	========================================================
+	*/
+
+	footer {
+		padding: 0;
+	}
+
+	/*
+	========================================================
+	=> FOOTER => FORMAS DE PAGO
+	========================================================
+	*/
+
+
+	footer .formasDePago {
+		background: #FAFAFA;
+		margin: 0;
+		padding-bottom: 60px;
+	}
+	footer .formasDePago section.contenedor {}
+	footer .formasDePago section > p {
+		width: 100%;
+		text-align: center;
+		clear: left;
+		font-size: 1.1em;
+		font-weight: 400;
+	}
+	footer .formasDePago section > img {
+		display: inline-block;
+		width: calc( 10% - 10px );
+		margin-right: calc( 6% - 10px );
+		min-height: 60px;
+	}
+	footer .formasDePago section .botones {
+		display: none;
+	}
+
+	/*
+	========================================================
+	=> FOOTER => ARRIBA
+	========================================================
+	*/
+
+	footer section.arriba {
+		padding: 10px 0;
+		background: #f4f4f4;
+	}
+
+	/*
+	========================================================
+	=> FOOTER => LOGO
+	========================================================
+	*/
+	footer section.arriba section.contenedor .logo {}
+	footer section.arriba section.contenedor .logo > a {}
+	footer section.arriba section .logo > a span {
+		text-indent: -9999px;
+		display: inline-block;
+	}
+	footer section.arriba section.contenedor .logo > a img {}
+	footer section.arriba section.contenedor > * {
+		display: inline-grid;
+	}
+	/*
+	========================================================
+	=> FOOTER => PAGINAS ESTATICAS
+	========================================================
+	*/
+	footer section.arriba section > ul {
+		margin-left: 70px;
+	}
+	footer section.arriba section > ul li {}
+	footer section.arriba section > ul li a {
+		color: #4b4b4b;
+		font-size: 0.8em;
+		font-weight: 400;
+		letter-spacing: 0.03em;
+	}
+	/*
+	========================================================
+	=> FOOTER => CERTIFICADOS IMAGENES
+	========================================================
+	*/
+	footer section.arriba section .certificado {
+		position: relative;
+		top: 50px;
+		margin-left: 70px;
+	}
+	footer section.arriba section .certificado a {}
+	footer section.arriba section .certificado a img {}
+	/*
+	========================================================
+	=> FOOTER => REGISTRAR CORREO
+	========================================================
+	*/
+	footer section.arriba section form.tuCorreo {
+		clear: left;
+		width: 280px;
+		margin: 50px auto 0;
+		padding: 10px;
+		float: right;
+	}
+	footer section.arriba section form.tuCorreo > label {
+		clear: left;
+		width: 100%;
+		text-align: center;
+		display: block;
+		margin: 0 0 10px 0;
+		color: #4b4b4b;
+		font-size: 0.8em;
+		font-weight: 400;
+		letter-spacing: 0.03em;
+	}
+	footer section.arriba section form.tuCorreo span.campos input[type="email"] {
+		height: 40px;
+		padding: 0 10px;
+		border: 1px solid #ddd;
+		outline: none;
+		width: 135px;
+		border-radius: 5px;
+		margin-right: 10px;
+	}
+	footer section.arriba section form.tuCorreo span.campos input[type="email"]:focus {
+		border: 1px solid #ff5a00;
+	}
+	footer section.arriba section form.tuCorreo span.campos input[type="submit"] {
+		background: #ff5a00;
+		text-align: center;
+		border: none;
+		color: white;
+		margin: 0;
+		font-weight: 300;
+		padding: 10px 0;
+		letter-spacing: .05em;
+		border-radius: 3px;
+		font-size: 0.8em;
+		outline: none;
+		height: 40px;
+		width: 110px;
+		-webkit-transition: all .2s ease;
+		-moz-transition: all .2s ease;
+		-o-transition: all .2s ease;
+		transition: all .2s ease;
+	}
+		footer section.arriba section form.tuCorreo span.campos input[type="submit"]:hover {
+			background: #ff7233;
+			-webkit-transition: all .2s ease;
+			-moz-transition: all .2s ease;
+			-o-transition: all .2s ease;
+			transition: all .2s ease;
+		}
+		footer section.arriba section form.tuCorreo span.campos input[type="submit"]:active {
+			background: #d94300;
+			-webkit-transition: all .2s ease;
+			-moz-transition: all .2s ease;
+			-o-transition: all .2s ease;
+			transition: all .2s ease;
+		}
+	footer section.arriba section form.tuCorreo > input {
+		display: inline-block;
+	}
+	footer section.arriba section form.tuCorreo > div {
+		display: none;
+		position: relative;
+		top: -50px;
+	}
+	footer section.arriba section form.tuCorreo > div > svg {
+		width: 50px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		-webkit-transition: all 1s ease;
+		-moz-transition: all 1s ease;
+		-o-transition: all 1s ease;
+		transition: all 1s ease;
+	}
+	footer section.arriba section form.tuCorreo > div > svg#enana-izq,
+	footer section.arriba section form.tuCorreo > div > svg#enana-der {
+		top: 60px;
+		width: 30px;
+	}
+	footer section.arriba section form.tuCorreo > div > svg#mediana {
+		width: 40px;
+		display: block;
+		top: 50px;
+	}
+	footer section.arriba section form.tuCorreo > div > p {
+		text-align: center;
+		text-transform: uppercase;
+		padding-top: 90px;
+		font-weight: bold;
+		font-size: .8em;
+	}
+	footer section.arriba section .datosContacto {
+		width: 290px;
+		position: absolute;
+		top: 150px;
+		right: 0;
+	}
+	footer section.arriba section .datosContacto a {
+		color: #ff5a00;
+		position: relative;
+	}
+	footer section.arriba section .datosContacto a > span {
+		height: 30px;
+		width: 30px;
+		display: inline-block;
+		position: relative;
+		top: 10px;
+		margin-right: 10px;
+	}
+	footer section.arriba section .datosContacto a .correo {
+		background-position: -116px -62px;
+		height: 30px;
+		top: 9px;
+	}
+	footer section.arriba section .datosContacto a .telefono {
+		background-position: -116px -40px;
+		height: 22px;
+		top: 5px;
+	}
+
+	/*
+	========================================================
+	=> FOOTER => ABAJO
+	========================================================
+	*/
+	footer section.abajo {
+		background: #e7e7e7;
+	}
+	footer section.abajo section.contenedor {}
+	/*
+	========================================================
+	=> FOOTER => DIRECCION
+	========================================================
+	*/
+	footer section.abajo section address {
+		width: calc( 500px - 10px );
+		margin-top: 0;
+	}
+	footer section.abajo section address > p {
+		color: #4b4b4b;
+		text-align: left;
+		font-style: normal;
+	}
+		footer section.abajo section address > p > span:first-of-type {
+			color: #ff5a00;
+		}
+	/*
+	========================================================
+	=> FOOTER => REDES
+	========================================================
+	*/
+	footer section.abajo section .redes {
+		width: calc( 260px - 10px );
+		display: inline-block;
+		float: right;
+		margin-top: 20px;
+		position: relative;
+	}
+		footer section.abajo section .redes > ul {
+		display: inline-block;
+		position: relative;
+		top: -10px;
+	}
+	footer section.abajo section .redes > ul li {
+		width: 36px;
+		height: 37px;
+		display: inline-block;
+		margin: 0 0 0 10px;
+		border-radius: 50%;
+	}
+	footer section.abajo section .redes > ul li.facebook {
+		background-position: 0px -91px;
+		width: 37px;
+	}
+	footer section.abajo section .redes > ul li.twitter {
+		background-position: -38px -91px;
+		width: 37px;
+	}
+	footer section.abajo section .redes > ul li.tiktok {
+		background-image: url( "https://statics.cdn1.buscalibre.com/images/tiktok202109210910.png" );
+		background-position: 0 0;
+		height: 36px;
+		width: 36px;
+	}
+	footer section.abajo section .redes > ul li.youtube {
+		background-image: url( "https://statics.cdn1.buscalibre.com/images/youtube202109210916.png" );
+		background-position: 0 0;
+		height: 36px;
+		width: 36px;
+	}
+	footer section.abajo section .redes > ul li.instagram {
+		background-position: -75px -91px;
+		width: 37px;
+	}
+	footer section.abajo section .redes > ul li.pinterest {
+		background-position: -111px -91px;
+		width: 38px;
+	}
+	footer section.abajo section .redes > ul li a {
+		text-indent: -9999px;
+		display: inline-block;
+		width: 100%;
+		height: 100%;
+	}
+</style><style type="text/css">
+	/*
+	|==============| INDICE |==============|
+
+	=> GENERAL
+	=> HEADER
+	*/
+
+	/*
+	========================================================
+	=> GENERAL
+	========================================================
+	*/
+
+	@media ( max-width: 1150px ) {
+		section.contenedor {
+			width: 95%;
+			clear: left;
+			height: 100%;
+			margin: 0 auto;
+		}
+	}
+
+	/*
+	========================================================
+	=> HEADER
+	========================================================
+	*/
+
+	@media ( max-width: 800px ) {
+		header.principal > section.inferior section.contenedor .listaDeDeseos ,
+		header.principal > section.inferior section.contenedor #iniciarSesion ,
+		header.principal > section.superior {
+			display: none;
+		}
+	}
+
+	@media ( max-width: 425px ) {
+		header.principal > section.inferior section.contenedor .logo {
+			background: none;
+			display: inline-block;
+			width: auto;
+			margin: 0;
+			width: 75%;
+			text-align: center;
+		}
+		header.principal > section.inferior section.contenedor #cart_button {
+			clear: none;
+			top: 0;
+			margin: 0;
+			width: 40px;
+		}
+		header.principal > section.inferior section.contenedor #cart_button > a > p {
+			display: none;
+		}
+	}
+
+
+	/*
+	========================================================
+	=> TETRAEMOS => TIENDAS
+	========================================================
+	*/
+
+	@media ( max-width: 1100px ) {
+		.tiendasTodas section.contenedor > h5 ,
+		.tiendasTodas section.contenedor > p {
+			text-align: center;
+		}
+		.tiendasTodas section.contenedor > div {
+			top: 0;
+			margin: 0 auto;
+			display: block;
+			float: none;
+			width: 100%;
+		}
+		.tiendasTodas section.contenedor > div > div {
+			width: calc(26% - 10px);
+			padding-bottom: 10px;
+		}
+		.tiendasTodas section.contenedor > div > div a img {
+			max-width: 170px;
+			max-height: 80px;
+		}
+	}
+
+	@media ( max-width: 600px ) {
+		.tiendasTodas section.contenedor > div > div {
+			width: calc(51% - 10px);
+		}
+		.tiendasTodas section.contenedor > p {
+			margin: 10px 0
+		}
+	}
+
+	/*
+	========================================================
+	=> TETRAEMOS => COTIZADOR
+	========================================================
+	*/
+
+	@media ( max-width: 730px ) {
+		.tetraemosForm section.contenedor > p {
+			width: 100%;
+			text-align: center;
+		}
+		.tetraemosForm section.contenedor > a {
+			position: relative;
+			top: 0;
+			margin-top: 10px;
+			width: 100%;
+			text-align: center;
+			right: auto;
+			display: block;
+		}
+		.tetraemosForm section.contenedor > form {
+			height: 70px;
+		}
+	}
+	@media ( max-width: 500px ) {
+		.tetraemosForm section.contenedor > form {
+			height: auto;
+		}
+		.tetraemosForm section.contenedor > form input {
+			position: relative;
+			width: calc( 97% - 10px );
+			margin: 0 auto;
+		}
+		.tetraemosForm section.contenedor > form button {
+			width: 100%;
+			float: none;
+			margin-top: 10px;
+			margin-bottom: 20px;
+			position: relative;
+		}
+	}
+
+	/*
+	========================================================
+	=> TETRAEMOS => AGREGAR EXTENSION
+	========================================================
+	*/
+
+	@media ( max-width: 1120px ) {
+		.agregarExtension {
+			display: none;
+		}
+	}
+
+	/*
+	========================================================
+	=> TETRAEMOS => VENTAJAS
+	========================================================
+	*/
+
+	@media ( max-width: 876px ) {
+		.teTraemosVentajas > section.contenedor > div {
+			width: 100%;
+		}
+		.teTraemosVentajas > section.contenedor .tambien {
+			width: 100%;
+			float: none;
+			width: calc( 98% - 10px );
+		}
+	}
+	@media ( max-width: 500px ) {
+		.teTraemosVentajas > section.contenedor > div > .ventajitas {
+			width: 100%;
+			margin-bottom: 6%;
+		}
+		.teTraemosVentajas > section.contenedor .tambien > ul li {
+			margin-bottom: 10px;
+		}
+	}
+
+	/*
+	========================================================
+	=> TETRAEMOS => NUESTROS CLIENTES DICEN
+	========================================================
+	*/
+
+	@media ( max-width: 600px ) {
+		.nuestrosClientesDicenDeBL {
+			margin-top: 50px;
+		}
+		.nuestrosClientesDicenDeBL section.contenedor > .opiniones > div {
+			width: 100%;
+			margin-bottom: 30px;
+		}
+	}
+
+	/*
+	========================================================
+	=> FOOTER
+	========================================================
+	*/
+
+	footer {}
+
+	/*
+	========================================================
+	=> FOOTER => FORMAS DE PAGO
+	========================================================
+	*/
+
+	@media ( max-width: 867px ) {
+		footer .formasDePago section.contenedor > img {
+			margin: 0 10px;
+			min-height: auto;
+			width: calc( 11.3% - 10px );
+		}
+	}
+
+	@media ( max-width: 685px ) {
+		footer .formasDePago section.contenedor .botones {
+			display: block;
+			width: 100%;
+			margin-top: 30px;
+		}
+		footer .formasDePago section.contenedor .botones > ul {
+			width: 70px;
+			margin: 0 auto;
+			display: block;
+		}
+		footer .formasDePago section.contenedor .botones > ul > li {
+			background: #CCC;
+			border-radius: 50%;
+			height: 30px;
+			width: 30px;
+			display: inline-block;
+			cursor: pointer;
+		}
+			footer .formasDePago section.contenedor .botones > ul > li:hover {
+				background: #d94300;
+			}
+		footer .formasDePago section.contenedor .botones > ul > li:first-of-type {
+			margin-right: 10px;
+		}
+		footer .formasDePago section.contenedor .botones > ul > li.activo {
+			background: #FF5A00;
+		}
+		footer .formasDePago section.contenedor > img {
+			display: none;
+			margin-right: calc( 4% - 10px );
+			margin-left: calc( 4% - 10px );
+			margin-top: 0;
+			margin-bottom: 0;
+			display: inline-block;
+		}
+		footer .formasDePago section.contenedor.slice1a3 img {
+			width: calc( 25% - 10px );
+			display: inline-block;
+		}
+		footer .formasDePago section.contenedor.slice4a7 img {
+			width: calc( 21% - 10px );
+			display: inline-block;
+		}
+		footer .formasDePago section.contenedor.slice1a3 > img:nth-child(5) ,
+		footer .formasDePago section.contenedor.slice1a3 > img:nth-child(6) ,
+		footer .formasDePago section.contenedor.slice1a3 > img:nth-child(7) ,
+		footer .formasDePago section.contenedor.slice1a3 > img:nth-child(8) {
+			display: none;
+		}
+		footer .formasDePago section.contenedor.slice4a7 > img:nth-child(2) ,
+		footer .formasDePago section.contenedor.slice4a7 > img:nth-child(3) ,
+		footer .formasDePago section.contenedor.slice4a7 > img:nth-child(4) {
+			display: none;
+		}
+	}
+
+	/*
+	========================================================
+	=> FOOTER => DIRECCION
+	========================================================
+	*/
+
+	@media ( max-width: 685px ) {
+		footer section.abajo section.contenedor address {
+			width: 90%;
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</style><!-- /CSS NUEVO --><!-- <script src="https://statics.cdn0.buscalibre.com/js/fontawesome.min.comp.js"></script> --><script src="https://statics.cdn0.buscalibre.com/js/lazysizes.min.js?version=1" async=""></script><style type="text/css">
+	h2.deal {
+		background: transparent;
+		border: none;
+		border-bottom: 1px solid #ff3c00;
+		padding-left: 0;
+		padding-bottom: 0;
+		height: auto;
+		line-height: 1.3em;
+		font-weight: bold;
+		overflow: hidden;
+		margin-left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+	}
+	h2.deal > span {
+		border-bottom: 6px solid #ff3c00;
+		padding: 0 20px 6px 10px;
+	}
+	h2.deal > a {
+        font-size: 0.5em;
+        font-weight: 600;
+        color: var( --azul );
+	}
+	h2.deal > a:hover {
+        color: var( --naranjo );
+	}
+	.bestsellersPortada > h2.deal ,
+	.bestsellersPortada > h4.deal {
+		padding-bottom: 0;
+	}
+	.bestsellersPortada > h2.deal > span ,
+	.bestsellersPortada > h4.deal > span {
+		font-size: .6em;
+		text-align: center;
+		padding: 0 10px 6px 10px;
+		line-height: 2.6em;
+	}
+	.productosLista .productoLista a {
+		overflow: inherit;
+	}
+	@media ( max-width: 500px ) {
+		.v2018 .productosLista .productoLista.testgrillameta {
+			overflow: hidden;
+		}
+		h2.deal > span {
+			border-bottom: none;
+		}
+		h2.deal > a {
+            line-height: 1.4em;
+		}
+	}
+	@media ( max-width: 450px ) {
+		.productosLista .productoLista a  {
+			overflow: hidden;
+			padding-bottom: 5px;
+		}
+		h2.deal ,
+		h4.deal {
+			padding-bottom: 2px;
+			width: auto;
+		}
+	}
+</style><style type="text/css">
+	@media ( max-width: 1150px ) {
+		header.principal section.inferior {}
+		header.principal section.inferior > .contenedor > div {
+			display: flex;
+		}
+		header.principal > section.inferior > section.contenedor > .row > .col:nth-child( 1 ) {
+			display: flex;
+		}
+		header.principal > section.inferior > section.contenedor > .row > .col:nth-child( 1 ) > div {
+			display: flex;
+		}
+		header.principal > section.inferior > section.contenedor > .row > .col-cart:nth-child( 3 ) {
+			width: 40%;
+			display: block;
+			flex-basis: auto;
+		}
+		.menu-mobile-button-header {
+			margin-right: 30px;
+		}
+		#buscador form {
+			margin-left: 90px;
+		}
+	}
+	@media ( max-width: 500px ) {
+		header.principal > section.inferior > section.contenedor > .row > .col:nth-child( 1 ) > div {
+			width: 250px;
+		}
+		header.principal > section.inferior > section.contenedor > .row > .col:nth-child( 1 ) > div > .menu-mobile-button-header {
+			margin-right: 20px;
+		}
+		header.principal > section.inferior section.contenedor #cart_button > a > p > label {
+			display: none;
+		}
+	}
+</style><style type="text/css">
+	h3.title {
+		margin: 0;
+		color: #000;
+		max-height: 32px;
+		overflow: hidden;
+		padding-right: 10px;
+		line-height: 16px;
+		font-weight: 400;
+		font-size: 0.97em;
+	}
+	.productos .producto a .nombre {
+		margin-bottom: 5px;
+	}
+</style><style type="text/css">
+	@media ( max-width: 670px ) {
+		/* PORTADA */
+		.portadasyotros {
+			overflow: hidden;
+		}
+		section#productosPortada {
+			width: 100%;
+		}
+		.minibannerAbajo > div > a > img ,
+		section.bestsellersPortada.v2018 {
+			width: 90%;
+		}
+		.minibannerCostado ,
+		.minibannerAbajo {
+			display: flex;
+			flex-direction: column;
+		}
+		.minibannerCostado > div ,
+		.minibannerAbajo > div {
+			width: 100%;
+			margin-bottom: 5px;
+		}
+		.minibannerAbajo > div > a > img, section.bestsellersPortada.v2018 {
+			max-height: inherit;
+		}
+		/* /PORTADA */
+		/* CARRITO => CARRO DE COMPRA */
+		nav.pasosCompra {
+			display: none;
+		}
+		/* / CARRITO => CARRO DE COMPRA */
+		/* CARRITO => INFORMACION DE ENVIO */
+		.bodyCheckout header {
+			width: 100%;
+		}
+		section#carro .checkout.informacionEnvio {
+			width: 100%;
+			overflow: hidden;
+		}
+		/* / CARRITO => INFORMACION DE ENVIO */
+		/* CARRITO => PAGO PEDIDO */
+		section#carro .checkout.pagoPedido {
+			width: 100%;
+		}
+		/* / CARRITO => PAGO PEDIDO */
+	}
+
+	@media (min-width: 768px) and (max-width: 1024px) {
+		.minibannerAbajo > div > a > img {
+			max-height: 70px;
+		}
+	}
+
+</style><script type="text/javascript">
+	let anchoPantalla = $(window).width();
+	if ( anchoPantalla <= 670 ) {
+		$( ".categories.col-left" ).removeClass( "col-left" );
+		$( ".portadasyotros.col-right" ).removeClass( "col-right" );
+	}
+</script><style type="text/css">
+	#content, #filtros {
+		float: none;
+	}
+</style><style type="text/css">
+	@media ( max-width: 550px ) {
+		section#productosPortada {
+			width: 100% !important;
+		}
+	}
+</style><style type="text/css">
+	body {
+		overflow-x: hidden !important;
+	}
+</style><style type="text/css">
+    .v2018 .productos .producto .imagen img {
+        height: 90% !important;
+    }
+    .productos .producto .add-cart a.add-to-cart {
+        font-size: .8em;
+        justify-content: center;
+        padding: 12px 0 !important;
+    }
+    .productos .producto a .imagen {
+        min-width: 100%;
+    }
+</style><style type="text/css">
+    b, strong {
+        font-weight: 600;
+    }
+</style><style type="text/css">
+    .dashboard .contenidoBoard .productosLista .productoLista.testgrillameta {
+        overflow: visible;
+    }
+    .dashboard .contenidoBoard .productosLista .productoLista a {
+        overflow: visible;
+    }
+    .dashboard .contenidoBoard .productosLista .productoLista.testgrillameta .etiqueta {
+        top: 0 !important;
+        text-indent: 0 !important;
+    }
+    .dashboard .contenidoBoard .productosLista .productoLista.testgrillameta a .precioAntes {
+        top: 0 !important;
+    }
+    .dashboard .contenidoBoard .productosLista .productoLista.testgrillameta a .precioAhora {
+        top: 20px !important;
+    }
+</style><style type="text/css">
+    section#menudesplegado > section.menu > nav > ul > li:last-of-type {
+        border-bottom: none;
+    }
+</style><script type="module">
+    if ( $("body").outerWidth() <= 800 ) {
+        const alto_header        = $("header#principal").outerHeight();
+        const alto_barrasuperior = $("body.mobile .avisoTop").outerHeight() ?? 0;
+        const alto_barrainferior = $("#barrainferior").outerHeight() ?? 0;
+        const altura_todo_header = alto_header + alto_barrasuperior + alto_barrainferior;
+
+        $("section#menudesplegado > section.menu > nav").css( "height", `calc(100dvh - ${ altura_todo_header }px)` );
+    }
+</script><script>
+        $(".opiniones-like.reviews-vote button").click(
+            function(){
+                var clicked_button = $(this);
+                var voto         =  clicked_button.hasClass("util") ? "1" : "0";
+                var review_id    = clicked_button.parents('em').attr('data-id');
+
+                                    clicked_button.parent().find(".msg").addClass("box-success margin-top-20 font-style-normal").html("Para evaluar esta opinión por favor <a href='/v2/u?rto=/pb/2510172'>Ingresa o Regístrate.</a>")
+                
+            }
+        );
+    </script><script>
+        $( "body" ).on( "click", ".carruselRelacionados .arrowDer" , function(){
+            $( ".carruselRelacionados .arrowIzq > span" ).removeClass( "gris" );
+            $( this ).parent().find( ".productos" ).animate({
+                scrollLeft: '+='+ $( this ).parent().find( ".productos" ).width()
+            },1000);
+        });
+        $( "body" ).on( "click", ".carruselRelacionados .arrowIzq" , function(){
+            $( this ).parent().find( ".productos" ).animate({
+                scrollLeft: '-='+ $( this ).parent().find( ".productos" ).width()
+            },1000);
+        });
+    </script><script>
+        $.post('/v2/track_prod', {
+            "sku"    : "2510172",
+            "precio" : "63.00",
+            "pvp"    : "90.00",
+            "ml"     : "700",
+            "nombre" : "La Ciencia Del Caos",
+            "image"  : "https://image.cdn0.buscalibre.com/5d2d442c78cb61e7408b4567.__RSF640x640__.jpg",
+            "url"    : "/libro-la-ciencia-del-caos/9789681668631/p/2510172",
+            "pl"     : "1",
+       });
+    </script><script>
+        function traducirTexto (element, id_texto_wrapper) {
+            var button_traducir = $(element);
+
+            $('#' + id_texto_wrapper).css("opacity","0.5");
+            var buttons_wrapper = button_traducir.parent();
+
+            let params = { 'text' : $('#' + id_texto_wrapper).text() };
+            $.getJSON('/v2/translate-text', params, function( response ) {
+                $('#' + id_texto_wrapper ).hide();
+                $('#' + id_texto_wrapper + "-translated").text( response.translated_text );
+                $('#' + id_texto_wrapper + "-translated").show();
+
+                $('#' + id_texto_wrapper).css("opacity","1");
+
+                button_traducir.hide();
+                buttons_wrapper.find(".button-mostrar-original").show();
+            });
+        }
+
+        function mostrarTextoOriginal (element, id_texto_wrapper) {
+            $('#' + id_texto_wrapper ).show();
+            $('#' + id_texto_wrapper + "-translated" ).hide();
+            $(element).parent().find(".button-mostrar-original").hide();
+            $(element).parent().find(".button-translate").show();
+        }
+    </script><style type="text/css">
+			#cambiarPais.version2020 {
+				box-shadow: none;
+				height: auto;
+			}
+			#cambiarPais.version2020 .modal-header > i {
+				z-index: 1;
+				cursor: pointer;
+			}
+			#cambiarPais.version2020 .modal-header > p {
+				position: relative;
+				top: -20px;
+				font-weight: 600;
+				border-bottom: 1px solid #ddd;
+				padding-bottom: 10px;
+				margin: 20px 0 0 0;
+			}
+			#cambiarPais.version2020 > p {
+				margin: 0 0 20px 0;
+				color: black;
+			}
+			#cambiarPais.version2020 > a {
+				font-size: 1.2em;
+				border-radius: 10px;
+				border: none;
+				text-decoration: none;
+			}
+			#cambiarPais.version2020 > a.cerrar {
+				background: #bbb;
+				color: white;
+				padding: 5px 10px;
+				display: table;
+				margin: 20px auto 5px;
+				width: auto;
+			}
+			@media ( max-width: 768px ) {
+				#cambiarPais.version2020 > a.cerrar {
+					font-size: 1em;
+				}
+			}
+	</style><script>
+    if ( getCookie('sugpais') != 131 && false ) {
+
+        $("body").append('<div id="cambiarPais" class="dialog-box cambiodepaismodal" style="display:none; height: auto !important;"></div>');
+        const html = `
+            <style type="text/css">
+                .cambiodepaismodal {
+                    width: 420px;
+                }
+                @media ( max-width: 500px ) {
+                    .cambiodepaismodal {
+                        width: 90% !important;
+                        left: 0 !important;
+                        right: 0 !important;
+                        margin-left: auto !important;
+                        margin-right: auto !important;
+                    }
+                }
+            </style><p>
+                Estás viendo <strong>Buscalibre México</strong>, pero estás en <strong>México</strong></p><a
+                class="irA"
+                href="/v2/cp?rto=https://www.buscalibre.com.mx/libro-la-ciencia-del-caos/9789681668631/p/2510172"
+            >
+                Ir a México
+            </a><a class="cerrar">Me quedo aquí</a>
+        `;
+        $('#cambiarPais').html(html);
+
+        $("#cambiarPais").lightbox_me({
+            closeClick: false,
+            closeEsc: true,
+            appearEffect:'fadeIn',
+            closeSelector: '.cerrar'
+        });
+
+        setCookie('sugpais', 131, 7 , "/", "", "");
+    }
+</script><a href="https://r5rh2u0m2h.execute-api.us-east-1.amazonaws.com/ProdStage" rel="nofollow" style="display: none" aria-hidden="true">siguiente</a>
+<div class="autocomplete-suggestions" style="position: absolute; display: none; max-height: 300px; z-index: 9999;"></div>
+<script id="" text="" charset="" type="text/javascript" src="//dynamic.criteo.com/js/ld/ld.js?a=95464"></script><div style="display: none; visibility: hidden;"><script type="text/javascript">var tlf="+525592746508",text="+52 55 9274 6508 (9 a 18hrs)";
+if(document.querySelectorAll(".mobile .principal").length){var link=document.createElement("a");link.style="color: #333;font-weight: bold;padding: 10px 20px;display: block;";link.href="tel:"+tlf;link.innerHTML=text;document.querySelectorAll(".mobile .principal .inferior .contenedor")[0].append(link)}else document.querySelectorAll("#menudesplegado").length?document.querySelector("section#menudesplegado \x3e section.menu \x3e nav \x3e ul").innerHTML+=' \x3cli\x3e \x3ca class\x3d"contactotelefono" href\x3d"tel:'+
+tlf+'" title\x3d"'+text+'"\x3e \x3cp\x3e'+text+'\x3c/p\x3e \x3cspan class\x3d"arrow-right"\x3e\x3c/span\x3e \x3c/a\x3e \x3c/li\x3e ':(link=document.createElement("a"),link.style="color: white;font-weight: bold;padding: 0px 10px 0px 0px;",link.href="tel:"+tlf,link.innerHTML=text,document.getElementsByTagName("aside")[0].prepend(link));</script></div><script type="text/javascript" id="" charset="">!function(d,g,e){d.TiktokAnalyticsObject=e;var a=d[e]=d[e]||[];a.methods="page track identify instances debug on off once ready alias group enableCookie disableCookie".split(" ");a.setAndDefer=function(b,c){b[c]=function(){b.push([c].concat(Array.prototype.slice.call(arguments,0)))}};for(d=0;d<a.methods.length;d++)a.setAndDefer(a,a.methods[d]);a.instance=function(b){b=a._i[b]||[];for(var c=0;c<a.methods.length;c++)a.setAndDefer(b,a.methods[c]);return b};a.load=function(b,c){var f="https://analytics.tiktok.com/i18n/pixel/events.js";
+a._i=a._i||{};a._i[b]=[];a._i[b]._u=f;a._t=a._t||{};a._t[b]=+new Date;a._o=a._o||{};a._o[b]=c||{};c=document.createElement("script");c.type="text/javascript";c.async=!0;c.src=f+"?sdkid\x3d"+b+"\x26lib\x3d"+e;b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(c,b)};a.load("C4J59C51KC6QQ9D0GOMG");a.page()}(window,document,"ttq");</script>
+<script type="text/javascript" id="" charset="">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","334724869216339");fbq("set","agent","tmgoogletagmanager","334724869216339");fbq("track","PageView");</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=334724869216339&amp;ev=PageView&amp;noscript=1"></noscript>
+
+<script type="text/javascript" id="" charset="">-1==document.location.href.search("gtm-msr.appspot")&&(window.criteo_q=window.criteo_q||[],window.criteo_q.push({event:"setAccount",account:google_tag_manager["rm"]["748349"](16)},{event:"viewItem",item:google_tag_manager["rm"]["748349"](17)},{event:"setEmail",email:google_tag_manager["rm"]["748349"](18),hash_method:google_tag_manager["rm"]["748349"](19)},{event:"setZipcode",zipcode:google_tag_manager["rm"]["748349"](20)},{event:"setSiteType",type:google_tag_manager["rm"]["748349"](21)}));</script>
+<script type="text/javascript" id="" charset="">var params={device:"desktop",ip:"177.245.238.89",id_session:"tp61k3gnknos61rsiehllni4bv",id_usuario:google_tag_manager["rm"]["748349"](22),c_pais:google_tag_manager["rm"]["748349"](23),event:"view",page_type:"detalle_producto",id_product:google_tag_manager["rm"]["748349"](24),price:google_tag_manager["rm"]["748349"](25),products:google_tag_manager["rm"]["748349"](26),carro:google_tag_manager["rm"]["748349"](27),url:"https:\/\/www.buscalibre.com.mx\/libro-la-ciencia-del-caos\/9789681668631\/p\/2510172",c_pedido:google_tag_manager["rm"]["748349"](28),webview:google_tag_manager["rm"]["748349"](29),utm_campaign:"undefined",utm_source:"undefined",utm_medium:"undefined",
+utm_content:"undefined",utm_nooverride:"undefined",fbclid:"undefined",gclid:"undefined",referer:"https:\/\/www.buscalibre.com.mx\/libros\/search\/?q\x3dciencia",search:"",tag:"undefined",user_agent:"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/120.0.0.0 Safari\/537.36",bmkt_campaign:"undefined",bmkt_source:"undefined",bmkt_anuncio:"undefined",referido:"undefined",test_ab:google_tag_manager["rm"]["748349"](30)},m;
+for(m in params)void 0!=params[m]&&params[m]&&"undefined"!=params[m]&&"null"!=params[m]||delete params[m];fetch("https://track.buscalibre.com/api/tracking",{method:"POST",body:JSON.stringify(params),headers:{"Content-Type":"application/json"}});</script><script type="text/javascript" id="" charset="">ttq.track("ViewContent",{content_id:google_tag_manager["rm"]["748349"](31)[0].id,content_name:google_tag_manager["rm"]["748349"](32)[0].name,value:google_tag_manager["rm"]["748349"](33)[0].price,currency:"MXN",content_type:"product"});</script>
+<iframe height="0" width="0" style="display: none; visibility: hidden;"></iframe><div id="criteo-tags-div" style="display: none;"></div><img src="https://t.co/1/i/adsct?bci=4&amp;dv=America%2FMexico_City%26es-419%2Ces%26Google%20Inc.%26Win32%26255%261366%26768%268%2632%261366%26728%260%26na&amp;eci=4&amp;event=%7B%7D&amp;event_id=8cd08f10-6837-421b-a2cf-e84c66b4a532&amp;integration=gtm&amp;p_id=Twitter&amp;p_user_id=0&amp;pl_id=299540f4-54e8-4ae5-b2ae-8dff1f5d5e69&amp;pt=Libro%20La%20Ciencia%20del%20Caos%20De%20Isaac%20Schifter%20-%20Buscalibre%20M%C3%A9xico&amp;tw_document_href=https%3A%2F%2Fwww.buscalibre.com.mx%2Flibro-la-ciencia-del-caos%2F9789681668631%2Fp%2F2510172&amp;tw_iframe_status=0&amp;tw_pid_src=2&amp;twpid=tw.1779577235096.799430407571644078&amp;txn_id=tw-o32yi-odsxi&amp;type=javascript&amp;version=2.3.53" height="1" width="1" fetchpriority="high" style="display: none;"><img src="https://analytics.twitter.com/1/i/adsct?bci=4&amp;dv=America%2FMexico_City%26es-419%2Ces%26Google%20Inc.%26Win32%26255%261366%26768%268%2632%261366%26728%260%26na&amp;eci=4&amp;event=%7B%7D&amp;event_id=8cd08f10-6837-421b-a2cf-e84c66b4a532&amp;integration=gtm&amp;p_id=Twitter&amp;p_user_id=0&amp;pl_id=299540f4-54e8-4ae5-b2ae-8dff1f5d5e69&amp;pt=Libro%20La%20Ciencia%20del%20Caos%20De%20Isaac%20Schifter%20-%20Buscalibre%20M%C3%A9xico&amp;tw_document_href=https%3A%2F%2Fwww.buscalibre.com.mx%2Flibro-la-ciencia-del-caos%2F9789681668631%2Fp%2F2510172&amp;tw_iframe_status=0&amp;tw_pid_src=2&amp;twpid=tw.1779577235096.799430407571644078&amp;txn_id=tw-o32yi-odsxi&amp;type=javascript&amp;version=2.3.53" height="1" width="1" fetchpriority="high" style="display: none;"><img src="https://t.co/1/i/adsct?bci=4&amp;dv=America%2FMexico_City%26es-419%2Ces%26Google%20Inc.%26Win32%26255%261366%26768%268%2632%261366%26728%260%26na&amp;eci=3&amp;event=%7B%7D&amp;event_id=87ad5a13-203a-4b92-9966-71ca3ce4bda0&amp;integration=gtm&amp;p_id=Twitter&amp;p_user_id=0&amp;pl_id=299540f4-54e8-4ae5-b2ae-8dff1f5d5e69&amp;pt=Libro%20La%20Ciencia%20del%20Caos%20De%20Isaac%20Schifter%20-%20Buscalibre%20M%C3%A9xico&amp;tw_document_href=https%3A%2F%2Fwww.buscalibre.com.mx%2Flibro-la-ciencia-del-caos%2F9789681668631%2Fp%2F2510172&amp;tw_iframe_status=0&amp;tw_pid_src=2&amp;twpid=tw.1779577235096.799430407571644078&amp;txn_id=o32yi&amp;type=javascript&amp;version=2.3.53" height="1" width="1" fetchpriority="high" style="display: none;"><img src="https://analytics.twitter.com/1/i/adsct?bci=4&amp;dv=America%2FMexico_City%26es-419%2Ces%26Google%20Inc.%26Win32%26255%261366%26768%268%2632%261366%26728%260%26na&amp;eci=3&amp;event=%7B%7D&amp;event_id=87ad5a13-203a-4b92-9966-71ca3ce4bda0&amp;integration=gtm&amp;p_id=Twitter&amp;p_user_id=0&amp;pl_id=299540f4-54e8-4ae5-b2ae-8dff1f5d5e69&amp;pt=Libro%20La%20Ciencia%20del%20Caos%20De%20Isaac%20Schifter%20-%20Buscalibre%20M%C3%A9xico&amp;tw_document_href=https%3A%2F%2Fwww.buscalibre.com.mx%2Flibro-la-ciencia-del-caos%2F9789681668631%2Fp%2F2510172&amp;tw_iframe_status=0&amp;tw_pid_src=2&amp;twpid=tw.1779577235096.799430407571644078&amp;txn_id=o32yi&amp;type=javascript&amp;version=2.3.53" height="1" width="1" fetchpriority="high" style="display: none;"><img src="https://s-cs.rmp.rakuten.com/?d=21&amp;uid=X0EYw0_30zc0jm3NKpvyZKar-qFmAa21qsbE-J8g08M" width="1" height="1" scrolling="no" frameborder="0" style="display:none"><img src="https://usersync.gumgum.com/usersync?b=rth&amp;i=X0EYw0_30zc0jm3NKpvyZKar-qFmAa21qsbE-J8g08M" width="1" height="1" scrolling="no" frameborder="0" style="display:none"><img src="https://t.adx.opera.com/sync?vendor=60039&amp;uid=X0EYw0_30zc0jm3NKpvyZKar-qFmAa21qsbE-J8g08M" width="1" height="1" scrolling="no" frameborder="0" style="display:none"><iframe id="_hjSafeContext_41490765" title="_hjSafeContext" tabindex="-1" aria-hidden="true" src="about:blank" style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"></iframe><iframe height="0" width="0" hidden="" aria-hidden="true" tabindex="-1" title="Criteo DIS iframe"></iframe></body></html>
