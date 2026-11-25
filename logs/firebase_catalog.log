@@ -25,3 +25,73 @@
 2026-11-20 12:30:00 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_cac1fce0749dfd7e648ef1af | title='Cien años de soledad' | source=buscalibre | update_time=2026-11-20 18:30:00.197394+00:00
 2026-11-20 12:30:01 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_dbef0bdd1057f3aa006079f7 | title='Cien Años de Soledad (2015)' | source=buscalibre | update_time=2026-11-20 18:30:00.311734+00:00
 2026-11-20 12:30:01 | INFO | FIRESTORE_SYNC_FINISHED | query='cien años de soledad' | attempted=3 | saved=3 | failed=0 | status=success
+2026-11-25 13:05:09 | INFO | FIRESTORE_SYNC_STARTED | query='Harry Potter' | found_results=10 | collection=books
+2026-11-25 13:05:09 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 13:05:09 | WARNING | FIRESTORE_SYNC_FINISHED | query='Harry Potter' | attempted=10 | saved=0 | status=skipped
+2026-11-25 13:10:46 | INFO | FIRESTORE_SYNC_STARTED | query='Harry Potter' | found_results=10 | collection=books
+2026-11-25 13:10:46 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 13:10:46 | WARNING | FIRESTORE_SYNC_FINISHED | query='Harry Potter' | attempted=10 | saved=0 | status=skipped
+2026-11-25 13:11:57 | INFO | FIRESTORE_SYNC_STARTED | query='El Principito' | found_results=10 | collection=books
+2026-11-25 13:11:57 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 13:11:57 | WARNING | FIRESTORE_SYNC_FINISHED | query='El Principito' | attempted=10 | saved=0 | status=skipped
+2026-11-25 13:13:40 | INFO | FIRESTORE_SYNC_STARTED | query='Harry Potter' | found_results=8 | collection=books
+2026-11-25 13:13:40 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 13:13:40 | WARNING | FIRESTORE_SYNC_FINISHED | query='Harry Potter' | attempted=8 | saved=0 | status=skipped
+2026-11-25 13:14:56 | INFO | FIRESTORE_SYNC_STARTED | query='Harry Potter test' | found_results=3 | collection=books
+2026-11-25 13:14:58 | INFO | FIRESTORE_CONNECTED | collection=books | project=store-ea555
+2026-11-25 13:14:59 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_a0eea0449379d06096532669 | title='Harry Potter y la piedra filosofal (Harry Potter 1)' | source=buscalibre | update_time=2026-11-25 19:14:57.758122+00:00
+2026-11-25 13:14:59 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_e170dab48f252dc396a5b842 | title='Harry Potter y la cámara secreta (Harry Potter 2)' | source=buscalibre | update_time=2026-11-25 19:14:57.877796+00:00
+2026-11-25 13:14:59 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_b59f0bfd56af6068bc32d7a6 | title='Harry Potter Lego. Un año Magico en Hogwarts' | source=buscalibre | update_time=2026-11-25 19:14:58.091156+00:00
+2026-11-25 13:14:59 | INFO | FIRESTORE_SYNC_FINISHED | query='Harry Potter test' | attempted=3 | saved=3 | failed=0 | status=success
+2026-11-25 13:15:57 | INFO | FIRESTORE_SYNC_STARTED | query='Harry Potter' | found_results=5 | collection=books
+2026-11-25 13:15:59 | INFO | FIRESTORE_CONNECTED | collection=books | project=store-ea555
+2026-11-25 13:16:00 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_a0eea0449379d06096532669 | title='Harry Potter y la piedra filosofal (Harry Potter 1)' | source=buscalibre | update_time=2026-11-25 19:15:59.254302+00:00
+2026-11-25 13:16:00 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_e170dab48f252dc396a5b842 | title='Harry Potter y la cámara secreta (Harry Potter 2)' | source=buscalibre | update_time=2026-11-25 19:15:59.449011+00:00
+2026-11-25 13:16:00 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_b59f0bfd56af6068bc32d7a6 | title='Harry Potter Lego. Un año Magico en Hogwarts' | source=buscalibre | update_time=2026-11-25 19:15:59.567133+00:00
+2026-11-25 13:16:01 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_574a11d372a5e8a000e1aa7f | title='Harry Potter y el prisionero de Azkaban (Harry Potter 3)' | source=buscalibre | update_time=2026-11-25 19:15:59.757539+00:00
+2026-11-25 13:16:01 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_d60818fe24be412eba1a20aa | title='Harry Potter y su Mundo Magico' | source=buscalibre | update_time=2026-11-25 19:15:59.896029+00:00
+2026-11-25 13:16:01 | INFO | FIRESTORE_SYNC_FINISHED | query='Harry Potter' | attempted=5 | saved=5 | failed=0 | status=success
+2026-11-25 13:16:51 | INFO | FIRESTORE_SYNC_STARTED | query='El Principito' | found_results=5 | collection=books
+2026-11-25 13:16:51 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_ba4c9c2e6fcbd295dd6c4760 | title='El Principito' | source=buscalibre | update_time=2026-11-25 19:16:50.141223+00:00
+2026-11-25 13:16:51 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_df2f072bf5830aa78863e96a | title='El Principito' | source=buscalibre | update_time=2026-11-25 19:16:50.238453+00:00
+2026-11-25 13:16:51 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_ea68c5f27911c51436eab99b | title='El Principito' | source=buscalibre | update_time=2026-11-25 19:16:50.326468+00:00
+2026-11-25 13:16:51 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_9dcc9fc5eecc5257a7c30c90 | title='Principito, el' | source=buscalibre | update_time=2026-11-25 19:16:50.449279+00:00
+2026-11-25 13:16:51 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_8aca9ff5e837f73f9ecbaef3 | title='El Principito' | source=buscalibre | update_time=2026-11-25 19:16:50.528412+00:00
+2026-11-25 13:16:51 | INFO | FIRESTORE_SYNC_FINISHED | query='El Principito' | attempted=5 | saved=5 | failed=0 | status=success
+2026-11-25 13:17:41 | INFO | FIRESTORE_SYNC_STARTED | query='Cien años de soledad' | found_results=5 | collection=books
+2026-11-25 13:17:41 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_84e67fd8b875d33978c11301 | title='Cien Años de Soledad' | source=buscalibre | update_time=2026-11-25 19:17:40.314742+00:00
+2026-11-25 13:17:41 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_cac1fce0749dfd7e648ef1af | title='Cien años de soledad' | source=buscalibre | update_time=2026-11-25 19:17:40.397883+00:00
+2026-11-25 13:17:41 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_dbef0bdd1057f3aa006079f7 | title='Cien Años de Soledad (2015)' | source=buscalibre | update_time=2026-11-25 19:17:40.481961+00:00
+2026-11-25 13:17:41 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_3a61b4621e72f2e21d237c3d | title='TD Cien años de soledad' | source=buscalibre | update_time=2026-11-25 19:17:40.563316+00:00
+2026-11-25 13:17:41 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_3c300945df48c4a35cf1e3b5 | title='Cien Años de Soledad. Edición Ilustrada' | source=buscalibre | update_time=2026-11-25 19:17:40.644687+00:00
+2026-11-25 13:17:41 | INFO | FIRESTORE_SYNC_FINISHED | query='Cien años de soledad' | attempted=5 | saved=5 | failed=0 | status=success
+2026-11-25 13:26:26 | INFO | FIRESTORE_SYNC_STARTED | query='Harry Potter' | found_results=1 | collection=books
+2026-11-25 13:26:26 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 13:26:26 | WARNING | FIRESTORE_SYNC_FINISHED | query='Harry Potter' | attempted=1 | saved=0 | status=skipped
+2026-11-25 13:26:26 | INFO | FIRESTORE_SYNC_STARTED | query='Harry Potter' | found_results=1 | collection=books
+2026-11-25 13:26:26 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 13:26:26 | WARNING | FIRESTORE_SYNC_FINISHED | query='Harry Potter' | attempted=1 | saved=0 | status=skipped
+2026-11-25 13:26:26 | INFO | FIRESTORE_SYNC_STARTED | query='Harry Potter' | found_results=1 | collection=books
+2026-11-25 13:26:26 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 13:26:26 | WARNING | FIRESTORE_SYNC_FINISHED | query='Harry Potter' | attempted=1 | saved=0 | status=skipped
+2026-11-25 13:26:26 | INFO | FIRESTORE_SYNC_STARTED | query='Harry Potter' | found_results=1 | collection=books
+2026-11-25 13:26:26 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 13:26:26 | WARNING | FIRESTORE_SYNC_FINISHED | query='Harry Potter' | attempted=1 | saved=0 | status=skipped
+2026-11-25 13:26:26 | INFO | FIRESTORE_SYNC_STARTED | query='Harry Potter' | found_results=1 | collection=books
+2026-11-25 13:26:26 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 13:26:26 | WARNING | FIRESTORE_SYNC_FINISHED | query='Harry Potter' | attempted=1 | saved=0 | status=skipped
+2026-11-25 13:26:26 | INFO | FIRESTORE_SYNC_STARTED | query='Harry Potter' | found_results=1 | collection=books
+2026-11-25 13:26:26 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 13:26:26 | WARNING | FIRESTORE_SYNC_FINISHED | query='Harry Potter' | attempted=1 | saved=0 | status=skipped
+2026-11-25 13:26:26 | INFO | FIRESTORE_SYNC_STARTED | query='Harry Potter' | found_results=1 | collection=books
+2026-11-25 13:26:26 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 13:26:26 | WARNING | FIRESTORE_SYNC_FINISHED | query='Harry Potter' | attempted=1 | saved=0 | status=skipped
+2026-11-25 13:26:26 | INFO | FIRESTORE_SYNC_STARTED | query='Harry Potter' | found_results=1 | collection=books
+2026-11-25 13:26:26 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 13:26:26 | WARNING | FIRESTORE_SYNC_FINISHED | query='Harry Potter' | attempted=1 | saved=0 | status=skipped
+2026-11-25 13:26:26 | INFO | FIRESTORE_SYNC_STARTED | query='Harry Potter' | found_results=1 | collection=books
+2026-11-25 13:26:26 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 13:26:26 | WARNING | FIRESTORE_SYNC_FINISHED | query='Harry Potter' | attempted=1 | saved=0 | status=skipped
+2026-11-25 13:26:26 | INFO | FIRESTORE_SYNC_STARTED | query='Harry Potter' | found_results=1 | collection=books
+2026-11-25 13:26:26 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 13:26:26 | WARNING | FIRESTORE_SYNC_FINISHED | query='Harry Potter' | attempted=1 | saved=0 | status=skipped
