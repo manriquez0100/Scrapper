@@ -4,7 +4,7 @@ import sys
 import os
 import asyncio
 import re
-from typing import List, Dict, Any
+from typing import Callable, List, Dict, Any, Optional
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
@@ -144,20 +144,34 @@ def extraer_detalle_libro(driver, url_libro, numero_producto, ganancia_envio: fl
         if 'nombre' not in info_completa:
             info_completa['nombre'] = f"Libro #{numero_producto}"
         
-        selectores_precio = [
+        selectores_precio_actual = [
             ".precio", ".price", ".product-price", ".costo", "[class*='precio']",
             "[class*='price']", ".valor", ".amount", ".box-precio-v2 strong"
         ]
-        for selector in selectores_precio:
+        selectores_precio_original = [
+            ".precio tachado", ".precio .original", ".precio .price--original",
+            ".precio anterior", "[class*='precio-original']", "[class*='original-price']",
+            ".price--before", ".price-original", ".price-before-discount"
+        ]
+        selectores_descuento = [
+            "[class*='descuento']", "[class*='discount']", ".percent-descuento",
+            "[class*='percent']", ".badge-descuento", ".badge-descuento",
+            ".descuento-porcentaje", "span[class*='des']"
+        ]
+        
+        precio_actual_encontrado = False
+        for selector in selectores_precio_actual:
             try:
                 precio_element = driver.find_element(By.CSS_SELECTOR, selector)
                 precio_texto = precio_element.text.strip()
                 if precio_texto and ('$' in precio_texto or '€' in precio_texto or any(c.isdigit() for c in precio_texto)):
-                    info_completa['precio_original'] = precio_texto
+                    info_completa['precio_actual'] = precio_texto
                     import re
                     precio_numerico = re.search(r'[\d,]+\.?\d*', precio_texto)
                     if precio_numerico:
                         precio_valor = float(precio_numerico.group().replace(',', ''))
+                        precio_actual_encontrado = True
+                        # Calcular precio con envio
                         precio_actualizado = precio_valor + ganancia_envio
                         unidad = int(precio_actualizado) % 10
                         if 1 <= unidad <= 5:
@@ -169,10 +183,68 @@ def extraer_detalle_libro(driver, url_libro, numero_producto, ganancia_envio: fl
                         elif unidad == 0:
                             precio_actualizado = precio_actualizado - 1
                         info_completa['precio_con_envio'] = f"$ {precio_actualizado:,.0f}"
+                        # También guardamos el precio actual como precio_original si aún no está establecido
+                        if 'precio_original' not in info_completa:
+                            info_completa['precio_original'] = precio_texto
                     break
             except:
                 continue
+        
+        # Buscar precio original (antes de descuentos) si no fue encontrado
+        if not precio_actual_encontrado or 'precio_original' not in info_completa or info_completa.get('precio_original') == "Precio no disponible":
+            for selector in selectores_precio_original:
+                try:
+                    precio_original_elements = driver.find_elements(By.CSS_SELECTOR, selector)
+                    for elem in precio_original_elements:
+                        precio_texto = elem.text.strip()
+                        if precio_texto and ('$' in precio_texto or '€' in precio_texto or any(c.isdigit() for c in precio_texto)):
+                            info_completa['precio_original'] = precio_texto
+                            import re
+                            precio_numerico = re.search(r'[\d,]+\.?\d*', precio_texto)
+                            if precio_numerico:
+                                # Guardar el valor numérico original sin markup
+                                info_completa['precio_original_numerico'] = float(precio_numerico.group().replace(',', ''))
+                            break
+                    if 'precio_original' in info_completa:
+                        break
+                except:
+                    continue
+        
+        # Extraer porcentaje de descuento
+        for selector in selectores_descuento:
+            try:
+                descuento_elements = driver.find_elements(By.CSS_SELECTOR, selector)
+                for elem in descuento_elements:
+                    descuento_texto = elem.text.strip()
+                    # Buscar porcentaje en el texto
+                    import re
+                    porcentaje_match = re.search(r'(\d+(\.\d+)?)%?', descuento_texto)
+                    if porcentaje_match:
+                        info_completa['descuento_porcentaje'] = float(porcentaje_match.group(1))
+                        # Si hay descuento, el precio_actual es el precio con descuento
+                        # Podríamos calcular el precio original si no existe
+                        if 'precio_original' not in info_completa or info_completa.get('precio_original') == "Precio no disponible":
+                            # Precio original = precio_actual / (1 - descuento/100)
+                            if 'precio_actual_numerico' in info_completa and info_completa['precio_actual_numerico']:
+                                precio_actual_valor = info_completa['precio_actual_numerico']
+                                descuento = info_completa['descuento_porcentaje']
+                                if descuento and descuento < 100:
+                                    precio_original_calc = precio_actual_valor / (1 - descuento/100)
+                                    info_completa['precio_original'] = f"$ {precio_original_calc:,.0f}"
+                                    info_completa['precio_original_numerico'] = precio_original_calc
+                        break
+            except:
+                continue
+            if 'descuento_porcentaje' in info_completa:
+                break
+        
+        # Si aún no tenemos precio_original, usar precio_actual como fallback
         if 'precio_original' not in info_completa:
+            info_completa['precio_original'] = info_completa.get('precio_actual', "Precio no disponible")
+        if 'precio_original_numerico' not in info_completa and 'precio_actual_numerico' in info_completa:
+            info_completa['precio_original_numerico'] = info_completa['precio_actual_numerico']
+        
+        if 'precio_original' not in info_completa or info_completa.get('precio_original') == "Precio no disponible":
             info_completa['precio_original'] = "Precio no disponible"
             info_completa['precio_con_envio'] = "Precio no disponible"
         
@@ -283,7 +355,13 @@ def extraer_detalle_libro(driver, url_libro, numero_producto, ganancia_envio: fl
         return None
 
 
-def search_buscalibre_sync(query: str, max_results: int = 5, ganancia_envio: float = 200) -> Dict[str, Any]:
+def search_buscalibre_sync(
+    query: str,
+    max_results: int = 5,
+    ganancia_envio: float = 200,
+    on_result: Optional[Callable[[Dict[str, Any]], None]] = None,
+) -> Dict[str, Any]:
+    """Search BuscaLibre and optionally publish each completed product immediately."""
     driver = setup_chrome_driver()
     results = []
     try:
@@ -330,7 +408,7 @@ def search_buscalibre_sync(query: str, max_results: int = 5, ganancia_envio: flo
                 if not detail:
                     continue
                 available = detail.get('precio_con_envio', 'No disponible') != 'No disponible'
-                results.append({
+                book = {
                     "title": detail.get('nombre', 'No disponible'),
                     "author": detail.get('autor', 'No disponible'),
                     "price": detail.get('precio_con_envio', 'No disponible'),
@@ -344,7 +422,17 @@ def search_buscalibre_sync(query: str, max_results: int = 5, ganancia_envio: flo
                     "description": detail.get('descripcion', 'No disponible'),
                     "delivery_estimate": detail.get('delivery_estimate', 'No disponible'),
                     "delivery_dates": detail.get('delivery_dates', []),
-                })
+                }
+                results.append(book)
+
+                # The product page has now been read completely.  Notify the
+                # caller before moving to the next page so catalog persistence
+                # never has to wait for the entire search batch.
+                if on_result:
+                    try:
+                        on_result(book)
+                    except Exception as callback_error:
+                        print(f"Error publishing product {i}: {callback_error}")
                 time.sleep(1)
             except Exception as e:
                 print(f"Error extracting product {i}: {e}")
@@ -356,12 +444,17 @@ def search_buscalibre_sync(query: str, max_results: int = 5, ganancia_envio: flo
     return {"results": results}
 
 
-async def search_buscalibre(query: str, max_results: int = 5, ganancia_envio: float = 200) -> Dict[str, Any]:
+async def search_buscalibre(
+    query: str,
+    max_results: int = 5,
+    ganancia_envio: float = 200,
+    on_result: Optional[Callable[[Dict[str, Any]], None]] = None,
+) -> Dict[str, Any]:
     async with _search_semaphore:
         try:
             # Add 120 second timeout to prevent hanging
             return await asyncio.wait_for(
-                asyncio.to_thread(search_buscalibre_sync, query, max_results, ganancia_envio),
+                asyncio.to_thread(search_buscalibre_sync, query, max_results, ganancia_envio, on_result),
                 timeout=120.0
             )
         except asyncio.TimeoutError:

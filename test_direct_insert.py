@@ -4,7 +4,7 @@ from firebase_admin import credentials, firestore
 from datetime import datetime
 
 # Use the same credentials as the uploader
-creds_path = 'implemented_firestore/store-ea555-firebase-adminsdk-4znay-e64b83a1f0.json'
+creds_path = 'implemented_firestore/store-ea555-firebase-adminsdk-4znay-c3f26d3ea7.json'
 cred = credentials.Certificate(creds_path)
 app = firebase_admin.initialize_app(cred)
 db = firestore.client()

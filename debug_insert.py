@@ -5,7 +5,7 @@ from datetime import datetime
 import os
 
 # Make sure we're using the correct credentials
-creds_path = 'implemented_firestore/store-ea555-firebase-adminsdk-4znay-e64b83a1f0.json'
+creds_path = 'implemented_firestore/store-ea555-firebase-adminsdk-4znay-c3f26d3ea7.json'
 print('Using credentials from:', creds_path)
 
 cred = credentials.Certificate(creds_path)

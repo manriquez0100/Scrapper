@@ -6,12 +6,15 @@ import hashlib
 import logging
 import os
 import re
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any, Dict, Iterable, Optional
 
+# Nombres de meses en español para formatear la fecha de llegada
+MESES = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']
+
 logger = logging.getLogger(__name__)
-LOG_FILE = Path(__file__).with_name("logs") / "firebase_catalog.log"
+LOG_FILE = Path(__file__).with_name("firebase_catalog.log")
 
 
 def _configure_catalog_logger() -> None:
@@ -58,36 +61,52 @@ def _pages_value(value: Any) -> int:
     return int(match.group()) if match else 0
 
 
+def _positive_int(value: Any, default: int = 0) -> int:
+    try:
+        return max(int(value), 0)
+    except (TypeError, ValueError):
+        return default
+
+
+def _format_price(value: float) -> str:
+    return f"$ {value:,.0f}" if value > 0 else "No disponible"
+
+
 def _cover_tone(title: str) -> str:
     tones = ("midnight", "terracotta", "ochre", "jungle", "clay", "ocean")
     return tones[int(hashlib.sha256(title.encode("utf-8")).hexdigest(), 16) % len(tones)]
 
 
-def catalog_document_id(book: Dict[str, Any]) -> str:
-    """Create a stable ID, preferring the source product URL to prevent duplicates."""
-    identity = _clean_text(book.get("url") or book.get("url_libro"))
-    if not identity:
-        identity = "|".join((
-            _clean_text(book.get("title") or book.get("nombre")).lower(),
-            _clean_text(book.get("author") or book.get("autor")).lower(),
-            _clean_text(book.get("isbn")).lower(),
-        ))
-    digest = hashlib.sha256(identity.encode("utf-8")).hexdigest()[:24]
-    return f"book_{digest}"
+def _formato_llegada() -> str:
+    """Retorna la fecha de llegada formateada: 'dd de Mes'"""
+    return f"{((datetime.now().date() + timedelta(days=7)).day):02d} de {MESES[(datetime.now().date() + timedelta(days=7)).month - 1] if (datetime.now().date() + timedelta(days=7)).month > 0 else ''}"
+
+
+def _transformar_llegada(raw: str) -> str:
+    """Transforma 'Envío rápido' a 'Envío rápido (llega el dd de Mes)'"""
+    if raw and ('rápido' in raw.lower() or 'envío rápido' in raw.lower()):
+        return f"Envío rápido (llega el {_formato_llegada()})"
+    return raw or '15 a 20 días háb.'
 
 
 def prepare_catalog_book_document(book: Dict[str, Any], search_query: str) -> Dict[str, Any]:
     """Normalize a BuscaLibre/MercadoLibre result into the shared catalog schema."""
     title = _clean_text(book.get("title") or book.get("nombre"), "Libro sin título")
-    price_text = _clean_text(book.get("price") or book.get("precio_con_envio"))
+    raw_price = book.get("price") or book.get("precio_con_envio")
+    price_value = _money_value(raw_price)
+    price_text = _clean_text(book.get("priceText") or raw_price)
     price_original = _clean_text(book.get("price_original") or book.get("precio_original"))
     return {
-        "id": catalog_document_id(book),
+        "id": __import__('hashlib').sha256(_clean_text(book.get("url") or book.get("url_libro")).encode("utf-8")).hexdigest()[:24],
         "title": title,
         "author": _clean_text(book.get("author") or book.get("autor"), "No disponible"),
-        "price": _money_value(price_text),
-        "priceText": price_text or "No disponible",
+        # Firestore preserves Python numeric values as number fields.  The
+        # storefront can therefore read them directly, instead of receiving
+        # stringValue wrappers for values such as "$ 1,299".
+        "price": price_value,
+        "priceText": price_text if price_value > 0 else "No disponible",
         "priceOriginal": price_original or "No disponible",
+        "priceOriginalValue": _money_value(price_original),
         "currency": _clean_text(book.get("currency"), "MXN"),
         "availability": bool(book.get("availability", True)),
         "url": _clean_text(book.get("url") or book.get("url_libro")),
@@ -95,121 +114,144 @@ def prepare_catalog_book_document(book: Dict[str, Any], search_query: str) -> Di
         "editorial": _clean_text(book.get("editorial"), "No disponible"),
         "pages": _pages_value(book.get("pages") or book.get("num_paginas")),
         "description": _clean_text(book.get("description") or book.get("descripcion"), "Descripción no disponible."),
-        "delivery": _clean_text(book.get("delivery_estimate") or book.get("tiempo_entrega"), "No disponible"),
+        "category": _clean_text(book.get("category"), "Catálogo"),
+        "format": _clean_text(book.get("format") or book.get("formato"), "No disponible"),
+        "isbn": _clean_text(book.get("isbn")),
+        "stock": _positive_int(book.get("stock"), 1),
+        "badge": _clean_text(book.get("badge")),
+        "pricingStrategy": _clean_text(book.get("pricing_strategy")),
+        "isPsychologicalPrice": bool(book.get("is_psychological_price", False)),
+        "smartPriceMargin": _money_value(book.get("smart_price_margin")),
+        "delivery": _transformar_llegada(_clean_text(book.get("delivery_estimate") or book.get("tiempo_entrega"))),
         "deliveryDates": list(book.get("delivery_dates") or []),
         "condition": _clean_text(book.get("condition"), "No disponible"),
         "source": _clean_text(book.get("source"), "buscalibre"),
         "searchTerms": [_clean_text(search_query)],
+        "qualityScore": _positive_int(book.get("qualityScore")),
         "coverTone": _cover_tone(title),
         "updatedAt": datetime.now(timezone.utc),
     }
 
 
-class FirestoreCatalogWriter:
-    """Lazy Firestore client. Missing credentials never interrupt a search."""
-
-    def __init__(self, db: Any = None, enabled: Optional[bool] = None) -> None:
-        self.db = db
-        configured_enabled = os.getenv("FIREBASE_CATALOG_ENABLED")
-        default_key = Path(__file__).with_name("firebase-credentials.json")
-        self.enabled = enabled if enabled is not None else (
-            configured_enabled.lower() in {"1", "true", "yes"}
-            if configured_enabled is not None
-            else bool(os.getenv("FIREBASE_PROJECT_ID") or default_key.is_file())
-        )
-        self.collection = os.getenv("FIREBASE_CATALOG_COLLECTION", "books")
-        self._initialization_attempted = db is not None
-        self._array_union: Any = None
-
-    def _initialize(self) -> bool:
-        if self.db is not None:
-            return True
-        if self._initialization_attempted or not self.enabled:
-            logger.warning(
-                "FIRESTORE_SYNC_SKIPPED | reason=%s | collection=%s",
-                "disabled" if not self.enabled else "previous_initialization_failed",
-                self.collection,
-            )
-            return False
-        self._initialization_attempted = True
-        try:
-            import firebase_admin
-            from firebase_admin import credentials, firestore
-
-            project_id = os.getenv("FIREBASE_PROJECT_ID")
-            key_path = Path(os.getenv("FIREBASE_SERVICE_ACCOUNT_KEY_PATH", "firebase-credentials.json"))
-            if not key_path.is_absolute():
-                key_path = Path(__file__).parent / key_path
-
-            if not firebase_admin._apps:
-                if key_path.is_file():
-                    credential = credentials.Certificate(str(key_path))
-                    firebase_admin.initialize_app(credential, {"projectId": project_id} if project_id else None)
-                else:
-                    credential = credentials.ApplicationDefault()
-                    firebase_admin.initialize_app(credential, {"projectId": project_id} if project_id else None)
-            self.db = firestore.client()
-            self._array_union = firestore.ArrayUnion
-            logger.info("FIRESTORE_CONNECTED | collection=%s | project=%s", self.collection, project_id or "default")
-            return True
-        except Exception as exc:
-            logger.exception(
-                "FIRESTORE_CONNECTION_FAILED | collection=%s | error=%s", self.collection, exc
-            )
-            return False
-
-    def persist(self, books: Iterable[Dict[str, Any]], search_query: str) -> int:
-        items = list(books)
-        logger.info(
-            "FIRESTORE_SYNC_STARTED | query=%r | found_results=%d | collection=%s",
-            search_query,
-            len(items),
-            self.collection,
-        )
-        if not self._initialize():
-            logger.warning(
-                "FIRESTORE_SYNC_FINISHED | query=%r | attempted=%d | saved=0 | status=skipped",
-                search_query,
-                len(items),
-            )
-            return 0
-        saved = 0
-        failures = 0
-        for book in items:
-            try:
-                document = prepare_catalog_book_document(book, search_query)
-                if self._array_union:
-                    document["searchTerms"] = self._array_union(document["searchTerms"])
-                write_result = self.db.collection(self.collection).document(document["id"]).set(document, merge=True)
-                saved += 1
-                logger.info(
-                    "FIRESTORE_UPSERT_CONFIRMED | id=%s | title=%r | source=%s | update_time=%s",
-                    document["id"],
-                    document["title"],
-                    document["source"],
-                    getattr(write_result, "update_time", "unknown"),
-                )
-            except Exception as exc:
-                failures += 1
-                logger.exception(
-                    "FIRESTORE_UPSERT_FAILED | title=%r | error=%s",
-                    book.get("title") or book.get("nombre"),
-                    exc,
-                )
-        logger.info(
-            "FIRESTORE_SYNC_FINISHED | query=%r | attempted=%d | saved=%d | failed=%d | status=%s",
-            search_query,
-            len(items),
-            saved,
-            failures,
-            "success" if failures == 0 else "partial_failure",
-        )
-        return saved
+catalog_writer = None
 
 
-catalog_writer = FirestoreCatalogWriter()
+# Inicializar FirebaseUploader al importar el módulo
+try:
+    from firebase_uploader import FirebaseUploader
+    catalog_writer = FirebaseUploader()
+    # Verificar si la conexión fue exitosa probando un get simple
+    try:
+        # Intentar acceder a la colección para verificar que Firebase funciona
+        test_ref = catalog_writer.db.collection('books').limit(1)
+        test_ref.get()
+        catalog_writer.enabled = True
+    except Exception:
+        # Firebase inicializado pero sin conexión real - deshabilitado
+        catalog_writer.enabled = False
+except ImportError:
+    # FirebaseUploader no disponible - catalog_writer se mantendrá en None
+    catalog_writer = type('MockCatalogWriter', (), {'enabled': False})()
+except Exception:
+    catalog_writer.enabled = False
+
+
+def catalog_document_id(book: Dict[str, Any]) -> str:
+    """Generate a book ID from title for price comparison support.
+    
+    Uses only the title as the ID so that:
+    - Same book title (any source): creates/updates same record
+    - Different prices from different sources: stored as separate price entries
+    - Enables price comparison within the same catalog record
+    - Compatible with poblar.py usage
+    """
+    title = _clean_text(book.get("title") or book.get("nombre"), "Libro sin título")
+    # Create hash from title only (not source) for price comparison
+    return hashlib.sha256(title.encode("utf-8")).hexdigest()[:24]
+
+
+def _book_id_from_book(book: Dict[str, Any]) -> str:
+    """Internal function for persist_catalog_books upsert logic."""
+    title = _clean_text(book.get("title") or book.get("nombre"), "Libro sin título")
+    # Create hash from title only (not source) for price comparison
+    return hashlib.sha256(title.encode("utf-8")).hexdigest()[:24]
 
 
 def persist_catalog_books(books: Iterable[Dict[str, Any]], search_query: str) -> int:
-    """Save all found books with an upsert; safe to run from an async worker."""
-    return catalog_writer.persist(books, search_query)
+    """Save all found books supporting price comparison.
+    
+    Same title from different sources/prices will be stored in the same 
+    document, with prices appended to a list. This enables:
+    - Price comparison: same title shows multiple price options
+    - Single source updates: price list grows with each scrape
+    - Different books: separate records as before
+    """
+    from firebase_admin import firestore
+    
+    db = firestore.client()
+    collection_name = 'books'
+    saved_count = 0
+    
+    for book in books:
+        # Normalize to our catalog schema
+        catalog_book = prepare_catalog_book_document(book, search_query)
+        book_id = _book_id_from_book(catalog_book)
+        
+        # Check if document already exists
+        doc_ref = db.collection(collection_name).document(book_id)
+        doc_snapshot = doc_ref.get()
+        
+        if doc_snapshot.exists:
+            # Document exists - merge new price into existing price list
+            existing = doc_snapshot.to_dict()
+            current_prices = existing.get('priceHistory', [])
+            new_price_entry = {
+                'price': catalog_book.get('price', 0),
+                'priceText': catalog_book.get('priceText', 'No disponible'),
+                'source': catalog_book.get('source', 'buscalibre'),
+                'url': catalog_book.get('url', ''),
+                'date': datetime.now(timezone.utc).isoformat(),
+            }
+            # Replace a record from the same source URL so a new scrape
+            # refreshes its price instead of leaving a stale top-level price.
+            matching_index = next(
+                (index for index, item in enumerate(current_prices)
+                 if item.get('url') == new_price_entry.get('url')),
+                None,
+            )
+            if matching_index is None:
+                current_prices.append(new_price_entry)
+            else:
+                current_prices[matching_index] = new_price_entry
+            # Update the document with the (possibly updated) price history
+            doc_ref.set({
+                **catalog_book,
+                'priceHistory': current_prices,
+                'updatedAt': datetime.now(timezone.utc),
+            }, merge=True)
+            # Always set top-level price fields from the latest price entry
+            if current_prices:
+                latest_price = current_prices[-1]
+                doc_ref.update({
+                    'price': latest_price.get('price'),
+                    'priceText': latest_price.get('priceText'),
+                })
+            saved_count += 1
+        else:
+            # New document - initialize with price history
+            catalog_book['priceHistory'] = [{
+                'price': catalog_book.get('price', 0),
+                'priceText': catalog_book.get('priceText', 'No disponible'),
+                'source': catalog_book.get('source', 'buscalibre'),
+                'url': catalog_book.get('url', ''),
+                'date': datetime.now(timezone.utc).isoformat(),
+            }]
+            # Set top-level price fields for immediate access
+            doc_ref.set({
+                **catalog_book,
+                'priceHistory': catalog_book['priceHistory'],
+            }, merge=False)
+            saved_count += 1
+    
+    logger.info("Saved %d catalog books to Firestore (search: '%s').", saved_count, search_query)
+    return saved_count

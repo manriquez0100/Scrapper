@@ -95,3 +95,827 @@
 2026-11-25 13:26:26 | INFO | FIRESTORE_SYNC_STARTED | query='Harry Potter' | found_results=1 | collection=books
 2026-11-25 13:26:26 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
 2026-11-25 13:26:26 | WARNING | FIRESTORE_SYNC_FINISHED | query='Harry Potter' | attempted=1 | saved=0 | status=skipped
+2026-11-25 13:35:01 | INFO | FIRESTORE_SYNC_STARTED | query='Harry Potter' | found_results=1 | collection=books
+2026-11-25 13:35:01 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 13:35:01 | WARNING | FIRESTORE_SYNC_FINISHED | query='Harry Potter' | attempted=1 | saved=0 | status=skipped
+2026-11-25 13:35:01 | INFO | FIRESTORE_SYNC_STARTED | query='Harry Potter' | found_results=1 | collection=books
+2026-11-25 13:35:01 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 13:35:01 | WARNING | FIRESTORE_SYNC_FINISHED | query='Harry Potter' | attempted=1 | saved=0 | status=skipped
+2026-11-25 13:35:01 | INFO | FIRESTORE_SYNC_STARTED | query='Harry Potter' | found_results=1 | collection=books
+2026-11-25 13:35:01 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 13:35:01 | WARNING | FIRESTORE_SYNC_FINISHED | query='Harry Potter' | attempted=1 | saved=0 | status=skipped
+2026-11-25 13:35:01 | INFO | FIRESTORE_SYNC_STARTED | query='Harry Potter' | found_results=1 | collection=books
+2026-11-25 13:35:01 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 13:35:01 | WARNING | FIRESTORE_SYNC_FINISHED | query='Harry Potter' | attempted=1 | saved=0 | status=skipped
+2026-11-25 13:35:01 | INFO | FIRESTORE_SYNC_STARTED | query='Harry Potter' | found_results=1 | collection=books
+2026-11-25 13:35:01 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 13:35:01 | WARNING | FIRESTORE_SYNC_FINISHED | query='Harry Potter' | attempted=1 | saved=0 | status=skipped
+2026-11-25 13:35:01 | INFO | FIRESTORE_SYNC_STARTED | query='Harry Potter' | found_results=1 | collection=books
+2026-11-25 13:35:01 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 13:35:01 | WARNING | FIRESTORE_SYNC_FINISHED | query='Harry Potter' | attempted=1 | saved=0 | status=skipped
+2026-11-25 13:35:01 | INFO | FIRESTORE_SYNC_STARTED | query='Harry Potter' | found_results=1 | collection=books
+2026-11-25 13:35:01 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 13:35:01 | WARNING | FIRESTORE_SYNC_FINISHED | query='Harry Potter' | attempted=1 | saved=0 | status=skipped
+2026-11-25 13:35:01 | INFO | FIRESTORE_SYNC_STARTED | query='Harry Potter' | found_results=1 | collection=books
+2026-11-25 13:35:01 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 13:35:01 | WARNING | FIRESTORE_SYNC_FINISHED | query='Harry Potter' | attempted=1 | saved=0 | status=skipped
+2026-11-25 13:35:01 | INFO | FIRESTORE_SYNC_STARTED | query='Harry Potter' | found_results=1 | collection=books
+2026-11-25 13:35:01 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 13:35:01 | WARNING | FIRESTORE_SYNC_FINISHED | query='Harry Potter' | attempted=1 | saved=0 | status=skipped
+2026-11-25 13:35:01 | INFO | FIRESTORE_SYNC_STARTED | query='Harry Potter' | found_results=1 | collection=books
+2026-11-25 13:35:01 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 13:35:01 | WARNING | FIRESTORE_SYNC_FINISHED | query='Harry Potter' | attempted=1 | saved=0 | status=skipped
+2026-11-25 13:40:06 | INFO | FIRESTORE_SYNC_STARTED | query='Harry Potter' | found_results=1 | collection=books
+2026-11-25 13:40:06 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 13:40:06 | WARNING | FIRESTORE_SYNC_FINISHED | query='Harry Potter' | attempted=1 | saved=0 | status=skipped
+2026-11-25 13:40:06 | INFO | FIRESTORE_SYNC_STARTED | query='Harry Potter' | found_results=1 | collection=books
+2026-11-25 13:40:06 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 13:40:06 | WARNING | FIRESTORE_SYNC_FINISHED | query='Harry Potter' | attempted=1 | saved=0 | status=skipped
+2026-11-25 13:40:06 | INFO | FIRESTORE_SYNC_STARTED | query='Harry Potter' | found_results=1 | collection=books
+2026-11-25 13:40:06 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 13:40:06 | WARNING | FIRESTORE_SYNC_FINISHED | query='Harry Potter' | attempted=1 | saved=0 | status=skipped
+2026-11-25 13:40:06 | INFO | FIRESTORE_SYNC_STARTED | query='Harry Potter' | found_results=1 | collection=books
+2026-11-25 13:40:06 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 13:40:06 | WARNING | FIRESTORE_SYNC_FINISHED | query='Harry Potter' | attempted=1 | saved=0 | status=skipped
+2026-11-25 13:40:06 | INFO | FIRESTORE_SYNC_STARTED | query='Harry Potter' | found_results=1 | collection=books
+2026-11-25 13:40:06 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 13:40:06 | WARNING | FIRESTORE_SYNC_FINISHED | query='Harry Potter' | attempted=1 | saved=0 | status=skipped
+2026-11-25 13:40:06 | INFO | FIRESTORE_SYNC_STARTED | query='Harry Potter' | found_results=1 | collection=books
+2026-11-25 13:40:06 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 13:40:06 | WARNING | FIRESTORE_SYNC_FINISHED | query='Harry Potter' | attempted=1 | saved=0 | status=skipped
+2026-11-25 13:40:06 | INFO | FIRESTORE_SYNC_STARTED | query='Harry Potter' | found_results=1 | collection=books
+2026-11-25 13:40:06 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 13:40:06 | WARNING | FIRESTORE_SYNC_FINISHED | query='Harry Potter' | attempted=1 | saved=0 | status=skipped
+2026-11-25 13:40:06 | INFO | FIRESTORE_SYNC_STARTED | query='Harry Potter' | found_results=1 | collection=books
+2026-11-25 13:40:06 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 13:40:06 | WARNING | FIRESTORE_SYNC_FINISHED | query='Harry Potter' | attempted=1 | saved=0 | status=skipped
+2026-11-25 13:40:06 | INFO | FIRESTORE_SYNC_STARTED | query='Harry Potter' | found_results=1 | collection=books
+2026-11-25 13:40:06 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 13:40:06 | WARNING | FIRESTORE_SYNC_FINISHED | query='Harry Potter' | attempted=1 | saved=0 | status=skipped
+2026-11-25 13:40:06 | INFO | FIRESTORE_SYNC_STARTED | query='Harry Potter' | found_results=1 | collection=books
+2026-11-25 13:40:06 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 13:40:06 | WARNING | FIRESTORE_SYNC_FINISHED | query='Harry Potter' | attempted=1 | saved=0 | status=skipped
+2026-11-25 13:51:55 | INFO | FIRESTORE_SYNC_STARTED | query='Harry Potter' | found_results=1 | collection=books
+2026-11-25 13:51:55 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 13:51:55 | WARNING | FIRESTORE_SYNC_FINISHED | query='Harry Potter' | attempted=1 | saved=0 | status=skipped
+2026-11-25 13:51:55 | INFO | FIRESTORE_SYNC_STARTED | query='Harry Potter' | found_results=1 | collection=books
+2026-11-25 13:51:55 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 13:51:55 | WARNING | FIRESTORE_SYNC_FINISHED | query='Harry Potter' | attempted=1 | saved=0 | status=skipped
+2026-11-25 13:51:55 | INFO | FIRESTORE_SYNC_STARTED | query='Harry Potter' | found_results=1 | collection=books
+2026-11-25 13:51:55 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 13:51:55 | WARNING | FIRESTORE_SYNC_FINISHED | query='Harry Potter' | attempted=1 | saved=0 | status=skipped
+2026-11-25 13:51:55 | INFO | FIRESTORE_SYNC_STARTED | query='Harry Potter' | found_results=1 | collection=books
+2026-11-25 13:51:55 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 13:51:55 | WARNING | FIRESTORE_SYNC_FINISHED | query='Harry Potter' | attempted=1 | saved=0 | status=skipped
+2026-11-25 13:51:55 | INFO | FIRESTORE_SYNC_STARTED | query='Harry Potter' | found_results=1 | collection=books
+2026-11-25 13:51:55 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 13:51:55 | WARNING | FIRESTORE_SYNC_FINISHED | query='Harry Potter' | attempted=1 | saved=0 | status=skipped
+2026-11-25 13:51:55 | INFO | FIRESTORE_SYNC_STARTED | query='Harry Potter' | found_results=1 | collection=books
+2026-11-25 13:51:55 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 13:51:55 | WARNING | FIRESTORE_SYNC_FINISHED | query='Harry Potter' | attempted=1 | saved=0 | status=skipped
+2026-11-25 13:51:55 | INFO | FIRESTORE_SYNC_STARTED | query='Harry Potter' | found_results=1 | collection=books
+2026-11-25 13:51:55 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 13:51:55 | WARNING | FIRESTORE_SYNC_FINISHED | query='Harry Potter' | attempted=1 | saved=0 | status=skipped
+2026-11-25 13:51:55 | INFO | FIRESTORE_SYNC_STARTED | query='Harry Potter' | found_results=1 | collection=books
+2026-11-25 13:51:55 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 13:51:55 | WARNING | FIRESTORE_SYNC_FINISHED | query='Harry Potter' | attempted=1 | saved=0 | status=skipped
+2026-11-25 13:51:55 | INFO | FIRESTORE_SYNC_STARTED | query='Harry Potter' | found_results=1 | collection=books
+2026-11-25 13:51:55 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 13:51:55 | WARNING | FIRESTORE_SYNC_FINISHED | query='Harry Potter' | attempted=1 | saved=0 | status=skipped
+2026-11-25 13:51:55 | INFO | FIRESTORE_SYNC_STARTED | query='Harry Potter' | found_results=1 | collection=books
+2026-11-25 13:51:55 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 13:51:55 | WARNING | FIRESTORE_SYNC_FINISHED | query='Harry Potter' | attempted=1 | saved=0 | status=skipped
+2026-11-25 13:53:03 | INFO | FIRESTORE_SYNC_STARTED | query='1984' | found_results=1 | collection=books
+2026-11-25 13:53:03 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 13:53:03 | WARNING | FIRESTORE_SYNC_FINISHED | query='1984' | attempted=1 | saved=0 | status=skipped
+2026-11-25 13:53:03 | INFO | FIRESTORE_SYNC_STARTED | query='1984' | found_results=1 | collection=books
+2026-11-25 13:53:03 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 13:53:03 | WARNING | FIRESTORE_SYNC_FINISHED | query='1984' | attempted=1 | saved=0 | status=skipped
+2026-11-25 13:53:03 | INFO | FIRESTORE_SYNC_STARTED | query='1984' | found_results=1 | collection=books
+2026-11-25 13:53:03 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 13:53:03 | WARNING | FIRESTORE_SYNC_FINISHED | query='1984' | attempted=1 | saved=0 | status=skipped
+2026-11-25 13:53:03 | INFO | FIRESTORE_SYNC_STARTED | query='1984' | found_results=1 | collection=books
+2026-11-25 13:53:03 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 13:53:03 | WARNING | FIRESTORE_SYNC_FINISHED | query='1984' | attempted=1 | saved=0 | status=skipped
+2026-11-25 13:53:03 | INFO | FIRESTORE_SYNC_STARTED | query='1984' | found_results=1 | collection=books
+2026-11-25 13:53:03 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 13:53:03 | WARNING | FIRESTORE_SYNC_FINISHED | query='1984' | attempted=1 | saved=0 | status=skipped
+2026-11-25 13:53:03 | INFO | FIRESTORE_SYNC_STARTED | query='1984' | found_results=1 | collection=books
+2026-11-25 13:53:03 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 13:53:03 | WARNING | FIRESTORE_SYNC_FINISHED | query='1984' | attempted=1 | saved=0 | status=skipped
+2026-11-25 13:53:03 | INFO | FIRESTORE_SYNC_STARTED | query='1984' | found_results=1 | collection=books
+2026-11-25 13:53:03 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 13:53:03 | WARNING | FIRESTORE_SYNC_FINISHED | query='1984' | attempted=1 | saved=0 | status=skipped
+2026-11-25 13:53:03 | INFO | FIRESTORE_SYNC_STARTED | query='1984' | found_results=1 | collection=books
+2026-11-25 13:53:03 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 13:53:03 | WARNING | FIRESTORE_SYNC_FINISHED | query='1984' | attempted=1 | saved=0 | status=skipped
+2026-11-25 13:53:03 | INFO | FIRESTORE_SYNC_STARTED | query='1984' | found_results=1 | collection=books
+2026-11-25 13:53:03 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 13:53:03 | WARNING | FIRESTORE_SYNC_FINISHED | query='1984' | attempted=1 | saved=0 | status=skipped
+2026-11-25 13:53:03 | INFO | FIRESTORE_SYNC_STARTED | query='1984' | found_results=1 | collection=books
+2026-11-25 13:53:03 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 13:53:03 | WARNING | FIRESTORE_SYNC_FINISHED | query='1984' | attempted=1 | saved=0 | status=skipped
+2026-11-25 14:08:07 | INFO | FIRESTORE_SYNC_STARTED | query='Haruki Murakami libros' | found_results=1 | collection=books
+2026-11-25 14:08:07 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 14:08:07 | WARNING | FIRESTORE_SYNC_FINISHED | query='Haruki Murakami libros' | attempted=1 | saved=0 | status=skipped
+2026-11-25 14:08:07 | INFO | FIRESTORE_SYNC_STARTED | query='Haruki Murakami libros' | found_results=1 | collection=books
+2026-11-25 14:08:07 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 14:08:07 | WARNING | FIRESTORE_SYNC_FINISHED | query='Haruki Murakami libros' | attempted=1 | saved=0 | status=skipped
+2026-11-25 14:08:07 | INFO | FIRESTORE_SYNC_STARTED | query='Haruki Murakami libros' | found_results=1 | collection=books
+2026-11-25 14:08:07 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 14:08:07 | WARNING | FIRESTORE_SYNC_FINISHED | query='Haruki Murakami libros' | attempted=1 | saved=0 | status=skipped
+2026-11-25 14:08:07 | INFO | FIRESTORE_SYNC_STARTED | query='Haruki Murakami libros' | found_results=1 | collection=books
+2026-11-25 14:08:07 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 14:08:07 | WARNING | FIRESTORE_SYNC_FINISHED | query='Haruki Murakami libros' | attempted=1 | saved=0 | status=skipped
+2026-11-25 14:08:07 | INFO | FIRESTORE_SYNC_STARTED | query='Haruki Murakami libros' | found_results=1 | collection=books
+2026-11-25 14:08:07 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 14:08:07 | WARNING | FIRESTORE_SYNC_FINISHED | query='Haruki Murakami libros' | attempted=1 | saved=0 | status=skipped
+2026-11-25 14:08:07 | INFO | FIRESTORE_SYNC_STARTED | query='Haruki Murakami libros' | found_results=1 | collection=books
+2026-11-25 14:08:07 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 14:08:07 | WARNING | FIRESTORE_SYNC_FINISHED | query='Haruki Murakami libros' | attempted=1 | saved=0 | status=skipped
+2026-11-25 14:08:07 | INFO | FIRESTORE_SYNC_STARTED | query='Haruki Murakami libros' | found_results=1 | collection=books
+2026-11-25 14:08:07 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 14:08:07 | WARNING | FIRESTORE_SYNC_FINISHED | query='Haruki Murakami libros' | attempted=1 | saved=0 | status=skipped
+2026-11-25 14:08:07 | INFO | FIRESTORE_SYNC_STARTED | query='Haruki Murakami libros' | found_results=1 | collection=books
+2026-11-25 14:08:07 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 14:08:07 | WARNING | FIRESTORE_SYNC_FINISHED | query='Haruki Murakami libros' | attempted=1 | saved=0 | status=skipped
+2026-11-25 14:08:07 | INFO | FIRESTORE_SYNC_STARTED | query='Haruki Murakami libros' | found_results=1 | collection=books
+2026-11-25 14:08:07 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 14:08:07 | WARNING | FIRESTORE_SYNC_FINISHED | query='Haruki Murakami libros' | attempted=1 | saved=0 | status=skipped
+2026-11-25 14:08:07 | INFO | FIRESTORE_SYNC_STARTED | query='Haruki Murakami libros' | found_results=1 | collection=books
+2026-11-25 14:08:07 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 14:08:07 | WARNING | FIRESTORE_SYNC_FINISHED | query='Haruki Murakami libros' | attempted=1 | saved=0 | status=skipped
+2026-11-25 14:09:17 | INFO | FIRESTORE_SYNC_STARTED | query='Tokio Blues' | found_results=1 | collection=books
+2026-11-25 14:09:17 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 14:09:17 | WARNING | FIRESTORE_SYNC_FINISHED | query='Tokio Blues' | attempted=1 | saved=0 | status=skipped
+2026-11-25 14:09:17 | INFO | FIRESTORE_SYNC_STARTED | query='Tokio Blues' | found_results=1 | collection=books
+2026-11-25 14:09:17 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 14:09:17 | WARNING | FIRESTORE_SYNC_FINISHED | query='Tokio Blues' | attempted=1 | saved=0 | status=skipped
+2026-11-25 14:09:17 | INFO | FIRESTORE_SYNC_STARTED | query='Tokio Blues' | found_results=1 | collection=books
+2026-11-25 14:09:17 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 14:09:17 | WARNING | FIRESTORE_SYNC_FINISHED | query='Tokio Blues' | attempted=1 | saved=0 | status=skipped
+2026-11-25 14:09:17 | INFO | FIRESTORE_SYNC_STARTED | query='Tokio Blues' | found_results=1 | collection=books
+2026-11-25 14:09:17 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 14:09:17 | WARNING | FIRESTORE_SYNC_FINISHED | query='Tokio Blues' | attempted=1 | saved=0 | status=skipped
+2026-11-25 14:09:17 | INFO | FIRESTORE_SYNC_STARTED | query='Tokio Blues' | found_results=1 | collection=books
+2026-11-25 14:09:17 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 14:09:17 | WARNING | FIRESTORE_SYNC_FINISHED | query='Tokio Blues' | attempted=1 | saved=0 | status=skipped
+2026-11-25 14:09:17 | INFO | FIRESTORE_SYNC_STARTED | query='Tokio Blues' | found_results=1 | collection=books
+2026-11-25 14:09:17 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 14:09:17 | WARNING | FIRESTORE_SYNC_FINISHED | query='Tokio Blues' | attempted=1 | saved=0 | status=skipped
+2026-11-25 14:09:17 | INFO | FIRESTORE_SYNC_STARTED | query='Tokio Blues' | found_results=1 | collection=books
+2026-11-25 14:09:17 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 14:09:17 | WARNING | FIRESTORE_SYNC_FINISHED | query='Tokio Blues' | attempted=1 | saved=0 | status=skipped
+2026-11-25 14:09:17 | INFO | FIRESTORE_SYNC_STARTED | query='Tokio Blues' | found_results=1 | collection=books
+2026-11-25 14:09:17 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 14:09:17 | WARNING | FIRESTORE_SYNC_FINISHED | query='Tokio Blues' | attempted=1 | saved=0 | status=skipped
+2026-11-25 14:09:17 | INFO | FIRESTORE_SYNC_STARTED | query='Tokio Blues' | found_results=1 | collection=books
+2026-11-25 14:09:17 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 14:09:17 | WARNING | FIRESTORE_SYNC_FINISHED | query='Tokio Blues' | attempted=1 | saved=0 | status=skipped
+2026-11-25 14:11:22 | INFO | FIRESTORE_SYNC_STARTED | query='1984' | found_results=1 | collection=books
+2026-11-25 14:11:22 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 14:11:22 | WARNING | FIRESTORE_SYNC_FINISHED | query='1984' | attempted=1 | saved=0 | status=skipped
+2026-11-25 14:11:22 | INFO | FIRESTORE_SYNC_STARTED | query='1984' | found_results=1 | collection=books
+2026-11-25 14:11:22 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 14:11:22 | WARNING | FIRESTORE_SYNC_FINISHED | query='1984' | attempted=1 | saved=0 | status=skipped
+2026-11-25 14:11:22 | INFO | FIRESTORE_SYNC_STARTED | query='1984' | found_results=1 | collection=books
+2026-11-25 14:11:22 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 14:11:22 | WARNING | FIRESTORE_SYNC_FINISHED | query='1984' | attempted=1 | saved=0 | status=skipped
+2026-11-25 14:11:22 | INFO | FIRESTORE_SYNC_STARTED | query='1984' | found_results=1 | collection=books
+2026-11-25 14:11:22 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 14:11:22 | WARNING | FIRESTORE_SYNC_FINISHED | query='1984' | attempted=1 | saved=0 | status=skipped
+2026-11-25 14:11:22 | INFO | FIRESTORE_SYNC_STARTED | query='1984' | found_results=1 | collection=books
+2026-11-25 14:11:22 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 14:11:22 | WARNING | FIRESTORE_SYNC_FINISHED | query='1984' | attempted=1 | saved=0 | status=skipped
+2026-11-25 14:11:22 | INFO | FIRESTORE_SYNC_STARTED | query='1984' | found_results=1 | collection=books
+2026-11-25 14:11:22 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 14:11:22 | WARNING | FIRESTORE_SYNC_FINISHED | query='1984' | attempted=1 | saved=0 | status=skipped
+2026-11-25 14:11:22 | INFO | FIRESTORE_SYNC_STARTED | query='1984' | found_results=1 | collection=books
+2026-11-25 14:11:22 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 14:11:22 | WARNING | FIRESTORE_SYNC_FINISHED | query='1984' | attempted=1 | saved=0 | status=skipped
+2026-11-25 14:11:22 | INFO | FIRESTORE_SYNC_STARTED | query='1984' | found_results=1 | collection=books
+2026-11-25 14:11:22 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 14:11:22 | WARNING | FIRESTORE_SYNC_FINISHED | query='1984' | attempted=1 | saved=0 | status=skipped
+2026-11-25 14:11:22 | INFO | FIRESTORE_SYNC_STARTED | query='1984' | found_results=1 | collection=books
+2026-11-25 14:11:22 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 14:11:22 | WARNING | FIRESTORE_SYNC_FINISHED | query='1984' | attempted=1 | saved=0 | status=skipped
+2026-11-25 14:11:22 | INFO | FIRESTORE_SYNC_STARTED | query='1984' | found_results=1 | collection=books
+2026-11-25 14:11:22 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 14:11:22 | WARNING | FIRESTORE_SYNC_FINISHED | query='1984' | attempted=1 | saved=0 | status=skipped
+2026-11-25 14:14:44 | INFO | FIRESTORE_SYNC_STARTED | query='Harry Potter' | found_results=1 | collection=books
+2026-11-25 14:14:44 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 14:14:44 | WARNING | FIRESTORE_SYNC_FINISHED | query='Harry Potter' | attempted=1 | saved=0 | status=skipped
+2026-11-25 14:14:44 | INFO | FIRESTORE_SYNC_STARTED | query='Harry Potter' | found_results=1 | collection=books
+2026-11-25 14:14:44 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 14:14:44 | WARNING | FIRESTORE_SYNC_FINISHED | query='Harry Potter' | attempted=1 | saved=0 | status=skipped
+2026-11-25 14:14:44 | INFO | FIRESTORE_SYNC_STARTED | query='Harry Potter' | found_results=1 | collection=books
+2026-11-25 14:14:44 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 14:14:44 | WARNING | FIRESTORE_SYNC_FINISHED | query='Harry Potter' | attempted=1 | saved=0 | status=skipped
+2026-11-25 14:14:44 | INFO | FIRESTORE_SYNC_STARTED | query='Harry Potter' | found_results=1 | collection=books
+2026-11-25 14:14:44 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 14:14:44 | WARNING | FIRESTORE_SYNC_FINISHED | query='Harry Potter' | attempted=1 | saved=0 | status=skipped
+2026-11-25 14:14:44 | INFO | FIRESTORE_SYNC_STARTED | query='Harry Potter' | found_results=1 | collection=books
+2026-11-25 14:14:44 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 14:14:44 | WARNING | FIRESTORE_SYNC_FINISHED | query='Harry Potter' | attempted=1 | saved=0 | status=skipped
+2026-11-25 14:14:44 | INFO | FIRESTORE_SYNC_STARTED | query='Harry Potter' | found_results=1 | collection=books
+2026-11-25 14:14:44 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 14:14:44 | WARNING | FIRESTORE_SYNC_FINISHED | query='Harry Potter' | attempted=1 | saved=0 | status=skipped
+2026-11-25 14:14:44 | INFO | FIRESTORE_SYNC_STARTED | query='Harry Potter' | found_results=1 | collection=books
+2026-11-25 14:14:44 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 14:14:44 | WARNING | FIRESTORE_SYNC_FINISHED | query='Harry Potter' | attempted=1 | saved=0 | status=skipped
+2026-11-25 14:14:44 | INFO | FIRESTORE_SYNC_STARTED | query='Harry Potter' | found_results=1 | collection=books
+2026-11-25 14:14:44 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 14:14:44 | WARNING | FIRESTORE_SYNC_FINISHED | query='Harry Potter' | attempted=1 | saved=0 | status=skipped
+2026-11-25 14:14:44 | INFO | FIRESTORE_SYNC_STARTED | query='Harry Potter' | found_results=1 | collection=books
+2026-11-25 14:14:44 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 14:14:44 | WARNING | FIRESTORE_SYNC_FINISHED | query='Harry Potter' | attempted=1 | saved=0 | status=skipped
+2026-11-25 14:14:44 | INFO | FIRESTORE_SYNC_STARTED | query='Harry Potter' | found_results=1 | collection=books
+2026-11-25 14:14:44 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 14:14:44 | WARNING | FIRESTORE_SYNC_FINISHED | query='Harry Potter' | attempted=1 | saved=0 | status=skipped
+2026-11-25 14:16:02 | INFO | FIRESTORE_SYNC_STARTED | query='1984' | found_results=1 | collection=books
+2026-11-25 14:16:02 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 14:16:02 | WARNING | FIRESTORE_SYNC_FINISHED | query='1984' | attempted=1 | saved=0 | status=skipped
+2026-11-25 14:16:02 | INFO | FIRESTORE_SYNC_STARTED | query='1984' | found_results=1 | collection=books
+2026-11-25 14:16:02 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 14:16:02 | WARNING | FIRESTORE_SYNC_FINISHED | query='1984' | attempted=1 | saved=0 | status=skipped
+2026-11-25 14:16:02 | INFO | FIRESTORE_SYNC_STARTED | query='1984' | found_results=1 | collection=books
+2026-11-25 14:16:02 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 14:16:02 | WARNING | FIRESTORE_SYNC_FINISHED | query='1984' | attempted=1 | saved=0 | status=skipped
+2026-11-25 14:16:02 | INFO | FIRESTORE_SYNC_STARTED | query='1984' | found_results=1 | collection=books
+2026-11-25 14:16:02 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 14:16:02 | WARNING | FIRESTORE_SYNC_FINISHED | query='1984' | attempted=1 | saved=0 | status=skipped
+2026-11-25 14:16:02 | INFO | FIRESTORE_SYNC_STARTED | query='1984' | found_results=1 | collection=books
+2026-11-25 14:16:02 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 14:16:02 | WARNING | FIRESTORE_SYNC_FINISHED | query='1984' | attempted=1 | saved=0 | status=skipped
+2026-11-25 14:16:02 | INFO | FIRESTORE_SYNC_STARTED | query='1984' | found_results=1 | collection=books
+2026-11-25 14:16:02 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 14:16:02 | WARNING | FIRESTORE_SYNC_FINISHED | query='1984' | attempted=1 | saved=0 | status=skipped
+2026-11-25 14:16:02 | INFO | FIRESTORE_SYNC_STARTED | query='1984' | found_results=1 | collection=books
+2026-11-25 14:16:02 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 14:16:02 | WARNING | FIRESTORE_SYNC_FINISHED | query='1984' | attempted=1 | saved=0 | status=skipped
+2026-11-25 14:16:02 | INFO | FIRESTORE_SYNC_STARTED | query='1984' | found_results=1 | collection=books
+2026-11-25 14:16:02 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 14:16:02 | WARNING | FIRESTORE_SYNC_FINISHED | query='1984' | attempted=1 | saved=0 | status=skipped
+2026-11-25 14:16:02 | INFO | FIRESTORE_SYNC_STARTED | query='1984' | found_results=1 | collection=books
+2026-11-25 14:16:02 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 14:16:02 | WARNING | FIRESTORE_SYNC_FINISHED | query='1984' | attempted=1 | saved=0 | status=skipped
+2026-11-25 14:16:02 | INFO | FIRESTORE_SYNC_STARTED | query='1984' | found_results=1 | collection=books
+2026-11-25 14:16:02 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 14:16:02 | WARNING | FIRESTORE_SYNC_FINISHED | query='1984' | attempted=1 | saved=0 | status=skipped
+2026-11-25 14:17:25 | INFO | FIRESTORE_SYNC_STARTED | query='Dune' | found_results=1 | collection=books
+2026-11-25 14:17:25 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 14:17:25 | WARNING | FIRESTORE_SYNC_FINISHED | query='Dune' | attempted=1 | saved=0 | status=skipped
+2026-11-25 14:17:25 | INFO | FIRESTORE_SYNC_STARTED | query='Dune' | found_results=1 | collection=books
+2026-11-25 14:17:25 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 14:17:25 | WARNING | FIRESTORE_SYNC_FINISHED | query='Dune' | attempted=1 | saved=0 | status=skipped
+2026-11-25 14:17:25 | INFO | FIRESTORE_SYNC_STARTED | query='Dune' | found_results=1 | collection=books
+2026-11-25 14:17:25 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 14:17:25 | WARNING | FIRESTORE_SYNC_FINISHED | query='Dune' | attempted=1 | saved=0 | status=skipped
+2026-11-25 14:17:25 | INFO | FIRESTORE_SYNC_STARTED | query='Dune' | found_results=1 | collection=books
+2026-11-25 14:17:25 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 14:17:25 | WARNING | FIRESTORE_SYNC_FINISHED | query='Dune' | attempted=1 | saved=0 | status=skipped
+2026-11-25 14:17:25 | INFO | FIRESTORE_SYNC_STARTED | query='Dune' | found_results=1 | collection=books
+2026-11-25 14:17:25 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 14:17:25 | WARNING | FIRESTORE_SYNC_FINISHED | query='Dune' | attempted=1 | saved=0 | status=skipped
+2026-11-25 14:17:25 | INFO | FIRESTORE_SYNC_STARTED | query='Dune' | found_results=1 | collection=books
+2026-11-25 14:17:25 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 14:17:25 | WARNING | FIRESTORE_SYNC_FINISHED | query='Dune' | attempted=1 | saved=0 | status=skipped
+2026-11-25 14:17:25 | INFO | FIRESTORE_SYNC_STARTED | query='Dune' | found_results=1 | collection=books
+2026-11-25 14:17:25 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 14:17:25 | WARNING | FIRESTORE_SYNC_FINISHED | query='Dune' | attempted=1 | saved=0 | status=skipped
+2026-11-25 14:17:25 | INFO | FIRESTORE_SYNC_STARTED | query='Dune' | found_results=1 | collection=books
+2026-11-25 14:17:25 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 14:17:25 | WARNING | FIRESTORE_SYNC_FINISHED | query='Dune' | attempted=1 | saved=0 | status=skipped
+2026-11-25 14:17:25 | INFO | FIRESTORE_SYNC_STARTED | query='Dune' | found_results=1 | collection=books
+2026-11-25 14:17:25 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 14:17:25 | WARNING | FIRESTORE_SYNC_FINISHED | query='Dune' | attempted=1 | saved=0 | status=skipped
+2026-11-25 14:17:25 | INFO | FIRESTORE_SYNC_STARTED | query='Dune' | found_results=1 | collection=books
+2026-11-25 14:17:25 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 14:17:25 | WARNING | FIRESTORE_SYNC_FINISHED | query='Dune' | attempted=1 | saved=0 | status=skipped
+2026-11-25 14:21:58 | INFO | FIRESTORE_SYNC_STARTED | query='ciencia ficcion' | found_results=1 | collection=books
+2026-11-25 14:21:58 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 14:21:58 | WARNING | FIRESTORE_SYNC_FINISHED | query='ciencia ficcion' | attempted=1 | saved=0 | status=skipped
+2026-11-25 14:21:58 | INFO | FIRESTORE_SYNC_STARTED | query='ciencia ficcion' | found_results=1 | collection=books
+2026-11-25 14:21:58 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 14:21:58 | WARNING | FIRESTORE_SYNC_FINISHED | query='ciencia ficcion' | attempted=1 | saved=0 | status=skipped
+2026-11-25 14:21:58 | INFO | FIRESTORE_SYNC_STARTED | query='ciencia ficcion' | found_results=1 | collection=books
+2026-11-25 14:21:58 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 14:21:58 | WARNING | FIRESTORE_SYNC_FINISHED | query='ciencia ficcion' | attempted=1 | saved=0 | status=skipped
+2026-11-25 14:21:58 | INFO | FIRESTORE_SYNC_STARTED | query='ciencia ficcion' | found_results=1 | collection=books
+2026-11-25 14:21:58 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 14:21:58 | WARNING | FIRESTORE_SYNC_FINISHED | query='ciencia ficcion' | attempted=1 | saved=0 | status=skipped
+2026-11-25 14:21:58 | INFO | FIRESTORE_SYNC_STARTED | query='ciencia ficcion' | found_results=1 | collection=books
+2026-11-25 14:21:58 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 14:21:58 | WARNING | FIRESTORE_SYNC_FINISHED | query='ciencia ficcion' | attempted=1 | saved=0 | status=skipped
+2026-11-25 14:21:58 | INFO | FIRESTORE_SYNC_STARTED | query='ciencia ficcion' | found_results=1 | collection=books
+2026-11-25 14:21:58 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 14:21:58 | WARNING | FIRESTORE_SYNC_FINISHED | query='ciencia ficcion' | attempted=1 | saved=0 | status=skipped
+2026-11-25 14:21:58 | INFO | FIRESTORE_SYNC_STARTED | query='ciencia ficcion' | found_results=1 | collection=books
+2026-11-25 14:21:58 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 14:21:58 | WARNING | FIRESTORE_SYNC_FINISHED | query='ciencia ficcion' | attempted=1 | saved=0 | status=skipped
+2026-11-25 14:21:58 | INFO | FIRESTORE_SYNC_STARTED | query='ciencia ficcion' | found_results=1 | collection=books
+2026-11-25 14:21:58 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 14:21:58 | WARNING | FIRESTORE_SYNC_FINISHED | query='ciencia ficcion' | attempted=1 | saved=0 | status=skipped
+2026-11-25 14:21:58 | INFO | FIRESTORE_SYNC_STARTED | query='ciencia ficcion' | found_results=1 | collection=books
+2026-11-25 14:21:58 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 14:21:58 | WARNING | FIRESTORE_SYNC_FINISHED | query='ciencia ficcion' | attempted=1 | saved=0 | status=skipped
+2026-11-25 14:21:58 | INFO | FIRESTORE_SYNC_STARTED | query='ciencia ficcion' | found_results=1 | collection=books
+2026-11-25 14:21:58 | WARNING | FIRESTORE_SYNC_SKIPPED | reason=disabled | collection=books
+2026-11-25 14:21:58 | WARNING | FIRESTORE_SYNC_FINISHED | query='ciencia ficcion' | attempted=1 | saved=0 | status=skipped
+2026-11-25 14:26:04 | INFO | FIRESTORE_CONNECTED | collection=books | project=default
+2026-11-25 14:26:11 | INFO | FIRESTORE_CONNECTED | collection=books | project=default
+2026-11-25 14:27:30 | INFO | FIRESTORE_SYNC_STARTED | query='Harry Potter' | found_results=1 | collection=books
+2026-11-25 14:27:30 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_a0eea0449379d06096532669 | title='Harry Potter y la piedra filosofal (Harry Potter 1)' | source=buscalibre | update_time=2026-11-25 20:27:30.151230+00:00
+2026-11-25 14:27:30 | INFO | FIRESTORE_SYNC_FINISHED | query='Harry Potter' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:27:30 | INFO | FIRESTORE_SYNC_STARTED | query='Harry Potter' | found_results=1 | collection=books
+2026-11-25 14:27:30 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_e170dab48f252dc396a5b842 | title='Harry Potter y la cámara secreta (Harry Potter 2)' | source=buscalibre | update_time=2026-11-25 20:27:30.467955+00:00
+2026-11-25 14:27:30 | INFO | FIRESTORE_SYNC_FINISHED | query='Harry Potter' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:27:30 | INFO | FIRESTORE_SYNC_STARTED | query='Harry Potter' | found_results=1 | collection=books
+2026-11-25 14:27:30 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_b59f0bfd56af6068bc32d7a6 | title='Harry Potter Lego. Un año Magico en Hogwarts' | source=buscalibre | update_time=2026-11-25 20:27:30.876462+00:00
+2026-11-25 14:27:30 | INFO | FIRESTORE_SYNC_FINISHED | query='Harry Potter' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:27:31 | INFO | FIRESTORE_SYNC_STARTED | query='Harry Potter' | found_results=1 | collection=books
+2026-11-25 14:27:31 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_574a11d372a5e8a000e1aa7f | title='Harry Potter y el prisionero de Azkaban (Harry Potter 3)' | source=buscalibre | update_time=2026-11-25 20:27:31.206040+00:00
+2026-11-25 14:27:31 | INFO | FIRESTORE_SYNC_FINISHED | query='Harry Potter' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:27:31 | INFO | FIRESTORE_SYNC_STARTED | query='Harry Potter' | found_results=1 | collection=books
+2026-11-25 14:27:31 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_d60818fe24be412eba1a20aa | title='Harry Potter y su Mundo Magico' | source=buscalibre | update_time=2026-11-25 20:27:31.438618+00:00
+2026-11-25 14:27:31 | INFO | FIRESTORE_SYNC_FINISHED | query='Harry Potter' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:27:31 | INFO | FIRESTORE_SYNC_STARTED | query='Harry Potter' | found_results=1 | collection=books
+2026-11-25 14:27:31 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_230b1c8c9b5f0a5c83c27850 | title='Harry Potter y las Criaturas Magicas' | source=buscalibre | update_time=2026-11-25 20:27:31.591731+00:00
+2026-11-25 14:27:31 | INFO | FIRESTORE_SYNC_FINISHED | query='Harry Potter' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:27:31 | INFO | FIRESTORE_SYNC_STARTED | query='Harry Potter' | found_results=1 | collection=books
+2026-11-25 14:27:31 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_c257586d3b62844e6d90a69d | title='Harry Potter y sus Artefactos Magicos' | source=buscalibre | update_time=2026-11-25 20:27:31.757018+00:00
+2026-11-25 14:27:31 | INFO | FIRESTORE_SYNC_FINISHED | query='Harry Potter' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:27:31 | INFO | FIRESTORE_SYNC_STARTED | query='Harry Potter' | found_results=1 | collection=books
+2026-11-25 14:27:31 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_60b0eb20307d155a8f303365 | title='Harry Potter Lugares y Personajes Magicos' | source=buscalibre | update_time=2026-11-25 20:27:31.939326+00:00
+2026-11-25 14:27:31 | INFO | FIRESTORE_SYNC_FINISHED | query='Harry Potter' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:27:32 | INFO | FIRESTORE_SYNC_STARTED | query='Harry Potter' | found_results=1 | collection=books
+2026-11-25 14:27:32 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_761aeb07b7e5cbf3c44d0bfa | title='Harry Potter y la cámara secreta (Harry Potter edición MinaLima 2)' | source=buscalibre | update_time=2026-11-25 20:27:32.091175+00:00
+2026-11-25 14:27:32 | INFO | FIRESTORE_SYNC_FINISHED | query='Harry Potter' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:27:32 | INFO | FIRESTORE_SYNC_STARTED | query='Harry Potter' | found_results=1 | collection=books
+2026-11-25 14:27:32 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_2e82f455e4f1d6bc59829d4d | title='Harry Potter y la piedra filosofal (Harry Potter edición MinaLima 1)' | source=buscalibre | update_time=2026-11-25 20:27:32.233956+00:00
+2026-11-25 14:27:32 | INFO | FIRESTORE_SYNC_FINISHED | query='Harry Potter' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:27:54 | INFO | FIRESTORE_CONNECTED | collection=books | project=default
+2026-11-25 14:28:00 | INFO | FIRESTORE_CONNECTED | collection=books | project=default
+2026-11-25 14:28:07 | INFO | FIRESTORE_CONNECTED | collection=books | project=default
+2026-11-25 14:29:22 | INFO | FIRESTORE_SYNC_STARTED | query='El Principito' | found_results=1 | collection=books
+2026-11-25 14:29:22 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_df2f072bf5830aa78863e96a | title='El Principito' | source=buscalibre | update_time=2026-11-25 20:29:22.883988+00:00
+2026-11-25 14:29:22 | INFO | FIRESTORE_SYNC_FINISHED | query='El Principito' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:29:23 | INFO | FIRESTORE_SYNC_STARTED | query='El Principito' | found_results=1 | collection=books
+2026-11-25 14:29:23 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_ba4c9c2e6fcbd295dd6c4760 | title='El Principito' | source=buscalibre | update_time=2026-11-25 20:29:23.281008+00:00
+2026-11-25 14:29:23 | INFO | FIRESTORE_SYNC_FINISHED | query='El Principito' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:29:23 | INFO | FIRESTORE_SYNC_STARTED | query='El Principito' | found_results=1 | collection=books
+2026-11-25 14:29:23 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_ea68c5f27911c51436eab99b | title='El Principito' | source=buscalibre | update_time=2026-11-25 20:29:23.604913+00:00
+2026-11-25 14:29:23 | INFO | FIRESTORE_SYNC_FINISHED | query='El Principito' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:29:23 | INFO | FIRESTORE_SYNC_STARTED | query='El Principito' | found_results=1 | collection=books
+2026-11-25 14:29:23 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_8aca9ff5e837f73f9ecbaef3 | title='El Principito' | source=buscalibre | update_time=2026-11-25 20:29:23.993906+00:00
+2026-11-25 14:29:23 | INFO | FIRESTORE_SYNC_FINISHED | query='El Principito' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:29:24 | INFO | FIRESTORE_SYNC_STARTED | query='El Principito' | found_results=1 | collection=books
+2026-11-25 14:29:24 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_9dcc9fc5eecc5257a7c30c90 | title='Principito, el' | source=buscalibre | update_time=2026-11-25 20:29:24.292260+00:00
+2026-11-25 14:29:24 | INFO | FIRESTORE_SYNC_FINISHED | query='El Principito' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:29:24 | INFO | FIRESTORE_SYNC_STARTED | query='El Principito' | found_results=1 | collection=books
+2026-11-25 14:29:24 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_d1586af78807f293d63597ee | title='El Principito' | source=buscalibre | update_time=2026-11-25 20:29:24.435168+00:00
+2026-11-25 14:29:24 | INFO | FIRESTORE_SYNC_FINISHED | query='El Principito' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:29:24 | INFO | FIRESTORE_SYNC_STARTED | query='El Principito' | found_results=1 | collection=books
+2026-11-25 14:29:24 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_5b0582b53e3b472e36ae1628 | title='Mandalas Para Colorear: El Principito' | source=buscalibre | update_time=2026-11-25 20:29:24.585100+00:00
+2026-11-25 14:29:24 | INFO | FIRESTORE_SYNC_FINISHED | query='El Principito' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:29:24 | INFO | FIRESTORE_SYNC_STARTED | query='El Principito' | found_results=1 | collection=books
+2026-11-25 14:29:24 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_b19416f6cb1e33a92f76a8ad | title='EL PRINCIPITO PARA COLOREAR' | source=buscalibre | update_time=2026-11-25 20:29:24.723175+00:00
+2026-11-25 14:29:24 | INFO | FIRESTORE_SYNC_FINISHED | query='El Principito' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:29:24 | INFO | FIRESTORE_SYNC_STARTED | query='El Principito' | found_results=1 | collection=books
+2026-11-25 14:29:24 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_560ba8287d99b195614dd18e | title='Principito, el' | source=buscalibre | update_time=2026-11-25 20:29:24.853642+00:00
+2026-11-25 14:29:24 | INFO | FIRESTORE_SYNC_FINISHED | query='El Principito' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:29:24 | INFO | FIRESTORE_SYNC_STARTED | query='El Principito' | found_results=1 | collection=books
+2026-11-25 14:29:25 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_bed116a7d5103205711a73eb | title='El Principito (en Bilingüe)' | source=buscalibre | update_time=2026-11-25 20:29:25.209562+00:00
+2026-11-25 14:29:25 | INFO | FIRESTORE_SYNC_FINISHED | query='El Principito' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:29:32 | INFO | FIRESTORE_CONNECTED | collection=books | project=default
+2026-11-25 14:33:10 | INFO | FIRESTORE_CONNECTED | collection=books | project=default
+2026-11-25 14:34:24 | INFO | FIRESTORE_SYNC_STARTED | query='Haruki Murakami libros' | found_results=1 | collection=books
+2026-11-25 14:34:25 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_b87c0e0f6bdbf9763d3e1a62 | title='1q84 Libros 1 y 2' | source=buscalibre | update_time=2026-11-25 20:34:25.091732+00:00
+2026-11-25 14:34:25 | INFO | FIRESTORE_SYNC_FINISHED | query='Haruki Murakami libros' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:34:25 | INFO | FIRESTORE_SYNC_STARTED | query='Haruki Murakami libros' | found_results=1 | collection=books
+2026-11-25 14:34:25 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_6b9dffb868c3a24bcb3a39f0 | title='1q84. Libro 3' | source=buscalibre | update_time=2026-11-25 20:34:25.473872+00:00
+2026-11-25 14:34:25 | INFO | FIRESTORE_SYNC_FINISHED | query='Haruki Murakami libros' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:34:25 | INFO | FIRESTORE_SYNC_STARTED | query='Haruki Murakami libros' | found_results=1 | collection=books
+2026-11-25 14:34:25 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_c56f15c06cc3adb23b00b826 | title='La Muerte del Comendador Libro 1' | source=buscalibre | update_time=2026-11-25 20:34:25.867241+00:00
+2026-11-25 14:34:25 | INFO | FIRESTORE_SYNC_FINISHED | query='Haruki Murakami libros' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:34:26 | INFO | FIRESTORE_SYNC_STARTED | query='Haruki Murakami libros' | found_results=1 | collection=books
+2026-11-25 14:34:26 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_8f27682c1b8c7b7cbe66bb86 | title='La Muerte del Comendador. Libro 2' | source=buscalibre | update_time=2026-11-25 20:34:26.183337+00:00
+2026-11-25 14:34:26 | INFO | FIRESTORE_SYNC_FINISHED | query='Haruki Murakami libros' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:34:26 | INFO | FIRESTORE_SYNC_STARTED | query='Haruki Murakami libros' | found_results=1 | collection=books
+2026-11-25 14:34:26 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_ea34bad48766660efff456a6 | title='1Q84. Libros 1 y 2' | source=buscalibre | update_time=2026-11-25 20:34:26.417208+00:00
+2026-11-25 14:34:26 | INFO | FIRESTORE_SYNC_FINISHED | query='Haruki Murakami libros' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:34:26 | INFO | FIRESTORE_SYNC_STARTED | query='Haruki Murakami libros' | found_results=1 | collection=books
+2026-11-25 14:34:26 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_b272bf0959ae82b1b88198e2 | title='La Muerte del Comendador (Libro 1) / Killing Commendatore (Book 1)' | source=buscalibre | update_time=2026-11-25 20:34:26.595978+00:00
+2026-11-25 14:34:26 | INFO | FIRESTORE_SYNC_FINISHED | query='Haruki Murakami libros' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:34:26 | INFO | FIRESTORE_SYNC_STARTED | query='Haruki Murakami libros' | found_results=1 | collection=books
+2026-11-25 14:34:26 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_d2e3abc9a6c434e2d7d5faca | title='La Muerte del Comendador (Libro 2) / Killing Commendatore (Book 2)' | source=buscalibre | update_time=2026-11-25 20:34:26.772259+00:00
+2026-11-25 14:34:26 | INFO | FIRESTORE_SYNC_FINISHED | query='Haruki Murakami libros' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:34:26 | INFO | FIRESTORE_SYNC_STARTED | query='Haruki Murakami libros' | found_results=1 | collection=books
+2026-11-25 14:34:26 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_12a9a3cca090b436f4ce9019 | title='1Q84, libros 1 y 2' | source=buscalibre | update_time=2026-11-25 20:34:26.949767+00:00
+2026-11-25 14:34:26 | INFO | FIRESTORE_SYNC_FINISHED | query='Haruki Murakami libros' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:34:27 | INFO | FIRESTORE_SYNC_STARTED | query='Haruki Murakami libros' | found_results=1 | collection=books
+2026-11-25 14:34:27 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_8da4d9b68817bce219582e8c | title='1q84. Libro 3' | source=buscalibre | update_time=2026-11-25 20:34:27.101341+00:00
+2026-11-25 14:34:27 | INFO | FIRESTORE_SYNC_FINISHED | query='Haruki Murakami libros' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:34:27 | INFO | FIRESTORE_SYNC_STARTED | query='Haruki Murakami libros' | found_results=1 | collection=books
+2026-11-25 14:34:27 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_542f002666c2ac067d4d5896 | title='1Q84. Libros 1 y 2' | source=buscalibre | update_time=2026-11-25 20:34:27.249346+00:00
+2026-11-25 14:34:27 | INFO | FIRESTORE_SYNC_FINISHED | query='Haruki Murakami libros' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:35:38 | INFO | FIRESTORE_SYNC_STARTED | query='Tokio Blues' | found_results=1 | collection=books
+2026-11-25 14:35:38 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_787f45f46d5c9adfa4453121 | title='Tokio Blues' | source=buscalibre | update_time=2026-11-25 20:35:38.290581+00:00
+2026-11-25 14:35:38 | INFO | FIRESTORE_SYNC_FINISHED | query='Tokio Blues' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:35:38 | INFO | FIRESTORE_SYNC_STARTED | query='Tokio Blues' | found_results=1 | collection=books
+2026-11-25 14:35:38 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_530d458bcae2baf8c67713de | title='Tokio Blues td' | source=buscalibre | update_time=2026-11-25 20:35:38.457827+00:00
+2026-11-25 14:35:38 | INFO | FIRESTORE_SYNC_FINISHED | query='Tokio Blues' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:35:38 | INFO | FIRESTORE_SYNC_STARTED | query='Tokio Blues' | found_results=1 | collection=books
+2026-11-25 14:35:38 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_ec5ea65364c7096657edd9e7 | title='Tokio blues' | source=buscalibre | update_time=2026-11-25 20:35:38.629356+00:00
+2026-11-25 14:35:38 | INFO | FIRESTORE_SYNC_FINISHED | query='Tokio Blues' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:35:38 | INFO | FIRESTORE_SYNC_STARTED | query='Tokio Blues' | found_results=1 | collection=books
+2026-11-25 14:35:38 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_f6d29d6c389c9fc011d4367f | title='Tokio Blues' | source=buscalibre | update_time=2026-11-25 20:35:38.805128+00:00
+2026-11-25 14:35:38 | INFO | FIRESTORE_SYNC_FINISHED | query='Tokio Blues' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:35:38 | INFO | FIRESTORE_SYNC_STARTED | query='Tokio Blues' | found_results=1 | collection=books
+2026-11-25 14:35:38 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_e00fbafa0d5e5d5e679c6f89 | title='Tokio Blues' | source=buscalibre | update_time=2026-11-25 20:35:38.993583+00:00
+2026-11-25 14:35:38 | INFO | FIRESTORE_SYNC_FINISHED | query='Tokio Blues' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:35:39 | INFO | FIRESTORE_SYNC_STARTED | query='Tokio Blues' | found_results=1 | collection=books
+2026-11-25 14:35:39 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_06829f3ee314cd5f4b99593c | title='Tokio Blues / Norwegian Wood' | source=buscalibre | update_time=2026-11-25 20:35:39.150729+00:00
+2026-11-25 14:35:39 | INFO | FIRESTORE_SYNC_FINISHED | query='Tokio Blues' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:35:39 | INFO | FIRESTORE_SYNC_STARTED | query='Tokio Blues' | found_results=1 | collection=books
+2026-11-25 14:35:39 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_e1b62c0c82e5ee0589923b51 | title='Tokio blues' | source=buscalibre | update_time=2026-11-25 20:35:39.301613+00:00
+2026-11-25 14:35:39 | INFO | FIRESTORE_SYNC_FINISHED | query='Tokio Blues' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:35:39 | INFO | FIRESTORE_SYNC_STARTED | query='Tokio Blues' | found_results=1 | collection=books
+2026-11-25 14:35:39 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_677a46072fe1d37474bd55da | title='Tokio Blues' | source=buscalibre | update_time=2026-11-25 20:35:39.446498+00:00
+2026-11-25 14:35:39 | INFO | FIRESTORE_SYNC_FINISHED | query='Tokio Blues' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:35:39 | INFO | FIRESTORE_SYNC_STARTED | query='Tokio Blues' | found_results=1 | collection=books
+2026-11-25 14:35:39 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_92769da6872011fe7c99cbf7 | title='Tokio Blues' | source=buscalibre | update_time=2026-11-25 20:35:39.584283+00:00
+2026-11-25 14:35:39 | INFO | FIRESTORE_SYNC_FINISHED | query='Tokio Blues' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:35:39 | INFO | FIRESTORE_SYNC_STARTED | query='Tokio Blues' | found_results=1 | collection=books
+2026-11-25 14:35:39 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_2568e315c62e67e5a489b721 | title='Tokio Blues' | source=buscalibre | update_time=2026-11-25 20:35:39.723645+00:00
+2026-11-25 14:35:39 | INFO | FIRESTORE_SYNC_FINISHED | query='Tokio Blues' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:36:50 | INFO | FIRESTORE_SYNC_STARTED | query='Kafka en la orilla' | found_results=1 | collection=books
+2026-11-25 14:36:50 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_77bba5400e6e4c1b550aba77 | title='Kafka en la Orilla' | source=buscalibre | update_time=2026-11-25 20:36:50.449304+00:00
+2026-11-25 14:36:50 | INFO | FIRESTORE_SYNC_FINISHED | query='Kafka en la orilla' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:36:50 | INFO | FIRESTORE_SYNC_STARTED | query='Kafka en la orilla' | found_results=1 | collection=books
+2026-11-25 14:36:50 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_3862f93210da7d97276d1669 | title='Kafka en la Orilla' | source=buscalibre | update_time=2026-11-25 20:36:50.616114+00:00
+2026-11-25 14:36:50 | INFO | FIRESTORE_SYNC_FINISHED | query='Kafka en la orilla' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:36:50 | INFO | FIRESTORE_SYNC_STARTED | query='Kafka en la orilla' | found_results=1 | collection=books
+2026-11-25 14:36:50 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_81034d672a0caf388fd963a8 | title='Kafka en la Orilla' | source=buscalibre | update_time=2026-11-25 20:36:50.780455+00:00
+2026-11-25 14:36:50 | INFO | FIRESTORE_SYNC_FINISHED | query='Kafka en la orilla' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:36:50 | INFO | FIRESTORE_SYNC_STARTED | query='Kafka en la orilla' | found_results=1 | collection=books
+2026-11-25 14:36:50 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_11dad473f90bd25548b022bb | title='Kafka en la Orilla' | source=buscalibre | update_time=2026-11-25 20:36:50.948603+00:00
+2026-11-25 14:36:50 | INFO | FIRESTORE_SYNC_FINISHED | query='Kafka en la orilla' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:36:51 | INFO | FIRESTORE_SYNC_STARTED | query='Kafka en la orilla' | found_results=1 | collection=books
+2026-11-25 14:36:51 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_d946f9fd1e254629cacd4321 | title='Kafka en la Orilla' | source=buscalibre | update_time=2026-11-25 20:36:51.099411+00:00
+2026-11-25 14:36:51 | INFO | FIRESTORE_SYNC_FINISHED | query='Kafka en la orilla' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:36:51 | INFO | FIRESTORE_SYNC_STARTED | query='Kafka en la orilla' | found_results=1 | collection=books
+2026-11-25 14:36:51 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_29e922139b6c1236a99709f4 | title='Kafka en la orilla' | source=buscalibre | update_time=2026-11-25 20:36:51.260911+00:00
+2026-11-25 14:36:51 | INFO | FIRESTORE_SYNC_FINISHED | query='Kafka en la orilla' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:36:51 | INFO | FIRESTORE_SYNC_STARTED | query='Kafka en la orilla' | found_results=1 | collection=books
+2026-11-25 14:36:51 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_de8c5689bec6f66a0e720368 | title='Kafka en la Orilla' | source=buscalibre | update_time=2026-11-25 20:36:51.405991+00:00
+2026-11-25 14:36:51 | INFO | FIRESTORE_SYNC_FINISHED | query='Kafka en la orilla' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:36:51 | INFO | FIRESTORE_SYNC_STARTED | query='Kafka en la orilla' | found_results=1 | collection=books
+2026-11-25 14:36:51 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_fcb21f4c032a7decd9321a43 | title='Kafka en la Orilla' | source=buscalibre | update_time=2026-11-25 20:36:51.543713+00:00
+2026-11-25 14:36:51 | INFO | FIRESTORE_SYNC_FINISHED | query='Kafka en la orilla' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:36:51 | INFO | FIRESTORE_SYNC_STARTED | query='Kafka en la orilla' | found_results=1 | collection=books
+2026-11-25 14:36:51 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_a0278bfbae6ca8079b191932 | title='Kafka en las dos Orillas' | source=buscalibre | update_time=2026-11-25 20:36:51.688910+00:00
+2026-11-25 14:36:51 | INFO | FIRESTORE_SYNC_FINISHED | query='Kafka en la orilla' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:38:06 | INFO | FIRESTORE_SYNC_STARTED | query='1Q84' | found_results=1 | collection=books
+2026-11-25 14:38:06 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_a7e37450aa1e6afff84a4d47 | title='1Q84. Libro 3' | source=buscalibre | update_time=2026-11-25 20:38:06.902555+00:00
+2026-11-25 14:38:06 | INFO | FIRESTORE_SYNC_FINISHED | query='1Q84' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:38:07 | INFO | FIRESTORE_SYNC_STARTED | query='1Q84' | found_results=1 | collection=books
+2026-11-25 14:38:07 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_98d64fd7b07c888b088bec4b | title='1q84 Books 1 and 2' | source=buscalibre | update_time=2026-11-25 20:38:07.208237+00:00
+2026-11-25 14:38:07 | INFO | FIRESTORE_SYNC_FINISHED | query='1Q84' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:38:07 | INFO | FIRESTORE_SYNC_STARTED | query='1Q84' | found_results=1 | collection=books
+2026-11-25 14:38:07 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_bba3e847437d2d8b6ef9e859 | title='1984' | source=buscalibre | update_time=2026-11-25 20:38:07.363197+00:00
+2026-11-25 14:38:07 | INFO | FIRESTORE_SYNC_FINISHED | query='1Q84' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:38:07 | INFO | FIRESTORE_SYNC_STARTED | query='1Q84' | found_results=1 | collection=books
+2026-11-25 14:38:07 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_628b752ce5b313d0d22e3456 | title='1984' | source=buscalibre | update_time=2026-11-25 20:38:07.532977+00:00
+2026-11-25 14:38:07 | INFO | FIRESTORE_SYNC_FINISHED | query='1Q84' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:38:07 | INFO | FIRESTORE_SYNC_STARTED | query='1Q84' | found_results=1 | collection=books
+2026-11-25 14:38:07 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_bca8434ff2ad78f887e89b36 | title='1984' | source=buscalibre | update_time=2026-11-25 20:38:07.691435+00:00
+2026-11-25 14:38:07 | INFO | FIRESTORE_SYNC_FINISHED | query='1Q84' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:39:23 | INFO | FIRESTORE_SYNC_STARTED | query='La muerte del comendador' | found_results=1 | collection=books
+2026-11-25 14:39:23 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_eca6a9cb9b0517cb422c8a37 | title='La muerte del comendador (Libro 2)' | source=buscalibre | update_time=2026-11-25 20:39:23.594709+00:00
+2026-11-25 14:39:23 | INFO | FIRESTORE_SYNC_FINISHED | query='La muerte del comendador' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:39:23 | INFO | FIRESTORE_SYNC_STARTED | query='La muerte del comendador' | found_results=1 | collection=books
+2026-11-25 14:39:23 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_4a725275ae986b230c184f1a | title='La Muerte del Comendador' | source=buscalibre | update_time=2026-11-25 20:39:23.748737+00:00
+2026-11-25 14:39:23 | INFO | FIRESTORE_SYNC_FINISHED | query='La muerte del comendador' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:39:23 | INFO | FIRESTORE_SYNC_STARTED | query='La muerte del comendador' | found_results=1 | collection=books
+2026-11-25 14:39:23 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_c3ed368f25515a480be79626 | title='La Muerte del Comendador (Libro 2)' | source=buscalibre | update_time=2026-11-25 20:39:23.900026+00:00
+2026-11-25 14:39:23 | INFO | FIRESTORE_SYNC_FINISHED | query='La muerte del comendador' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:39:23 | INFO | FIRESTORE_SYNC_STARTED | query='La muerte del comendador' | found_results=1 | collection=books
+2026-11-25 14:39:24 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_78eb4dbac90a6ef5616df645 | title='La Muerte del Comendador (Libro 2)' | source=buscalibre | update_time=2026-11-25 20:39:24.044489+00:00
+2026-11-25 14:39:24 | INFO | FIRESTORE_SYNC_FINISHED | query='La muerte del comendador' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:39:24 | INFO | FIRESTORE_SYNC_STARTED | query='La muerte del comendador' | found_results=1 | collection=books
+2026-11-25 14:39:24 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_a324fe2b936e99c49ab82797 | title='La Muerte del Comendador Libro i' | source=buscalibre | update_time=2026-11-25 20:39:24.204654+00:00
+2026-11-25 14:39:24 | INFO | FIRESTORE_SYNC_FINISHED | query='La muerte del comendador' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:39:24 | INFO | FIRESTORE_SYNC_STARTED | query='La muerte del comendador' | found_results=1 | collection=books
+2026-11-25 14:39:24 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_6f03721c4e4a92bcda7dc7f8 | title='Muerte del Comendador [Libro 1]' | source=buscalibre | update_time=2026-11-25 20:39:24.362401+00:00
+2026-11-25 14:39:24 | INFO | FIRESTORE_SYNC_FINISHED | query='La muerte del comendador' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:40:39 | INFO | FIRESTORE_SYNC_STARTED | query='Ryu Murakami libros' | found_results=1 | collection=books
+2026-11-25 14:40:39 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_9fdf719b0fa1afc9f3149f57 | title='Azul casi transparente' | source=buscalibre | update_time=2026-11-25 20:40:39.501081+00:00
+2026-11-25 14:40:39 | INFO | FIRESTORE_SYNC_FINISHED | query='Ryu Murakami libros' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:40:39 | INFO | FIRESTORE_SYNC_STARTED | query='Ryu Murakami libros' | found_results=1 | collection=books
+2026-11-25 14:40:39 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_70dcd89546b01fe10821026d | title='Piercing' | source=buscalibre | update_time=2026-11-25 20:40:39.664479+00:00
+2026-11-25 14:40:39 | INFO | FIRESTORE_SYNC_FINISHED | query='Ryu Murakami libros' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:40:39 | INFO | FIRESTORE_SYNC_STARTED | query='Ryu Murakami libros' | found_results=1 | collection=books
+2026-11-25 14:40:39 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_06495b9237e27d4e2fb81622 | title='Audición' | source=buscalibre | update_time=2026-11-25 20:40:39.828165+00:00
+2026-11-25 14:40:39 | INFO | FIRESTORE_SYNC_FINISHED | query='Ryu Murakami libros' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:40:39 | INFO | FIRESTORE_SYNC_STARTED | query='Ryu Murakami libros' | found_results=1 | collection=books
+2026-11-25 14:40:40 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_ec7929f79f0f7db357c12bed | title='Libro #4' | source=buscalibre | update_time=2026-11-25 20:40:40.042197+00:00
+2026-11-25 14:40:40 | INFO | FIRESTORE_SYNC_FINISHED | query='Ryu Murakami libros' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:40:40 | INFO | FIRESTORE_SYNC_STARTED | query='Ryu Murakami libros' | found_results=1 | collection=books
+2026-11-25 14:40:40 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_886698d67659610997b1a7eb | title='Sopa de Miso' | source=buscalibre | update_time=2026-11-25 20:40:40.195243+00:00
+2026-11-25 14:40:40 | INFO | FIRESTORE_SYNC_FINISHED | query='Ryu Murakami libros' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:40:40 | INFO | FIRESTORE_SYNC_STARTED | query='Ryu Murakami libros' | found_results=1 | collection=books
+2026-11-25 14:40:40 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_90d0594c938391e3438afdf1 | title='Simbiontes' | source=buscalibre | update_time=2026-11-25 20:40:40.352743+00:00
+2026-11-25 14:40:40 | INFO | FIRESTORE_SYNC_FINISHED | query='Ryu Murakami libros' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:40:40 | INFO | FIRESTORE_SYNC_STARTED | query='Ryu Murakami libros' | found_results=1 | collection=books
+2026-11-25 14:40:40 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_fe58f48055699451beb82379 | title='Decadencia de Tokio' | source=buscalibre | update_time=2026-11-25 20:40:40.508533+00:00
+2026-11-25 14:40:40 | INFO | FIRESTORE_SYNC_FINISHED | query='Ryu Murakami libros' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:40:40 | INFO | FIRESTORE_SYNC_STARTED | query='Ryu Murakami libros' | found_results=1 | collection=books
+2026-11-25 14:40:40 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_47d9ae57757b26a582cd2dbc | title='Azul casi transparente' | source=buscalibre | update_time=2026-11-25 20:40:40.692081+00:00
+2026-11-25 14:40:40 | INFO | FIRESTORE_SYNC_FINISHED | query='Ryu Murakami libros' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:40:40 | INFO | FIRESTORE_SYNC_STARTED | query='Ryu Murakami libros' | found_results=1 | collection=books
+2026-11-25 14:40:40 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_5737fb39ca05e45b5f914d25 | title='Sopa de Miso' | source=buscalibre | update_time=2026-11-25 20:40:40.921685+00:00
+2026-11-25 14:40:40 | INFO | FIRESTORE_SYNC_FINISHED | query='Ryu Murakami libros' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:41:20 | INFO | FIRESTORE_SYNC_STARTED | query='Yasunari Kawabata libros' | found_results=1 | collection=books
+2026-11-25 14:41:20 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_c61054f485d63ca37fdcc039 | title='Die Schlafenden Schönen. Roman. Aus dem Japanischen von Siegfried Schaarschmidt. (en Alemán)' | source=buscalibre | update_time=2026-11-25 20:41:20.542145+00:00
+2026-11-25 14:41:20 | INFO | FIRESTORE_SYNC_FINISHED | query='Yasunari Kawabata libros' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:42:34 | INFO | FIRESTORE_SYNC_STARTED | query='País de nieve' | found_results=1 | collection=books
+2026-11-25 14:42:34 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_7be283d01ef565e01811b000 | title='País de Nieve' | source=buscalibre | update_time=2026-11-25 20:42:34.244572+00:00
+2026-11-25 14:42:34 | INFO | FIRESTORE_SYNC_FINISHED | query='País de nieve' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:42:34 | INFO | FIRESTORE_SYNC_STARTED | query='País de nieve' | found_results=1 | collection=books
+2026-11-25 14:42:34 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_ee5ee84c46cae41ac16e7bd7 | title='País de Nieve' | source=buscalibre | update_time=2026-11-25 20:42:34.416815+00:00
+2026-11-25 14:42:34 | INFO | FIRESTORE_SYNC_FINISHED | query='País de nieve' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:42:34 | INFO | FIRESTORE_SYNC_STARTED | query='País de nieve' | found_results=1 | collection=books
+2026-11-25 14:42:34 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_b7a527ca331707a398fd406d | title='País de nieve' | source=buscalibre | update_time=2026-11-25 20:42:34.585501+00:00
+2026-11-25 14:42:34 | INFO | FIRESTORE_SYNC_FINISHED | query='País de nieve' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:42:34 | INFO | FIRESTORE_SYNC_STARTED | query='País de nieve' | found_results=1 | collection=books
+2026-11-25 14:42:34 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_33da8b1f9af1b906303e4b24 | title='País de nieve. Edición 2024' | source=buscalibre | update_time=2026-11-25 20:42:34.741418+00:00
+2026-11-25 14:42:34 | INFO | FIRESTORE_SYNC_FINISHED | query='País de nieve' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:42:34 | INFO | FIRESTORE_SYNC_STARTED | query='País de nieve' | found_results=1 | collection=books
+2026-11-25 14:42:34 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_55e077e47226ac1467967ae6 | title='Alicia en el País de la Alegría' | source=buscalibre | update_time=2026-11-25 20:42:34.905716+00:00
+2026-11-25 14:42:34 | INFO | FIRESTORE_SYNC_FINISHED | query='País de nieve' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:42:34 | INFO | FIRESTORE_SYNC_STARTED | query='País de nieve' | found_results=1 | collection=books
+2026-11-25 14:42:35 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_669846b4d6befb100262a99f | title='Huellas en la nieve, misterios y certezas' | source=buscalibre | update_time=2026-11-25 20:42:35.043484+00:00
+2026-11-25 14:42:35 | INFO | FIRESTORE_SYNC_FINISHED | query='País de nieve' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:42:35 | INFO | FIRESTORE_SYNC_STARTED | query='País de nieve' | found_results=1 | collection=books
+2026-11-25 14:42:35 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_ead1311234d052e2f7857af4 | title='el país de la nieve' | source=buscalibre | update_time=2026-11-25 20:42:35.193801+00:00
+2026-11-25 14:42:35 | INFO | FIRESTORE_SYNC_FINISHED | query='País de nieve' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:42:35 | INFO | FIRESTORE_SYNC_STARTED | query='País de nieve' | found_results=1 | collection=books
+2026-11-25 14:42:35 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_9d5ec40c8ccd5522a908eea6 | title='Pais de Nieve' | source=buscalibre | update_time=2026-11-25 20:42:35.339999+00:00
+2026-11-25 14:42:35 | INFO | FIRESTORE_SYNC_FINISHED | query='País de nieve' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:42:35 | INFO | FIRESTORE_SYNC_STARTED | query='País de nieve' | found_results=1 | collection=books
+2026-11-25 14:42:35 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_2b8ab462728b0d19f85c1606 | title='Pais de nieve' | source=buscalibre | update_time=2026-11-25 20:42:35.481140+00:00
+2026-11-25 14:42:35 | INFO | FIRESTORE_SYNC_FINISHED | query='País de nieve' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:42:35 | INFO | FIRESTORE_SYNC_STARTED | query='País de nieve' | found_results=1 | collection=books
+2026-11-25 14:42:35 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_df10be6942846eb8043e45e6 | title='en el pais de las nieves' | source=buscalibre | update_time=2026-11-25 20:42:35.624335+00:00
+2026-11-25 14:42:35 | INFO | FIRESTORE_SYNC_FINISHED | query='País de nieve' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:43:49 | INFO | FIRESTORE_SYNC_STARTED | query='Osamu Dazai libros' | found_results=1 | collection=books
+2026-11-25 14:43:49 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_278fb7ab8151b024c0281d02 | title='Otogizoshi: The Fairy Tale Book of Dazai Osamu' | source=buscalibre | update_time=2026-11-25 20:43:49.779865+00:00
+2026-11-25 14:43:49 | INFO | FIRESTORE_SYNC_FINISHED | query='Osamu Dazai libros' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:43:49 | INFO | FIRESTORE_SYNC_STARTED | query='Osamu Dazai libros' | found_results=1 | collection=books
+2026-11-25 14:43:49 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_f20d3569a33c9b29347d42c3 | title='Flores de la Bufoneria' | source=buscalibre | update_time=2026-11-25 20:43:49.937965+00:00
+2026-11-25 14:43:49 | INFO | FIRESTORE_SYNC_FINISHED | query='Osamu Dazai libros' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:43:49 | INFO | FIRESTORE_SYNC_STARTED | query='Osamu Dazai libros' | found_results=1 | collection=books
+2026-11-25 14:43:50 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_82aef806681e26017eb759fb | title='Indigno de ser humano' | source=buscalibre | update_time=2026-11-25 20:43:50.099350+00:00
+2026-11-25 14:43:50 | INFO | FIRESTORE_SYNC_FINISHED | query='Osamu Dazai libros' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:43:50 | INFO | FIRESTORE_SYNC_STARTED | query='Osamu Dazai libros' | found_results=1 | collection=books
+2026-11-25 14:43:50 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_843758adf91973cabb6a0b65 | title='Indigno de ser humano' | source=buscalibre | update_time=2026-11-25 20:43:50.272838+00:00
+2026-11-25 14:43:50 | INFO | FIRESTORE_SYNC_FINISHED | query='Osamu Dazai libros' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:43:50 | INFO | FIRESTORE_SYNC_STARTED | query='Osamu Dazai libros' | found_results=1 | collection=books
+2026-11-25 14:43:50 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_1e894d8d05791098a875fbd8 | title='Cuentos de Cabecera' | source=buscalibre | update_time=2026-11-25 20:43:50.429215+00:00
+2026-11-25 14:43:50 | INFO | FIRESTORE_SYNC_FINISHED | query='Osamu Dazai libros' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:43:50 | INFO | FIRESTORE_SYNC_STARTED | query='Osamu Dazai libros' | found_results=1 | collection=books
+2026-11-25 14:43:50 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_204c73cd0b55d0f57ea05be2 | title='Diario de un viaje por Tsugaru' | source=buscalibre | update_time=2026-11-25 20:43:50.593829+00:00
+2026-11-25 14:43:50 | INFO | FIRESTORE_SYNC_FINISHED | query='Osamu Dazai libros' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:43:50 | INFO | FIRESTORE_SYNC_STARTED | query='Osamu Dazai libros' | found_results=1 | collection=books
+2026-11-25 14:43:50 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_befbe4d25f7728d4f1adaf62 | title='Tormenta de Flores' | source=buscalibre | update_time=2026-11-25 20:43:50.751827+00:00
+2026-11-25 14:43:50 | INFO | FIRESTORE_SYNC_FINISHED | query='Osamu Dazai libros' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:43:50 | INFO | FIRESTORE_SYNC_STARTED | query='Osamu Dazai libros' | found_results=1 | collection=books
+2026-11-25 14:43:50 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_e63953864622caaa940ec0b7 | title='Repudiados' | source=buscalibre | update_time=2026-11-25 20:43:50.907615+00:00
+2026-11-25 14:43:50 | INFO | FIRESTORE_SYNC_FINISHED | query='Osamu Dazai libros' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:43:50 | INFO | FIRESTORE_SYNC_STARTED | query='Osamu Dazai libros' | found_results=1 | collection=books
+2026-11-25 14:43:51 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_549c71f5c1d4fc77b463c75b | title='Colegiala' | source=buscalibre | update_time=2026-11-25 20:43:51.051013+00:00
+2026-11-25 14:43:51 | INFO | FIRESTORE_SYNC_FINISHED | query='Osamu Dazai libros' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:43:51 | INFO | FIRESTORE_SYNC_STARTED | query='Osamu Dazai libros' | found_results=1 | collection=books
+2026-11-25 14:43:51 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_2a6cc377c2f1a0006f3ef932 | title='El Declive' | source=buscalibre | update_time=2026-11-25 20:43:51.197733+00:00
+2026-11-25 14:43:51 | INFO | FIRESTORE_SYNC_FINISHED | query='Osamu Dazai libros' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:45:07 | INFO | FIRESTORE_SYNC_STARTED | query='Indigno de ser humano' | found_results=1 | collection=books
+2026-11-25 14:45:07 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_f743924449b039decc606f25 | title='Indigno de ser humano' | source=buscalibre | update_time=2026-11-25 20:45:07.229310+00:00
+2026-11-25 14:45:07 | INFO | FIRESTORE_SYNC_FINISHED | query='Indigno de ser humano' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:45:07 | INFO | FIRESTORE_SYNC_STARTED | query='Indigno de ser humano' | found_results=1 | collection=books
+2026-11-25 14:45:07 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_602c77a865bcda2c44a51cad | title='Indigno de ser humano' | source=buscalibre | update_time=2026-11-25 20:45:07.396931+00:00
+2026-11-25 14:45:07 | INFO | FIRESTORE_SYNC_FINISHED | query='Indigno de ser humano' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:45:07 | INFO | FIRESTORE_SYNC_STARTED | query='Indigno de ser humano' | found_results=1 | collection=books
+2026-11-25 14:45:07 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_5f3c918fa00c9657e017c27e | title='Indigno de ser Humano' | source=buscalibre | update_time=2026-11-25 20:45:07.576065+00:00
+2026-11-25 14:45:07 | INFO | FIRESTORE_SYNC_FINISHED | query='Indigno de ser humano' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:45:07 | INFO | FIRESTORE_SYNC_STARTED | query='Indigno de ser humano' | found_results=1 | collection=books
+2026-11-25 14:45:07 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_cbe15c1877bc798195b9aecf | title='INDIGNO DE SER HUMANO' | source=buscalibre | update_time=2026-11-25 20:45:07.735331+00:00
+2026-11-25 14:45:07 | INFO | FIRESTORE_SYNC_FINISHED | query='Indigno de ser humano' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:45:07 | INFO | FIRESTORE_SYNC_STARTED | query='Indigno de ser humano' | found_results=1 | collection=books
+2026-11-25 14:45:07 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_7bfbac14f088cd0cf3a3eb28 | title='Indigno de ser humano' | source=buscalibre | update_time=2026-11-25 20:45:07.879257+00:00
+2026-11-25 14:45:07 | INFO | FIRESTORE_SYNC_FINISHED | query='Indigno de ser humano' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:45:07 | INFO | FIRESTORE_SYNC_STARTED | query='Indigno de ser humano' | found_results=1 | collection=books
+2026-11-25 14:45:08 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_02351a62cc194e847df11317 | title='Indigno de ser Humano 1' | source=buscalibre | update_time=2026-11-25 20:45:08.033116+00:00
+2026-11-25 14:45:08 | INFO | FIRESTORE_SYNC_FINISHED | query='Indigno de ser humano' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:45:08 | INFO | FIRESTORE_SYNC_STARTED | query='Indigno de ser humano' | found_results=1 | collection=books
+2026-11-25 14:45:08 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_84b853fbbdcef59c8439fb67 | title='Indigno de ser humano (en Literatura)' | source=buscalibre | update_time=2026-11-25 20:45:08.176103+00:00
+2026-11-25 14:45:08 | INFO | FIRESTORE_SYNC_FINISHED | query='Indigno de ser humano' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:45:08 | INFO | FIRESTORE_SYNC_STARTED | query='Indigno de ser humano' | found_results=1 | collection=books
+2026-11-25 14:45:08 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_e9c95fd267ca5444afbb2406 | title='Indigno de ser Humano 3' | source=buscalibre | update_time=2026-11-25 20:45:08.324905+00:00
+2026-11-25 14:45:08 | INFO | FIRESTORE_SYNC_FINISHED | query='Indigno de ser humano' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:46:16 | INFO | FIRESTORE_SYNC_STARTED | query='El cielo es azul la tierra blanca' | found_results=1 | collection=books
+2026-11-25 14:46:16 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_da8cd3013288aa473cafa0ab | title='El cielo es azul, la tierra blanca' | source=buscalibre | update_time=2026-11-25 20:46:16.688113+00:00
+2026-11-25 14:46:16 | INFO | FIRESTORE_SYNC_FINISHED | query='El cielo es azul la tierra blanca' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:46:16 | INFO | FIRESTORE_SYNC_STARTED | query='El cielo es azul la tierra blanca' | found_results=1 | collection=books
+2026-11-25 14:46:16 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_f773f57a978d6401a608a29b | title='Cielo es Azul, la Tierra Blanca' | source=buscalibre | update_time=2026-11-25 20:46:16.843426+00:00
+2026-11-25 14:46:16 | INFO | FIRESTORE_SYNC_FINISHED | query='El cielo es azul la tierra blanca' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:46:16 | INFO | FIRESTORE_SYNC_STARTED | query='El cielo es azul la tierra blanca' | found_results=1 | collection=books
+2026-11-25 14:46:16 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_da3c000b3e65542b7c107a43 | title='El Cielo es Azul, la Tierra Blanca' | source=buscalibre | update_time=2026-11-25 20:46:17.001760+00:00
+2026-11-25 14:46:16 | INFO | FIRESTORE_SYNC_FINISHED | query='El cielo es azul la tierra blanca' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:46:17 | INFO | FIRESTORE_SYNC_STARTED | query='El cielo es azul la tierra blanca' | found_results=1 | collection=books
+2026-11-25 14:46:17 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_976f9537d99ff169da0309b7 | title='El cielo es azul, la tierra blanca' | source=buscalibre | update_time=2026-11-25 20:46:17.157303+00:00
+2026-11-25 14:46:17 | INFO | FIRESTORE_SYNC_FINISHED | query='El cielo es azul la tierra blanca' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:46:17 | INFO | FIRESTORE_SYNC_STARTED | query='El cielo es azul la tierra blanca' | found_results=1 | collection=books
+2026-11-25 14:46:17 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_c9b4b9a4dcfc48ea26002500 | title='El Cielo es Azul, la Tierra Blanca' | source=buscalibre | update_time=2026-11-25 20:46:17.346789+00:00
+2026-11-25 14:46:17 | INFO | FIRESTORE_SYNC_FINISHED | query='El cielo es azul la tierra blanca' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:46:17 | INFO | FIRESTORE_SYNC_STARTED | query='El cielo es azul la tierra blanca' | found_results=1 | collection=books
+2026-11-25 14:46:17 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_20e50fc115ccc57adb5e1a09 | title='El Cielo es Azul, la Tierra Blanca: Una Historia de Amor' | source=buscalibre | update_time=2026-11-25 20:46:17.500357+00:00
+2026-11-25 14:46:17 | INFO | FIRESTORE_SYNC_FINISHED | query='El cielo es azul la tierra blanca' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:46:17 | INFO | FIRESTORE_SYNC_STARTED | query='El cielo es azul la tierra blanca' | found_results=1 | collection=books
+2026-11-25 14:46:17 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_db85c7c0fee011ab035917e1 | title='El Cielo es Azul, la Tierra Blanca: Una Historia de Amor' | source=buscalibre | update_time=2026-11-25 20:46:17.653220+00:00
+2026-11-25 14:46:17 | INFO | FIRESTORE_SYNC_FINISHED | query='El cielo es azul la tierra blanca' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:47:34 | INFO | FIRESTORE_SYNC_STARTED | query='Banana Yoshimoto libros' | found_results=1 | collection=books
+2026-11-25 14:47:34 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_6523d8578574f2ddbed8f500 | title='Primer amor' | source=buscalibre | update_time=2026-11-25 20:47:34.721893+00:00
+2026-11-25 14:47:34 | INFO | FIRESTORE_SYNC_FINISHED | query='Banana Yoshimoto libros' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:47:34 | INFO | FIRESTORE_SYNC_STARTED | query='Banana Yoshimoto libros' | found_results=1 | collection=books
+2026-11-25 14:47:34 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_f7a213a187b59fc7097d68ce | title='Lagartija' | source=buscalibre | update_time=2026-11-25 20:47:34.890650+00:00
+2026-11-25 14:47:34 | INFO | FIRESTORE_SYNC_FINISHED | query='Banana Yoshimoto libros' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:47:34 | INFO | FIRESTORE_SYNC_STARTED | query='Banana Yoshimoto libros' | found_results=1 | collection=books
+2026-11-25 14:47:35 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_0aa9d6861a01ac5ab513cb55 | title='El Lago' | source=buscalibre | update_time=2026-11-25 20:47:35.084728+00:00
+2026-11-25 14:47:35 | INFO | FIRESTORE_SYNC_FINISHED | query='Banana Yoshimoto libros' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:47:35 | INFO | FIRESTORE_SYNC_STARTED | query='Banana Yoshimoto libros' | found_results=1 | collection=books
+2026-11-25 14:47:35 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_9d0bac6863626f3060e03062 | title='Kitchen' | source=buscalibre | update_time=2026-11-25 20:47:35.274347+00:00
+2026-11-25 14:47:35 | INFO | FIRESTORE_SYNC_FINISHED | query='Banana Yoshimoto libros' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:47:35 | INFO | FIRESTORE_SYNC_STARTED | query='Banana Yoshimoto libros' | found_results=1 | collection=books
+2026-11-25 14:47:35 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_0a233e54cd6f30aa8853185d | title='Kitchen - Planeta Lector' | source=buscalibre | update_time=2026-11-25 20:47:35.430141+00:00
+2026-11-25 14:47:35 | INFO | FIRESTORE_SYNC_FINISHED | query='Banana Yoshimoto libros' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:47:35 | INFO | FIRESTORE_SYNC_STARTED | query='Banana Yoshimoto libros' | found_results=1 | collection=books
+2026-11-25 14:47:35 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_3ce39da21b55f7d83f64bb45 | title='Libro #6' | source=buscalibre | update_time=2026-11-25 20:47:35.624633+00:00
+2026-11-25 14:47:35 | INFO | FIRESTORE_SYNC_FINISHED | query='Banana Yoshimoto libros' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:47:35 | INFO | FIRESTORE_SYNC_STARTED | query='Banana Yoshimoto libros' | found_results=1 | collection=books
+2026-11-25 14:47:35 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_cb0b9a8f98ed0579a633a1b4 | title='Primer amor' | source=buscalibre | update_time=2026-11-25 20:47:35.792930+00:00
+2026-11-25 14:47:35 | INFO | FIRESTORE_SYNC_FINISHED | query='Banana Yoshimoto libros' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:47:35 | INFO | FIRESTORE_SYNC_STARTED | query='Banana Yoshimoto libros' | found_results=1 | collection=books
+2026-11-25 14:47:35 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_9b07d040b5ca584d93a466ca | title='Kitchen (en Inglés)' | source=buscalibre | update_time=2026-11-25 20:47:35.947778+00:00
+2026-11-25 14:47:35 | INFO | FIRESTORE_SYNC_FINISHED | query='Banana Yoshimoto libros' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:47:35 | INFO | FIRESTORE_SYNC_STARTED | query='Banana Yoshimoto libros' | found_results=1 | collection=books
+2026-11-25 14:47:36 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_3af12a286123504b16869ce8 | title='Lagartija' | source=buscalibre | update_time=2026-11-25 20:47:36.094361+00:00
+2026-11-25 14:47:36 | INFO | FIRESTORE_SYNC_FINISHED | query='Banana Yoshimoto libros' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:47:36 | INFO | FIRESTORE_SYNC_STARTED | query='Banana Yoshimoto libros' | found_results=1 | collection=books
+2026-11-25 14:47:36 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_5a9760f75928c080005eb587 | title='Kitchen' | source=buscalibre | update_time=2026-11-25 20:47:36.295972+00:00
+2026-11-25 14:47:36 | INFO | FIRESTORE_SYNC_FINISHED | query='Banana Yoshimoto libros' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:48:53 | INFO | FIRESTORE_SYNC_STARTED | query='Kitchen Banana Yoshimoto' | found_results=1 | collection=books
+2026-11-25 14:48:53 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_c9dd56f9d522c7adf57799f7 | title='Kitchen' | source=buscalibre | update_time=2026-11-25 20:48:53.786292+00:00
+2026-11-25 14:48:53 | INFO | FIRESTORE_SYNC_FINISHED | query='Kitchen Banana Yoshimoto' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:48:53 | INFO | FIRESTORE_SYNC_STARTED | query='Kitchen Banana Yoshimoto' | found_results=1 | collection=books
+2026-11-25 14:48:54 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_afa118711b0a92ba9a865aee | title='Kitchen (en Inglés)' | source=buscalibre | update_time=2026-11-25 20:48:54.027875+00:00
+2026-11-25 14:48:54 | INFO | FIRESTORE_SYNC_FINISHED | query='Kitchen Banana Yoshimoto' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:48:54 | INFO | FIRESTORE_SYNC_STARTED | query='Kitchen Banana Yoshimoto' | found_results=1 | collection=books
+2026-11-25 14:48:54 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_4da7a2a92fa25b6c3427c1dc | title='kitchen' | source=buscalibre | update_time=2026-11-25 20:48:54.176965+00:00
+2026-11-25 14:48:54 | INFO | FIRESTORE_SYNC_FINISHED | query='Kitchen Banana Yoshimoto' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:48:54 | INFO | FIRESTORE_SYNC_STARTED | query='Kitchen Banana Yoshimoto' | found_results=1 | collection=books
+2026-11-25 14:48:54 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_adbc108443281b7ec9bec889 | title='Kitchen' | source=buscalibre | update_time=2026-11-25 20:48:54.330747+00:00
+2026-11-25 14:48:54 | INFO | FIRESTORE_SYNC_FINISHED | query='Kitchen Banana Yoshimoto' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:48:54 | INFO | FIRESTORE_SYNC_STARTED | query='Kitchen Banana Yoshimoto' | found_results=1 | collection=books
+2026-11-25 14:48:54 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_bc968efa5a4fb372392ecd70 | title='kitchen (en Alemán)' | source=buscalibre | update_time=2026-11-25 20:48:54.483976+00:00
+2026-11-25 14:48:54 | INFO | FIRESTORE_SYNC_FINISHED | query='Kitchen Banana Yoshimoto' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:48:54 | INFO | FIRESTORE_SYNC_STARTED | query='Kitchen Banana Yoshimoto' | found_results=1 | collection=books
+2026-11-25 14:48:54 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_a355e643e3254cd5b0d44e4d | title='Kitchen (italian Edition) (en Italian)' | source=buscalibre | update_time=2026-11-25 20:48:54.632480+00:00
+2026-11-25 14:48:54 | INFO | FIRESTORE_SYNC_FINISHED | query='Kitchen Banana Yoshimoto' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 14:49:32 | INFO | FIRESTORE_SYNC_STARTED | query='Kenzaburo Oe libros' | found_results=1 | collection=books
+2026-11-25 14:49:33 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_4cbc3798537507a1d2e685ac | title='Adiós, Libros Míos!' | source=buscalibre | update_time=2026-11-25 20:49:33.213140+00:00
+2026-11-25 14:49:33 | INFO | FIRESTORE_SYNC_FINISHED | query='Kenzaburo Oe libros' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 18:06:48 | INFO | FIRESTORE_CONNECTED | collection=books | project=default
+2026-11-25 18:12:11 | INFO | FIRESTORE_SYNC_STARTED | query='Haruki Murakami libros' | found_results=1 | collection=books
+2026-11-25 18:12:24 | INFO | FIRESTORE_CONNECTED | collection=books | project=default
+2026-11-25 18:27:48 | INFO | FIRESTORE_CONNECTED | collection=books | project=default
+2026-11-25 18:30:58 | INFO | FIRESTORE_CONNECTED | collection=books | project=default
+2026-11-25 18:46:42 | INFO | FIRESTORE_CONNECTED | collection=books | project=default
+2026-11-25 18:47:54 | INFO | FIRESTORE_CONNECTED | collection=books | project=default
+2026-11-25 18:49:58 | INFO | FIRESTORE_CONNECTED | collection=books | project=default
+2026-11-25 18:50:14 | INFO | FIRESTORE_CONNECTED | collection=books | project=default
+2026-11-25 18:50:30 | INFO | FIRESTORE_CONNECTED | collection=books | project=default
+2026-11-25 18:54:27 | INFO | FIRESTORE_CONNECTED | collection=books | project=default
+2026-11-25 18:54:50 | INFO | FIRESTORE_CONNECTED | collection=books | project=store-ea555
+2026-11-25 18:55:52 | INFO | FIRESTORE_CONNECTED | collection=books | project=store-ea555
+2026-11-25 18:55:58 | INFO | FIRESTORE_CONNECTED | collection=books | project=store-ea555
+2026-11-25 18:56:31 | INFO | FIRESTORE_CONNECTED | collection=books | project=store-ea555
+2026-11-25 18:58:11 | INFO | FIRESTORE_CONNECTED | collection=books | project=store-ea555
+2026-11-25 19:13:31 | INFO | FIRESTORE_SYNC_STARTED | query='Shusaku Endo libros' | found_results=1 | collection=books
+2026-11-25 19:13:31 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_ea3e6e024a8c7e148ed1487f | title='Silence' | source=buscalibre | update_time=2026-11-26 01:13:32.069445+00:00
+2026-11-25 19:13:31 | INFO | FIRESTORE_SYNC_FINISHED | query='Shusaku Endo libros' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 19:13:31 | INFO | FIRESTORE_SYNC_STARTED | query='Shusaku Endo libros' | found_results=1 | collection=books
+2026-11-25 19:13:31 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_a7a08767675a03b5a728ae64 | title='Escandalo 9788435010276' | source=buscalibre | update_time=2026-11-26 01:13:32.241739+00:00
+2026-11-25 19:13:31 | INFO | FIRESTORE_SYNC_FINISHED | query='Shusaku Endo libros' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 19:13:32 | INFO | FIRESTORE_SYNC_STARTED | query='Shusaku Endo libros' | found_results=1 | collection=books
+2026-11-25 19:13:32 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_3ccadfbf7dbb1a276d2bf5aa | title='Silencio' | source=buscalibre | update_time=2026-11-26 01:13:32.408573+00:00
+2026-11-25 19:13:32 | INFO | FIRESTORE_SYNC_FINISHED | query='Shusaku Endo libros' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 19:13:32 | INFO | FIRESTORE_SYNC_STARTED | query='Shusaku Endo libros' | found_results=1 | collection=books
+2026-11-25 19:13:32 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_d22b630029a4c9f84d663228 | title='Silencio' | source=buscalibre | update_time=2026-11-26 01:13:32.558545+00:00
+2026-11-25 19:13:32 | INFO | FIRESTORE_SYNC_FINISHED | query='Shusaku Endo libros' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 19:13:32 | INFO | FIRESTORE_SYNC_STARTED | query='Shusaku Endo libros' | found_results=1 | collection=books
+2026-11-25 19:13:32 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_7d8fff13f82147c417447a8b | title='El Samurai (Narrativas Históricas)' | source=buscalibre | update_time=2026-11-26 01:13:32.708914+00:00
+2026-11-25 19:13:32 | INFO | FIRESTORE_SYNC_FINISHED | query='Shusaku Endo libros' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 19:13:32 | INFO | FIRESTORE_SYNC_STARTED | query='Shusaku Endo libros' | found_results=1 | collection=books
+2026-11-25 19:13:32 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_4cd161f6fb6b7026e62b52a2 | title='Cuando Silbo' | source=buscalibre | update_time=2026-11-26 01:13:32.860380+00:00
+2026-11-25 19:13:32 | INFO | FIRESTORE_SYNC_FINISHED | query='Shusaku Endo libros' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 19:13:32 | INFO | FIRESTORE_SYNC_STARTED | query='Shusaku Endo libros' | found_results=1 | collection=books
+2026-11-25 19:13:32 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_083d7a102b678b22dfe0ec6a | title='A Life of Jesus (en Inglés)' | source=buscalibre | update_time=2026-11-26 01:13:33.004165+00:00
+2026-11-25 19:13:32 | INFO | FIRESTORE_SYNC_FINISHED | query='Shusaku Endo libros' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 19:13:32 | INFO | FIRESTORE_SYNC_STARTED | query='Shusaku Endo libros' | found_results=1 | collection=books
+2026-11-25 19:13:32 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_81792f4d2c818f4e23d3ada5 | title='deep river (en Inglés)' | source=buscalibre | update_time=2026-11-26 01:13:33.138138+00:00
+2026-11-25 19:13:32 | INFO | FIRESTORE_SYNC_FINISHED | query='Shusaku Endo libros' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 19:13:32 | INFO | FIRESTORE_SYNC_STARTED | query='Shusaku Endo libros' | found_results=1 | collection=books
+2026-11-25 19:13:32 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_9c94b59db44d39b75dbcaf93 | title='the sea and poison (en Inglés)' | source=buscalibre | update_time=2026-11-26 01:13:33.286437+00:00
+2026-11-25 19:13:32 | INFO | FIRESTORE_SYNC_FINISHED | query='Shusaku Endo libros' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 19:13:33 | INFO | FIRESTORE_SYNC_STARTED | query='Shusaku Endo libros' | found_results=1 | collection=books
+2026-11-25 19:13:33 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_3b9494329b56a39df00d43c0 | title='El Samurai' | source=buscalibre | update_time=2026-11-26 01:13:33.437613+00:00
+2026-11-25 19:13:33 | INFO | FIRESTORE_SYNC_FINISHED | query='Shusaku Endo libros' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 19:14:18 | INFO | FIRESTORE_SYNC_STARTED | query='El mar y el veneno' | found_results=1 | collection=books
+2026-11-25 19:14:18 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_ec5d85bbcb5b79d298347c2c | title='Tu rostro maÃ±ana, 3. Veneno y sombra y adiÃ s' | source=buscalibre | update_time=2026-11-26 01:14:18.462935+00:00
+2026-11-25 19:14:18 | INFO | FIRESTORE_SYNC_FINISHED | query='El mar y el veneno' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 19:14:18 | INFO | FIRESTORE_SYNC_STARTED | query='El mar y el veneno' | found_results=1 | collection=books
+2026-11-25 19:14:18 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_c137519bb35ebc4473904df6 | title='socorros que se han de dar los envenenados asfixiados, y medios propios para reconocer los venenos y los vinos adulterados, y para distinguir la muert' | source=buscalibre | update_time=2026-11-26 01:14:18.616715+00:00
+2026-11-25 19:14:18 | INFO | FIRESTORE_SYNC_FINISHED | query='El mar y el veneno' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 19:14:18 | INFO | FIRESTORE_SYNC_STARTED | query='El mar y el veneno' | found_results=1 | collection=books
+2026-11-25 19:14:18 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_a283346899e9305925429509 | title='socorros que se han de dar a los envenenados asfixiados: y medios propios para reconocer los venenos y los vinos adulterados, y para distinguir la mue' | source=buscalibre | update_time=2026-11-26 01:14:18.765925+00:00
+2026-11-25 19:14:18 | INFO | FIRESTORE_SYNC_FINISHED | query='El mar y el veneno' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 19:14:18 | INFO | FIRESTORE_SYNC_STARTED | query='El mar y el veneno' | found_results=1 | collection=books
+2026-11-25 19:14:18 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_082479fa76eb13150017048c | title='El Veneno del Gran Verrugoso' | source=buscalibre | update_time=2026-11-26 01:14:18.900534+00:00
+2026-11-25 19:14:18 | INFO | FIRESTORE_SYNC_FINISHED | query='El mar y el veneno' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 19:15:24 | INFO | FIRESTORE_SYNC_STARTED | query='Sayaka Murata libros' | found_results=1 | collection=books
+2026-11-25 19:15:24 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_b8f790aa3ac620036ba3223b | title='Dependienta, La' | source=buscalibre | update_time=2026-11-26 01:15:24.762774+00:00
+2026-11-25 19:15:24 | INFO | FIRESTORE_SYNC_FINISHED | query='Sayaka Murata libros' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 19:15:24 | INFO | FIRESTORE_SYNC_STARTED | query='Sayaka Murata libros' | found_results=1 | collection=books
+2026-11-25 19:15:24 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_86529480389ea51f0ad5da96 | title='Earthlings (en Inglés)' | source=buscalibre | update_time=2026-11-26 01:15:24.930448+00:00
+2026-11-25 19:15:24 | INFO | FIRESTORE_SYNC_FINISHED | query='Sayaka Murata libros' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 19:15:24 | INFO | FIRESTORE_SYNC_STARTED | query='Sayaka Murata libros' | found_results=1 | collection=books
+2026-11-25 19:15:24 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_5759c679d7845fed1d473eba | title='La ceremonia' | source=buscalibre | update_time=2026-11-26 01:15:25.085552+00:00
+2026-11-25 19:15:24 | INFO | FIRESTORE_SYNC_FINISHED | query='Sayaka Murata libros' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 19:15:24 | INFO | FIRESTORE_SYNC_STARTED | query='Sayaka Murata libros' | found_results=1 | collection=books
+2026-11-25 19:15:24 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_ab034bcc559472bad3603a23 | title='Convenience Store Woman (en Inglés)' | source=buscalibre | update_time=2026-11-26 01:15:25.246258+00:00
+2026-11-25 19:15:24 | INFO | FIRESTORE_SYNC_FINISHED | query='Sayaka Murata libros' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 19:15:25 | INFO | FIRESTORE_SYNC_STARTED | query='Sayaka Murata libros' | found_results=1 | collection=books
+2026-11-25 19:15:25 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_c919320c9a35cc9b91d37d6e | title='Life Ceremony (en Inglés)' | source=buscalibre | update_time=2026-11-26 01:15:25.387815+00:00
+2026-11-25 19:15:25 | INFO | FIRESTORE_SYNC_FINISHED | query='Sayaka Murata libros' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 19:15:25 | INFO | FIRESTORE_SYNC_STARTED | query='Sayaka Murata libros' | found_results=1 | collection=books
+2026-11-25 19:15:25 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_516c365508d34ad061fa8bb9 | title='Vanishing World (en Inglés)' | source=buscalibre | update_time=2026-11-26 01:15:25.523550+00:00
+2026-11-25 19:15:25 | INFO | FIRESTORE_SYNC_FINISHED | query='Sayaka Murata libros' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 19:15:25 | INFO | FIRESTORE_SYNC_STARTED | query='Sayaka Murata libros' | found_results=1 | collection=books
+2026-11-25 19:15:25 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_563cb7be7fcbf753d65815b8 | title='Convenience Store Woman (en Inglés)' | source=buscalibre | update_time=2026-11-26 01:15:25.661715+00:00
+2026-11-25 19:15:25 | INFO | FIRESTORE_SYNC_FINISHED | query='Sayaka Murata libros' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 19:15:25 | INFO | FIRESTORE_SYNC_STARTED | query='Sayaka Murata libros' | found_results=1 | collection=books
+2026-11-25 19:15:25 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_4f6c47be6dabc91d2d594198 | title='Earthlings: A Novel (en Inglés)' | source=buscalibre | update_time=2026-11-26 01:15:25.800115+00:00
+2026-11-25 19:15:25 | INFO | FIRESTORE_SYNC_FINISHED | query='Sayaka Murata libros' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 19:15:25 | INFO | FIRESTORE_SYNC_STARTED | query='Sayaka Murata libros' | found_results=1 | collection=books
+2026-11-25 19:15:25 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_2762011121635e392fe769df | title='La dependienta. Edición especial de lujo' | source=buscalibre | update_time=2026-11-26 01:15:25.955875+00:00
+2026-11-25 19:15:25 | INFO | FIRESTORE_SYNC_FINISHED | query='Sayaka Murata libros' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 19:15:25 | INFO | FIRESTORE_SYNC_STARTED | query='Sayaka Murata libros' | found_results=1 | collection=books
+2026-11-25 19:15:25 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_3468b0ba49c61d56a2f619a3 | title='Vanishing World (en Inglés)' | source=buscalibre | update_time=2026-11-26 01:15:26.101951+00:00
+2026-11-25 19:15:25 | INFO | FIRESTORE_SYNC_FINISHED | query='Sayaka Murata libros' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 19:16:11 | INFO | FIRESTORE_SYNC_STARTED | query='Convenience Store Woman' | found_results=1 | collection=books
+2026-11-25 19:16:11 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_21800e346be15d089a0f1f39 | title='Convenience Store Woman: A Novel (en Inglés)' | source=buscalibre | update_time=2026-11-26 01:16:12.027192+00:00
+2026-11-25 19:16:11 | INFO | FIRESTORE_SYNC_FINISHED | query='Convenience Store Woman' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 19:16:11 | INFO | FIRESTORE_SYNC_STARTED | query='Convenience Store Woman' | found_results=1 | collection=books
+2026-11-25 19:16:11 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_ae0934defcd6c0f2bb73ee4e | title='Convenience Store Woman' | source=buscalibre | update_time=2026-11-26 01:16:12.172702+00:00
+2026-11-25 19:16:11 | INFO | FIRESTORE_SYNC_FINISHED | query='Convenience Store Woman' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 19:17:17 | INFO | FIRESTORE_SYNC_STARTED | query='Mieko Kawakami libros' | found_results=1 | collection=books
+2026-11-25 19:17:17 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_15d1f0c1ad60680c41acbb2e | title='Heaven' | source=buscalibre | update_time=2026-11-26 01:17:17.475952+00:00
+2026-11-25 19:17:17 | INFO | FIRESTORE_SYNC_FINISHED | query='Mieko Kawakami libros' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 19:17:17 | INFO | FIRESTORE_SYNC_STARTED | query='Mieko Kawakami libros' | found_results=1 | collection=books
+2026-11-25 19:17:17 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_91101cad3e9df80c9c00ecb8 | title='Los amantes de la noche' | source=buscalibre | update_time=2026-11-26 01:17:17.633531+00:00
+2026-11-25 19:17:17 | INFO | FIRESTORE_SYNC_FINISHED | query='Mieko Kawakami libros' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 19:17:17 | INFO | FIRESTORE_SYNC_STARTED | query='Mieko Kawakami libros' | found_results=1 | collection=books
+2026-11-25 19:17:17 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_c20f0a9b56956ec54e5f67d4 | title='PECHOS Y HUEVOS' | source=buscalibre | update_time=2026-11-26 01:17:17.776702+00:00
+2026-11-25 19:17:17 | INFO | FIRESTORE_SYNC_FINISHED | query='Mieko Kawakami libros' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 19:17:17 | INFO | FIRESTORE_SYNC_STARTED | query='Mieko Kawakami libros' | found_results=1 | collection=books
+2026-11-25 19:17:17 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_1ca817090f2d2bef10d1c6d8 | title='Heaven (en Inglés)' | source=buscalibre | update_time=2026-11-26 01:17:17.925391+00:00
+2026-11-25 19:17:17 | INFO | FIRESTORE_SYNC_FINISHED | query='Mieko Kawakami libros' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 19:17:17 | INFO | FIRESTORE_SYNC_STARTED | query='Mieko Kawakami libros' | found_results=1 | collection=books
+2026-11-25 19:17:17 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_755ebe56d842edc5632bbdd9 | title='Heaven' | source=buscalibre | update_time=2026-11-26 01:17:18.064835+00:00
+2026-11-25 19:17:17 | INFO | FIRESTORE_SYNC_FINISHED | query='Mieko Kawakami libros' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 19:17:17 | INFO | FIRESTORE_SYNC_STARTED | query='Mieko Kawakami libros' | found_results=1 | collection=books
+2026-11-25 19:17:17 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_d95a97689fc1ce824009bfb2 | title='Pechos y Huevos' | source=buscalibre | update_time=2026-11-26 01:17:18.200179+00:00
+2026-11-25 19:17:17 | INFO | FIRESTORE_SYNC_FINISHED | query='Mieko Kawakami libros' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 19:17:17 | INFO | FIRESTORE_SYNC_STARTED | query='Mieko Kawakami libros' | found_results=1 | collection=books
+2026-11-25 19:17:18 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_8c442c3b7541d382f503d7a8 | title='Breasts and Eggs (en Inglés)' | source=buscalibre | update_time=2026-11-26 01:17:18.347486+00:00
+2026-11-25 19:17:18 | INFO | FIRESTORE_SYNC_FINISHED | query='Mieko Kawakami libros' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 19:17:18 | INFO | FIRESTORE_SYNC_STARTED | query='Mieko Kawakami libros' | found_results=1 | collection=books
+2026-11-25 19:17:18 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_10af84684c6de97b1b548617 | title='Los amantes de la noche' | source=buscalibre | update_time=2026-11-26 01:17:18.488945+00:00
+2026-11-25 19:17:18 | INFO | FIRESTORE_SYNC_FINISHED | query='Mieko Kawakami libros' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 19:17:18 | INFO | FIRESTORE_SYNC_STARTED | query='Mieko Kawakami libros' | found_results=1 | collection=books
+2026-11-25 19:17:18 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_5f79c67310461094f34f5939 | title='All the Lovers in the Night (en Inglés)' | source=buscalibre | update_time=2026-11-26 01:17:18.629553+00:00
+2026-11-25 19:17:18 | INFO | FIRESTORE_SYNC_FINISHED | query='Mieko Kawakami libros' | attempted=1 | saved=1 | failed=0 | status=success
+2026-11-25 19:17:18 | INFO | FIRESTORE_SYNC_STARTED | query='Mieko Kawakami libros' | found_results=1 | collection=books
+2026-11-25 19:17:18 | INFO | FIRESTORE_UPSERT_CONFIRMED | id=book_92108209dcb82037c6d4595a | title='Pechos y huevos' | source=buscalibre | update_time=2026-11-26 01:17:18.777050+00:00
+2026-11-25 19:17:18 | INFO | FIRESTORE_SYNC_FINISHED | query='Mieko Kawakami libros' | attempted=1 | saved=1 | failed=0 | status=success

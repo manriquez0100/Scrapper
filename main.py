@@ -25,7 +25,7 @@ from mercadolibre import search_mercadolibre
 from chrome_manager import ensure_chrome_debugging, terminate_chrome_debugging
 
 load_dotenv()
-from firestore_catalog import persist_catalog_books
+from firestore_catalog import catalog_writer, persist_catalog_books
 
 logger = logging.getLogger(__name__)
 BEHAVIOR_CONFIG_PATH = Path(
@@ -837,8 +837,27 @@ class Agent:
         pricing_config = await get_pricing_config()
         ganancia_envio = pricing_config["ganancia_envio"]
         
+        # Persist each BuscaLibre product as soon as its detail page has been
+        # read. This avoids waiting for the rest of the Selenium batch (and
+        # the parallel Mercado Libre request) before the catalog is updated.
+        def save_buscalibre_result(book: Dict) -> None:
+            if not getattr(catalog_writer, "enabled", False):
+                return
+            book_with_source = {**book, "source": "buscalibre"}
+            saved = persist_catalog_books([book_with_source], search_query)
+            logger.info(
+                "Saved BuscaLibre product immediately after detail extraction: %s (%d record).",
+                book_with_source.get("title", "Libro sin título"),
+                saved,
+            )
+
         # Buscar en paralelo en BuscaLibre y MercadoLibre
-        buscalibre_task = search_buscalibre(search_query, max_results=3, ganancia_envio=ganancia_envio)
+        buscalibre_task = search_buscalibre(
+            search_query,
+            max_results=3,
+            ganancia_envio=ganancia_envio,
+            on_result=save_buscalibre_result,
+        )
         debugger_address = os.getenv("MELI_CHROME_DEBUGGER_ADDRESS")
         mercadolibre_task = search_mercadolibre(search_query, max_results=3, ganancia_envio=ganancia_envio, detailed=True, debugger_address=debugger_address)
         

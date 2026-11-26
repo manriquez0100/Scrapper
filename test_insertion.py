@@ -8,7 +8,7 @@ def test_insertion():
     """Test that data can be inserted into Firebase Firestore books collection."""
     
     # Initialize Firebase with the service account key
-    creds_path = 'implemented_firestore/store-ea555-firebase-adminsdk-4znay-e64b83a1f0.json'
+    creds_path = 'implemented_firestore/store-ea555-firebase-adminsdk-4znay-c3f26d3ea7.json'
     
     print("Inicializando Firebase con credenciales: " + creds_path)
     print("Proyecto destino: store-ea555")

@@ -24,7 +24,7 @@ class FirebaseUploader:
             if not firebase_admin._apps:
                 
                 # Buscar archivo de credenciales especifico del proyecto store-ea555
-                credentials_file = "store-ea555-firebase-adminsdk-4znay-58bf088886.json"
+                credentials_file = "store-ea555-firebase-adminsdk-4znay-c3f26d3ea7.json"
                 
                 if os.path.exists(credentials_file):
                     cred = credentials.Certificate(credentials_file)
