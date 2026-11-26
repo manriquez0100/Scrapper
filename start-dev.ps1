@@ -5,7 +5,7 @@ param(
 
 $ErrorActionPreference = "Stop"
 $projectRoot = $PSScriptRoot
-$frontendRoot = Join-Path $projectRoot "frontend"
+$frontendRoot = Join-Path (Split-Path -Parent $projectRoot) "frontend-agenteVendedor"
 $venvPython = Join-Path $projectRoot ".venv\Scripts\python.exe"
 $venvUvicorn = Join-Path $projectRoot ".venv\Scripts\uvicorn.exe"
 
@@ -34,5 +34,5 @@ Start-Process powershell.exe -ArgumentList "-NoExit", "-Command", $backendComman
 Start-Process powershell.exe -ArgumentList "-NoExit", "-Command", $frontendCommand
 
 Write-Host "Backend iniciado en http://127.0.0.1:8000"
-Write-Host "Frontend iniciando; abra la URL que muestre Vite (normalmente http://localhost:5173)."
+Write-Host "Frontend iniciando en http://localhost:5173"
 Write-Host "LM Studio debe estar iniciado antes de enviar consultas."

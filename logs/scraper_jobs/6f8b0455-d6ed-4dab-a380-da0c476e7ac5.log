@@ -1,0 +1,260 @@
+Usando credenciales: store-ea555-firebase-adminsdk-4znay-c3f26d3ea7.json
+Conexion a Firebase establecida
+[*] Sin argumentos proporcionados. Usando 580 temas por defecto.
+Conexion a Firebase establecida
+[*] Iniciando poblar automático de BuscaLibre con pricing inteligente
+[+] Total de temas a procesar: 580
+------------------------------------------------------------
+
+[1/580] Buscando: 'Game design libros'
+   [OK] Guardado inmediato: The art of Game of Thrones, the Official Book of Design From Season 1 to Season 8 (en Inglés)
+   [OK] Guardado inmediato: Thematic Integration in Board Game Design (Crc Press Guides to Tabletop Game Design) (en Inglés)
+[+] Encontrados 2 libros
+[+] Libros guardados durante la lectura: 2
+   [ACTUALIZAR] Libro existente: se actualizarán precio y ficha.
+[*] Guardando libro: 'The art of Game of Thrones, the Official Book of Design From Season 1 to Season 8 (en Inglés)'
+   Precio inteligente: $1,059.90 (estrat: precio_psicologico_charm_90)
+   Margen: $100.90 (10.52%)
+   [ACTUALIZAR] Libro existente: se actualizarán precio y ficha.
+[*] Guardando libro: 'Thematic Integration in Board Game Design (Crc Press Guides to Tabletop Game Design) (en Inglés)'
+   Precio inteligente: $1,929.90 (estrat: precio_psicologico_charm_90)
+   Margen: $100.90 (5.52%)
+
+[2/580] Buscando: 'The Art of Game Design Jesse Schell'
+   [OK] Guardado inmediato: The Art of Game Design (en Inglés)
+   [OK] Guardado inmediato: The art of Game Design: A Book of Lenses, Third Edition (en Inglés)
+[+] Encontrados 2 libros
+[+] Libros guardados durante la lectura: 2
+   [ACTUALIZAR] Libro existente: se actualizarán precio y ficha.
+[*] Guardando libro: 'The Art of Game Design (en Inglés)'
+   Precio inteligente: $2,079.90 (estrat: precio_psicologico_charm_90)
+   Margen: $100.90 (5.1%)
+   [ACTUALIZAR] Libro existente: se actualizarán precio y ficha.
+[*] Guardando libro: 'The art of Game Design: A Book of Lenses, Third Edition (en Inglés)'
+   Precio inteligente: $4,079.90 (estrat: precio_psicologico_charm_90)
+   Margen: $100.90 (2.54%)
+
+[3/580] Buscando: 'Game programming patterns'
+   [OK] Guardado inmediato: Game Programming Patterns (en Inglés)
+   [OK] Guardado inmediato: Learn Design Patterns with Game Programming (en Inglés)
+   [OK] Guardado inmediato: Libro #3
+   [OK] Guardado inmediato: Java Games Design Patterns: Learning Programming design patterns through games (en Inglés)
+[!] Error en la busqueda: Search timed out after 120 seconds
+
+[4/580] Buscando: 'Level design libros'
+   [OK] Guardado inmediato: Feliz 80 Cumpleaños: Mejor que una Tarjeta de Cumpleaños! Lindo Elefante con Globo Azul, Libro de Cumpleaños que se Puede Usar Como Cuadern de Level up Designs(Independently Published)
+   [OK] Guardado inmediato: Feliz 45 Cumpleaños: Mejor que una Tarjeta de Cumpleaños! Lindo Elefante con Globo Azul, Libro de Cumpleaños que se Puede Usar Como Cuadern de Level up Designs(Independently Published)
+   [OK] Guardado inmediato: Feliz 85 Cumpleaños: Mejor que una Tarjeta de Cumpleaños! Lindo Elefante con Globo Azul, Libro de Cumpleaños que se Puede Usar Como Cuadern de Level up Designs(Independently Published)
+   [OK] Guardado inmediato: Feliz 75 Cumpleaños: Mejor que una Tarjeta de Cumpleaños! Lindo Elefante con Globo Azul, Libro de Cumpleaños que se Puede Usar Como Cuadern de Level up Designs(Independently Published)
+   [OK] Guardado inmediato: Feliz 50 Cumpleaños: Mejor que una Tarjeta de Cumpleaños! Lindo Elefante con Globo Azul, Libro de Cumpleaños que se Puede Usar Como Cuadern de Level up Designs(Independently Published)
+[!] Error en la busqueda: Search timed out after 120 seconds
+
+[5/580] Buscando: 'Video game storytelling libros'
+   [OK] Guardado inmediato: Video Game Storytelling: What Every Developer Needs to Know About Narrative Techniques (en Inglés)
+   [OK] Guardado inmediato: Video Game Characters and Transmedia Storytelling: The Dynamic Game Character (en Inglés)
+   [OK] Guardado inmediato: Moviegen ai: Meta's Game-Changer in Visual Storytelling: Explore the Future of Filmmaking, Text-To-Video, and Dynamic Editing (en Inglés)
+   [OK] Guardado inmediato: A Mind Forever Voyaging: A History of Storytelling in Video Games (en Inglés)
+   [OK] Guardado inmediato: Interactive Stories and Video Game Art: A Storytelling Framework for Game Design (en Inglés)
+[+] Encontrados 5 libros
+[+] Libros guardados durante la lectura: 5
+   [ACTUALIZAR] Libro existente: se actualizarán precio y ficha.
+[*] Guardando libro: 'Video Game Storytelling: What Every Developer Needs to Know About Narrative Techniques (en Inglés)'
+   Precio inteligente: $769.90 (estrat: precio_psicologico_charm_90)
+   Margen: $100.90 (15.08%)
+   [ACTUALIZAR] Libro existente: se actualizarán precio y ficha.
+[*] Guardando libro: 'Video Game Characters and Transmedia Storytelling: The Dynamic Game Character (en Inglés)'
+   Precio inteligente: $3,569.90 (estrat: precio_psicologico_charm_90)
+   Margen: $100.90 (2.91%)
+   [ACTUALIZAR] Libro existente: se actualizarán precio y ficha.
+[*] Guardando libro: 'Moviegen ai: Meta's Game-Changer in Visual Storytelling: Explore the Future of Filmmaking, Text-To-Video, and Dynamic Editing (en Inglés)'
+   Precio inteligente: $739.90 (estrat: precio_psicologico_charm_90)
+   Margen: $100.90 (15.79%)
+   [ACTUALIZAR] Libro existente: se actualizarán precio y ficha.
+[*] Guardando libro: 'A Mind Forever Voyaging: A History of Storytelling in Video Games (en Inglés)'
+   Precio inteligente: $739.90 (estrat: precio_psicologico_charm_90)
+   Margen: $100.90 (15.79%)
+   [ACTUALIZAR] Libro existente: se actualizarán precio y ficha.
+[*] Guardando libro: 'Interactive Stories and Video Game Art: A Storytelling Framework for Game Design (en Inglés)'
+   Precio inteligente: $1,879.90 (estrat: precio_psicologico_charm_90)
+   Margen: $100.90 (5.67%)
+
+[6/580] Buscando: 'Historia de los videojuegos libros'
+   [OK] Guardado inmediato: Eso no Estaba en mi Libro de Historia de los Videojuegos
+[+] Encontrados 1 libros
+[+] Libros guardados durante la lectura: 1
+   [ACTUALIZAR] Libro existente: se actualizarán precio y ficha.
+[*] Guardando libro: 'Eso no Estaba en mi Libro de Historia de los Videojuegos'
+   Precio inteligente: $939.90 (estrat: precio_psicologico_charm_90)
+   Margen: $100.90 (12.03%)
+
+[7/580] Buscando: 'Nintendo art books'
+   [OK] Guardado inmediato: The Legend of Zelda: Art & Artifacts (en Inglés)
+   [OK] Guardado inmediato: Super Mario Little Golden Book (Nintendo) (en Inglés)
+   [OK] Guardado inmediato: The art of Super Mario Odyssey (en Inglés)
+   [OK] Guardado inmediato: Operación Bolívar Art Book
+   [OK] Guardado inmediato: The Art of Splatoon 3 (en Inglés)
+[+] Encontrados 5 libros
+[+] Libros guardados durante la lectura: 5
+   [ACTUALIZAR] Libro existente: se actualizarán precio y ficha.
+[*] Guardando libro: 'The Legend of Zelda: Art & Artifacts (en Inglés)'
+   Precio inteligente: $1,079.90 (estrat: precio_psicologico_charm_90)
+   Margen: $100.90 (10.31%)
+   [ACTUALIZAR] Libro existente: se actualizarán precio y ficha.
+[*] Guardando libro: 'Super Mario Little Golden Book (Nintendo) (en Inglés)'
+   Precio inteligente: $579.90 (estrat: precio_psicologico_charm_90)
+   Margen: $100.90 (21.06%)
+   [ACTUALIZAR] Libro existente: se actualizarán precio y ficha.
+[*] Guardando libro: 'The art of Super Mario Odyssey (en Inglés)'
+   Precio inteligente: $1,159.90 (estrat: precio_psicologico_charm_90)
+   Margen: $100.90 (9.53%)
+   [ACTUALIZAR] Libro existente: se actualizarán precio y ficha.
+[*] Guardando libro: 'Operación Bolívar Art Book'
+   Precio inteligente: $399.90 (estrat: precio_psicologico_charm_90)
+   Margen: $100.90 (33.75%)
+   [ACTUALIZAR] Libro existente: se actualizarán precio y ficha.
+[*] Guardando libro: 'The Art of Splatoon 3 (en Inglés)'
+   Precio inteligente: $1,299.90 (estrat: precio_psicologico_charm_90)
+   Margen: $100.90 (8.42%)
+
+[8/580] Buscando: 'Dark Souls design works'
+   [OK] Guardado inmediato: Dark Souls: Design Works (en Inglés)
+   [OK] Guardado inmediato: Dark Souls II: Design Works (DARK SOULS DESIGN WORKS HC) (en Inglés)
+[+] Encontrados 2 libros
+[+] Libros guardados durante la lectura: 2
+   [ACTUALIZAR] Libro existente: se actualizarán precio y ficha.
+[*] Guardando libro: 'Dark Souls: Design Works (en Inglés)'
+   Precio inteligente: $749.90 (estrat: precio_psicologico_charm_90)
+   Margen: $100.90 (15.55%)
+   [ACTUALIZAR] Libro existente: se actualizarán precio y ficha.
+[*] Guardando libro: 'Dark Souls II: Design Works (DARK SOULS DESIGN WORKS HC) (en Inglés)'
+   Precio inteligente: $1,199.90 (estrat: precio_psicologico_charm_90)
+   Margen: $100.90 (9.18%)
+
+[9/580] Buscando: 'Bloodborne artbook'
+   [OK] Guardado inmediato: Bloodborne - Artbook Officiel
+   [OK] Guardado inmediato: CreaTuanary: The Artbook
+   [OK] Guardado inmediato: Bloodborne 2. La sed Medicinal
+   [OK] Guardado inmediato: Artbook - Loputyn
+   [OK] Guardado inmediato: Bloodborne 03. Canción de Cuervos
+[+] Encontrados 5 libros
+[+] Libros guardados durante la lectura: 5
+   [ACTUALIZAR] Libro existente: se actualizarán precio y ficha.
+[!] Se omite 'Bloodborne - Artbook Officiel': no tiene un precio válido.
+   [ACTUALIZAR] Libro existente: se actualizarán precio y ficha.
+[*] Guardando libro: 'CreaTuanary: The Artbook'
+   Precio inteligente: $649.90 (estrat: precio_psicologico_charm_90)
+   Margen: $100.90 (18.38%)
+   [ACTUALIZAR] Libro existente: se actualizarán precio y ficha.
+[*] Guardando libro: 'Bloodborne 2. La sed Medicinal'
+   Precio inteligente: $889.90 (estrat: precio_psicologico_charm_90)
+   Margen: $100.90 (12.79%)
+   [ACTUALIZAR] Libro existente: se actualizarán precio y ficha.
+[*] Guardando libro: 'Artbook - Loputyn'
+   Precio inteligente: $789.90 (estrat: precio_psicologico_charm_90)
+   Margen: $100.90 (14.64%)
+   [ACTUALIZAR] Libro existente: se actualizarán precio y ficha.
+[*] Guardando libro: 'Bloodborne 03. Canción de Cuervos'
+   Precio inteligente: $889.90 (estrat: precio_psicologico_charm_90)
+   Margen: $100.90 (12.79%)
+
+[10/580] Buscando: 'Final Fantasy art books'
+   [OK] Guardado inmediato: The Sky: The Art of Final Fantasy Book 3
+   [OK] Guardado inmediato: El arte de Final Fantasy XVI
+   [OK] Guardado inmediato: The art of Final Fantasy xvi (en Inglés)
+   [OK] Guardado inmediato: The Art of Final Fantasy Tactics (en Inglés)
+   [OK] Guardado inmediato: Final Fantasy V (Boss Fight Books)
+[+] Encontrados 5 libros
+[+] Libros guardados durante la lectura: 5
+   [ACTUALIZAR] Libro existente: se actualizarán precio y ficha.
+[!] Se omite 'The Sky: The Art of Final Fantasy Book 3': no tiene un precio válido.
+   [ACTUALIZAR] Libro existente: se actualizarán precio y ficha.
+[*] Guardando libro: 'El arte de Final Fantasy XVI'
+   Precio inteligente: $1,299.90 (estrat: precio_psicologico_charm_90)
+   Margen: $100.90 (8.42%)
+   [ACTUALIZAR] Libro existente: se actualizarán precio y ficha.
+[*] Guardando libro: 'The art of Final Fantasy xvi (en Inglés)'
+   Precio inteligente: $1,029.90 (estrat: precio_psicologico_charm_90)
+   Margen: $100.90 (10.86%)
+   [ACTUALIZAR] Libro existente: se actualizarán precio y ficha.
+[*] Guardando libro: 'The Art of Final Fantasy Tactics (en Inglés)'
+   Precio inteligente: $869.90 (estrat: precio_psicologico_charm_90)
+   Margen: $100.90 (13.12%)
+   [ACTUALIZAR] Libro existente: se actualizarán precio y ficha.
+[*] Guardando libro: 'Final Fantasy V (Boss Fight Books)'
+   Precio inteligente: $679.90 (estrat: precio_psicologico_charm_90)
+   Margen: $100.90 (17.43%)
+
+[11/580] Buscando: 'Concept art videojuegos'
+   [OK] Guardado inmediato: El Concept art en Videojuegos
+[+] Encontrados 1 libros
+[+] Libros guardados durante la lectura: 1
+   [ACTUALIZAR] Libro existente: se actualizarán precio y ficha.
+[*] Guardando libro: 'El Concept art en Videojuegos'
+   Precio inteligente: $1,229.00 (estrat: precio_psicologico_terminacion_9)
+   Margen: $99.00 (8.76%)
+
+[12/580] Buscando: 'Indie game development libros'
+   [OK] Guardado inmediato: Indie Game Development: 30 challenging ideas for beginners! (en Inglés)
+   [OK] Guardado inmediato: Charting the Seas of Indie Development: Helpful Tips and Mistakes to Avoid on Making Your First Game as an Aspiring Indie developer (en Inglés)
+   [OK] Guardado inmediato: Indie Video Game Development Work: Innovation in the Creative Economy (en Inglés)
+   [OK] Guardado inmediato: Indie Video Game Development Work: Innovation in the Creative Economy (en Inglés)
+   [OK] Guardado inmediato: Unity in Action, Third Edition: Multiplatform Game Development in c# (en Inglés)
+[+] Encontrados 5 libros
+[+] Libros guardados durante la lectura: 5
+   [ACTUALIZAR] Libro existente: se actualizarán precio y ficha.
+[*] Guardando libro: 'Indie Game Development: 30 challenging ideas for beginners! (en Inglés)'
+   Precio inteligente: $699.90 (estrat: precio_psicologico_charm_90)
+   Margen: $100.90 (16.84%)
+   [ACTUALIZAR] Libro existente: se actualizarán precio y ficha.
+[*] Guardando libro: 'Charting the Seas of Indie Development: Helpful Tips and Mistakes to Avoid on Making Your First Game as an Aspiring Indie developer (en Inglés)'
+   Precio inteligente: $759.90 (estrat: precio_psicologico_charm_90)
+   Margen: $100.90 (15.31%)
+   [ACTUALIZAR] Libro existente: se actualizarán precio y ficha.
+[*] Guardando libro: 'Indie Video Game Development Work: Innovation in the Creative Economy (en Inglés)'
+   Precio inteligente: $3,039.90 (estrat: precio_psicologico_charm_90)
+   Margen: $100.90 (3.43%)
+   [ACTUALIZAR] Libro existente: se actualizarán precio y ficha.
+[*] Guardando libro: 'Indie Video Game Development Work: Innovation in the Creative Economy (en Inglés)'
+   Precio inteligente: $3,039.90 (estrat: precio_psicologico_charm_90)
+   Margen: $100.90 (3.43%)
+   [ACTUALIZAR] Libro existente: se actualizarán precio y ficha.
+[*] Guardando libro: 'Unity in Action, Third Edition: Multiplatform Game Development in c# (en Inglés)'
+   Precio inteligente: $1,709.00 (estrat: precio_psicologico_terminacion_9)
+   Margen: $99.00 (6.15%)
+
+[13/580] Buscando: 'RPG design libros'
+   [OK] Guardado inmediato: Baetulona: Designs for History
+   [OK] Guardado inmediato: This is Service Design Thinking (Paperback) (en Inglés)
+   [OK] Guardado inmediato: El Libro de Catia v6 - Módulos Part Design / Wireframe Surface Design / Assembly Design y Drafting
+   [OK] Guardado inmediato: product design
+   [OK] Guardado inmediato: Libro de Secretos Disney Olaf
+[+] Encontrados 5 libros
+[+] Libros guardados durante la lectura: 5
+   [ACTUALIZAR] Libro existente: se actualizarán precio y ficha.
+[*] Guardando libro: 'Baetulona: Designs for History'
+   Precio inteligente: $449.90 (estrat: precio_psicologico_charm_90)
+   Margen: $100.90 (28.91%)
+   [ACTUALIZAR] Libro existente: se actualizarán precio y ficha.
+[*] Guardando libro: 'This is Service Design Thinking (Paperback) (en Inglés)'
+   Precio inteligente: $1,119.90 (estrat: precio_psicologico_charm_90)
+   Margen: $100.90 (9.9%)
+   [ACTUALIZAR] Libro existente: se actualizarán precio y ficha.
+[*] Guardando libro: 'El Libro de Catia v6 - Módulos Part Design / Wireframe Surface Design / Assembly Design y Drafting'
+   Precio inteligente: $999.90 (estrat: precio_psicologico_charm_90)
+   Margen: $100.90 (11.22%)
+   [ACTUALIZAR] Libro existente: se actualizarán precio y ficha.
+[*] Guardando libro: 'product design'
+   Precio inteligente: $799.90 (estrat: precio_psicologico_charm_90)
+   Margen: $100.90 (14.43%)
+   [ACTUALIZAR] Libro existente: se actualizarán precio y ficha.
+[*] Guardando libro: 'Libro de Secretos Disney Olaf'
+   Precio inteligente: $679.90 (estrat: precio_psicologico_charm_90)
+   Margen: $100.90 (17.43%)
+
+[14/580] Buscando: 'Narrative design videojuegos'
+   [OK] Guardado inmediato: Curso de Narrativa en Videojuegos
+   [OK] Guardado inmediato: Meander, Spiral, Explode: Design and Pattern in Narrative (en Inglés)
+   [OK] Guardado inmediato: Análisis Narrativo del Guion de Videojuego
+   [OK] Guardado inmediato: El Arte del Entretenimiento: Un Ensayo Sobre el Diseño de Experiencias en Narrativa, Videojuegos y Redes Sociales
+   [OK] Guardado inmediato: reading for the plot,design and intention in narrative
+[+] Encontrados 5 libros

@@ -5,6 +5,8 @@ import logging
 import os
 import asyncio
 import re
+import subprocess
+import sys
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
 from uuid import uuid4
@@ -21,7 +23,8 @@ from starlette.middleware.base import BaseHTTPMiddleware
 from buscalibre_tool import search_buscalibre
 from catalog_generator import FacebookAdGenerator
 from llm_provider import LLMProvider, get_llm_provider
-from mercadolibre import search_mercadolibre
+from scrappers.scrapperMercadoLibre import search_mercadolibre
+from default_queries import DEFAULT_QUERIES
 from chrome_manager import ensure_chrome_debugging, terminate_chrome_debugging
 
 load_dotenv()
@@ -52,6 +55,10 @@ def _load_pricing_config() -> Dict[str, float]:
 
 
 _pricing_config = _load_pricing_config()
+SCRAPER_JOBS: Dict[str, Dict] = {}
+SCRAPER_JOB_TASKS: Dict[str, asyncio.Task] = {}
+SCRAPER_PROCESSES: Dict[str, subprocess.Popen] = {}
+SCRAPER_JOB_LOG_DIR = Path(__file__).with_name("logs") / "scraper_jobs"
 
 
 async def get_pricing_config() -> Dict[str, float]:
@@ -851,15 +858,32 @@ class Agent:
                 saved,
             )
 
+        def save_mercadolibre_result(book: Dict) -> None:
+            if not getattr(catalog_writer, "enabled", False):
+                return
+            saved = persist_catalog_books([book], search_query)
+            logger.info(
+                "Saved Mercado Libre product immediately after detail extraction: %s (%d record).",
+                book.get("title", "Libro sin título"),
+                saved,
+            )
+
         # Buscar en paralelo en BuscaLibre y MercadoLibre
         buscalibre_task = search_buscalibre(
             search_query,
-            max_results=3,
+            max_results=5,
             ganancia_envio=ganancia_envio,
             on_result=save_buscalibre_result,
         )
         debugger_address = os.getenv("MELI_CHROME_DEBUGGER_ADDRESS")
-        mercadolibre_task = search_mercadolibre(search_query, max_results=3, ganancia_envio=ganancia_envio, detailed=True, debugger_address=debugger_address)
+        mercadolibre_task = search_mercadolibre(
+            search_query,
+            max_results=5,
+            ganancia_envio=ganancia_envio,
+            on_result=save_mercadolibre_result,
+            debugger_address=debugger_address,
+        browser=os.getenv("MELI_BROWSER", "edge"),
+        )
         
         buscalibre_results, mercadolibre_results = await asyncio.gather(
             buscalibre_task, mercadolibre_task, return_exceptions=True
@@ -993,6 +1017,107 @@ class Conversation(BaseModel):
     messages: List[Dict]
 
 
+def _scraper_command(script_name: str, query: Optional[str]) -> List[str]:
+    """Build a safe subprocess command for either catalog scraper."""
+    command = [
+        sys.executable,
+        str(Path(__file__).resolve().parent / "scrappers" / script_name),
+    ]
+    if query and query.strip():
+        command.append(query.strip())
+    else:
+        # Explicitly override the CLI's safety limit: no input means the
+        # complete shared DEFAULT_QUERIES list, as requested by the endpoint.
+        command.extend(["--limit", str(len(DEFAULT_QUERIES))])
+    command.extend(["--max-results", "5"])
+    if script_name == "scrapperMercadoLibre.py":
+        command.extend(["--browser", "edge"])
+    if script_name == "scrapperAmazon.py":
+        # Amazon Prime eligibility is account-specific; use the temporary
+        # Edge-profile clone implemented by its scraper.
+        command.append("--usar-perfil-edge")
+    return command
+
+
+def _scraper_job_view(job: Dict) -> Dict:
+    return {
+        key: job.get(key)
+        for key in ("id", "kind", "query", "status", "created_at", "started_at", "finished_at", "exit_code", "log_file")
+    }
+
+
+async def _run_scraper_job(job_id: str, command: List[str]) -> None:
+    job = SCRAPER_JOBS[job_id]
+    if job.get("cancel_requested"):
+        job["status"] = "cancelled"
+        job["finished_at"] = datetime.now(ZoneInfo(ASSISTANT_TIMEZONE)).isoformat()
+        return
+    SCRAPER_JOB_LOG_DIR.mkdir(parents=True, exist_ok=True)
+    log_path = SCRAPER_JOB_LOG_DIR / f"{job_id}.log"
+    job["log_file"] = str(log_path)
+    job["status"] = "running"
+    job["started_at"] = datetime.now(ZoneInfo(ASSISTANT_TIMEZONE)).isoformat()
+    try:
+        with log_path.open("wb") as log_file:
+            # ``asyncio.create_subprocess_exec`` is unavailable when Uvicorn
+            # runs with Windows' selector event loop.  Popen works on both
+            # Windows loop implementations; waiting in a worker thread keeps
+            # the FastAPI event loop responsive while the scraper runs.
+            process = subprocess.Popen(
+                command,
+                cwd=str(Path(__file__).parent),
+                stdout=log_file,
+                stderr=subprocess.STDOUT,
+            )
+            SCRAPER_PROCESSES[job_id] = process
+            job["pid"] = process.pid
+            job["exit_code"] = await asyncio.to_thread(process.wait)
+        job["status"] = "cancelled" if job.get("cancel_requested") else (
+            "completed" if job["exit_code"] == 0 else "failed"
+        )
+    except asyncio.CancelledError:
+        job["status"] = "cancelled"
+        raise
+    except Exception as error:
+        job["status"] = "cancelled" if job.get("cancel_requested") else "failed"
+        job["error"] = str(error)
+        logger.exception("Scraper job %s failed to start", job_id)
+    finally:
+        SCRAPER_PROCESSES.pop(job_id, None)
+        job["finished_at"] = datetime.now(ZoneInfo(ASSISTANT_TIMEZONE)).isoformat()
+
+
+def _terminate_scraper_process_tree(process: subprocess.Popen) -> None:
+    """Stop a scraper and the browser processes it started, without touching the API."""
+    if os.name == "nt":
+        subprocess.run(
+            ["taskkill", "/PID", str(process.pid), "/T", "/F"],
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
+            check=False,
+        )
+    elif process.poll() is None:
+        process.terminate()
+
+
+def _start_scraper_job(kind: str, script_name: str, query: Optional[str]) -> Dict:
+    job_id = str(uuid4())
+    job = {
+        "id": job_id,
+        "kind": kind,
+        "query": query.strip() if query and query.strip() else None,
+        "status": "queued",
+        "created_at": datetime.now(ZoneInfo(ASSISTANT_TIMEZONE)).isoformat(),
+        "exit_code": None,
+        "log_file": None,
+    }
+    SCRAPER_JOBS[job_id] = job
+    SCRAPER_JOB_TASKS[job_id] = asyncio.create_task(
+        _run_scraper_job(job_id, _scraper_command(script_name, query))
+    )
+    return _scraper_job_view(job)
+
+
 @app.post("/message", response_model=MessageResponse)
 async def receive_message(request: MessageRequest) -> MessageResponse:
     try:
@@ -1095,6 +1220,84 @@ async def delete_conversation(conversation_id: str) -> Dict[str, str]:
 @app.get("/health")
 async def health() -> Dict[str, str]:
     return {"status": "ok"}
+
+
+@app.post("/scrapers/poblar", status_code=202)
+async def start_poblar_scraper(query: Optional[str] = None) -> Dict:
+    """Start BuscaLibre population; no query processes all DEFAULT_QUERIES."""
+    return _start_scraper_job("buscalibre", "poblar.py", query)
+
+
+@app.post("/scrapers/mercadolibre", status_code=202)
+async def start_mercadolibre_scraper(query: Optional[str] = None) -> Dict:
+    """Start Mercado Libre population; no query processes all DEFAULT_QUERIES."""
+    return _start_scraper_job("mercadolibre", "scrapperMercadoLibre.py", query)
+
+
+@app.post("/scrapers/amazon", status_code=202)
+async def start_amazon_scraper(query: Optional[str] = None) -> Dict:
+    """Start Amazon Prime population; no query processes all DEFAULT_QUERIES."""
+    return _start_scraper_job("amazon", "scrapperAmazon.py", query)
+
+
+@app.post("/scrapers/all", status_code=202)
+async def start_all_scrapers(query: Optional[str] = None) -> Dict[str, List[Dict]]:
+    """Start BuscaLibre, Mercado Libre and Amazon Prime scrapers concurrently."""
+    return {
+        "jobs": [
+            _start_scraper_job("buscalibre", "poblar.py", query),
+            _start_scraper_job("mercadolibre", "scrapperMercadoLibre.py", query),
+            _start_scraper_job("amazon", "scrapperAmazon.py", query),
+        ]
+    }
+
+
+@app.get("/scrapers/jobs/{job_id}")
+async def get_scraper_job(job_id: str) -> Dict:
+    job = SCRAPER_JOBS.get(job_id)
+    if not job:
+        raise HTTPException(404, "Trabajo de scraper no encontrado")
+    return _scraper_job_view(job)
+
+
+@app.post("/scrapers/jobs/{job_id}/cancel")
+async def cancel_scraper_job(job_id: str) -> Dict:
+    """Cancel one catalog-scraper job and any browser processes it owns."""
+    job = SCRAPER_JOBS.get(job_id)
+    if not job:
+        raise HTTPException(404, "Trabajo de scraper no encontrado")
+    await _cancel_scraper_job(job)
+    return _scraper_job_view(job)
+
+
+async def _cancel_scraper_job(job: Dict) -> None:
+    """Cancel a queued or running scraper job without stopping the API."""
+    if job.get("status") in {"completed", "failed", "cancelled"}:
+        return
+
+    job["cancel_requested"] = True
+    process = SCRAPER_PROCESSES.get(job["id"])
+    if process and process.poll() is None:
+        await asyncio.to_thread(_terminate_scraper_process_tree, process)
+    else:
+        task = SCRAPER_JOB_TASKS.get(job["id"])
+        if task and not task.done():
+            task.cancel()
+
+    job["status"] = "cancelled"
+    job["finished_at"] = datetime.now(ZoneInfo(ASSISTANT_TIMEZONE)).isoformat()
+
+
+@app.post("/scrapers/cancel-all")
+async def cancel_all_scraper_jobs() -> Dict[str, List[Dict]]:
+    """Cancel every scraper currently queued or running."""
+    active_jobs = [
+        job for job in SCRAPER_JOBS.values()
+        if job.get("status") in {"queued", "running"}
+    ]
+    for job in active_jobs:
+        await _cancel_scraper_job(job)
+    return {"jobs": [_scraper_job_view(job) for job in active_jobs]}
 
 
 @app.get("/pricing", response_model=PricingConfig)

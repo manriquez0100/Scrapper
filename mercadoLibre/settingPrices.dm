@@ -1,2 +1,0 @@
-create a file with function for update prices, and then use this function in buscaLibreUpdating_10.py and mercadoLibreUpdating_1.
-idea is to separate updating prices functionality.

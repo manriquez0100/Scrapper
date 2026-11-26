@@ -1,0 +1,46 @@
+Usando credenciales: store-ea555-firebase-adminsdk-4znay-c3f26d3ea7.json
+Conexion a Firebase establecida
+[1/580] Buscando libros Prime: Game design libros
+[2/580] Buscando libros Prime: The Art of Game Design Jesse Schell
+[INFO] Amazon no mostró un filtro Prime seleccionable; se usarán insignias visibles.
+[INFO] Sin insignias en tarjetas; verificando Prime dentro de cada ficha.
+[INFO] Resultados leídos: 14 | con etiqueta Prime visible: 0
+[OK] Publicado en Firebase: The Art of Game Design: A Deck of Lenses, 3rd Edition
+[OK] Publicado en Firebase: The Art of Game Design: A Book of Lenses, Third Edition
+[OK] Publicado en Firebase: The Art of Game Design: A Book of Lenses
+[OK] Publicado en Firebase: The Art of Game Design: A Book of Lenses
+[OK] Publicado en Firebase: The Art of Game Design: A Book of Lenses, Third Edition
+[3/580] Buscando libros Prime: Game programming patterns
+Traceback (most recent call last):
+  File "C:\Users\DATA-MESACNTL3\AppData\Local\Programs\Python\Python313\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\DATA-MESACNTL3\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 720, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "C:\Users\DATA-MESACNTL3\scrapper\Scrapper\scrappers\scrapperAmazon.py", line 376, in search_amazon
+    return await asyncio.to_thread(search_amazon_sync, query, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DATA-MESACNTL3\AppData\Local\Programs\Python\Python313\Lib\asyncio\threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\DATA-MESACNTL3\scrapper\Scrapper\scrappers\scrapperAmazon.py", line 419, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\DATA-MESACNTL3\scrapper\Scrapper\scrappers\scrapperAmazon.py", line 407, in main
+    result = asyncio.run(search_amazon(
+        query, max_results=max(args.max_results, 1), ganancia_envio=max(args.ganancia_envio, 0),
+        on_result=save_book, user_data_dir=user_data_dir, edge_profile=args.edge_profile,
+        use_edge_profile=args.usar_perfil_edge,
+    ))
+  File "C:\Users\DATA-MESACNTL3\AppData\Local\Programs\Python\Python313\Lib\asyncio\runners.py", line 194, in run
+    return runner.run(main)
+           ~~~~~~~~~~^^^^^^
+  File "C:\Users\DATA-MESACNTL3\AppData\Local\Programs\Python\Python313\Lib\asyncio\runners.py", line 123, in run
+    raise KeyboardInterrupt()
+KeyboardInterrupt

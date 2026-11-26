@@ -1,0 +1,134 @@
+Usando credenciales: store-ea555-firebase-adminsdk-4znay-c3f26d3ea7.json
+Conexion a Firebase establecida
+[*] Sin argumentos proporcionados. Usando 580 temas por defecto.
+Conexion a Firebase establecida
+[*] Iniciando poblar automático de BuscaLibre con pricing inteligente
+[+] Total de temas a procesar: 580
+------------------------------------------------------------
+
+[1/580] Buscando: 'Game design libros'
+   [OK] Guardado inmediato: The art of Game of Thrones, the Official Book of Design From Season 1 to Season 8 (en Inglés)
+   [OK] Guardado inmediato: Thematic Integration in Board Game Design (Crc Press Guides to Tabletop Game Design) (en Inglés)
+[+] Encontrados 2 libros
+[+] Libros guardados durante la lectura: 2
+   [ACTUALIZAR] Libro existente: se actualizarán precio y ficha.
+[*] Guardando libro: 'The art of Game of Thrones, the Official Book of Design From Season 1 to Season 8 (en Inglés)'
+   Precio inteligente: $1,059.90 (estrat: precio_psicologico_charm_90)
+   Margen: $100.90 (10.52%)
+   [ACTUALIZAR] Libro existente: se actualizarán precio y ficha.
+[*] Guardando libro: 'Thematic Integration in Board Game Design (Crc Press Guides to Tabletop Game Design) (en Inglés)'
+   Precio inteligente: $1,929.90 (estrat: precio_psicologico_charm_90)
+   Margen: $100.90 (5.52%)
+
+[2/580] Buscando: 'The Art of Game Design Jesse Schell'
+   [OK] Guardado inmediato: The Art of Game Design (en Inglés)
+   [OK] Guardado inmediato: The art of Game Design: A Book of Lenses, Third Edition (en Inglés)
+[+] Encontrados 2 libros
+[+] Libros guardados durante la lectura: 2
+   [ACTUALIZAR] Libro existente: se actualizarán precio y ficha.
+[*] Guardando libro: 'The Art of Game Design (en Inglés)'
+   Precio inteligente: $2,079.90 (estrat: precio_psicologico_charm_90)
+   Margen: $100.90 (5.1%)
+   [ACTUALIZAR] Libro existente: se actualizarán precio y ficha.
+[*] Guardando libro: 'The art of Game Design: A Book of Lenses, Third Edition (en Inglés)'
+   Precio inteligente: $4,079.90 (estrat: precio_psicologico_charm_90)
+   Margen: $100.90 (2.54%)
+
+[3/580] Buscando: 'Game programming patterns'
+   [OK] Guardado inmediato: Game Programming Patterns (en Inglés)
+   [OK] Guardado inmediato: Learn Design Patterns with Game Programming (en Inglés)
+   [OK] Guardado inmediato: Libro #3
+   [OK] Guardado inmediato: Java Games Design Patterns: Learning Programming design patterns through games (en Inglés)
+[+] Encontrados 4 libros
+[+] Libros guardados durante la lectura: 4
+   [ACTUALIZAR] Libro existente: se actualizarán precio y ficha.
+[*] Guardando libro: 'Game Programming Patterns (en Inglés)'
+   Precio inteligente: $1,299.90 (estrat: precio_psicologico_charm_90)
+   Margen: $100.90 (8.42%)
+   [ACTUALIZAR] Libro existente: se actualizarán precio y ficha.
+[*] Guardando libro: 'Learn Design Patterns with Game Programming (en Inglés)'
+   Precio inteligente: $1,079.90 (estrat: precio_psicologico_charm_90)
+   Margen: $100.90 (10.31%)
+   [ACTUALIZAR] Libro existente: se actualizarán precio y ficha.
+[*] Guardando libro: 'Libro #3'
+   Precio inteligente: $999.90 (estrat: precio_psicologico_charm_90)
+   Margen: $100.90 (11.22%)
+   [ACTUALIZAR] Libro existente: se actualizarán precio y ficha.
+[*] Guardando libro: 'Java Games Design Patterns: Learning Programming design patterns through games (en Inglés)'
+   Precio inteligente: $1,329.90 (estrat: precio_psicologico_charm_90)
+   Margen: $100.90 (8.21%)
+
+[4/580] Buscando: 'Level design libros'
+[!] Error en la busqueda: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=158.0.8127.37); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff7d80f0f05+4705]
+	chromedriver!(No symbol) [0x7ff7d7ff1db0]
+	chromedriver!(No symbol) [0x7ff7d7e73433]
+	chromedriver!(No symbol) [0x7ff7d7e67d7f]
+	chromedriver!(No symbol) [0x7ff7d7e79a4d]
+	chromedriver!(No symbol) [0x7ff7d7ea1546]
+	chromedriver!(No symbol) [0x7ff7d7ea583f]
+	chromedriver!(No symbol) [0x7ff7d7e8bea1]
+	chromedriver!(No symbol) [0x7ff7d7e8d1d3]
+	chromedriver!GetHandleVerifier [0x7ff7d8590f4f+4a474f]
+	chromedriver!GetHandleVerifier [0x7ff7d85b7678+4cae78]
+	chromedriver!GetHandleVerifier [0x7ff7d85aaf68+4be768]
+	chromedriver!GetHandleVerifier [0x7ff7d820e62e+121e2e]
+	chromedriver!(No symbol) [0x7ff7d80016f3]
+	chromedriver!(No symbol) [0x7ff7d7ffc304]
+	chromedriver!(No symbol) [0x7ff7d7ffc494]
+	chromedriver!(No symbol) [0x7ff7d7fe509c]
+	KERNEL32!BaseThreadInitThunk [0x7ffe4a267374+14]
+	ntdll!RtlUserThreadStart [0x7ffe4c07cc91+21]
+
+
+[5/580] Buscando: 'Video game storytelling libros'
+   [OK] Guardado inmediato: Video Game Storytelling: What Every Developer Needs to Know About Narrative Techniques (en Inglés)
+   [OK] Guardado inmediato: Video Game Characters and Transmedia Storytelling: The Dynamic Game Character (en Inglés)
+   [OK] Guardado inmediato: Moviegen ai: Meta's Game-Changer in Visual Storytelling: Explore the Future of Filmmaking, Text-To-Video, and Dynamic Editing (en Inglés)
+   [OK] Guardado inmediato: A Mind Forever Voyaging: A History of Storytelling in Video Games (en Inglés)
+   [OK] Guardado inmediato: Interactive Stories and Video Game Art: A Storytelling Framework for Game Design (en Inglés)
+[!] Error en la busqueda: Search timed out after 120 seconds
+
+[6/580] Buscando: 'Historia de los videojuegos libros'
+Traceback (most recent call last):
+  File "C:\Users\DATA-MESACNTL3\AppData\Local\Programs\Python\Python313\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\DATA-MESACNTL3\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 720, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "C:\Users\DATA-MESACNTL3\scrapper\Scrapper\buscalibre_tool.py", line 456, in search_buscalibre
+    return await asyncio.wait_for(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+    )
+    ^
+  File "C:\Users\DATA-MESACNTL3\AppData\Local\Programs\Python\Python313\Lib\asyncio\tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "C:\Users\DATA-MESACNTL3\AppData\Local\Programs\Python\Python313\Lib\asyncio\threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\DATA-MESACNTL3\scrapper\Scrapper\scrappers\poblar.py", line 354, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\DATA-MESACNTL3\scrapper\Scrapper\scrappers\poblar.py", line 183, in main
+    result = asyncio.run(
+        search_buscalibre(
+    ...<4 lines>...
+        )
+    )
+  File "C:\Users\DATA-MESACNTL3\AppData\Local\Programs\Python\Python313\Lib\asyncio\runners.py", line 194, in run
+    return runner.run(main)
+           ~~~~~~~~~~^^^^^^
+  File "C:\Users\DATA-MESACNTL3\AppData\Local\Programs\Python\Python313\Lib\asyncio\runners.py", line 123, in run
+    raise KeyboardInterrupt()
+KeyboardInterrupt

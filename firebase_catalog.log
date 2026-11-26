@@ -1,14 +1,317 @@
-2026-11-25 23:35:22 | INFO | Saved 1 catalog books to Firestore (search: 'Game design libros').
-2026-11-25 23:35:22 | INFO | Saved 1 catalog books to Firestore (search: 'Game design libros').
-2026-11-26 00:19:57 | INFO | Saved 1 catalog books to Firestore (search: 'Historia de los videojuegos').
-2026-11-26 00:19:58 | INFO | Saved 1 catalog books to Firestore (search: 'Historia de los videojuegos').
-2026-11-26 00:19:58 | INFO | Saved 1 catalog books to Firestore (search: 'Historia de los videojuegos').
-2026-11-26 00:19:58 | INFO | Saved 1 catalog books to Firestore (search: 'Historia de los videojuegos').
-2026-11-26 00:19:59 | INFO | Saved 1 catalog books to Firestore (search: 'Historia de los videojuegos').
-2026-11-26 00:19:59 | INFO | Saved 1 catalog books to Firestore (search: 'Historia de los videojuegos').
-2026-11-26 00:19:59 | INFO | Saved 1 catalog books to Firestore (search: 'Historia de los videojuegos').
-2026-11-26 00:19:59 | INFO | Saved 1 catalog books to Firestore (search: 'Historia de los videojuegos').
-2026-11-26 00:19:59 | INFO | Saved 1 catalog books to Firestore (search: 'Historia de los videojuegos').
-2026-11-26 00:20:00 | INFO | Saved 1 catalog books to Firestore (search: 'Historia de los videojuegos').
-2026-11-26 00:29:21 | INFO | Saved 1 catalog books to Firestore (search: 'Game design libros').
-2026-11-26 00:29:26 | INFO | Saved 1 catalog books to Firestore (search: 'Game design libros').
+2026-11-26 14:01:11 | INFO | Saved 1 catalog books to Firestore (search: 'Game design libros').
+2026-11-26 14:01:16 | INFO | Saved 1 catalog books to Firestore (search: 'Game design libros').
+2026-11-26 14:01:18 | INFO | Saved 1 catalog books to Firestore (search: 'Game design libros').
+2026-11-26 14:01:24 | INFO | Saved 1 catalog books to Firestore (search: 'Game design libros').
+2026-11-26 14:01:27 | INFO | Saved 1 catalog books to Firestore (search: 'Game design libros').
+2026-11-26 14:01:27 | INFO | Saved 1 catalog books to Firestore (search: 'Game design libros').
+2026-11-26 14:01:31 | INFO | Saved 1 catalog books to Firestore (search: 'Game design libros').
+2026-11-26 14:01:31 | INFO | Saved 1 catalog books to Firestore (search: 'Game design libros').
+2026-11-26 14:01:35 | INFO | Saved 1 catalog books to Firestore (search: 'Game design libros').
+2026-11-26 14:01:35 | INFO | Saved 1 catalog books to Firestore (search: 'Game design libros').
+2026-11-26 14:01:36 | INFO | Saved 1 catalog books to Firestore (search: 'Game design libros').
+2026-11-26 14:01:38 | INFO | Saved 1 catalog books to Firestore (search: 'Game design libros').
+2026-11-26 14:01:41 | INFO | Saved 1 catalog books to Firestore (search: 'Game design libros').
+2026-11-26 14:01:46 | INFO | Saved 1 catalog books to Firestore (search: 'Game design libros').
+2026-11-26 14:02:15 | INFO | Saved 1 catalog books to Firestore (search: 'The Art of Game Design Jesse Schell').
+2026-11-26 14:02:17 | INFO | Saved 1 catalog books to Firestore (search: 'The Art of Game Design Jesse Schell').
+2026-11-26 14:02:21 | INFO | Saved 1 catalog books to Firestore (search: 'The Art of Game Design Jesse Schell').
+2026-11-26 14:02:25 | INFO | Saved 1 catalog books to Firestore (search: 'The Art of Game Design Jesse Schell').
+2026-11-26 14:02:26 | INFO | Saved 1 catalog books to Firestore (search: 'The Art of Game Design Jesse Schell').
+2026-11-26 14:02:28 | INFO | Saved 1 catalog books to Firestore (search: 'The Art of Game Design Jesse Schell').
+2026-11-26 14:02:29 | INFO | Saved 1 catalog books to Firestore (search: 'The Art of Game Design Jesse Schell').
+2026-11-26 14:02:30 | INFO | Saved 1 catalog books to Firestore (search: 'The Art of Game Design Jesse Schell').
+2026-11-26 14:02:31 | INFO | Saved 1 catalog books to Firestore (search: 'The Art of Game Design Jesse Schell').
+2026-11-26 14:02:34 | INFO | Saved 1 catalog books to Firestore (search: 'The Art of Game Design Jesse Schell').
+2026-11-26 14:02:41 | INFO | Saved 1 catalog books to Firestore (search: 'The Art of Game Design Jesse Schell').
+2026-11-26 14:02:44 | INFO | Saved 1 catalog books to Firestore (search: 'The Art of Game Design Jesse Schell').
+2026-11-26 14:03:15 | INFO | Saved 1 catalog books to Firestore (search: 'Game programming patterns').
+2026-11-26 14:03:21 | INFO | Saved 1 catalog books to Firestore (search: 'Game programming patterns').
+2026-11-26 14:03:22 | INFO | Saved 1 catalog books to Firestore (search: 'Game programming patterns').
+2026-11-26 14:03:41 | INFO | Saved 1 catalog books to Firestore (search: 'Game programming patterns').
+2026-11-26 14:03:48 | INFO | Saved 1 catalog books to Firestore (search: 'Game programming patterns').
+2026-11-26 14:04:00 | INFO | Saved 1 catalog books to Firestore (search: 'Game programming patterns').
+2026-11-26 14:04:03 | INFO | Saved 1 catalog books to Firestore (search: 'Game programming patterns').
+2026-11-26 14:04:16 | INFO | Saved 1 catalog books to Firestore (search: 'Game programming patterns').
+2026-11-26 14:04:26 | INFO | Saved 1 catalog books to Firestore (search: 'Game programming patterns').
+2026-11-26 14:04:46 | INFO | Saved 1 catalog books to Firestore (search: 'Game programming patterns').
+2026-11-26 14:04:59 | INFO | Saved 1 catalog books to Firestore (search: 'Game programming patterns').
+2026-11-26 14:05:09 | INFO | Saved 1 catalog books to Firestore (search: 'Game programming patterns').
+2026-11-26 14:05:20 | INFO | Saved 1 catalog books to Firestore (search: 'Level design libros').
+2026-11-26 14:05:22 | INFO | Saved 1 catalog books to Firestore (search: 'Game programming patterns').
+2026-11-26 14:05:35 | INFO | Saved 1 catalog books to Firestore (search: 'Level design libros').
+2026-11-26 14:05:41 | INFO | Saved 1 catalog books to Firestore (search: 'Game programming patterns').
+2026-11-26 14:05:52 | INFO | Saved 1 catalog books to Firestore (search: 'Level design libros').
+2026-11-26 14:06:11 | INFO | Saved 1 catalog books to Firestore (search: 'Level design libros').
+2026-11-26 14:06:14 | INFO | Saved 1 catalog books to Firestore (search: 'Level design libros').
+2026-11-26 14:06:18 | INFO | Saved 1 catalog books to Firestore (search: 'Level design libros').
+2026-11-26 14:06:24 | INFO | Saved 1 catalog books to Firestore (search: 'Level design libros').
+2026-11-26 14:06:28 | INFO | Saved 1 catalog books to Firestore (search: 'Level design libros').
+2026-11-26 14:06:42 | INFO | Saved 1 catalog books to Firestore (search: 'Level design libros').
+2026-11-26 14:06:50 | INFO | Saved 1 catalog books to Firestore (search: 'Level design libros').
+2026-11-26 14:07:10 | INFO | Saved 1 catalog books to Firestore (search: 'Video game storytelling libros').
+2026-11-26 14:07:15 | INFO | Saved 1 catalog books to Firestore (search: 'Level design libros').
+2026-11-26 14:07:19 | INFO | Saved 1 catalog books to Firestore (search: 'Video game storytelling libros').
+2026-11-26 14:07:23 | INFO | Saved 1 catalog books to Firestore (search: 'Level design libros').
+2026-11-26 14:07:28 | INFO | Saved 1 catalog books to Firestore (search: 'Video game storytelling libros').
+2026-11-26 14:07:29 | INFO | Saved 1 catalog books to Firestore (search: 'Level design libros').
+2026-11-26 14:07:33 | INFO | Saved 1 catalog books to Firestore (search: 'Video game storytelling libros').
+2026-11-26 14:07:36 | INFO | Saved 1 catalog books to Firestore (search: 'Level design libros').
+2026-11-26 14:07:39 | INFO | Saved 1 catalog books to Firestore (search: 'Video game storytelling libros').
+2026-11-26 14:07:42 | INFO | Saved 1 catalog books to Firestore (search: 'Level design libros').
+2026-11-26 14:07:48 | INFO | Saved 1 catalog books to Firestore (search: 'Video game storytelling libros').
+2026-11-26 14:07:53 | INFO | Saved 1 catalog books to Firestore (search: 'Video game storytelling libros').
+2026-11-26 14:07:59 | INFO | Saved 1 catalog books to Firestore (search: 'Video game storytelling libros').
+2026-11-26 14:08:08 | INFO | Saved 1 catalog books to Firestore (search: 'Video game storytelling libros').
+2026-11-26 14:08:13 | INFO | Saved 1 catalog books to Firestore (search: 'Video game storytelling libros').
+2026-11-26 14:08:19 | INFO | Saved 1 catalog books to Firestore (search: 'Video game storytelling libros').
+2026-11-26 14:08:19 | INFO | Saved 1 catalog books to Firestore (search: 'Video game storytelling libros').
+2026-11-26 14:08:19 | INFO | Saved 1 catalog books to Firestore (search: 'Video game storytelling libros').
+2026-11-26 14:08:19 | INFO | Saved 1 catalog books to Firestore (search: 'Video game storytelling libros').
+2026-11-26 14:08:20 | INFO | Saved 1 catalog books to Firestore (search: 'Video game storytelling libros').
+2026-11-26 14:08:22 | INFO | Saved 1 catalog books to Firestore (search: 'Historia de los videojuegos libros').
+2026-11-26 14:08:33 | INFO | Saved 1 catalog books to Firestore (search: 'Historia de los videojuegos libros').
+2026-11-26 14:08:35 | INFO | Saved 1 catalog books to Firestore (search: 'Video game storytelling libros').
+2026-11-26 14:08:39 | INFO | Saved 1 catalog books to Firestore (search: 'Video game storytelling libros').
+2026-11-26 14:08:39 | INFO | Saved 1 catalog books to Firestore (search: 'Historia de los videojuegos libros').
+2026-11-26 14:08:44 | INFO | Saved 1 catalog books to Firestore (search: 'Video game storytelling libros').
+2026-11-26 14:08:46 | INFO | Saved 1 catalog books to Firestore (search: 'Historia de los videojuegos libros').
+2026-11-26 14:08:51 | INFO | Saved 1 catalog books to Firestore (search: 'Video game storytelling libros').
+2026-11-26 14:08:54 | INFO | Saved 1 catalog books to Firestore (search: 'Historia de los videojuegos libros').
+2026-11-26 14:08:57 | INFO | Saved 1 catalog books to Firestore (search: 'Video game storytelling libros').
+2026-11-26 14:09:07 | INFO | Saved 1 catalog books to Firestore (search: 'Historia de los videojuegos libros').
+2026-11-26 14:09:12 | INFO | Saved 1 catalog books to Firestore (search: 'Historia de los videojuegos libros').
+2026-11-26 14:09:29 | INFO | Saved 1 catalog books to Firestore (search: 'Nintendo art books').
+2026-11-26 14:09:35 | INFO | Saved 1 catalog books to Firestore (search: 'Nintendo art books').
+2026-11-26 14:09:42 | INFO | Saved 1 catalog books to Firestore (search: 'Historia de los videojuegos libros').
+2026-11-26 14:09:45 | INFO | Saved 1 catalog books to Firestore (search: 'Nintendo art books').
+2026-11-26 14:09:51 | INFO | Saved 1 catalog books to Firestore (search: 'Historia de los videojuegos libros').
+2026-11-26 14:09:57 | INFO | Saved 1 catalog books to Firestore (search: 'Nintendo art books').
+2026-11-26 14:09:58 | INFO | Saved 1 catalog books to Firestore (search: 'Historia de los videojuegos libros').
+2026-11-26 14:10:02 | INFO | Saved 1 catalog books to Firestore (search: 'Nintendo art books').
+2026-11-26 14:10:07 | INFO | Saved 1 catalog books to Firestore (search: 'Historia de los videojuegos libros').
+2026-11-26 14:10:08 | INFO | Saved 1 catalog books to Firestore (search: 'Nintendo art books').
+2026-11-26 14:10:13 | INFO | Saved 1 catalog books to Firestore (search: 'Nintendo art books').
+2026-11-26 14:10:17 | INFO | Saved 1 catalog books to Firestore (search: 'Historia de los videojuegos libros').
+2026-11-26 14:10:19 | INFO | Saved 1 catalog books to Firestore (search: 'Nintendo art books').
+2026-11-26 14:10:24 | INFO | Saved 1 catalog books to Firestore (search: 'Nintendo art books').
+2026-11-26 14:10:31 | INFO | Saved 1 catalog books to Firestore (search: 'Nintendo art books').
+2026-11-26 14:10:31 | INFO | Saved 1 catalog books to Firestore (search: 'Nintendo art books').
+2026-11-26 14:10:31 | INFO | Saved 1 catalog books to Firestore (search: 'Nintendo art books').
+2026-11-26 14:10:32 | INFO | Saved 1 catalog books to Firestore (search: 'Nintendo art books').
+2026-11-26 14:10:32 | INFO | Saved 1 catalog books to Firestore (search: 'Nintendo art books').
+2026-11-26 14:10:37 | INFO | Saved 1 catalog books to Firestore (search: 'Dark Souls design works').
+2026-11-26 14:10:47 | INFO | Saved 1 catalog books to Firestore (search: 'Dark Souls design works').
+2026-11-26 14:11:03 | INFO | Saved 1 catalog books to Firestore (search: 'Nintendo art books').
+2026-11-26 14:11:05 | INFO | Saved 1 catalog books to Firestore (search: 'Dark Souls design works').
+2026-11-26 14:11:18 | INFO | Saved 1 catalog books to Firestore (search: 'Nintendo art books').
+2026-11-26 14:11:21 | INFO | Saved 1 catalog books to Firestore (search: 'Dark Souls design works').
+2026-11-26 14:11:26 | INFO | Saved 1 catalog books to Firestore (search: 'Dark Souls design works').
+2026-11-26 14:11:30 | INFO | Saved 1 catalog books to Firestore (search: 'Nintendo art books').
+2026-11-26 14:11:30 | INFO | Saved 1 catalog books to Firestore (search: 'Dark Souls design works').
+2026-11-26 14:11:30 | INFO | Saved 1 catalog books to Firestore (search: 'Dark Souls design works').
+2026-11-26 14:11:39 | INFO | Saved 1 catalog books to Firestore (search: 'Bloodborne artbook').
+2026-11-26 14:11:49 | INFO | Saved 1 catalog books to Firestore (search: 'Bloodborne artbook').
+2026-11-26 14:11:59 | INFO | Saved 1 catalog books to Firestore (search: 'Bloodborne artbook').
+2026-11-26 14:12:07 | INFO | Saved 1 catalog books to Firestore (search: 'Bloodborne artbook').
+2026-11-26 14:12:16 | INFO | Saved 1 catalog books to Firestore (search: 'Bloodborne artbook').
+2026-11-26 14:12:24 | INFO | Saved 1 catalog books to Firestore (search: 'Dark Souls design works').
+2026-11-26 14:12:26 | INFO | Saved 1 catalog books to Firestore (search: 'Bloodborne artbook').
+2026-11-26 14:12:31 | INFO | Saved 1 catalog books to Firestore (search: 'Bloodborne artbook').
+2026-11-26 14:12:35 | INFO | Saved 1 catalog books to Firestore (search: 'Dark Souls design works').
+2026-11-26 14:12:37 | INFO | Saved 1 catalog books to Firestore (search: 'Bloodborne artbook').
+2026-11-26 14:12:43 | INFO | Saved 1 catalog books to Firestore (search: 'Bloodborne artbook').
+2026-11-26 14:12:43 | INFO | Saved 1 catalog books to Firestore (search: 'Dark Souls design works').
+2026-11-26 14:12:47 | INFO | Saved 1 catalog books to Firestore (search: 'Bloodborne artbook').
+2026-11-26 14:12:49 | INFO | Saved 1 catalog books to Firestore (search: 'Final Fantasy art books').
+2026-11-26 14:12:50 | INFO | Saved 1 catalog books to Firestore (search: 'Dark Souls design works').
+2026-11-26 14:12:53 | INFO | Saved 1 catalog books to Firestore (search: 'Bloodborne artbook').
+2026-11-26 14:12:53 | INFO | Saved 1 catalog books to Firestore (search: 'Bloodborne artbook').
+2026-11-26 14:12:53 | INFO | Saved 1 catalog books to Firestore (search: 'Bloodborne artbook').
+2026-11-26 14:12:53 | INFO | Saved 1 catalog books to Firestore (search: 'Bloodborne artbook').
+2026-11-26 14:12:55 | INFO | Saved 1 catalog books to Firestore (search: 'Final Fantasy art books').
+2026-11-26 14:12:56 | INFO | Saved 1 catalog books to Firestore (search: 'Dark Souls design works').
+2026-11-26 14:13:00 | INFO | Saved 1 catalog books to Firestore (search: 'Final Fantasy art books').
+2026-11-26 14:13:08 | INFO | Saved 1 catalog books to Firestore (search: 'Final Fantasy art books').
+2026-11-26 14:13:14 | INFO | Saved 1 catalog books to Firestore (search: 'Final Fantasy art books').
+2026-11-26 14:13:28 | INFO | Saved 1 catalog books to Firestore (search: 'Bloodborne artbook').
+2026-11-26 14:13:35 | INFO | Saved 1 catalog books to Firestore (search: 'Final Fantasy art books').
+2026-11-26 14:13:36 | INFO | Saved 1 catalog books to Firestore (search: 'Bloodborne artbook').
+2026-11-26 14:13:36 | INFO | Saved 1 catalog books to Firestore (search: 'Concept art videojuegos').
+2026-11-26 14:13:39 | INFO | Saved 1 catalog books to Firestore (search: 'Final Fantasy art books').
+2026-11-26 14:13:41 | INFO | Saved 1 catalog books to Firestore (search: 'Concept art videojuegos').
+2026-11-26 14:13:41 | INFO | Saved 1 catalog books to Firestore (search: 'Bloodborne artbook').
+2026-11-26 14:13:43 | INFO | Saved 1 catalog books to Firestore (search: 'Final Fantasy art books').
+2026-11-26 14:13:46 | INFO | Saved 1 catalog books to Firestore (search: 'Concept art videojuegos').
+2026-11-26 14:13:47 | INFO | Saved 1 catalog books to Firestore (search: 'Final Fantasy art books').
+2026-11-26 14:13:48 | INFO | Saved 1 catalog books to Firestore (search: 'Bloodborne artbook').
+2026-11-26 14:13:50 | INFO | Saved 1 catalog books to Firestore (search: 'Concept art videojuegos').
+2026-11-26 14:13:51 | INFO | Saved 1 catalog books to Firestore (search: 'Final Fantasy art books').
+2026-11-26 14:13:53 | INFO | Saved 1 catalog books to Firestore (search: 'Bloodborne artbook').
+2026-11-26 14:13:55 | INFO | Saved 1 catalog books to Firestore (search: 'Concept art videojuegos').
+2026-11-26 14:13:55 | INFO | Saved 1 catalog books to Firestore (search: 'Final Fantasy art books').
+2026-11-26 14:13:56 | INFO | Saved 1 catalog books to Firestore (search: 'Final Fantasy art books').
+2026-11-26 14:13:56 | INFO | Saved 1 catalog books to Firestore (search: 'Final Fantasy art books').
+2026-11-26 14:13:56 | INFO | Saved 1 catalog books to Firestore (search: 'Final Fantasy art books').
+2026-11-26 14:14:22 | INFO | Saved 1 catalog books to Firestore (search: 'Indie game development libros').
+2026-11-26 14:14:26 | INFO | Saved 1 catalog books to Firestore (search: 'Final Fantasy art books').
+2026-11-26 14:14:28 | INFO | Saved 1 catalog books to Firestore (search: 'Indie game development libros').
+2026-11-26 14:14:34 | INFO | Saved 1 catalog books to Firestore (search: 'Indie game development libros').
+2026-11-26 14:14:34 | INFO | Saved 1 catalog books to Firestore (search: 'Final Fantasy art books').
+2026-11-26 14:14:38 | INFO | Saved 1 catalog books to Firestore (search: 'Concept art videojuegos').
+2026-11-26 14:14:40 | INFO | Saved 1 catalog books to Firestore (search: 'Indie game development libros').
+2026-11-26 14:14:41 | INFO | Saved 1 catalog books to Firestore (search: 'Final Fantasy art books').
+2026-11-26 14:14:42 | INFO | Saved 1 catalog books to Firestore (search: 'Concept art videojuegos').
+2026-11-26 14:14:46 | INFO | Saved 1 catalog books to Firestore (search: 'Indie game development libros').
+2026-11-26 14:14:47 | INFO | Saved 1 catalog books to Firestore (search: 'Final Fantasy art books').
+2026-11-26 14:14:54 | INFO | Saved 1 catalog books to Firestore (search: 'Final Fantasy art books').
+2026-11-26 14:15:08 | INFO | Saved 1 catalog books to Firestore (search: 'RPG design libros').
+2026-11-26 14:15:15 | INFO | Saved 1 catalog books to Firestore (search: 'RPG design libros').
+2026-11-26 14:15:17 | INFO | Saved 1 catalog books to Firestore (search: 'Concept art videojuegos').
+2026-11-26 14:15:21 | INFO | Saved 1 catalog books to Firestore (search: 'Concept art videojuegos').
+2026-11-26 14:15:21 | INFO | Saved 1 catalog books to Firestore (search: 'RPG design libros').
+2026-11-26 14:15:24 | INFO | Saved 1 catalog books to Firestore (search: 'Indie game development libros').
+2026-11-26 14:15:25 | INFO | Saved 1 catalog books to Firestore (search: 'Concept art videojuegos').
+2026-11-26 14:15:27 | INFO | Saved 1 catalog books to Firestore (search: 'RPG design libros').
+2026-11-26 14:15:28 | INFO | Saved 1 catalog books to Firestore (search: 'Indie game development libros').
+2026-11-26 14:15:30 | INFO | Saved 1 catalog books to Firestore (search: 'Concept art videojuegos').
+2026-11-26 14:15:31 | INFO | Saved 1 catalog books to Firestore (search: 'RPG design libros').
+2026-11-26 14:15:32 | INFO | Saved 1 catalog books to Firestore (search: 'Indie game development libros').
+2026-11-26 14:15:34 | INFO | Saved 1 catalog books to Firestore (search: 'Concept art videojuegos').
+2026-11-26 14:15:36 | INFO | Saved 1 catalog books to Firestore (search: 'Indie game development libros').
+2026-11-26 14:15:39 | INFO | Saved 1 catalog books to Firestore (search: 'Indie game development libros').
+2026-11-26 14:15:43 | INFO | Saved 1 catalog books to Firestore (search: 'Indie game development libros').
+2026-11-26 14:15:44 | INFO | Saved 1 catalog books to Firestore (search: 'Indie game development libros').
+2026-11-26 14:15:44 | INFO | Saved 1 catalog books to Firestore (search: 'Indie game development libros').
+2026-11-26 14:15:44 | INFO | Saved 1 catalog books to Firestore (search: 'Indie game development libros').
+2026-11-26 14:15:45 | INFO | Saved 1 catalog books to Firestore (search: 'Indie game development libros').
+2026-11-26 14:15:53 | INFO | Saved 1 catalog books to Firestore (search: 'Narrative design videojuegos').
+2026-11-26 14:15:58 | INFO | Saved 1 catalog books to Firestore (search: 'Narrative design videojuegos').
+2026-11-26 14:16:02 | INFO | Saved 1 catalog books to Firestore (search: 'Narrative design videojuegos').
+2026-11-26 14:16:05 | INFO | Saved 1 catalog books to Firestore (search: 'Indie game development libros').
+2026-11-26 14:16:09 | INFO | Saved 1 catalog books to Firestore (search: 'Narrative design videojuegos').
+2026-11-26 14:16:10 | INFO | Saved 1 catalog books to Firestore (search: 'Indie game development libros').
+2026-11-26 14:16:15 | INFO | Saved 1 catalog books to Firestore (search: 'Indie game development libros').
+2026-11-26 14:16:15 | INFO | Saved 1 catalog books to Firestore (search: 'Narrative design videojuegos').
+2026-11-26 14:16:19 | INFO | Saved 1 catalog books to Firestore (search: 'Indie game development libros').
+2026-11-26 14:16:25 | INFO | Saved 1 catalog books to Firestore (search: 'Indie game development libros').
+2026-11-26 14:16:34 | INFO | Saved 1 catalog books to Firestore (search: 'RPG design libros').
+2026-11-26 14:16:41 | INFO | Saved 1 catalog books to Firestore (search: 'RPG design libros').
+2026-11-26 14:16:42 | INFO | Saved 1 catalog books to Firestore (search: 'Pixel art libros').
+2026-11-26 14:16:50 | INFO | Saved 1 catalog books to Firestore (search: 'RPG design libros').
+2026-11-26 14:16:53 | INFO | Saved 1 catalog books to Firestore (search: 'Pixel art libros').
+2026-11-26 14:16:55 | INFO | Saved 1 catalog books to Firestore (search: 'RPG design libros').
+2026-11-26 14:16:59 | INFO | Saved 1 catalog books to Firestore (search: 'RPG design libros').
+2026-11-26 14:16:59 | INFO | Saved 1 catalog books to Firestore (search: 'Pixel art libros').
+2026-11-26 14:17:04 | INFO | Saved 1 catalog books to Firestore (search: 'RPG design libros').
+2026-11-26 14:17:04 | INFO | Saved 1 catalog books to Firestore (search: 'RPG design libros').
+2026-11-26 14:17:04 | INFO | Saved 1 catalog books to Firestore (search: 'RPG design libros').
+2026-11-26 14:17:05 | INFO | Saved 1 catalog books to Firestore (search: 'RPG design libros').
+2026-11-26 14:17:05 | INFO | Saved 1 catalog books to Firestore (search: 'RPG design libros').
+2026-11-26 14:17:08 | INFO | Saved 1 catalog books to Firestore (search: 'Pixel art libros').
+2026-11-26 14:17:08 | INFO | Saved 1 catalog books to Firestore (search: 'RPG design libros').
+2026-11-26 14:17:13 | INFO | Saved 1 catalog books to Firestore (search: 'RPG design libros').
+2026-11-26 14:17:15 | INFO | Saved 1 catalog books to Firestore (search: 'Pixel art libros').
+2026-11-26 14:17:19 | INFO | Saved 1 catalog books to Firestore (search: 'RPG design libros').
+2026-11-26 14:17:25 | INFO | Saved 1 catalog books to Firestore (search: 'RPG design libros').
+2026-11-26 14:17:49 | INFO | Saved 1 catalog books to Firestore (search: 'Narrative design videojuegos').
+2026-11-26 14:17:51 | INFO | Saved 1 catalog books to Firestore (search: 'Narrative design videojuegos').
+2026-11-26 14:17:54 | INFO | Saved 1 catalog books to Firestore (search: 'Narrative design videojuegos').
+2026-11-26 14:17:55 | INFO | Saved 1 catalog books to Firestore (search: 'Narrative design videojuegos').
+2026-11-26 14:17:59 | INFO | Saved 1 catalog books to Firestore (search: 'Narrative design videojuegos').
+2026-11-26 14:18:04 | INFO | Saved 1 catalog books to Firestore (search: 'Narrative design videojuegos').
+2026-11-26 14:18:09 | INFO | Saved 1 catalog books to Firestore (search: 'Narrative design videojuegos').
+2026-11-26 14:18:12 | INFO | Saved 1 catalog books to Firestore (search: 'Narrative design videojuegos').
+2026-11-26 14:18:13 | INFO | Saved 1 catalog books to Firestore (search: 'Narrative design videojuegos').
+2026-11-26 14:18:13 | INFO | Saved 1 catalog books to Firestore (search: 'Narrative design videojuegos').
+2026-11-26 14:18:13 | INFO | Saved 1 catalog books to Firestore (search: 'Narrative design videojuegos').
+2026-11-26 14:18:14 | INFO | Saved 1 catalog books to Firestore (search: 'Narrative design videojuegos').
+2026-11-26 14:18:23 | INFO | Saved 1 catalog books to Firestore (search: 'Pixel art libros').
+2026-11-26 14:18:31 | INFO | Saved 1 catalog books to Firestore (search: 'Pixel art libros').
+2026-11-26 14:18:38 | INFO | Saved 1 catalog books to Firestore (search: 'Pixel art libros').
+2026-11-26 14:18:44 | INFO | Saved 1 catalog books to Firestore (search: 'Pixel art libros').
+2026-11-26 14:18:49 | INFO | Saved 1 catalog books to Firestore (search: 'Pixel art libros').
+2026-11-26 14:18:57 | INFO | Saved 1 catalog books to Firestore (search: 'Pixel art libros').
+2026-11-26 14:19:02 | INFO | Saved 1 catalog books to Firestore (search: 'Pixel art libros').
+2026-11-26 14:19:21 | INFO | Saved 1 catalog books to Firestore (search: 'Haruki Murakami libros').
+2026-11-26 14:19:28 | INFO | Saved 1 catalog books to Firestore (search: 'Haruki Murakami libros').
+2026-11-26 14:19:37 | INFO | Saved 1 catalog books to Firestore (search: 'Haruki Murakami libros').
+2026-11-26 14:19:44 | INFO | Saved 1 catalog books to Firestore (search: 'Haruki Murakami libros').
+2026-11-26 14:19:50 | INFO | Saved 1 catalog books to Firestore (search: 'Haruki Murakami libros').
+2026-11-26 14:19:51 | INFO | Saved 1 catalog books to Firestore (search: 'Haruki Murakami libros').
+2026-11-26 14:19:54 | INFO | Saved 1 catalog books to Firestore (search: 'Haruki Murakami libros').
+2026-11-26 14:19:57 | INFO | Saved 1 catalog books to Firestore (search: 'Haruki Murakami libros').
+2026-11-26 14:20:02 | INFO | Saved 1 catalog books to Firestore (search: 'Haruki Murakami libros').
+2026-11-26 14:20:06 | INFO | Saved 1 catalog books to Firestore (search: 'Haruki Murakami libros').
+2026-11-26 14:20:16 | INFO | Saved 1 catalog books to Firestore (search: 'Haruki Murakami libros').
+2026-11-26 14:20:16 | INFO | Saved 1 catalog books to Firestore (search: 'Haruki Murakami libros').
+2026-11-26 14:20:16 | INFO | Saved 1 catalog books to Firestore (search: 'Haruki Murakami libros').
+2026-11-26 14:20:16 | INFO | Saved 1 catalog books to Firestore (search: 'Haruki Murakami libros').
+2026-11-26 14:20:17 | INFO | Saved 1 catalog books to Firestore (search: 'Haruki Murakami libros').
+2026-11-26 14:20:31 | INFO | Saved 1 catalog books to Firestore (search: 'Tokio Blues').
+2026-11-26 14:21:03 | INFO | Saved 1 catalog books to Firestore (search: 'Kafka en la orilla').
+2026-11-26 14:21:09 | INFO | Saved 1 catalog books to Firestore (search: 'Kafka en la orilla').
+2026-11-26 14:21:14 | INFO | Saved 1 catalog books to Firestore (search: 'Kafka en la orilla').
+2026-11-26 14:21:25 | INFO | Saved 1 catalog books to Firestore (search: 'Kafka en la orilla').
+2026-11-26 14:21:31 | INFO | Saved 1 catalog books to Firestore (search: 'Kafka en la orilla').
+2026-11-26 14:21:32 | INFO | Saved 1 catalog books to Firestore (search: 'Kafka en la orilla').
+2026-11-26 14:21:35 | INFO | Saved 1 catalog books to Firestore (search: 'Kafka en la orilla').
+2026-11-26 14:21:39 | INFO | Saved 1 catalog books to Firestore (search: 'Kafka en la orilla').
+2026-11-26 14:21:44 | INFO | Saved 1 catalog books to Firestore (search: 'Kafka en la orilla').
+2026-11-26 14:21:48 | INFO | Saved 1 catalog books to Firestore (search: 'Kafka en la orilla').
+2026-11-26 14:21:52 | INFO | Saved 1 catalog books to Firestore (search: 'Kafka en la orilla').
+2026-11-26 14:21:52 | INFO | Saved 1 catalog books to Firestore (search: 'Kafka en la orilla').
+2026-11-26 14:21:53 | INFO | Saved 1 catalog books to Firestore (search: 'Kafka en la orilla').
+2026-11-26 14:21:53 | INFO | Saved 1 catalog books to Firestore (search: 'Kafka en la orilla').
+2026-11-26 14:21:53 | INFO | Saved 1 catalog books to Firestore (search: 'Kafka en la orilla').
+2026-11-26 14:22:11 | INFO | Saved 1 catalog books to Firestore (search: '1Q84').
+2026-11-26 14:22:21 | INFO | Saved 1 catalog books to Firestore (search: '1Q84').
+2026-11-26 14:32:43 | INFO | Saved 1 catalog books to Firestore (search: 'Game design libros').
+2026-11-26 14:32:47 | INFO | Saved 1 catalog books to Firestore (search: 'Game design libros').
+2026-11-26 14:32:53 | INFO | Saved 1 catalog books to Firestore (search: 'Game design libros').
+2026-11-26 14:32:53 | INFO | Saved 1 catalog books to Firestore (search: 'Game design libros').
+2026-11-26 14:32:57 | INFO | Saved 1 catalog books to Firestore (search: 'Game design libros').
+2026-11-26 14:32:58 | INFO | Saved 1 catalog books to Firestore (search: 'Game design libros').
+2026-11-26 14:33:02 | INFO | Saved 1 catalog books to Firestore (search: 'Game design libros').
+2026-11-26 14:33:02 | INFO | Saved 1 catalog books to Firestore (search: 'Game design libros').
+2026-11-26 14:33:03 | INFO | Saved 1 catalog books to Firestore (search: 'Game design libros').
+2026-11-26 14:33:36 | INFO | Saved 1 catalog books to Firestore (search: 'The Art of Game Design Jesse Schell').
+2026-11-26 14:33:40 | INFO | Saved 1 catalog books to Firestore (search: 'The Art of Game Design Jesse Schell').
+2026-11-26 14:33:43 | INFO | Saved 1 catalog books to Firestore (search: 'The Art of Game Design Jesse Schell').
+2026-11-26 14:33:44 | INFO | Saved 1 catalog books to Firestore (search: 'The Art of Game Design Jesse Schell').
+2026-11-26 14:33:47 | INFO | Saved 1 catalog books to Firestore (search: 'The Art of Game Design Jesse Schell').
+2026-11-26 14:33:48 | INFO | Saved 1 catalog books to Firestore (search: 'The Art of Game Design Jesse Schell').
+2026-11-26 14:33:48 | INFO | Saved 1 catalog books to Firestore (search: 'The Art of Game Design Jesse Schell').
+2026-11-26 14:33:55 | INFO | Saved 1 catalog books to Firestore (search: 'The Art of Game Design Jesse Schell').
+2026-11-26 14:34:03 | INFO | Saved 1 catalog books to Firestore (search: 'The Art of Game Design Jesse Schell').
+2026-11-26 14:34:26 | INFO | Saved 1 catalog books to Firestore (search: 'Game programming patterns').
+2026-11-26 14:34:32 | INFO | Saved 1 catalog books to Firestore (search: 'Game programming patterns').
+2026-11-26 14:34:38 | INFO | Saved 1 catalog books to Firestore (search: 'Game programming patterns').
+2026-11-26 14:34:44 | INFO | Saved 1 catalog books to Firestore (search: 'Game programming patterns').
+2026-11-26 14:34:51 | INFO | Saved 1 catalog books to Firestore (search: 'Game programming patterns').
+2026-11-26 14:34:51 | INFO | Saved 1 catalog books to Firestore (search: 'Game programming patterns').
+2026-11-26 14:34:51 | INFO | Saved 1 catalog books to Firestore (search: 'Game programming patterns').
+2026-11-26 14:34:51 | INFO | Saved 1 catalog books to Firestore (search: 'Game programming patterns').
+2026-11-26 14:34:52 | INFO | Saved 1 catalog books to Firestore (search: 'Game programming patterns').
+2026-11-26 14:34:56 | INFO | Saved 1 catalog books to Firestore (search: 'Game programming patterns').
+2026-11-26 14:35:03 | INFO | Saved 1 catalog books to Firestore (search: 'Game programming patterns').
+2026-11-26 14:35:11 | INFO | Saved 1 catalog books to Firestore (search: 'Game programming patterns').
+2026-11-26 14:35:16 | INFO | Saved 1 catalog books to Firestore (search: 'Game programming patterns').
+2026-11-26 14:37:21 | INFO | Saved 1 catalog books to Firestore (search: 'Video game storytelling libros').
+2026-11-26 14:37:23 | INFO | Saved 1 catalog books to Firestore (search: 'The Art of Game Design Jesse Schell').
+2026-11-26 14:37:23 | INFO | Saved 1 catalog books to Firestore (search: 'The Art of Game Design Jesse Schell').
+2026-11-26 14:37:39 | INFO | Saved 1 catalog books to Firestore (search: 'Video game storytelling libros').
+2026-11-26 14:37:39 | INFO | Saved 1 catalog books to Firestore (search: 'The Art of Game Design Jesse Schell').
+2026-11-26 14:37:48 | INFO | Saved 1 catalog books to Firestore (search: 'Video game storytelling libros').
+2026-11-26 14:37:50 | INFO | Saved 1 catalog books to Firestore (search: 'Video game storytelling libros').
+2026-11-26 14:37:51 | INFO | Saved 1 catalog books to Firestore (search: 'The Art of Game Design Jesse Schell').
+2026-11-26 14:37:55 | INFO | Saved 1 catalog books to Firestore (search: 'Video game storytelling libros').
+2026-11-26 14:37:55 | INFO | Saved 1 catalog books to Firestore (search: 'Video game storytelling libros').
+2026-11-26 14:38:03 | INFO | Saved 1 catalog books to Firestore (search: 'The Art of Game Design Jesse Schell').
+2026-11-26 14:38:04 | INFO | Saved 1 catalog books to Firestore (search: 'Video game storytelling libros').
+2026-11-26 14:38:06 | INFO | Saved 1 catalog books to Firestore (search: 'Video game storytelling libros').
+2026-11-26 14:38:14 | INFO | Saved 1 catalog books to Firestore (search: 'The Art of Game Design Jesse Schell').
+2026-11-26 14:38:17 | INFO | Saved 1 catalog books to Firestore (search: 'Video game storytelling libros').
+2026-11-26 14:38:36 | INFO | Saved 1 catalog books to Firestore (search: 'Video game storytelling libros').
+2026-11-26 14:38:36 | INFO | Saved 1 catalog books to Firestore (search: 'The Art of Game Design Jesse Schell').
+2026-11-26 14:39:00 | INFO | Saved 1 catalog books to Firestore (search: 'Game programming patterns').
+2026-11-26 14:39:18 | INFO | Saved 1 catalog books to Firestore (search: 'Game programming patterns').

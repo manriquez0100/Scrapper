@@ -1,0 +1,52 @@
+Usando credenciales: store-ea555-firebase-adminsdk-4znay-c3f26d3ea7.json
+Conexion a Firebase establecida
+[1/580] Buscando: Game design libros
+[PAUSA] Esperando 21s antes de la siguiente consulta.
+[2/580] Buscando: The Art of Game Design Jesse Schell
+[PAUSA] Esperando 28s antes de la siguiente consulta.
+[3/580] Buscando: Game programming patterns
+[PAUSA] Esperando 20s antes de la siguiente consulta.
+[4/580] Buscando: Level design libros
+[PAUSA] Esperando 19s antes de la siguiente consulta.
+[5/580] Buscando: Video game storytelling libros
+[PAUSA] Esperando 21s antes de la siguiente consulta.
+[6/580] Buscando: Historia de los videojuegos libros
+Traceback (most recent call last):
+  File "C:\Users\DATA-MESACNTL3\AppData\Local\Programs\Python\Python313\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\DATA-MESACNTL3\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 720, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "C:\Users\DATA-MESACNTL3\scrapper\Scrapper\scrappers\scrapperMercadoLibre.py", line 396, in search_mercadolibre
+    return await asyncio.wait_for(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<13 lines>...
+    )
+    ^
+  File "C:\Users\DATA-MESACNTL3\AppData\Local\Programs\Python\Python313\Lib\asyncio\tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "C:\Users\DATA-MESACNTL3\AppData\Local\Programs\Python\Python313\Lib\asyncio\threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\DATA-MESACNTL3\scrapper\Scrapper\scrappers\scrapperMercadoLibre.py", line 484, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\DATA-MESACNTL3\scrapper\Scrapper\scrappers\scrapperMercadoLibre.py", line 457, in main
+    result = asyncio.run(
+        search_mercadolibre(
+    ...<9 lines>...
+        )
+    )
+  File "C:\Users\DATA-MESACNTL3\AppData\Local\Programs\Python\Python313\Lib\asyncio\runners.py", line 194, in run
+    return runner.run(main)
+           ~~~~~~~~~~^^^^^^
+  File "C:\Users\DATA-MESACNTL3\AppData\Local\Programs\Python\Python313\Lib\asyncio\runners.py", line 123, in run
+    raise KeyboardInterrupt()
+KeyboardInterrupt
